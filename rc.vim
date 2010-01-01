@@ -19,7 +19,7 @@
 "
 "*****************************************************************************"
 
- "                                                                           "
+"                                                                           "
 "*****************************************************************************"
 "
 " Base settings
@@ -80,17 +80,17 @@ set hidden " Allow dirty unsaved buffers
 
 """ Appearance
 
-set gfn=Monospace\ 8  " Font
-colorscheme molokai   " Color theme
+set gfn=Anonymous\ Pro  " Font
+colorscheme molokai     " Color theme
 
 """ Search
 
 set ignorecase " Ignore case when searching
-set showcmd " Show incomplete cmds down the bottom
-set showmode " Show current mode down the bottom
+set showcmd    " Show incomplete cmds down the bottom
+set showmode   " Show current mode down the bottom
 
-set incsearch " Find the next match as we type the search
-set hlsearch " Hilight searches by default
+set incsearch  " Find the next match as we type the search
+set hlsearch   " Hilight searches by default
 
 " Page Up & Page Down behaviour
 
@@ -134,9 +134,9 @@ imap <PageDown> <C-O><C-D><C-O><C-D>
 
 "" Ctrl+C & Ctrl+V to system buffer
 
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>i
-vmap <C-C> "+y
+"nmap <C-V> "+gP
+"imap <C-V> <ESC><C-V>i
+"vmap <C-C> "+y
 
 " Ctrl+L to clear highlight
 
@@ -169,8 +169,18 @@ imap <silent> <C-D> :NERDTreeToggle<CR>
 " Autocomplete setup
 
 let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_classes_in_global = 1
+let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1
+
+""" Ack
+
+" Use instead grep
+
+set grepprg=ack\ -a
+
+" Ctrl+A to start Ack search
+
+nnoremap <C-A> :Ack<Space>
 
  "                                                                           "
 "*****************************************************************************"
