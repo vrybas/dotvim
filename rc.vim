@@ -143,6 +143,11 @@ imap <PageDown> <C-O><C-D><C-O><C-D>
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
+" Folding
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
+vnoremap <Space> zf
+
  "                                                                           "
 "*****************************************************************************"
 "
