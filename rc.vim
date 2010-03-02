@@ -151,6 +151,35 @@ inoremap <C-L> <C-O>:nohls<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
 vnoremap <Space> zf
 
+"" Indent
+
+" Emulate TextMate behaviour
+
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+"" Windows
+
+" Navigate between windows
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+"" Surround text
+
+vnoremap " :call Surround('"', '"')<CR>
+vnoremap ' :call Surround("'", "'")<CR>
+
+"" Other staff
+
+" Sudo promt with :w!!
+
+cmap w!! %!sudo tee > /dev/null %
+
  "                                                                           "
 "*****************************************************************************"
 "
@@ -188,7 +217,8 @@ set grepprg=ack\ -a
 
 " Ctrl+A to start Ack search
 
-nnoremap <C-A> :Ack<Space>
+nmap <C-A> :Ack<Space>
+imap <C-A> :Ack<Space>
 
  "                                                                           "
 "*****************************************************************************"
@@ -210,6 +240,27 @@ fun! RemoveSpaces()
   endif
 endf
 
+""" Surround text
+
+fun! Surround(s1, s2) range
+  exe "normal vgvmboma\<Esc>"
+  normal `a
+  let lineA = line(".")
+  let columnA = col(".")
+  normal `b
+  let lineB = line(".")
+  let columnB = col(".")
+  " exchange marks
+  if lineA > lineB || lineA <= lineB && columnA > columnB
+    " save b in c
+    normal mc
+    " store a in b
+    normal `amb
+    " set a to old b
+    normal `cma
+  endif
+  exe "normal `ba" . a:s2 . "\<Esc>`ai" . a:s1 . "\<Esc>"
+endfun
 
  "                                                                           "
 "*****************************************************************************"
