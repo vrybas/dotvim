@@ -70,6 +70,10 @@ set si            " Smart indent
 set stal=2
 set expandtab     " No tabs, no war!
 
+filetype on
+filetype plugin on
+filetype indent on
+
 " Do not wrap text
 
 set nowrap
@@ -95,7 +99,6 @@ set hlsearch   " Hilight searches by default
 " Page Up & Page Down behaviour
 
 set nostartofline " Don't jump to fisrt line
-
 
  "                                                                           "
 "*****************************************************************************"
