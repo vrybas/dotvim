@@ -1,8 +1,31 @@
+# Ruby snippets
+
 snippet def
 	def ${1:method_name}
 		${2}
 	end
 snippet if
 	if ${1:condition}
+		${2}
+	end
+
+# Rails snippets
+
+snippet bf
+	before_filter :#{1:filter_name}
+
+# RSpec snippets
+
+snippet specc
+	require 'spec_helper'
+  describe ${1:NameOf}Controller do
+		${2}
+	end
+snippet desc
+	describe '${1}' do
+		${2}
+	end
+snippet desca
+	describe '${1:name} action' do
 		${2}
 	end

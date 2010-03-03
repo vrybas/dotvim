@@ -143,8 +143,8 @@ imap <PageDown> <C-O><C-D><C-O><C-D>
 
 " Ctrl+L to clear highlight
 
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
+nnoremap <C-c> :nohls<CR><C-L>
+inoremap <C-c> <C-O>:nohls<CR>
 
 " Folding
 
