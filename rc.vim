@@ -127,26 +127,17 @@ endif
 map <C-S-Left> :bprev<CR>
 map <C-S-Right> :bnext<CR>
 
-"" Page Up & Page Down behaviour
+""
 
-nmap <PageUp> <C-U><C-U>
-imap <PageUp> <C-O><C-U><C-O><C-U>
+imap <C-S-o> <ESC>O
+imap <C-o> <ESC>o
 
-nmap <PageDown> <C-D><C-D>
-imap <PageDown> <C-O><C-D><C-O><C-D>
-
-"" Ctrl+C & Ctrl+V to system buffer
-
-"nmap <C-V> "+gP
-"imap <C-V> <ESC><C-V>i
-"vmap <C-C> "+y
-
-" Ctrl+L to clear highlight
+"" Ctrl+L to clear highlight
 
 nnoremap <C-c> :nohls<CR><C-L>
 inoremap <C-c> <C-O>:nohls<CR>
 
-" Folding
+"" Folding
 
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
 vnoremap <Space> zf
@@ -217,8 +208,13 @@ set grepprg=ack\ -a
 
 " Ctrl+A to start Ack search
 
-nmap <C-A> :Ack<Space>
+"""nmap <C-A> :Ack<Space>
 imap <C-A> :Ack<Space>
+
+""" NERDCommenter
+
+imap <D-/> <ESC>,cc
+nmap <D-/> ,cc
 
  "                                                                           "
 "*****************************************************************************"
@@ -278,6 +274,12 @@ autocmd BufWritePre * call RemoveSpaces()
 
 "autocmd BufWritePost * !ctags -R > /dev/null
 
+"" Restore last cursor position in file
+
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
 
  "                                                                           "
 "*****************************************************************************"
