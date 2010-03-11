@@ -146,6 +146,8 @@ vnoremap <Space> zf
 
 " Emulate TextMate behaviour
 
+imap <D-[> <ESC><<
+imap <D-]> <ESC>>>
 nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
@@ -164,6 +166,16 @@ map <C-l> <C-w>l
 
 vnoremap " :call Surround('"', '"')<CR>
 vnoremap ' :call Surround("'", "'")<CR>
+
+"""
+
+let i=1
+while i<=9
+    execute "nmap <D-".i."> ".i."gt"
+    execute "vmap <D-".i."> ".i."gt"
+    execute "imap <D-".i."> <ESC>".i."gt"
+    let i+=1
+endwhile
 
 "" Other staff
 
