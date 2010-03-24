@@ -85,7 +85,7 @@ set hidden " Allow dirty unsaved buffers
 
 """ Appearance
 
-colorscheme dual     " Color theme
+colorscheme vrdual     " Color theme
 
 """ Search
 
@@ -111,8 +111,11 @@ set nostartofline " Don't jump to fisrt line
 if has("gui_running")
   set tb=icons      " Only icons in toolbar
   set tbis=tiny     " Set icon size to tiny
-  set guioptions-=T " Turn off toolbar
-  colorscheme dual  " Color theme
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set showtabline=0  "remove right-hand scroll bar
+  colorscheme vrdual  " Color theme
   set gfn=Monospace\ 9 " Font
 endif
 
@@ -151,8 +154,10 @@ imap <C-o> <ESC>o
 
 "" Ctrl+L to clear highlight
 
-map <C-i> :nohls<CR><C-L>
-map <C-i> <C-O>:nohls<CR>
+" TODO: map turn off highlightig on any mode
+"map <C-i> :nohls<CR><C-L>
+"map <C-i> <C-O>:nohls<CR>
+map <C-i> :noh<CR>
 
 " F3 - Save File
 nmap <F3> :w<cr>
@@ -168,9 +173,17 @@ vnoremap <Space> zf
 
 "" Move block of text
 
+"imap <C-S-h> <ESC><<
+"imap <C-S-l> <ESC>>>
+"nmap <C-S-h> <<
+"nmap <C-S-l> >>
 vmap <C-h> <gv
 vmap <C-l> >gv
 
+"imap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
+"imap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+"nmap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
+"nmap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
 vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 
@@ -179,10 +192,10 @@ vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 
 " Navigate between windows
 
-"nmap <C-h> <C-w>h
-"nmap <C-j> <C-w>j
-"map <C-k> <C-w>k
-"map <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 "" Surround text
 
@@ -202,7 +215,7 @@ endwhile
 
 "" Autocomplete
 
-imap <C-z> <C-x><C-o>
+imap <C-Space> <C-x><C-o>
 
 "" Other stuff
 
