@@ -16,6 +16,7 @@
 "
 "
 "                                         by Aleksandr Koss (http://nocorp.ru)
+"                                         forked by Vladimir Rybas
 "
 "*****************************************************************************"
 
@@ -52,7 +53,7 @@ set wildmode=list:longest " Make cmdline tab completion similar to bash
 """ Line options
 
 set nu   " Turn on line numbers
-set cul  " Highligth current line
+"set cul  " Highligth current line
 
 "" Highligth in red more then 80 columns
 
@@ -84,8 +85,7 @@ set hidden " Allow dirty unsaved buffers
 
 """ Appearance
 
-set gfn=Anonymous\ Pro  " Font
-colorscheme molokai     " Color theme
+colorscheme dual     " Color theme
 
 """ Search
 
@@ -112,6 +112,8 @@ if has("gui_running")
   set tb=icons      " Only icons in toolbar
   set tbis=tiny     " Set icon size to tiny
   set guioptions-=T " Turn off toolbar
+  colorscheme dual  " Color theme
+  set gfn=Monospace\ 9 " Font
 endif
 
  "                                                                           "
@@ -122,20 +124,40 @@ endif
 "*****************************************************************************"
  "                                                                           "
 
+"" Toggle between normal and insert mode
+
+nnoremap <D-x> i
+imap <D-x> <Esc>
+
 "" Previous - Next buffer
 
-map <C-S-Left> :bprev<CR>
-map <C-S-Right> :bnext<CR>
+map <C-a> :bprev<CR>
+map <C-s> :bnext<CR>
+map <C-Tab> :BufExplorer<CR>
+
+imap <F4> :bdelete<CR>
+nmap <F4> :bdelete<CR>
 
 ""
 
-imap <C-S-o> <ESC>O
+"" Ctrl+C & Ctrl+V to system buffer
+
+nmap <C-v> "+gP
+imap <C-v> <ESC><C-v>i
+vmap <C-c> "+y
+
+imap <C-o> <ESC>O
 imap <C-o> <ESC>o
 
 "" Ctrl+L to clear highlight
 
-nnoremap <C-c> :nohls<CR><C-L>
-inoremap <C-c> <C-O>:nohls<CR>
+map <C-i> :nohls<CR><C-L>
+map <C-i> <C-O>:nohls<CR>
+
+" F3 - Save File
+nmap <F3> :w<cr>
+vmap <F3> <esc>:w<cr>
+imap <F3> <esc>:w<cr>
 
 "" Folding
 
@@ -144,40 +166,45 @@ vnoremap <Space> zf
 
 "" Indent
 
-" Emulate TextMate behaviour
+"" Move block of text
 
-imap <D-[> <ESC><<
-imap <D-]> <ESC>>>
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
+vmap <C-h> <gv
+vmap <C-l> >gv
+
+vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
+vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+
 
 "" Windows
 
 " Navigate between windows
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+"nmap <C-h> <C-w>h
+"nmap <C-j> <C-w>j
+"map <C-k> <C-w>k
+"map <C-l> <C-w>l
 
 "" Surround text
 
-vnoremap " :call Surround('"', '"')<CR>
-vnoremap ' :call Surround("'", "'")<CR>
+"vnoremap " :call Surround('"', '"')<CR>
+"vnoremap ' :call Surround("'", "'")<CR>
 
 """
 
 let i=1
 while i<=9
-    execute "nmap <D-".i."> ".i."gt"
-    execute "vmap <D-".i."> ".i."gt"
-    execute "imap <D-".i."> <ESC>".i."gt"
-    let i+=1
+  execute "nmap <D-".i."> ".i."gt"
+  execute "vmap <D-".i."> ".i."gt"
+  execute "imap <D-".i."> <ESC>".i."gt"
+  let i+=1
 endwhile
 
-"" Other staff
+
+"" Autocomplete
+
+imap <C-z> <C-x><C-o>
+
+"" Other stuff
 
 " Sudo promt with :w!!
 
@@ -195,14 +222,15 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Ctrl+F map to start search
 
-nnoremap <C-F> :FuzzyFinderTextMate<CR>
+imap <F2> :FuzzyFinderTextMate<CR>
+nmap <F2> :FuzzyFinderTextMate<CR>
 
 """ NERDTree
 
 " Ctrl+D map to toggle NERDTree
 
-nmap <silent> <C-D> :NERDTreeToggle<CR>
-imap <silent> <C-D> :NERDTreeToggle<CR>
+nmap <silent> <F1> :NERDTreeToggle<CR>
+imap <silent> <F1> :NERDTreeToggle<CR>
 
 """ Vim-Ruby
 
@@ -220,13 +248,17 @@ set grepprg=ack\ -a
 
 " Ctrl+A to start Ack search
 
-"""nmap <C-A> :Ack<Space>
-imap <C-A> :Ack<Space>
+"nmap <C-A> :Ack<Space>
+"imap <C-A> :Ack<Space>
 
 """ NERDCommenter
 
 imap <D-/> <ESC>,cc
 nmap <D-/> ,cc
+
+""" RSense
+
+let g:rsenseHome = "$RSENSE_HOME"
 
  "                                                                           "
 "*****************************************************************************"
