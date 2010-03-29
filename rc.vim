@@ -41,6 +41,7 @@ set history=1000 " Store lots of :cmdline history
 set backspace=indent,eol,start " Allow to navigate from start of line to end of previous line
 
 set wildmode=list:longest " Make cmdline tab completion similar to bash
+set autoread
 
  "                                                                           "
 "*****************************************************************************"
@@ -74,6 +75,10 @@ set expandtab     " No tabs, no war!
 filetype on
 filetype plugin on
 filetype indent on
+set statusline=%<%f%h%m%r%h%w%y\ %{&ff}\ %{strftime('%a\ %b\ %e\ %I:%M\ %p')}%=\ lin:%l\,%L\ col:%c%V\ %P
+set ruler
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+
 
 " Do not wrap text
 
@@ -85,7 +90,7 @@ set hidden " Allow dirty unsaved buffers
 
 """ Appearance
 
-colorscheme vrdual     " Color theme
+colorscheme evening     " Color theme
 
 """ Search
 
@@ -114,7 +119,8 @@ if has("gui_running")
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
-  set showtabline=0  "remove right-hand scroll bar
+  set showtabline=0  "tabs bar
+  set laststatus=2   "file status
   colorscheme vrdual  " Color theme
   set gfn=Monospace\ 9 " Font
 endif
@@ -157,12 +163,13 @@ imap <C-o> <ESC>o
 " TODO: map turn off highlightig on any mode
 "map <C-i> :nohls<CR><C-L>
 "map <C-i> <C-O>:nohls<CR>
-map <C-i> :noh<CR>
+map <C-m> :noh<CR>
+"map <Leader>ri :Rinitializer<Space>
 
 " F3 - Save File
-nmap <F3> :w<cr>
-vmap <F3> <esc>:w<cr>
-imap <F3> <esc>:w<cr>
+nmap <F2> :w<cr>
+vmap <F2> <esc>:w<cr>
+imap <F2> <esc>:w<cr>
 
 "" Folding
 
@@ -235,8 +242,10 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Ctrl+F map to start search
 
-imap <F2> :FuzzyFinderTextMate<CR>
-nmap <F2> :FuzzyFinderTextMate<CR>
+imap <F3> :FuzzyFinderTextMate<CR>
+nmap <F3> :FuzzyFinderTextMate<CR>
+"imap <F2> :CommandT<CR>
+"nmap <F2> :CommandT<CR>
 
 """ NERDTree
 
@@ -266,8 +275,8 @@ set grepprg=ack\ -a
 
 """ NERDCommenter
 
-imap <D-/> <ESC>,cc
-nmap <D-/> ,cc
+"imap <C-/> <ESC>,cc
+"nmap <C-/> ,cc
 
 """ RSense
 
