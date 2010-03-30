@@ -119,8 +119,8 @@ if has("gui_running")
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
-  set guioptions-=l  "remove left-hand scroll bar
-  set showtabline=0  "tabs bar
+  set guioptions-=L  "remove left-hand scroll bar
+  set showtabline=1  "tabs bar
   set laststatus=2   "file status
   colorscheme vrdual  " Color theme
   set gfn=Monospace\ 9 " Font
@@ -150,6 +150,13 @@ nmap <F4> :bdelete<CR>
 
 ""
 
+"" Tabs
+
+map <F5> :tabnew<cr>
+map <F6> :tabprevious<cr>
+map <F7> :tabnext<cr>
+map <F8> :tabclose<cr>
+
 "" Ctrl+C & Ctrl+V to system buffer
 
 nmap <C-v> "+gP
@@ -164,7 +171,7 @@ imap <C-o> <ESC>o
 " TODO: map turn off highlightig on any mode
 "map <C-i> :nohls<CR><C-L>
 "map <C-i> <C-O>:nohls<CR>
-map <C-m> :noh<CR>
+map <C-n> :noh<CR>
 "map <Leader>ri :Rinitializer<Space>
 
 " F3 - Save File
@@ -204,9 +211,6 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-
-map <C-F7> <Esc><C-W>k<C-W>_a
-nmap <C-F7> <C-W>k<C-W>_
 
 """"""""" Toggle maximize/unmaximize
 "nnoremap <C-W>O :call MaximizeToggle ()<CR>
@@ -413,7 +417,7 @@ map т n
 map ь m
 map б ,
 map ю .
-map . /
+"map . /
 
 map Ё ~
 map Й Q
