@@ -152,10 +152,14 @@ nmap <F4> :bdelete<CR>
 
 "" Tabs
 
-map <F5> :tabnew<cr>
-map <F6> :tabprevious<cr>
-map <F7> :tabnext<cr>
-map <F8> :tabclose<cr>
+map <F5> <esc>:tabnew<cr>
+map <F6> <esc>:tabprevious<cr>
+map <F7> <esc>:tabnext<cr>
+map <F8> <esc>:tabclose<cr>
+imap <F5> <esc>:tabnew<cr>
+imap <F6> <esc>:tabprevious<cr>
+imap <F7> <esc>:tabnext<cr>
+imap <F8> <esc>:tabclose<cr>
 
 "" Ctrl+C & Ctrl+V to system buffer
 
