@@ -98,7 +98,7 @@ set ignorecase " Ignore case when searching
 set showcmd    " Show incomplete cmds down the bottom
 set showmode   " Show current mode down the bottom
 
-set incsearch  " Find the next match as we type the search
+"set incsearch  " Find the next match as we type the search
 set hlsearch   " Hilight searches by default
 
 " Page Up & Page Down behaviour
@@ -119,6 +119,7 @@ if has("gui_running")
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=l  "remove left-hand scroll bar
   set showtabline=0  "tabs bar
   set laststatus=2   "file status
   colorscheme vrdual  " Color theme
@@ -203,6 +204,30 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+map <C-F7> <Esc><C-W>k<C-W>_a
+nmap <C-F7> <C-W>k<C-W>_
+
+""""""""" Toggle maximize/unmaximize
+"nnoremap <C-W>O :call MaximizeToggle ()<CR>
+"nnoremap <C-W>o :call MaximizeToggle ()<CR>
+"nnoremap <C-W><C-O> :call MaximizeToggle ()<CR>
+"
+"function! MaximizeToggle()
+"  if exists("s:maximize_session")
+"    exec "source " . s:maximize_session
+"    call delete(s:maximize_session)
+"    unlet s:maximize_session
+"    let &hidden=s:maximize_hidden_save
+"    unlet s:maximize_hidden_save
+"  else
+"    let s:maximize_hidden_save = &hidden
+"    let s:maximize_session = tempname()
+"    set hidden
+"    exec "mksession! " . s:maximize_session
+"    only
+"  endif
+"endfunction
 
 "" Surround text
 
