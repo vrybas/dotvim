@@ -83,6 +83,11 @@ set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 " Do not wrap text
 
 set nowrap
+set noswapfile
+set visualbell
+
+" Show 3 line after and before cursor when scrolling
+set scrolloff=3
 
 """ Buffers
 
@@ -152,18 +157,18 @@ nmap <F4> :bdelete<CR>
 
 "" Tabs
 
-map <F5> <esc>:tabnew<cr>
+"map <F5> <esc>:tabnew<cr>
 map <F6> <esc>:tabprevious<cr>
 map <F7> <esc>:tabnext<cr>
 map <F8> <esc>:tabclose<cr>
-imap <F5> <esc>:tabnew<cr>
+"imap <F5> <esc>:tabnew<cr>
 imap <F6> <esc>:tabprevious<cr>
 imap <F7> <esc>:tabnext<cr>
 imap <F8> <esc>:tabclose<cr>
 
 "" Ctrl+C & Ctrl+V to system buffer
 
-nmap <C-v> "+gP
+nmap <C-v> "+gp
 imap <C-v> <ESC><C-v>i
 vmap <C-c> "+y
 
