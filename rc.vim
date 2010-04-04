@@ -84,7 +84,7 @@ set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 
 set nowrap
 set noswapfile
-set visualbell
+"set visualbell
 
 " Show 3 line after and before cursor when scrolling
 set scrolloff=3
