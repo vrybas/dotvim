@@ -125,7 +125,7 @@ if has("gui_running")
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
-  set showtabline=1  "tabs bar
+  set showtabline=2  "tabs bar
   set laststatus=2   "file status
   colorscheme vrdual  " Color theme
   set gfn=Monospace\ 9 " Font
@@ -146,24 +146,25 @@ imap <D-x> <Esc>
 
 "" Previous - Next buffer
 
-map <C-a> :bprev<CR>
-map <C-s> :bnext<CR>
+"map <C-a> :bprev<CR>
+"map <C-s> :bnext<CR>
 map <C-Tab> :BufExplorer<CR>
 
-imap <F4> :bdelete<CR>
-nmap <F4> :bdelete<CR>
+imap <F4> <C-w>c
+nmap <F4> <C-w>c
 
 ""
 
 "" Tabs
 
 "map <F5> <esc>:tabnew<cr>
-map <F6> <esc>:tabprevious<cr>
-map <F7> <esc>:tabnext<cr>
-map <F8> <esc>:tabclose<cr>
+map <C-Left> <esc>:tabprevious<cr>
+map <C-Right> <esc>:tabnext<cr>
+map <C-a> <esc>:tabprevious<cr>
+map <C-s> <esc>:tabnext<cr>
 "imap <F5> <esc>:tabnew<cr>
-imap <F6> <esc>:tabprevious<cr>
-imap <F7> <esc>:tabnext<cr>
+imap <C-Left> <esc>:tabprevious<cr>
+imap <C-Right> <esc>:tabnext<cr>
 imap <F8> <esc>:tabclose<cr>
 
 "" Ctrl+C & Ctrl+V to system buffer
@@ -291,6 +292,9 @@ nmap <F3> :FuzzyFinderTextMate<CR>
 
 nmap <silent> <F1> :NERDTreeToggle<CR>
 imap <silent> <F1> :NERDTreeToggle<CR>
+
+nmap <silent> <C-F1> :g/def /<CR>
+imap <silent> <C-F1> :g/def /<CR>
 
 """ Vim-Ruby
 
