@@ -127,8 +127,8 @@ if has("gui_running")
   set guioptions-=L  "remove left-hand scroll bar
   set showtabline=2  "tabs bar
   set laststatus=2   "file status
-  colorscheme vrdual  " Color theme
-  set gfn=Monospace\ 9 " Font
+  colorscheme vrmolokai "ir_black vrdual --  Colorscheme
+  set gfn=Terminus\ 9 " Monospace\ 9 --  GUI Font
 endif
 
  "                                                                           "
