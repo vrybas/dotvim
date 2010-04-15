@@ -1,12 +1,10 @@
+" Glowchalik
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
+" Author: Vladimir Rybas <vladimir@rybas.ru>
 "
-" Note: Based on the monokai theme for textmate
-" by Wimer Hazenberg and its darker variant
-" by Hamish Stuart Macpherson
+" Note: Based on the molokai theme by Tomas Restrepo
 "
-
 hi clear
 
 set background=dark
@@ -18,12 +16,12 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="molokai"
+let g:colors_name="glowchalk"
 
-if exists("g:molokai_original")
-    let s:molokai_original = g:molokai_original
+if exists("g:glowchalk_original")
+    let s:glowchalk_original = g:glowchalk_original
 else
-    let s:molokai_original = 0
+    let s:glowchalk_original = 0
 endif
 
 
@@ -107,7 +105,7 @@ hi Visual                        guibg=#666666
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
-if s:molokai_original == 1
+if s:glowchalk_original == 1
    hi Normal          guifg=#F8F8F2 guibg=#272822
    hi Comment         guifg=#cccccc
    hi CursorLine                    guibg=#3E3D32
