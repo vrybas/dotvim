@@ -95,7 +95,7 @@ set hidden " Allow dirty unsaved buffers
 
 """ Appearance
 
-colorscheme evening     " Color theme
+colorscheme 256-jungle     " Color theme
 
 """ Search
 
@@ -173,8 +173,8 @@ nmap <C-v> "+gp
 imap <C-v> <ESC><C-v>i
 vmap <C-c> "+y
 
-imap <C-o> <ESC>O
-imap <C-o> <ESC>o
+"imap <C-o> <ESC>O
+"imap <C-o> <ESC>o
 
 "" Ctrl+L to clear highlight
 
@@ -191,8 +191,10 @@ imap <F2> <esc>:w<cr>
 
 "" Folding
 
+set foldmethod=syntax
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
 vnoremap <Space> zf
+nmap z<Space> zO
 
 "" Indent
 

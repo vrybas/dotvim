@@ -46,10 +46,10 @@ hi Error           guifg=#960050 guibg=#1E0010
 hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
-hi FoldColumn      guifg=#465457 guibg=#000000
-hi Folded          guifg=#465457 guibg=#000000
+hi FoldColumn      guifg=#cccccc guibg=#000000
+hi Folded          guifg=#cccccc guibg=#000000
 hi Function        guifg=#CCCCFF
-hi Identifier      guifg=#FFFF33
+hi Identifier      guifg=#FFFF33               "gui=bold
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 
@@ -107,14 +107,14 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 
 if s:glowchalk_original == 1
    hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Comment         guifg=#cccccc
+   hi Comment         guifg=#777777
    hi CursorLine                    guibg=#3E3D32
    hi CursorColumn                  guibg=#3E3D32
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi NonText         guifg=#BCBCBC guibg=#3B3A32
 else
    hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#666666
+   hi Comment         guifg=#777777
    hi CursorLine                    guibg=#293739
    hi CursorColumn                  guibg=#293739
    hi LineNr          guifg=#BCBCBC guibg=#232526
