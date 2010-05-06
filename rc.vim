@@ -191,26 +191,14 @@ imap <F2> <esc>:w<cr>
 
 "" Folding
 
-set foldmethod=syntax
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
-vnoremap <Space> zf
-nmap z<Space> zO
+"set foldmethod=syntax
+"nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
+"vnoremap <Space> zf
+"nmap z<Space> zO
 
-"" Indent
-
-"" Move block of text
-
-"imap <C-S-h> <ESC><<
-"imap <C-S-l> <ESC>>>
-"nmap <C-S-h> <<
-"nmap <C-S-l> >>
+"" Move visually selected blocks of text
 vmap <C-h> <gv
 vmap <C-l> >gv
-
-"imap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
-"imap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
-"nmap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
-"nmap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
 vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 
