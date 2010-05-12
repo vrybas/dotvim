@@ -163,6 +163,7 @@ nmap <M-w> :tabclose<cr>
 map <C-Left> <esc>:tabprevious<cr>
 map <C-Right> <esc>:tabnext<cr>
 
+" Open tab by number
 map <M-1> 1gt
 map <M-2> 2gt
 map <M-3> 3gt
