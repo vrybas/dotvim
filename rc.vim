@@ -146,9 +146,10 @@ imap <D-x> <Esc>
 
 "" Previous - Next buffer
 
-"map <C-a> :bprev<CR>
-"map <C-s> :bnext<CR>
+map <M-a> :bprev<CR>
+map <M-s> :bnext<CR>
 map <C-Tab> :BufExplorer<CR>
+map <M-d> :BufExplorer<CR>
 
 imap <F4> <C-w>c
 nmap <F4> <C-w>c
@@ -157,15 +158,20 @@ nmap <F4> <C-w>c
 
 "" Tabs
 
-"map <F5> <esc>:tabnew<cr>
+nmap <M-t> :sp<cr><C-w>T
+nmap <M-w> :tabclose<cr>
 map <C-Left> <esc>:tabprevious<cr>
 map <C-Right> <esc>:tabnext<cr>
-map <C-a> <esc>:tabprevious<cr>
-map <C-s> <esc>:tabnext<cr>
-"imap <F5> <esc>:tabnew<cr>
-imap <C-Left> <esc>:tabprevious<cr>
-imap <C-Right> <esc>:tabnext<cr>
-imap <F8> <esc>:tabclose<cr>
+
+map <M-1> 1gt
+map <M-2> 2gt
+map <M-3> 3gt
+map <M-4> 4gt
+map <M-5> 5gt
+map <M-6> 6gt
+map <M-7> 7gt
+map <M-8> 8gt
+map <M-9> 9gt
 
 "" Ctrl+C & Ctrl+V to system buffer
 
@@ -211,6 +217,13 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+
+" Window resize
+
+nmap + <C-w>+
+nmap _ <C-w>-
+
 
 """"""""" Toggle maximize/unmaximize
 "nnoremap <C-W>O :call MaximizeToggle ()<CR>
@@ -273,6 +286,7 @@ cmap w!! %!sudo tee > /dev/null %
 
 imap <F3> :FuzzyFinderTextMate<CR>
 nmap <F3> :FuzzyFinderTextMate<CR>
+nmap <M-f> :FuzzyFinderTextMate<CR>
 "imap <F2> :CommandT<CR>
 "nmap <F2> :CommandT<CR>
 
@@ -282,6 +296,8 @@ nmap <F3> :FuzzyFinderTextMate<CR>
 
 nmap <silent> <F1> :NERDTreeToggle<CR>
 imap <silent> <F1> :NERDTreeToggle<CR>
+"nmap <silent> <M-d> :NERDTreeToggle<CR>
+"imap <silent> <M-d> :NERDTreeToggle<CR>
 
 nmap <silent> <C-F1> :g/def /<CR>
 imap <silent> <C-F1> :g/def /<CR>
