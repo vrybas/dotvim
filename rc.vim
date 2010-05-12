@@ -158,7 +158,7 @@ nmap <F4> <C-w>c
 
 "" Tabs
 
-nmap <M-t> :sp<cr><C-w>T
+nmap <M-t> :sp<cr><C-w>T " Open current buffer in new tab
 nmap <M-w> :tabclose<cr>
 map <C-Left> <esc>:tabprevious<cr>
 map <C-Right> <esc>:tabnext<cr>
