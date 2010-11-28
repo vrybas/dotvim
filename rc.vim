@@ -42,6 +42,7 @@ set backspace=indent,eol,start " Allow to navigate from start of line to end of 
 
 set wildmode=list:longest " Make cmdline tab completion similar to bash
 set autoread
+"set autochdir
 
  "                                                                           "
 "*****************************************************************************"
@@ -54,7 +55,7 @@ set autoread
 """ Line options
 
 set nu   " Turn on line numbers
-"set cul  " Highligth current line
+set cul  " Highligth current line
 
 "" Highligth in red more then 80 columns
 
@@ -95,7 +96,8 @@ set hidden " Allow dirty unsaved buffers
 
 """ Appearance
 
-colorscheme 256-jungle     " Color theme
+colorscheme evening    " Color theme
+"colorscheme railscasts    " Color theme
 
 """ Search
 
@@ -103,7 +105,7 @@ set ignorecase " Ignore case when searching
 set showcmd    " Show incomplete cmds down the bottom
 set showmode   " Show current mode down the bottom
 
-"set incsearch  " Find the next match as we type the search
+set incsearch  " Find the next match as we type the search
 set hlsearch   " Hilight searches by default
 
 " Page Up & Page Down behaviour
@@ -128,7 +130,7 @@ if has("gui_running")
   set showtabline=2  "tabs bar
   set laststatus=2   "file status
   colorscheme glowchalk "ir_black vrdual --  Colorscheme
-  set gfn=Terminus\ 10 " Monospace\ 9 --  GUI Font
+  set gfn=Terminus\ 12 " Monospace\ 9 --  GUI Font
 endif
 
  "                                                                           "
@@ -191,7 +193,7 @@ vmap <C-c> "+y
 map <C-n> :noh<CR>
 "map <Leader>ri :Rinitializer<Space>
 
-" F3 - Save File
+" F2 - Save File
 nmap <F2> :w<cr>
 vmap <F2> <esc>:w<cr>
 imap <F2> <esc>:w<cr>
@@ -281,19 +283,20 @@ cmap w!! %!sudo tee > /dev/null %
 "*****************************************************************************"
  "                                                                           "
 
-""" Fuzzy Finder Textmate
+""" CommandT for files browsing
 
 " Ctrl+F map to start search
 
-imap <F3> :FuzzyFinderTextMate<CR>
-nmap <F3> :FuzzyFinderTextMate<CR>
-nmap <M-f> :FuzzyFinderTextMate<CR>
+"imap <F3> :FuzzyFinderTextMate<CR>
+"nmap <F3> :FuzzyFinderTextMate<CR>
+"nmap <M-f> :FuzzyFinderTextMate<CR>
+nmap <M-f> :CommandT<CR>
 "imap <F2> :CommandT<CR>
 "nmap <F2> :CommandT<CR>
 
 """ NERDTree
 
-" Ctrl+D map to toggle NERDTree
+" F1 to toggle NERDTree
 
 nmap <silent> <F1> :NERDTreeToggle<CR>
 imap <silent> <F1> :NERDTreeToggle<CR>
@@ -329,7 +332,7 @@ set grepprg=ack\ -a
 
 """ RSense
 
-let g:rsenseHome = "$RSENSE_HOME"
+"let g:rsenseHome = "$RSENSE_HOME"
 
  "                                                                           "
 "*****************************************************************************"
@@ -338,6 +341,47 @@ let g:rsenseHome = "$RSENSE_HOME"
 "
 "*****************************************************************************"
  "                                                                           "
+
+" Color switchers
+"
+
+com Lfdark :call DarkScheme()<CR>
+com Lflight :call LightScheme()<CR>
+com Lfdark12 :call DarkScheme12()<CR>
+com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
+
+fun! DarkScheme()
+  colorscheme glowchalk
+  set gfn=Terminus\ 10
+endf
+
+fun! DarkScheme12()
+  colorscheme glowchalk
+  set gfn=Terminus\ 12
+endf
+
+fun! DarkSchemeMonaco()
+  colorscheme glowchalk
+  set gfn=Monaco\ 10
+endf
+
+fun! LightScheme()
+  colorscheme vrdual
+  set gfn=Monospace\ 10
+endf
+
+
+" ConqueTerm
+"
+
+com Zsh :call ZshStart()<CR>
+
+fun! ZshStart()
+  ConqueTerm zsh
+endf
+
+let g:ConqueTerm_Color = 0
+
 
 """ Remove all spaces from end in each line
 
@@ -383,7 +427,7 @@ endfun
 
 "" Remove all spaces from end of each line
 
-autocmd BufWritePre * call RemoveSpaces()
+"autocmd BufWritePre * call RemoveSpaces()
 
 "" Auto create ctags
 
@@ -396,85 +440,7 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
- "                                                                           "
-"*****************************************************************************"
-"
-" Map cyrillic keys to latin to use in command mode
-"
-"*****************************************************************************"
- "                                                                           "
 
-map ё `
-map й q
-map ц w
-map у e
-map к r
-map е t
-map н y
-map г u
-map ш i
-map щ o
-map з p
-map х [
-map ъ ]
-map ф a
-map ы s
-map в d
-map а f
-map п g
-map р h
-map о j
-map л k
-map д l
-map ж ;
-map э '
-map я z
-map ч x
-map с c
-map м v
-map и b
-map т n
-map ь m
-map б ,
-map ю .
-"map . /
-
-map Ё ~
-map Й Q
-map Ц W
-map У E
-map К R
-map Е T
-map Н Y
-map Г U
-map Ш I
-map Щ O
-map З P
-map Х {
-map Ъ }
-map Ф A
-map Ы S
-map В D
-map А F
-map П G
-map Р H
-map О J
-map Л K
-map Д L
-map Ж :
-map Э "
-map Я Z
-map Ч X
-map С C
-map М V
-map И B
-map Т N
-map Ь M
-map Б <
-map Ю >
-map , ?
-
- "                                                                           "
 "*****************************************************************************"
 " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * "
 "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"
