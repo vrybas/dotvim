@@ -55,7 +55,7 @@ set autoread
 """ Line options
 
 set nu   " Turn on line numbers
-set cul  " Highligth current line
+"set cul  " Highligth current line
 
 "" Highligth in red more then 80 columns
 
@@ -416,6 +416,12 @@ fun! Surround(s1, s2) range
   endif
   exe "normal `ba" . a:s2 . "\<Esc>`ai" . a:s1 . "\<Esc>"
 endfun
+
+
+"""" Toggle show trailing characters
+
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
 
  "                                                                           "
 "*****************************************************************************"
