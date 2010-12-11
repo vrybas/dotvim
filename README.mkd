@@ -1,8 +1,8 @@
 [DotVim](https://github.com/vrybas/dotvim)
 ======================================================================
 
-### Preface
-    Vim configuration & plugins for Ruby on Rails development
+## Preface
+    Vim configuration & plugins 
 
 ## Features ##
    * ???
@@ -73,50 +73,28 @@
     (make your own switchers in ~/.vim/rc.vim, section "Color switchers")
 
 ## Plugins installed ##
-### [Ack.vim](http://www.vim.org/scripts/script.php?script_id=2572)
-    This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep. This plugin will allow you to run ack from vim, and shows the results in a split window. 
-
-### Align.vba
-    
-### bufexplorer.vim
-
-### changes.vim
-
-### command-t.vim
-
-### conque_term.vim
-
-### delimitMate.vim
-
-### fuzzyfinder_textmate.vim
-
-### fuzzyfinder.vim
-
-### matchit.vim
-
-### NERD_commenter.vim
-
-### NERD_tree.vim
-
-### rails.vim
-
-### rsense.vim
-
-### snipMate.vim
-
-### surround.vim
-
-### tabexplorer.vim
-
-### toggle_words.vim
-
-### vim-rspec.rb
-
-### vim-rspec.vim
-
-### vim-rspec.xsl
-
-### vim-ruby-folding-1.1.vim
+### [Ack.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Ack.vim)
+### [Align.vba](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Align.vba)
+### [Bufexplorer.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Bufexplorer.vim)
+### [Changes.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Changes.vim)
+### [Command-t.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Command-t)
+### [Conque_term.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Conque_term.vim)
+### [DelimitMate.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=DelimitMate.vim)
+### [Fuzzyfinder_textmate.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Fuzzyfinder_textmate.vim)
+### [Fuzzyfinder.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Fuzzyfinder.vim)
+### [Matchit.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Matchit.vim)
+### [NERD_commenter.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=NERD_commenter.vim)
+### [NERD_tree.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=NERD_tree.vim)
+### [Rails.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Rails.vim)
+### [Rsense.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Rsense.vim)
+### [SnipMate.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=SnipMate.vim)
+### [Surround.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Surround.vim)
+### [Tabexplorer.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Tabexplorer.vim)
+### [Toggle_words.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Toggle_words.vim)
+### [Vim-rspec.rb](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-rspec.rb)
+### [Vim-rspec.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-rspec.vim)
+### [Vim-rspec.xsl](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-rspec.xsl)
+### [Vim-ruby-folding-1.1.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-ruby-folding)
 
 
 ## How To ##
