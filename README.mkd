@@ -1,4 +1,4 @@
-[dotVim](https://github.com/vrybas/dotvim)
+[DotVim](https://github.com/vrybas/dotvim)
 ======================================================================
 
 ### Preface
@@ -6,7 +6,7 @@
 
 ## Features ##
    * ???
-   coming soon...
+   * coming soon...
 
 ## Installation (Ubuntu) ##
    1. echo "runtime! rc.vim" > ~/.vimrc
@@ -15,8 +15,8 @@
    4. sudo apt-get console-terminus
 
 ## Custom Keymap ##
-   C - Ctrl key
-   M - Alt key(on PC)
+   * C - Ctrl key
+   * M - Alt key(on PC)
 
 ### Buffers
     <M-a>     Previous buffer
@@ -33,10 +33,10 @@
     <M-1..9>  Go to 1..9 tab
 
 ### Copy & Paste
-    <C-c>     Copy to system buffer
+    <C-c>     Copy selection to system buffer
     <C-v>     Paste from system buffer
 
-### Moving selected lines
+### Move selected lines
     <C-h>     Move left    
     <C-j>     Move down    
     <C-k>     Move up    
@@ -72,12 +72,59 @@
     :Lfdarkmonaco
     (make your own switchers in ~/.vim/rc.vim, section "Color switchers")
 
+## Plugins installed ##
+### [Ack.vim](http://www.vim.org/scripts/script.php?script_id=2572)
+    This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep. This plugin will allow you to run ack from vim, and shows the results in a split window. 
+
+### Align.vba
+    
+### bufexplorer.vim
+
+### changes.vim
+
+### command-t.vim
+
+### conque_term.vim
+
+### delimitMate.vim
+
+### fuzzyfinder_textmate.vim
+
+### fuzzyfinder.vim
+
+### matchit.vim
+
+### NERD_commenter.vim
+
+### NERD_tree.vim
+
+### rails.vim
+
+### rsense.vim
+
+### snipMate.vim
+
+### surround.vim
+
+### tabexplorer.vim
+
+### toggle_words.vim
+
+### vim-rspec.rb
+
+### vim-rspec.vim
+
+### vim-rspec.xsl
+
+### vim-ruby-folding-1.1.vim
+
+
 ## How To ##
 ### Start Vim with current project tree open
     1. Start vim with project directory path(e.g vim /home/username/projects/MyProject/src/).
     2. Right after that, press <cd> with current path highlighted in Tree-view.
 
-## Quickly jump between Ruby methods
+### Quickly jump between Ruby methods
     1. Press <F1> to see all methods.
     2. Enter :xx, where xx is method line number.
 
