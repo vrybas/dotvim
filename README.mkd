@@ -1,0 +1,53 @@
+[dotVim](https://github.com/vrybas/dotvim)
+======================================================================
+
+### Preface
+    Vim configuration & plugins for Ruby on Rails development
+
+## Features ##
+   * Mouse everywhere
+   * Clean GUI without menu, toolbar, scrollbars e.t.c.
+   * ???
+
+## Installation (Ubuntu) ##
+   1. echo "runtime! rc.vim" > ~/.vimrc
+   2. git clone git://github.com/vrybas/dotvim.git ~/.vim
+   3. sudo apt-get install ack-grep
+   4. sudo apt-get console-terminus
+
+## Keymap ##
+### Normal mode
+    <C-^>   Select the previously selected tab.If [count] is specified, go to the [count]th tab.
+    <C-a>   Increments the last number in URL by 1, or by [count] if given.
+    <C-b>   Scroll up [count] full page.
+    <C-d>   Scroll down [count] half page
+    <C-f>   Scroll down [count] full page
+    <C-i>   Go [count] pages forward in the browser history.
+    <C-o>   Go [count] pages back in the browser history.
+    <C-u>   Scroll up [count] half page
+    <C-v>   Pass through the next key
+    <C-x>   Decrements the last number in URL by 1, or by [count] if given.
+    <C-y>   Shorten current url,and copy it into clipboard
+    <C-z>   Temporarily ignore all Vrome key bindings
+
+### Insert mode
+
+    <C-^>   Select the previously selected tab.If [count] is specified, go to the [count]th tab.
+    <C-a>   Increments the last number in URL by 1, or by [count] if given.
+    <C-b>   Scroll up [count] full page.
+    <C-d>   Scroll down [count] half page
+    <C-f>   Scroll down [count] full page
+    <C-i>   Go [count] pages forward in the browser history.
+    <C-o>   Go [count] pages back in the browser history.
+    <C-u>   Scroll up [count] half page
+    <C-v>   Pass through the next key
+    <C-x>   Decrements the last number in URL by 1, or by [count] if given.
+    <C-y>   Shorten current url,and copy it into clipboard
+    <C-z>   Temporarily ignore all Vrome key bindings
+
+
+## Author ##
+  Vladimir Rybas
+    - github.com/vrybas
+    - vladimir@rybas.ru
+    - twitter.com/vrybas
