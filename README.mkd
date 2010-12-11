@@ -5,9 +5,8 @@
     Vim configuration & plugins for Ruby on Rails development
 
 ## Features ##
-   * Mouse everywhere
-   * Clean GUI without menu, toolbar, scrollbars e.t.c.
    * ???
+   coming soon...
 
 ## Installation (Ubuntu) ##
    1. echo "runtime! rc.vim" > ~/.vimrc
@@ -15,36 +14,72 @@
    3. sudo apt-get install ack-grep
    4. sudo apt-get console-terminus
 
-## Keymap ##
-### Normal mode
-    <C-^>   Select the previously selected tab.If [count] is specified, go to the [count]th tab.
-    <C-a>   Increments the last number in URL by 1, or by [count] if given.
-    <C-b>   Scroll up [count] full page.
-    <C-d>   Scroll down [count] half page
-    <C-f>   Scroll down [count] full page
-    <C-i>   Go [count] pages forward in the browser history.
-    <C-o>   Go [count] pages back in the browser history.
-    <C-u>   Scroll up [count] half page
-    <C-v>   Pass through the next key
-    <C-x>   Decrements the last number in URL by 1, or by [count] if given.
-    <C-y>   Shorten current url,and copy it into clipboard
-    <C-z>   Temporarily ignore all Vrome key bindings
+## Custom Keymap ##
+   C - Ctrl key
+   M - Alt key(on PC)
 
-### Insert mode
+### Buffers
+    <M-a>     Previous buffer
+    <M-s>     Next buffer
+    <M-d>     Buffer explorer
+    <C-Tab>   Buffer explorer
+    <F4>      Close current buffer
 
-    <C-^>   Select the previously selected tab.If [count] is specified, go to the [count]th tab.
-    <C-a>   Increments the last number in URL by 1, or by [count] if given.
-    <C-b>   Scroll up [count] full page.
-    <C-d>   Scroll down [count] half page
-    <C-f>   Scroll down [count] full page
-    <C-i>   Go [count] pages forward in the browser history.
-    <C-o>   Go [count] pages back in the browser history.
-    <C-u>   Scroll up [count] half page
-    <C-v>   Pass through the next key
-    <C-x>   Decrements the last number in URL by 1, or by [count] if given.
-    <C-y>   Shorten current url,and copy it into clipboard
-    <C-z>   Temporarily ignore all Vrome key bindings
+### Tabs
+    <M-t>     Open current buffer in new tab
+    <M-w>     Close current tab
+    <C-Left>  Previous tab
+    <C-Right> Next tab
+    <M-1..9>  Go to 1..9 tab
 
+### Copy & Paste
+    <C-c>     Copy to system buffer
+    <C-v>     Paste from system buffer
+
+### Moving selected lines
+    <C-h>     Move left    
+    <C-j>     Move down    
+    <C-k>     Move up    
+    <C-l>     Move right    
+
+### Navigate between splits
+    <C-h>     Left    
+    <C-j>     Down    
+    <C-k>     Up    
+    <C-l>     Right    
+
+### Resize split height
+    <+>       Increase
+    <_>       Decrease
+
+### Other
+    <C-n>     Clear search highlighting 
+    <F2>      Save file from any mode
+    <C-Space> Autocompletion
+    <F1>      Show project tree (NERDTree)
+    <M-f>     Quick file search (CommandT)
+    <C-F1>    Show all Ruby methods in current file
+    <\s>      Toggle display trailing characters
+
+## Commands ##
+### Search for _string_ in current directory and subdirectories
+    :Ack '_string_'
+
+### Quickly change colorschemes
+    :Lfdark
+    :Lflight
+    :Lfdark12
+    :Lfdarkmonaco
+    (make your own switchers in ~/.vim/rc.vim, section "Color switchers")
+
+## How To ##
+### Start Vim with current project tree open
+    1. Start vim with project directory path(e.g vim /home/username/projects/MyProject/src/).
+    2. Right after that, press <cd> with current path highlighted in Tree-view.
+
+## Quickly jump between Ruby methods
+    1. Press <F1> to see all methods.
+    2. Enter :xx, where xx is method line number.
 
 ## Author ##
   Vladimir Rybas
