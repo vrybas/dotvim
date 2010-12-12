@@ -52,7 +52,7 @@
     <C-F1>    Show all Ruby methods in current file
     <C-n>     Clear search highlighting 
     <\s>      Toggle display trailing characters
-    <C-Space> Autocompletion
+    <C-Space> Autocompletion(basic)
 
 ## Commands ##
 ### Search for _string_ in current directory and subdirectories
