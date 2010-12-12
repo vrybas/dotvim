@@ -267,7 +267,7 @@ endwhile
 
 "" Autocomplete
 
-imap <C-Space> <C-x><C-o>
+imap <C-Space> <C-x><C-o><C-p>
 
 "" Other stuff
 
