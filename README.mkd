@@ -11,19 +11,19 @@
    * C - Ctrl key
    * M - Alt key(on PC)
 
-### Buffers
-    <M-a>     Previous buffer
-    <M-s>     Next buffer
-    <M-d>     Buffer explorer
-    <C-Tab>   Buffer explorer
-    <F4>      Close current buffer
-
 ### Tabs
     <M-t>     Open current buffer in new tab
     <M-w>     Close current tab
     <C-Left>  Previous tab
     <C-Right> Next tab
     <M-1..9>  Go to 1..9 tab
+
+### Buffers
+    <M-a>     Previous buffer
+    <M-s>     Next buffer
+    <M-d>     Buffer explorer
+    <C-Tab>   Buffer explorer
+    <F4>      Close current buffer
 
 ### Copy & Paste
     <C-c>     Copy selection to system buffer
