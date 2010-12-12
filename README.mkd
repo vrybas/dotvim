@@ -66,7 +66,8 @@
     2. Enter :xx, where xx is method line number.
 
 ### Jump between Rails project files
-    Use :Rmodel, :Rview, :Rcontroller commands [read more](http://www.vim.org/scripts/script.php?script_id=1567)
+Use :Rmodel, :Rview, :Rcontroller commands 
+[read more](http://www.vim.org/scripts/script.php?script_id=1567)
 
 ### Search for _string_ in current directory and subdirectories
     :Ack '_string_'
