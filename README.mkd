@@ -29,7 +29,7 @@
     <C-c>     Copy selection to system buffer
     <C-v>     Paste from system buffer
 
-### Move selected lines
+### Move selected line(s)
     <C-h>     Move left    
     <C-j>     Move down    
     <C-k>     Move up    
@@ -46,13 +46,13 @@
     <_>       Decrease
 
 ### Other
-    <C-n>     Clear search highlighting 
-    <F2>      Save file from any mode
-    <C-Space> Autocompletion
     <F1>      Show project tree (NERDTree)
     <M-f>     Quick file search (CommandT)
+    <F2>      Save file from any mode
     <C-F1>    Show all Ruby methods in current file
+    <C-n>     Clear search highlighting 
     <\s>      Toggle display trailing characters
+    <C-Space> Autocompletion
 
 ## Commands ##
 ### Search for _string_ in current directory and subdirectories
