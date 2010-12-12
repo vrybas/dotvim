@@ -54,8 +54,6 @@
     <\s>      Toggle display trailing characters
     <C-Space> Autocompletion (basic)
 
-## Commands ##
-
 ## How To ##
 ### Start Vim with current project tree open
     1. Start vim with project directory path(e.g. vim /home/username/projects/MyProject/src/).
