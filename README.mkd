@@ -55,6 +55,19 @@
     <C-Space> Autocompletion (basic)
 
 ## Commands ##
+
+## How To ##
+### Start Vim with current project tree open
+    1. Start vim with project directory path(e.g. vim /home/username/projects/MyProject/src/).
+    2. Press <cd> with current path highlighted in NERDTree. 
+
+### Jump between Ruby methods
+    1. Press <F1> to see all methods.
+    2. Enter :xx, where xx is method line number.
+
+### Jump between Rails project files
+    Use :Rmodel, :Rview, :Rcontroller commands [read more](http://www.vim.org/scripts/script.php?script_id=1567)
+
 ### Search for _string_ in current directory and subdirectories
     :Ack '_string_'
 
@@ -64,15 +77,6 @@
     :Lfdark12
     :Lfdarkmonaco
     (make your own switchers in ~/.vim/rc.vim, section "Color switchers")
-
-## How To ##
-### Start Vim with current project tree open
-    1. Start vim with project directory path(e.g. vim /home/username/projects/MyProject/src/).
-    2. Right after that, press <cd> with current path highlighted in Tree-view.
-
-### Quickly jump between Ruby methods
-    1. Press <F1> to see all methods.
-    2. Enter :xx, where xx is method line number.
 
 ## Plugins installed ##
 * [Ack.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Ack.vim)
