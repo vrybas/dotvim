@@ -58,7 +58,7 @@
 ### Search for _string_ in current directory and subdirectories
     :Ack '_string_'
 
-### Quickly change colorschemes
+### Quickly change look & feel
     :Lfdark
     :Lflight
     :Lfdark12
@@ -67,7 +67,7 @@
 
 ## How To ##
 ### Start Vim with current project tree open
-    1. Start vim with project directory path(e.g vim /home/username/projects/MyProject/src/).
+    1. Start vim with project directory path(e.g. vim /home/username/projects/MyProject/src/).
     2. Right after that, press <cd> with current path highlighted in Tree-view.
 
 ### Quickly jump between Ruby methods
