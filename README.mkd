@@ -1,16 +1,9 @@
-[DotVim](https://github.com/vrybas/dotvim)
+[DotVim](https://github.com/vrybas/dotvim) -- Vim configuration & plugins 
 ======================================================================
 
-## Preface
-    Vim configuration & plugins 
-
-## Features ##
-   * ???
-   * coming soon...
-
 ## Installation (Ubuntu) ##
-   1. echo "runtime! rc.vim" > ~/.vimrc
-   2. git clone git://github.com/vrybas/dotvim.git ~/.vim
+   1. git clone git://github.com/vrybas/dotvim.git ~/.vim
+   2. echo "runtime! rc.vim" > ~/.vimrc
    3. sudo apt-get install ack-grep
    4. sudo apt-get console-terminus
 
