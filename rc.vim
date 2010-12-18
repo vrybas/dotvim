@@ -254,14 +254,6 @@ set grepprg=ack\ -a
 nmap <C-A> :Ack<Space>
 imap <C-A> :Ack<Space>
 
-""" NERDCommenter
-
-"imap <C-/> <ESC>,cc
-"nmap <C-/> ,cc
-
-""" RSense
-
-"let g:rsenseHome = "$RSENSE_HOME"
 
  "                                                                           "
 "*****************************************************************************"
