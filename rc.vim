@@ -42,27 +42,18 @@ set backspace=indent,eol,start " Allow to navigate from start of line to end of 
 
 set wildmode=list:longest " Make cmdline tab completion similar to bash
 set autoread
-"set autochdir
 
- "                                                                           "
 "*****************************************************************************"
 "
 " Look and feel
 "
 "*****************************************************************************"
- "                                                                           "
 
 """ Line options
 
 set nu   " Turn on line numbers
 "set cul  " Highligth current line
 
-"" Highligth in red more then 80 columns
-
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.*/
-
-""" Tabulation
 
 " Tab size
 
@@ -80,27 +71,20 @@ set statusline=%<%f%h%m%r%h%w%y\ %{&ff}\ %{strftime('%a\ %b\ %e\ %I:%M\ %p')}%=\
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 
-
 " Do not wrap text
-
 set nowrap
 set noswapfile
-"set visualbell
 
 " Show 3 line after and before cursor when scrolling
 set scrolloff=3
 
 """ Buffers
-
 set hidden " Allow dirty unsaved buffers
 
 """ Appearance
-
 colorscheme evening    " Color theme
-"colorscheme railscasts    " Color theme
 
 """ Search
-
 set ignorecase " Ignore case when searching
 set showcmd    " Show incomplete cmds down the bottom
 set showmode   " Show current mode down the bottom
@@ -109,7 +93,6 @@ set incsearch  " Find the next match as we type the search
 set hlsearch   " Hilight searches by default
 
 " Page Up & Page Down behaviour
-
 set nostartofline " Don't jump to fisrt line
 
  "                                                                           "
@@ -142,12 +125,10 @@ endif
  "                                                                           "
 
 "" Toggle between normal and insert mode
-
 nnoremap <D-x> i
 imap <D-x> <Esc>
 
 "" Previous - Next buffer
-
 map <M-a> :bprev<CR>
 map <M-s> :bnext<CR>
 map <C-Tab> :BufExplorer<CR>
@@ -159,7 +140,6 @@ nmap <F4> <C-w>c
 ""
 
 "" Tabs
-
 nmap <M-t> :sp<cr><C-w>T " Open current buffer in new tab
 nmap <M-w> :tabclose<cr>
 map <C-Left> <esc>:tabprevious<cr>
@@ -177,7 +157,6 @@ map <M-8> 8gt
 map <M-9> 9gt
 
 "" Ctrl+C & Ctrl+V to system buffer
-
 nmap <C-v> "+gp
 imap <C-v> <ESC><C-v>i
 vmap <C-c> "+y
@@ -185,25 +164,13 @@ vmap <C-c> "+y
 "imap <C-o> <ESC>O
 "imap <C-o> <ESC>o
 
-"" Ctrl+L to clear highlight
-
-" TODO: map turn off highlightig on any mode
-"map <C-i> :nohls<CR><C-L>
-"map <C-i> <C-O>:nohls<CR>
+"" Ctrl+n to clear highlight
 map <C-n> :noh<CR>
-"map <Leader>ri :Rinitializer<Space>
 
 " F2 - Save File
 nmap <F2> :w<cr>
 vmap <F2> <esc>:w<cr>
 imap <F2> <esc>:w<cr>
-
-"" Folding
-
-"set foldmethod=syntax
-"nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
-"vnoremap <Space> zf
-"nmap z<Space> zO
 
 "" Move visually selected blocks of text
 vmap <C-h> <gv
@@ -227,33 +194,6 @@ nmap <C-l> <C-w>l
 nmap + <C-w>+
 nmap _ <C-w>-
 
-
-""""""""" Toggle maximize/unmaximize
-"nnoremap <C-W>O :call MaximizeToggle ()<CR>
-"nnoremap <C-W>o :call MaximizeToggle ()<CR>
-"nnoremap <C-W><C-O> :call MaximizeToggle ()<CR>
-"
-"function! MaximizeToggle()
-"  if exists("s:maximize_session")
-"    exec "source " . s:maximize_session
-"    call delete(s:maximize_session)
-"    unlet s:maximize_session
-"    let &hidden=s:maximize_hidden_save
-"    unlet s:maximize_hidden_save
-"  else
-"    let s:maximize_hidden_save = &hidden
-"    let s:maximize_session = tempname()
-"    set hidden
-"    exec "mksession! " . s:maximize_session
-"    only
-"  endif
-"endfunction
-
-"" Surround text
-
-"vnoremap " :call Surround('"', '"')<CR>
-"vnoremap ' :call Surround("'", "'")<CR>
-
 """
 
 let i=1
@@ -272,7 +212,6 @@ imap <C-Space> <C-x><C-o><C-p>
 "" Other stuff
 
 " Sudo promt with :w!!
-
 cmap w!! %!sudo tee > /dev/null %
 
  "                                                                           "
@@ -285,23 +224,14 @@ cmap w!! %!sudo tee > /dev/null %
 
 """ CommandT for files browsing
 
-" Ctrl+F map to start search
+" Alt+F map to start search
 
-"imap <F3> :FuzzyFinderTextMate<CR>
-"nmap <F3> :FuzzyFinderTextMate<CR>
-"nmap <M-f> :FuzzyFinderTextMate<CR>
 nmap <M-f> :CommandT<CR>
-"imap <F2> :CommandT<CR>
-"nmap <F2> :CommandT<CR>
 
 """ NERDTree
-
 " F1 to toggle NERDTree
-
 nmap <silent> <F1> :NERDTreeToggle<CR>
 imap <silent> <F1> :NERDTreeToggle<CR>
-"nmap <silent> <M-d> :NERDTreeToggle<CR>
-"imap <silent> <M-d> :NERDTreeToggle<CR>
 
 nmap <silent> <C-F1> :g/def /<CR>
 imap <silent> <C-F1> :g/def /<CR>
@@ -394,28 +324,6 @@ fun! RemoveSpaces()
     call cursor(line, col)
   endif
 endf
-
-""" Surround text
-
-fun! Surround(s1, s2) range
-  exe "normal vgvmboma\<Esc>"
-  normal `a
-  let lineA = line(".")
-  let columnA = col(".")
-  normal `b
-  let lineB = line(".")
-  let columnB = col(".")
-  " exchange marks
-  if lineA > lineB || lineA <= lineB && columnA > columnB
-    " save b in c
-    normal mc
-    " store a in b
-    normal `amb
-    " set a to old b
-    normal `cma
-  endif
-  exe "normal `ba" . a:s2 . "\<Esc>`ai" . a:s1 . "\<Esc>"
-endfun
 
 """"" IRB surrounds
 
