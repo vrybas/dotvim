@@ -247,13 +247,12 @@ let g:rubycomplete_rails = 1
 """ Ack
 
 " Use instead grep
-
 set grepprg=ack\ -a
 
 " Ctrl+A to start Ack search
 
-"nmap <C-A> :Ack<Space>
-"imap <C-A> :Ack<Space>
+nmap <C-A> :Ack<Space>
+imap <C-A> :Ack<Space>
 
 """ NERDCommenter
 
