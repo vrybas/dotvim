@@ -417,6 +417,10 @@ fun! Surround(s1, s2) range
   exe "normal `ba" . a:s2 . "\<Esc>`ai" . a:s1 . "\<Esc>"
 endfun
 
+""""" IRB surrounds
+
+let g:surround_45 = "<% \r %>"
+let g:surround_61 = "<%= \r %>"
 
 """" Toggle show trailing characters
 
