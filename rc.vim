@@ -307,8 +307,8 @@ endf
 
 " Another user functions
 
-com Wrap :call WrapLbr()<CR>
 nmap <silent> <leader>w :call WrapLbr()<CR>
+nmap <silent> <leader>wo :set nowrap<CR>
 
 fun! WrapLbr()
   set wrap
