@@ -53,6 +53,7 @@ set autoread
 
 set nu   " Turn on line numbers
 "set cul  " Highligth current line
+"set so=999
 
 
 " Tab size
@@ -82,7 +83,7 @@ set scrolloff=3
 set hidden " Allow dirty unsaved buffers
 
 """ Appearance
-colorscheme evening    " Color theme
+colorscheme github    " Color theme
 
 """ Search
 set ignorecase " Ignore case when searching
@@ -112,8 +113,8 @@ if has("gui_running")
   set guioptions-=L  "remove left-hand scroll bar
   set showtabline=2  "tabs bar
   set laststatus=2   "file status
-  colorscheme glowchalk "ir_black vrdual --  Colorscheme
-  set gfn=Terminus\ 12 " Monospace\ 9 --  GUI Font
+  colorscheme github "ir_black vrdual --  Colorscheme
+  set gfn=Monospace\ 11 " Monospace\ 9 --  GUI Font
 endif
 
  "                                                                           "
@@ -270,6 +271,8 @@ com Lfdark :call DarkScheme()<CR>
 com Lflight :call LightScheme()<CR>
 com Lfdark12 :call DarkScheme12()<CR>
 com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
+com Lfgithub :call GithubScheme()<CR>
+com Lfgithub10 :call GithubScheme10()<CR>
 
 fun! DarkScheme()
   colorscheme glowchalk
@@ -290,6 +293,67 @@ fun! LightScheme()
   colorscheme vrdual
   set gfn=Monospace\ 10
 endf
+
+fun! GithubScheme()
+  colorscheme github
+  set gfn=Monospace\ 11
+endf
+
+fun! GithubScheme10()
+  colorscheme github
+  set gfn=Monospace\ 10
+endf
+
+
+" Another user functions
+
+com Wrap :call WrapLbr()<CR>
+nmap <silent> <leader>w :call WrapLbr()<CR>
+
+fun! WrapLbr()
+  set wrap
+  set lbr
+  call TYToggleBreakMove()
+endf
+
+" mapping to make movements operate on 1 screen line in wrap mode
+function! ScreenMovement(movement)
+  "if &wrap && b:gmove == 'yes'
+  if &wrap && b:gmove == 'yes'
+    return "g" . a:movement
+  else
+    return a:movement
+  endif
+endfunction
+onoremap <silent> <expr> j ScreenMovement("j")
+onoremap <silent> <expr> k ScreenMovement("k")
+onoremap <silent> <expr> 0 ScreenMovement("0")
+onoremap <silent> <expr> ^ ScreenMovement("^")
+onoremap <silent> <expr> $ ScreenMovement("$")
+nnoremap <silent> <expr> j ScreenMovement("j")
+nnoremap <silent> <expr> k ScreenMovement("k")
+nnoremap <silent> <expr> 0 ScreenMovement("0")
+nnoremap <silent> <expr> ^ ScreenMovement("^")
+nnoremap <silent> <expr> $ ScreenMovement("$")
+" toggle showbreak
+function! TYShowBreak()
+  if &showbreak == ''
+    set showbreak=>
+  else
+    set showbreak=
+  endif
+endfunction
+let b:gmove = "yes"
+function! TYToggleBreakMove()
+  if exists("b:gmove") && b:gmove == "yes"
+    let b:gmove = "no"
+  else
+    let b:gmove = "yes"
+  endif
+endfunction
+nmap  <expr> ,b  TYShowBreak()
+nmap  <expr> ,bb  TYToggleBreakMove()
+
 
 
 " ConqueTerm
