@@ -231,8 +231,16 @@ nmap <M-f> :CommandT<CR>
 
 """ NERDTree
 " F1 to toggle NERDTree
-nmap <silent> <F1> :NERDTreeToggle<CR>
-imap <silent> <F1> :NERDTreeToggle<CR>
+nmap <silent> <F1> :call NERDTreeToggleWithFind()<CR>
+imap <silent> <F1> :call NERDTreeToggleWithFind()<CR>
+
+fun! NERDTreeToggleWithFind()
+  NERDTreeToggle 
+  exe "normal \<c-w>l"
+  if bufwinnr(t:NERDTreeBufName) > 0
+    NERDTreeFind
+  end
+endf
 
 nmap <silent> <C-F1> :g/def /<CR>
 imap <silent> <C-F1> :g/def /<CR>
