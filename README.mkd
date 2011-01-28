@@ -7,8 +7,8 @@
    0. rm -rf ~/.vim # :)
    1. git clone git://github.com/vrybas/dotvim.git ~/.vim
    2. echo "runtime! rc.vim" > ~/.vimrc
-   3. apt-get install ack-grep xfonts-terminus console-terminus # Ubuntu Linux packages
-   4. ln -s /usr/bin/ack-grep /usr/bin/ack
+   3. sudo apt-get install ack-grep xfonts-terminus console-terminus # Ubuntu Linux packages
+   4. sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 
 ## Custom Keymap ##
    * C - Ctrl key
@@ -73,9 +73,11 @@
     :Ack '_string_'
 
 ### Quickly change look & feel
+    :Lfgithub
+    :Lfgithub10
     :Lfdark
-    :Lflight
     :Lfdark12
+    :Lflight
     :Lfdarkmonaco
     (make your own switchers in ~/.vim/rc.vim, section "Color switchers")
 
