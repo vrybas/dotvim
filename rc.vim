@@ -83,7 +83,7 @@ set scrolloff=3
 set hidden " Allow dirty unsaved buffers
 
 """ Appearance
-colorscheme github    " Color theme
+colorscheme evening    " Color theme
 
 """ Search
 set ignorecase " Ignore case when searching
