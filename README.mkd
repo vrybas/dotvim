@@ -1,7 +1,7 @@
 [DotVim](https://github.com/vrybas/dotvim) -- Vim configuration & plugins 
 ======================================================================
 
-![Glowchalk](http://dl.dropbox.com/u/837984/vim/screenshots/glowchalk_terminus.png)
+![Github color scheme](http://dl.dropbox.com/u/837984/screenshots/github-vim.png)
 
 ## Installation ##
    0. rm -rf ~/.vim # :)
