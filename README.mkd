@@ -63,7 +63,7 @@
     2. Press <cd> with current path highlighted in NERDTree. 
 
 ### Jump between Ruby methods
-    1. Press <F1> to see all methods.
+    1. Press <C-F1> to see all methods.
     2. Enter :xx, where xx is method line number.
 
 ### Jump between Rails project files
