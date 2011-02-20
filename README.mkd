@@ -2,12 +2,13 @@
 ======================================================================
 
 ![Github color scheme](http://dl.dropbox.com/u/837984/screenshots/github-vim.png)
+works best with Gvim
 
 ## Installation ##
    0. rm -rf ~/.vim
    1. git clone git://github.com/vrybas/dotvim.git ~/.vim
    2. echo "runtime! rc.vim" > ~/.vimrc
-   3. sudo apt-get install ack-grep xfonts-terminus console-terminus
+   3. sudo apt-get install vim-gnome ack-grep xfonts-terminus console-terminus
    4. sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 
 ## Custom Keymap ##
