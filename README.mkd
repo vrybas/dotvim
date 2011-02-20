@@ -2,6 +2,7 @@
 ======================================================================
 
 ![Github color scheme](http://dl.dropbox.com/u/837984/screenshots/github-vim.png)
+
 works best with Gvim
 
 ## Installation ##
