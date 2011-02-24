@@ -34,7 +34,7 @@ works best with Gvim
     <C-c>     Copy selection to system buffer
     <C-v>     Paste from system buffer
 
-### Move selected line(s)
+### Move selected line(s) in visual mode
     <C-h>     Move left    
     <C-j>     Move down    
     <C-k>     Move up    
@@ -57,11 +57,12 @@ works best with Gvim
     <C-F1>    Show all Ruby methods in current file
     <C-n>     Clear search highlighting 
     <\s>      Toggle display trailing characters
-    <C-Space> Autocompletion (basic)
+    <\w>      Wrap mode on with the cursor movement among logical lines, not physical
+    <\wo>     Wrap mode off
 
 ## How To ##
 ### Start Vim with current project tree open
-    1. Start vim with project directory path(e.g. vim /home/username/projects/MyProject/src/).
+    1. Start vim with project directory path(e.g. gvim /home/username/projects/MyProject/src/).
     2. Press <cd> with current path highlighted in NERDTree. 
 
 ### Jump between Ruby methods
