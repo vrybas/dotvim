@@ -18,8 +18,7 @@
 "                                         by Aleksandr Koss (http://nocorp.ru)
 "                                         forked by Vladimir Rybas
 "
-"*****************************************************************************"
-
+"*****************************************************************************" 
 "                                                                           "
 "*****************************************************************************"
 "
@@ -59,6 +58,7 @@ set nu   " Turn on line numbers
 " Tab size
 
 set ts=2
+set sw=2
 set shiftwidth=2  " Make indent equal 2 spaces
 set ai            " Auto indent to current level
 set si            " Smart indent
@@ -105,16 +105,16 @@ set nostartofline " Don't jump to fisrt line
  "                                                                           "
 
 if has("gui_running")
-  set tb=icons      " Only icons in toolbar
-  set tbis=tiny     " Set icon size to tiny
-  set guioptions-=m  "remove menu bar
-  set guioptions-=T  "remove toolbar
-  set guioptions-=r  "remove right-hand scroll bar
-  set guioptions-=L  "remove left-hand scroll bar
-  set showtabline=2  "tabs bar
-  set laststatus=2   "file status
-  colorscheme github "ir_black vrdual --  Colorscheme
-  set gfn=Monospace\ 11 " Monospace\ 9 --  GUI Font
+  set tb=icons          " Only icons in toolbar
+  set tbis=tiny         " Set icon size to tiny
+  set guioptions-=m     " remove menu bar
+  set guioptions-=T     " remove toolbar
+  set guioptions-=r     " remove right-hand scroll bar
+  set guioptions-=L     " remove left-hand scroll bar
+  set showtabline=2     " tabs bar
+  set laststatus=2      " file status
+  colorscheme github " Colorscheme
+  set gfn=Monospace\ 11  " GUI Font
 endif
 
  "                                                                           "
@@ -278,6 +278,7 @@ imap <C-A> :Ack<Space>
 com Lfdark :call DarkScheme()<CR>
 com Lflight :call LightScheme()<CR>
 com Lfdark12 :call DarkScheme12()<CR>
+com Lfdark14 :call DarkScheme14()<CR>
 com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
 com Lfgithub :call GithubScheme()<CR>
 com Lfgithub10 :call GithubScheme10()<CR>
@@ -290,6 +291,11 @@ endf
 fun! DarkScheme12()
   colorscheme glowchalk
   set gfn=Terminus\ 12
+endf
+
+fun! DarkScheme14()
+  colorscheme glowchalk
+  set gfn=Terminus\ 14
 endf
 
 fun! DarkSchemeMonaco()
@@ -397,6 +403,16 @@ let g:surround_61 = "<%= \r %>"
 
 set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
+
+
+"""""" Indent Guides plugin configuration
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#F8F8FF   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#EEEEEE ctermbg=4
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
+autocmd VimEnter * IndentGuidesEnable
 
  "                                                                           "
 "*****************************************************************************"
