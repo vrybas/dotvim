@@ -107,6 +107,7 @@ works best with Gvim
 * [Vim-rspec.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-rspec.vim)
 * [Vim-rspec.xsl](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-rspec.xsl)
 * [Vim-ruby-folding-1.1.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-ruby-folding)
+* [Indent-Guides](https://github.com/nathanaelkane/vim-indent-guides)
 
 ## Author ##
   Vladimir Rybas
