@@ -68,7 +68,8 @@ set expandtab     " No tabs, no war!
 filetype on
 filetype plugin on
 filetype indent on
-set statusline=%<%f%h%m%r%h%w%y\ %{&ff}\ %{strftime('%a\ %b\ %e\ %I:%M\ %p')}%=\ lin:%l\,%L\ col:%c%V\ %P
+"set statusline=%<%f\ %{fugitive#statusline()}\ %=\ lin:%l\,%L\ col:%c%V\ %P
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 
@@ -135,8 +136,10 @@ map <M-s> :bnext<CR>
 map <C-Tab> :BufExplorer<CR>
 map <M-d> :BufExplorer<CR>
 
-imap <F4> <C-w>c
-nmap <F4> <C-w>c
+imap <F3> <C-w>c :set nowrap<CR>
+nmap <F3> <C-w>c :set nowrap<CR>
+imap <F4> :q!<CR> :set nowrap<CR>
+nmap <F4> :q!<CR> :set nowrap<CR>
 
 ""
 
