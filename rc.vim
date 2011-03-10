@@ -267,6 +267,9 @@ set grepprg=ack\ -a
 nmap <C-A> :Ack<Space>
 imap <C-A> :Ack<Space>
 
+" ZoomWin configuration
+map <Leader><Leader> :ZoomWin<CR>
+
 
  "                                                                           "
 "*****************************************************************************"

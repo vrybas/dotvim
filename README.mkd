@@ -109,6 +109,7 @@ works best with Gvim
 * [Vim-ruby-folding-1.1.vim](http://www.google.com/cse?cx=partner-pub-3005259998294962:bvyni59kjr1&ie=ISO-8859-1&q=Vim-ruby-folding)
 * [Indent-Guides](https://github.com/nathanaelkane/vim-indent-guides)
 * [Fugitive](https://github.com/tpope/vim-fugitive)
+* [ZoomWin](http://www.vim.org/scripts/script.php?script_id=508)
 
 ## Author ##
   Vladimir Rybas
