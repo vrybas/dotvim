@@ -110,6 +110,7 @@ works best with Gvim
 * [Indent-Guides](https://github.com/nathanaelkane/vim-indent-guides)
 * [Fugitive](https://github.com/tpope/vim-fugitive)
 * [ZoomWin](http://www.vim.org/scripts/script.php?script_id=508)
+* [SuperTab](http://www.vim.org/scripts/script.php?script_id=1643)
 
 ## Author ##
   Vladimir Rybas
