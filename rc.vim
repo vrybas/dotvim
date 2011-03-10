@@ -231,6 +231,7 @@ cmap w!! %!sudo tee > /dev/null %
 " Alt+F map to start search
 
 nmap <M-f> :CommandT<CR>
+let g:CommandTMaxHeight=20
 
 """ NERDTree
 " F1 to toggle NERDTree
