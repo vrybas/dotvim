@@ -327,12 +327,22 @@ endf
 
 
 " Another user functions
+"
+" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+
+" md, markdown, and mk are markdown and define buffer-local preview
+"au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+
+au BufRead,BufNewFile *.txt call WrapLbr()
 
 nmap <silent> <leader>w :call WrapLbr()<CR>
 nmap <silent> <leader>wo :set nowrap<CR>
 
 fun! WrapLbr()
   set wrap
+  set wm=2
+  set textwidth=72
   set lbr
   call TYToggleBreakMove()
 endf
@@ -422,6 +432,8 @@ let g:indent_guides_guide_size = 1
 if has("gui_running")
   autocmd VimEnter * IndentGuidesEnable
 endif
+
+
 
  "                                                                           "
 "*****************************************************************************"
