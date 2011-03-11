@@ -270,6 +270,9 @@ imap <C-A> :Ack<Space>
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
 
  "                                                                           "
 "*****************************************************************************"
