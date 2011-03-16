@@ -451,7 +451,7 @@ endif
 
 "" Remove all spaces from end of each line
 
-"autocmd BufWritePre * call RemoveSpaces()
+autocmd BufWritePre * call RemoveSpaces()
 
 "" Auto create ctags
 
