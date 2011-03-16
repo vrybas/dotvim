@@ -263,8 +263,11 @@ function! TYToggleBreakMove()
 endfunction
 nmap  <expr> ,b  TYShowBreak()
 nmap  <expr> ,bb  TYToggleBreakMove()
-" - - -
+" - - - 
 
+ "                                                                           "
+"*****************************************************************************"
+"
 " Key maps
 "
 "*****************************************************************************"
@@ -367,6 +370,27 @@ endwhile
 " Sudo promt with :w!!
 cmap w!! %!sudo tee > /dev/null %
 
+"""" Leader Mappings
+
+nnoremap <leader>a :Ack
+
+"nmap <silent> <leader>w :call WrapLbr()<CR>" Enable smart wrapping
+"nmap <silent> <leader>wo :set nowrap<CR>   " Disable smart wrapping
+
+nmap <silent><leader>p :set nolist!<CR>   " Show trailing characters
+nnoremap <leader>n :noh<cr>          " Clear highlight
+
+let g:SuperTabMappingForward = '<leader><tab>'
+
+nmap <silent><leader>v <C-w>v  " Create vertical split
+nmap <silent><leader>s <C-w>s  " Create horisontal split
+nmap <silent><leader>x <C-w>c  " Close split
+nmap <silent><leader>o :ZoomWin<CR> " Expand current split to fullscren/restore split size
+
+nmap <silent><leader><tab> :Sscratch<CR> " Opens a buffer which is never saved
+
+nmap <silent><leader>r :call ToggleRelNumber()<cr>
+
  "                                                                           "
 "*****************************************************************************"
 "
@@ -409,8 +433,6 @@ set grepprg=ack\ -a
 nmap <C-A> :Ack<Space>
 imap <C-A> :Ack<Space>
 
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -426,8 +448,6 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set f
 
 au BufRead,BufNewFile *.txt call WrapLbr()
 
-nmap <silent> <leader>w :call WrapLbr()<CR>
-nmap <silent> <leader>wo :set nowrap<CR>
 
 
 
@@ -447,7 +467,6 @@ let g:surround_61 = "<%= \r %>"
 """" Toggle show trailing characters
 
 set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
 
 
 """""" Indent Guides plugin configuration
