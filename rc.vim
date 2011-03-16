@@ -18,7 +18,7 @@
 "                                         by Aleksandr Koss (http://nocorp.ru)
 "                                         forked by Vladimir Rybas
 "
-"*****************************************************************************" 
+"*****************************************************************************"
 "                                                                           "
 "*****************************************************************************"
 "
@@ -41,6 +41,8 @@ set backspace=indent,eol,start " Allow to navigate from start of line to end of 
 
 set wildmode=list:longest " Make cmdline tab completion similar to bash
 set autoread
+set encoding=utf-8
+set gdefault " 'g' flag is used by default in commands
 
 "*****************************************************************************"
 "
