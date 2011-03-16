@@ -354,10 +354,6 @@ nnoremap <tab> %
 vnoremap <tab> %
 map <tab> %
 
-"" Other stuff
-
-" Sudo promt with :w!!
-cmap w!! %!sudo tee > /dev/null %
 
 """" Leader Mappings
 
@@ -426,26 +422,10 @@ imap <C-A> :Ack<Space>
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
-
 " Another user functions
 "
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
-
-" md, markdown, and mk are markdown and define buffer-local preview
-"au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-au BufRead,BufNewFile *.txt call WrapLbr()
-
-
-
-
-
-
-" ConqueTerm
-"
-
-
+" Sudo promt with :w!!
+cmap w!! %!sudo tee > /dev/null %
 
 
 """"" IRB surrounds
@@ -480,15 +460,21 @@ endif
  "                                                                           "
 
 "" Remove all spaces from end of each line
-
 autocmd BufWritePre * call RemoveSpaces()
+
+" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}    set ft=ruby
+
+" md, markdown, and mk are markdown and define buffer-local preview
+"au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+
+"au BufRead,BufNewFile *.txt call WrapLbr()
 
 "" Auto create ctags
 
 "autocmd BufWritePost * !ctags -R > /dev/null
 
 "" Restore last cursor position in file
-
 au FocusLost * :wa " save file on focus losing
 
 autocmd BufReadPost *
