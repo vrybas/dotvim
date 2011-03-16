@@ -354,17 +354,6 @@ nnoremap <tab> %
 vnoremap <tab> %
 map <tab> %
 
-let i=1
-while i<=9
-  execute "nmap <D-".i."> ".i."gt"
-  execute "vmap <D-".i."> ".i."gt"
-  execute "imap <D-".i."> <ESC>".i."gt"
-  let i+=1
-endwhile
-
-
-
-
 "" Other stuff
 
 " Sudo promt with :w!!
