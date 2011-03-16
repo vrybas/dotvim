@@ -205,7 +205,6 @@ nnoremap <M-l> <C-w>l
 nmap + <C-w>+
 nmap _ <C-w>-
 
-"""
 
 " Use <Tab> to move between brackets
 nnoremap <tab> %
@@ -221,9 +220,7 @@ while i<=9
 endwhile
 
 
-"" Autocomplete
 
-imap <C-Space> <C-x><C-o><C-p>
 
 "" Other stuff
 
