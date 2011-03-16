@@ -194,10 +194,10 @@ vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 
 " Navigate between windows
 
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
 
 
 " Window resize
