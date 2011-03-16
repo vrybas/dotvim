@@ -459,6 +459,8 @@ endif
 
 "" Restore last cursor position in file
 
+au FocusLost * :wa " save file on focus losing
+
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
