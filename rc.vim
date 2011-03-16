@@ -89,12 +89,14 @@ set hidden " Allow dirty unsaved buffers
 colorscheme evening    " Color theme
 
 """ Search
-set ignorecase " Ignore case when searching
+set ignorecase
+set smartcase
 set showcmd    " Show incomplete cmds down the bottom
 set showmode   " Show current mode down the bottom
 
 set incsearch  " Find the next match as we type the search
 set hlsearch   " Hilight searches by default
+set showmatch
 
 " Page Up & Page Down behaviour
 set nostartofline " Don't jump to fisrt line
