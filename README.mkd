@@ -128,7 +128,7 @@ works best with Gvim
 
 ## Author ##
   Vladimir Rybas
-    - [blog.rybas.org](http://blog.rybas.org)
+    - http://blog.rybas.org
     - github.com/vrybas
     - vladimir@rybas.ru
     - twitter.com/vrybas
