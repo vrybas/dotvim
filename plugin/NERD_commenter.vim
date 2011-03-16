@@ -383,6 +383,8 @@ function s:SetUpForNewFiletype(filetype, forceReset)
         call s:MapDelimiters('#', '')
     elseif a:filetype == "gtkrc"
         call s:MapDelimiters('#', '')
+    elseif a:filetype == "gundo"
+        call s:MapDelimiters('#', '')
     elseif a:filetype == "haskell"
         call s:MapDelimitersWithAlternative('{-','-}', '--', '')
     elseif a:filetype == "hb"
