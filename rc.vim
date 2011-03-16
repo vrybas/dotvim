@@ -207,6 +207,11 @@ nmap _ <C-w>-
 
 """
 
+" Use <Tab> to move between brackets
+nnoremap <tab> %
+vnoremap <tab> %
+map <tab> %
+
 let i=1
 while i<=9
   execute "nmap <D-".i."> ".i."gt"
