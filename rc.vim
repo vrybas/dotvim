@@ -322,9 +322,9 @@ vmap <C-c> "+y
 
 
 " F2 - Save File
-"nmap <F2> :w<cr>
-"vmap <F2> <esc>:w<cr>
-"imap <F2> <esc>:w<cr>
+nmap <F2> :w<cr>
+vmap <F2> <esc>:w<cr>
+imap <F2> <esc>:w<cr>
 
 "" Move visually selected blocks of text
 vmap <C-h> <gv
