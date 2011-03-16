@@ -278,10 +278,6 @@ let mapleader = ","
 noremap <leader><leader> <ESC>
 inoremap <leader><leader> <ESC>
 
-"" Toggle between normal and insert mode
-nnoremap <D-x> i
-imap <D-x> <Esc>
-
 "" Previous - Next buffer
 map <M-a> :bprev<CR>
 map <M-s> :bnext<CR>
@@ -357,7 +353,7 @@ map <tab> %
 
 """" Leader Mappings
 
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack<space>
 
 "nmap <silent> <leader>w :call WrapLbr()<CR>" Enable smart wrapping
 "nmap <silent> <leader>wo :set nowrap<CR>   " Disable smart wrapping
@@ -412,12 +408,6 @@ let g:rubycomplete_rails = 1
 
 " Use instead grep
 set grepprg=ack\ -a
-
-" Ctrl+A to start Ack search
-
-nmap <C-A> :Ack<Space>
-imap <C-A> :Ack<Space>
-
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
