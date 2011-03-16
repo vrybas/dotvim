@@ -125,6 +125,146 @@ endif
  "                                                                           "
 "*****************************************************************************"
 "
+" Functions and commands
+"
+"*****************************************************************************"
+ "                                                                           "
+
+" Color switchers
+
+
+fun! DarkScheme()
+  colorscheme glowchalk
+  set gfn=Terminus\ 10
+endf
+
+fun! DarkScheme12()
+  colorscheme glowchalk
+  set gfn=Terminus\ 12
+endf
+
+fun! DarkScheme14()
+  colorscheme glowchalk
+  set gfn=Terminus\ 14
+endf
+
+fun! DarkSchemeMonaco()
+  colorscheme glowchalk
+  set gfn=Monaco\ 10
+endf
+
+fun! LightScheme()
+  colorscheme vrdual
+  set gfn=Monospace\ 10
+endf
+
+fun! GithubScheme()
+  colorscheme github
+  set gfn=Monospace\ 11
+endf
+
+fun! GithubScheme10()
+  colorscheme github
+  set gfn=Monospace\ 10
+endf
+
+com Lfdark :call DarkScheme()<CR>
+com Lflight :call LightScheme()<CR>
+com Lfdark12 :call DarkScheme12()<CR>
+com Lfdark14 :call DarkScheme14()<CR>
+com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
+com Lfgithub :call GithubScheme()<CR>
+com Lfgithub10 :call GithubScheme10()<CR>
+
+"''''''
+
+" ConqueTerm
+com Zsh :call ZshStart()<CR>
+
+fun! ZshStart()
+  ConqueTerm zsh
+endf
+
+let g:ConqueTerm_Color = 0
+
+" Remove all spaces from end in each line
+fun! RemoveSpaces()
+  if &bin | return | endif
+  if search('\s\+$', 'n')
+    let line = line('.')
+    let col = col('.')
+    sil %s/\s\+$//ge
+    call cursor(line, col)
+  endif
+endf
+
+
+" Toggle set line numbers relative or straight(Vim 7.3 required)
+function ToggleRelNumber()
+  if (&relativenumber == 1)
+    set nu!
+  else
+    set relativenumber!
+  endif
+endfunction
+
+" NerdTree expand behaviour fix
+fun! NERDTreeToggleWithFind()
+  NERDTreeToggle
+  exe "normal \<c-w>l"
+  if bufwinnr(t:NERDTreeBufName) > 0
+    NERDTreeFind
+  end
+endf
+
+" Set text wrap and make movements to operate on 1 screen line in wrap mode
+fun! WrapLbr()
+  set wrap
+  set wm=2
+  set textwidth=72
+  set lbr
+  call TYToggleBreakMove()
+endf
+
+function! ScreenMovement(movement)
+  "if &wrap && b:gmove == 'yes'
+  if &wrap && b:gmove == 'yes'
+    return "g" . a:movement
+  else
+    return a:movement
+  endif
+endfunction
+
+onoremap <silent> <expr> j ScreenMovement("j")
+onoremap <silent> <expr> k ScreenMovement("k")
+onoremap <silent> <expr> 0 ScreenMovement("0")
+onoremap <silent> <expr> ^ ScreenMovement("^")
+onoremap <silent> <expr> $ ScreenMovement("$")
+nnoremap <silent> <expr> j ScreenMovement("j")
+nnoremap <silent> <expr> k ScreenMovement("k")
+nnoremap <silent> <expr> 0 ScreenMovement("0")
+nnoremap <silent> <expr> ^ ScreenMovement("^")
+nnoremap <silent> <expr> $ ScreenMovement("$")
+
+function! TYShowBreak()
+  if &showbreak == ''
+    set showbreak=>
+  else
+    set showbreak=
+  endif
+endfunction
+let b:gmove = "yes"
+function! TYToggleBreakMove()
+  if exists("b:gmove") && b:gmove == "yes"
+    let b:gmove = "no"
+  else
+    let b:gmove = "yes"
+  endif
+endfunction
+nmap  <expr> ,b  TYShowBreak()
+nmap  <expr> ,bb  TYToggleBreakMove()
+" - - -
+
 " Key maps
 "
 "*****************************************************************************"
@@ -247,13 +387,6 @@ let g:CommandTMaxHeight=20
 nmap <silent> <F1> :call NERDTreeToggleWithFind()<CR>
 imap <silent> <F1> :call NERDTreeToggleWithFind()<CR>
 
-fun! NERDTreeToggleWithFind()
-  NERDTreeToggle 
-  exe "normal \<c-w>l"
-  if bufwinnr(t:NERDTreeBufName) > 0
-    NERDTreeFind
-  end
-endf
 
 nmap <silent> <C-F1> :g/def /<CR>
 imap <silent> <C-F1> :g/def /<CR>
@@ -283,61 +416,6 @@ map <Leader><Leader> :ZoomWin<CR>
 nnoremap <F5> :GundoToggle<CR>
 
 
- "                                                                           "
-"*****************************************************************************"
-"
-" Functions
-"
-"*****************************************************************************"
- "                                                                           "
-
-" Color switchers
-"
-
-com Lfdark :call DarkScheme()<CR>
-com Lflight :call LightScheme()<CR>
-com Lfdark12 :call DarkScheme12()<CR>
-com Lfdark14 :call DarkScheme14()<CR>
-com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
-com Lfgithub :call GithubScheme()<CR>
-com Lfgithub10 :call GithubScheme10()<CR>
-
-fun! DarkScheme()
-  colorscheme glowchalk
-  set gfn=Terminus\ 10
-endf
-
-fun! DarkScheme12()
-  colorscheme glowchalk
-  set gfn=Terminus\ 12
-endf
-
-fun! DarkScheme14()
-  colorscheme glowchalk
-  set gfn=Terminus\ 14
-endf
-
-fun! DarkSchemeMonaco()
-  colorscheme glowchalk
-  set gfn=Monaco\ 10
-endf
-
-fun! LightScheme()
-  colorscheme vrdual
-  set gfn=Monospace\ 10
-endf
-
-fun! GithubScheme()
-  colorscheme github
-  set gfn=Monospace\ 11
-endf
-
-fun! GithubScheme10()
-  colorscheme github
-  set gfn=Monospace\ 10
-endf
-
-
 " Another user functions
 "
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
@@ -351,77 +429,15 @@ au BufRead,BufNewFile *.txt call WrapLbr()
 nmap <silent> <leader>w :call WrapLbr()<CR>
 nmap <silent> <leader>wo :set nowrap<CR>
 
-fun! WrapLbr()
-  set wrap
-  set wm=2
-  set textwidth=72
-  set lbr
-  call TYToggleBreakMove()
-endf
 
-" mapping to make movements operate on 1 screen line in wrap mode
-function! ScreenMovement(movement)
-  "if &wrap && b:gmove == 'yes'
-  if &wrap && b:gmove == 'yes'
-    return "g" . a:movement
-  else
-    return a:movement
-  endif
-endfunction
-onoremap <silent> <expr> j ScreenMovement("j")
-onoremap <silent> <expr> k ScreenMovement("k")
-onoremap <silent> <expr> 0 ScreenMovement("0")
-onoremap <silent> <expr> ^ ScreenMovement("^")
-onoremap <silent> <expr> $ ScreenMovement("$")
-nnoremap <silent> <expr> j ScreenMovement("j")
-nnoremap <silent> <expr> k ScreenMovement("k")
-nnoremap <silent> <expr> 0 ScreenMovement("0")
-nnoremap <silent> <expr> ^ ScreenMovement("^")
-nnoremap <silent> <expr> $ ScreenMovement("$")
-" toggle showbreak
-function! TYShowBreak()
-  if &showbreak == ''
-    set showbreak=>
-  else
-    set showbreak=
-  endif
-endfunction
-let b:gmove = "yes"
-function! TYToggleBreakMove()
-  if exists("b:gmove") && b:gmove == "yes"
-    let b:gmove = "no"
-  else
-    let b:gmove = "yes"
-  endif
-endfunction
-nmap  <expr> ,b  TYShowBreak()
-nmap  <expr> ,bb  TYToggleBreakMove()
 
 
 
 " ConqueTerm
 "
 
-com Zsh :call ZshStart()<CR>
-
-fun! ZshStart()
-  ConqueTerm zsh
-endf
-
-let g:ConqueTerm_Color = 0
 
 
-""" Remove all spaces from end in each line
-
-fun! RemoveSpaces()
-  if &bin | return | endif
-  if search('\s\+$', 'n')
-    let line = line('.')
-    let col = col('.')
-    sil %s/\s\+$//ge
-    call cursor(line, col)
-  endif
-endf
 
 """"" IRB surrounds
 
