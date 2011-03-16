@@ -1,4 +1,4 @@
-[DotVim](https://github.com/vrybas/dotvim) -- Vim configuration & plugins 
+[DotVim](https://github.com/vrybas/dotvim) -- Vim configuration & plugins
 ======================================================================
 
 ![Github color scheme](http://dl.dropbox.com/u/837984/screenshots/github-vim.png)
@@ -26,7 +26,6 @@ works best with Gvim
 ### Buffers
     <M-a>     Previous buffer
     <M-s>     Next buffer
-    <M-d>     Buffer explorer
     <C-Tab>   Buffer explorer
     <F4>      Close current buffer
 
@@ -35,16 +34,21 @@ works best with Gvim
     <C-v>     Paste from system buffer
 
 ### Move selected line(s) in visual mode
-    <C-h>     Move left    
-    <C-j>     Move down    
-    <C-k>     Move up    
-    <C-l>     Move right    
+    <C-h>     Move left
+    <C-j>     Move down
+    <C-k>     Move up
+    <C-l>     Move right
 
 ### Navigate between splits
-    <C-h>     Left    
-    <C-j>     Down    
-    <C-k>     Up    
-    <C-l>     Right    
+    <,v>     Create vertical split
+    <,s>     Create horisontal split
+    <,x>     Close split
+    <,o>     Maximize/unmaximize split
+    <M-h>    Left
+    <M-j>    Down
+    <M-k>    Up
+    <M-l>    Right
+    <F3>     Close split
 
 ### Resize split height
     <+>       Increase
@@ -54,23 +58,30 @@ works best with Gvim
     <F1>      Show project tree (NERDTree)
     <M-f>     Quick file search (CommandT)
     <F2>      Save file from any mode
+    <F4>      Close file without saving
     <C-F1>    Show all Ruby methods in current file
-    <C-n>     Clear search highlighting 
-    <\s>      Toggle display trailing characters
-    <\w>      Wrap mode on with the cursor movement among logical lines, not physical
-    <\wo>     Wrap mode off
+    <,n>      Clear search highlighting
+    <,p>      Toggle display trailing characters
+    <,w>      Wrap mode on with the cursor movement among logical lines, not physical
+    <,wo>     Wrap mode off
+    <,,>      Change VIM mode
+    <Tab>     Navigate between brackets
+    <,a>      Search on current path with Ack
+    <,r>      Toggle relative/straight line numbers (Vim 7.3)
+    <F5>      Graphical undo window (Vim 7.3)
+
 
 ## How To ##
 ### Start Vim with current project tree open
     1. Start vim with project directory path(e.g. gvim /home/username/projects/MyProject/src/).
-    2. Press <cd> with current path highlighted in NERDTree. 
+    2. Press <cd> with current path highlighted in NERDTree.
 
 ### Jump between Ruby methods
     1. Press <C-F1> to see all methods.
     2. Enter :xx, where xx is method line number.
 
 ### Jump between Rails project files
-    Use :Rmodel, :Rview, :Rcontroller commands 
+    Use :Rmodel, :Rview, :Rcontroller commands
 
 ### Search for _string_ in current directory and subdirectories
     :Ack '_string_'
@@ -111,9 +122,13 @@ works best with Gvim
 * [Fugitive](https://github.com/tpope/vim-fugitive)
 * [ZoomWin](http://www.vim.org/scripts/script.php?script_id=508)
 * [SuperTab](http://www.vim.org/scripts/script.php?script_id=1643)
+* [RVM](http://www.vim.org/scripts/script.php?script_id=3134)
+* [Gundo](http://www.vim.org/scripts/script.php?script_id=3304)
+
 
 ## Author ##
   Vladimir Rybas
+    - [blog.rybas.org](http://blog.rybas.org)
     - github.com/vrybas
     - vladimir@rybas.ru
     - twitter.com/vrybas
