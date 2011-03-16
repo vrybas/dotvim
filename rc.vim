@@ -126,6 +126,11 @@ endif
 "*****************************************************************************"
  "                                                                           "
 
+let mapleader = ","
+
+noremap <leader><leader> <ESC>
+inoremap <leader><leader> <ESC>
+
 "" Toggle between normal and insert mode
 nnoremap <D-x> i
 imap <D-x> <Esc>
@@ -168,13 +173,11 @@ vmap <C-c> "+y
 "imap <C-o> <ESC>O
 "imap <C-o> <ESC>o
 
-"" Ctrl+n to clear highlight
-map <C-n> :noh<CR>
 
 " F2 - Save File
-nmap <F2> :w<cr>
-vmap <F2> <esc>:w<cr>
-imap <F2> <esc>:w<cr>
+"nmap <F2> :w<cr>
+"vmap <F2> <esc>:w<cr>
+"imap <F2> <esc>:w<cr>
 
 "" Move visually selected blocks of text
 vmap <C-h> <gv
