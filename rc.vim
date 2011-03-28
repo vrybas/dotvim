@@ -355,8 +355,8 @@ map <tab> %
 
 nnoremap <leader>a :Ack<space>
 
-"nmap <silent> <leader>w :call WrapLbr()<CR>" Enable smart wrapping
-"nmap <silent> <leader>wo :set nowrap<CR>   " Disable smart wrapping
+nmap <silent> <leader>w :call WrapLbr()<CR>" Enable smart wrapping
+nmap <silent> <leader>wo :set nowrap<CR>   " Disable smart wrapping
 
 nmap <silent><leader>p :set nolist!<CR>   " Show trailing characters
 nnoremap <leader>n :noh<cr>          " Clear highlight
@@ -449,9 +449,6 @@ endif
 "*****************************************************************************"
  "                                                                           "
 
-"" Remove all spaces from end of each line
-autocmd BufWritePre * call RemoveSpaces()
-
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}    set ft=ruby
 
@@ -461,12 +458,13 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}  
 "au BufRead,BufNewFile *.txt call WrapLbr()
 
 "" Auto create ctags
-
 "autocmd BufWritePost * !ctags -R > /dev/null
 
-"" Restore last cursor position in file
-au FocusLost * :wa " save file on focus losing
+"Remove all spaces from end of each line and save file on focus lost
+au FocusLost * call RemoveSpaces()
+au FocusLost * :wa 
 
+"Restore custor position
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
