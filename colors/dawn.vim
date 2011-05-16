@@ -1,78 +1,102 @@
 " Vim color file
-" Maintainer:   Ajit J. Thakkar (ajit AT unb DOT ca)
-" Last Change:  2005 Nov. 24
-" Version:  1.5
-" URL:      http://www.unb.ca/chem/ajit/vim.htm
+" Converted from Textmate theme Dawn using Coloration v0.2.5 (http://github.com/sickill/coloration)
 
-" This GUI-only color scheme has a light grey background, and is a softer
-" variant of the default and morning color schemes.
+set background=dark
+highlight clear
 
-set background=light
-hi clear
 if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "dawn"
+let g:colors_name = "Dawn"
 
-hi Normal   guifg=Black guibg=grey90
-"hi Normal  guifg=Black guibg=grey80
+hi Cursor  guifg=NONE guibg=#000000 gui=NONE
+hi Visual  guifg=NONE guibg=#bacbf6 gui=NONE
+hi CursorLine  guifg=NONE guibg=#dfe7eb gui=NONE
+hi CursorColumn  guifg=NONE guibg=#dfe7eb gui=NONE
+hi LineNr  guifg=#81817d guibg=#f9f9f2 gui=NONE
+hi VertSplit  guifg=#cbcbc6 guibg=#cbcbc6 gui=NONE
+hi MatchParen  guifg=#794938 guibg=NONE gui=NONE
+hi StatusLine  guifg=#080808 guibg=#cbcbc6 gui=bold
+hi StatusLineNC  guifg=#080808 guibg=#cbcbc6 gui=NONE
+hi Pmenu  guifg=#bf4f24 guibg=NONE gui=NONE
+hi PmenuSel  guifg=NONE guibg=#bacbf6 gui=NONE
+hi IncSearch  guifg=NONE guibg=#b2bfd4 gui=NONE
+hi Search  guifg=NONE guibg=#b2bfd4 gui=NONE
+hi Directory  guifg=#811f24 guibg=NONE gui=bold
+hi Folded  guifg=#5a525f guibg=#f9f9f2 gui=NONE
 
-" Groups used in the 'highlight' and 'guicursor' options default value.
-hi ErrorMsg gui=NONE guifg=Red guibg=Linen
-hi IncSearch    gui=NONE guifg=fg guibg=LightGreen
-hi ModeMsg  gui=NONE guifg=fg guibg=bg
-hi StatusLine   gui=NONE guifg=DarkBlue guibg=grey70
-hi StatusLineNC gui=NONE guifg=grey90 guibg=grey70
-hi VertSplit    gui=NONE guifg=grey70 guibg=grey70
-hi Visual   gui=reverse guifg=Grey guibg=fg
-hi VisualNOS    gui=underline,bold guifg=fg guibg=bg
-hi DiffText gui=NONE guifg=Blue guibg=LightYellow
-"hi DiffText    gui=NONE guifg=Blue guibg=MistyRose2
-hi Cursor   guifg=NONE guibg=Green
-hi lCursor  guifg=NONE guibg=Cyan
-hi Directory    guifg=Blue guibg=bg
-hi LineNr   guifg=Brown guibg=grey80
-hi MoreMsg  gui=NONE guifg=SeaGreen guibg=bg
-hi NonText  gui=NONE guifg=Blue guibg=grey80
-hi Question gui=NONE guifg=SeaGreen guibg=bg
-hi Search   guifg=fg guibg=PeachPuff
-hi SpecialKey   guifg=Blue guibg=bg
-hi Title    gui=NONE guifg=Magenta guibg=bg
-hi WarningMsg   guifg=Red guibg=bg
-hi WildMenu guifg=fg guibg=PeachPuff
-hi Folded   guifg=Grey40 guibg=bg " guifg=DarkBlue guibg=LightGrey
-hi FoldColumn   guifg=DarkBlue guibg=Grey
-hi DiffAdd  gui=NONE guifg=Blue guibg=LightCyan
-hi DiffChange   gui=NONE guifg=fg guibg=MistyRose2
-hi DiffDelete   gui=NONE guifg=LightBlue guibg=LightCyan
-
-" Colors for syntax highlighting
-hi Constant gui=NONE guifg=azure4 guibg=bg
-"hi Constant    gui=NONE guifg=DeepSkyBlue4 guibg=bg
-hi String   gui=NONE guifg=DarkOliveGreen4 guibg=bg
-hi Special  gui=NONE guifg=Cyan4 guibg=bg
-hi Statement    gui=NONE guifg=SlateBlue4 guibg=bg
-hi Operator gui=NONE guifg=Purple guibg=bg
-hi Ignore   gui=NONE guifg=bg guibg=bg
-if v:version >= 700
-  hi SpellBad   gui=undercurl guisp=DeepPink1 guifg=fg guibg=bg
-  hi SpellCap   gui=undercurl guisp=Blue guifg=fg guibg=bg
-  hi SpellRare  gui=undercurl guisp=Black guifg=fg guibg=bg
-  hi SpellLocal gui=undercurl guisp=SeaGreen guifg=fg guibg=bg
-endif
-hi ToDo     gui=NONE guifg=DeepPink1 guibg=bg
-hi Error    gui=NONE guifg=Red guibg=Linen
-hi Comment  gui=NONE guifg=RoyalBlue guibg=NONE
-hi Identifier   gui=NONE guifg=DodgerBlue3 guibg=NONE
-"hi Identifier  gui=NONE guifg=SteelBlue4 guibg=NONE
-hi PreProc  gui=NONE guifg=Magenta4 guibg=NONE
-hi Type     gui=NONE guifg=Brown guibg=NONE
-hi Underlined   gui=underline guifg=SlateBlue guibg=bg
-"if exists("g:minimal_colors")
-"  hi Statement gui=NONE guifg=fg guibg=bg
-"  hi Identifier    gui=NONE guifg=fg guibg=bg
-"  hi Type  gui=NONE guifg=fg guibg=bg
-"endif
-
-" vim: sw=2
+hi Normal  guifg=#080808 guibg=#f9f9f2 gui=NONE
+hi Boolean  guifg=#811f24 guibg=NONE gui=bold
+hi Character  guifg=#811f24 guibg=NONE gui=bold
+hi Comment  guifg=#5a525f guibg=NONE gui=italic
+hi Conditional  guifg=#794938 guibg=NONE gui=NONE
+hi Constant  guifg=#811f24 guibg=NONE gui=bold
+hi Define  guifg=#794938 guibg=NONE gui=NONE
+hi ErrorMsg  guifg=NONE guibg=NONE gui=NONE
+hi WarningMsg  guifg=NONE guibg=NONE gui=NONE
+hi Float  guifg=#811f24 guibg=NONE gui=bold
+hi Function  guifg=#bf4f24 guibg=NONE gui=NONE
+hi Identifier  guifg=#a71d5d guibg=NONE gui=italic
+hi Keyword  guifg=#794938 guibg=NONE gui=NONE
+hi Label  guifg=NONE guibg=NONE gui=NONE
+hi NonText  guifg=#a2a2b8 guibg=#dfe7eb gui=NONE
+hi Number  guifg=#811f24 guibg=NONE gui=bold
+hi Operator  guifg=#794938 guibg=NONE gui=NONE
+hi PreProc  guifg=#794938 guibg=NONE gui=NONE
+hi Special  guifg=#080808 guibg=NONE gui=NONE
+hi SpecialKey  guifg=#a2a2b8 guibg=#dfe7eb gui=NONE
+hi Statement  guifg=#794938 guibg=NONE gui=NONE
+hi StorageClass  guifg=#a71d5d guibg=NONE gui=italic
+hi String  guifg=#006633 guibg=NONE gui=NONE
+hi Tag  guifg=#bf4f24 guibg=NONE gui=NONE
+hi Title  guifg=#080808 guibg=NONE gui=bold
+hi Todo  guifg=#5a525f guibg=NONE gui=inverse,bold,italic
+hi Type  guifg=#bf4f24 guibg=NONE gui=NONE
+hi Underlined  guifg=NONE guibg=NONE gui=underline
+hi rubyClass  guifg=#794938 guibg=NONE gui=NONE
+hi rubyFunction  guifg=#bf4f24 guibg=NONE gui=NONE
+hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi rubySymbol  guifg=#811f24 guibg=NONE gui=bold
+hi rubyConstant  guifg=#691c97 guibg=NONE gui=NONE
+hi rubyStringDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi rubyBlockParameter  guifg=#234a97 guibg=NONE gui=NONE
+hi rubyInstanceVariable  guifg=#234a97 guibg=NONE gui=NONE
+hi rubyInclude  guifg=#794938 guibg=NONE gui=NONE
+hi rubyGlobalVariable  guifg=#234a97 guibg=NONE gui=NONE
+hi rubyRegexp  guifg=#cf5628 guibg=NONE gui=NONE
+hi rubyRegexpDelimiter  guifg=#cf5628 guibg=NONE gui=NONE
+hi rubyEscape  guifg=#811f24 guibg=NONE gui=bold
+hi rubyControl  guifg=#794938 guibg=NONE gui=NONE
+hi rubyClassVariable  guifg=#234a97 guibg=NONE gui=NONE
+hi rubyOperator  guifg=#794938 guibg=NONE gui=NONE
+hi rubyException  guifg=#794938 guibg=NONE gui=NONE
+hi rubyPseudoVariable  guifg=#234a97 guibg=NONE gui=NONE
+hi rubyRailsUserClass  guifg=#691c97 guibg=NONE gui=NONE
+hi rubyRailsARAssociationMethod  guifg=#693a17 guibg=NONE gui=NONE
+hi rubyRailsARMethod  guifg=#693a17 guibg=NONE gui=NONE
+hi rubyRailsRenderMethod  guifg=#693a17 guibg=NONE gui=NONE
+hi rubyRailsMethod  guifg=#693a17 guibg=NONE gui=NONE
+hi erubyDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi erubyComment  guifg=#5a525f guibg=NONE gui=italic
+hi erubyRailsMethod  guifg=#693a17 guibg=NONE gui=NONE
+hi htmlTag  guifg=#bf4f24 guibg=NONE gui=NONE
+hi htmlEndTag  guifg=#bf4f24 guibg=NONE gui=NONE
+hi htmlTagName  guifg=#bf4f24 guibg=NONE gui=NONE
+hi htmlArg  guifg=#bf4f24 guibg=NONE gui=NONE
+hi htmlSpecialChar  guifg=#811f24 guibg=NONE gui=bold
+hi javaScriptFunction  guifg=#a71d5d guibg=NONE gui=italic
+hi javaScriptRailsFunction  guifg=#693a17 guibg=NONE gui=NONE
+hi javaScriptBraces  guifg=NONE guibg=NONE gui=NONE
+hi yamlKey  guifg=#bf4f24 guibg=NONE gui=NONE
+hi yamlAnchor  guifg=#234a97 guibg=NONE gui=NONE
+hi yamlAlias  guifg=#234a97 guibg=NONE gui=NONE
+hi yamlDocumentHeader  guifg=NONE guibg=NONE gui=NONE
+hi cssURL  guifg=#234a97 guibg=NONE gui=NONE
+hi cssFunctionName  guifg=#693a17 guibg=NONE gui=NONE
+hi cssColor  guifg=#811f24 guibg=NONE gui=bold
+hi cssPseudoClassId  guifg=#bf4f24 guibg=NONE gui=NONE
+hi cssClassName  guifg=#bf4f24 guibg=NONE gui=NONE
+hi cssValueLength  guifg=#811f24 guibg=NONE gui=bold
+hi cssCommonAttr  guifg=#b4371f guibg=NONE gui=NONE
+hi cssBraces  guifg=NONE guibg=NONE gui=NONE
