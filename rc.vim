@@ -419,7 +419,7 @@ let g:rubycomplete_rails = 1
 set grepprg=ack\ -a
 
 " Gundo
-nnoremap <F5> :GundoToggle<CR>
+"nnoremap <F5> :GundoToggle<CR>  " Disabled because buggy
 
 " Another user functions
 "
