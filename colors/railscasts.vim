@@ -1,96 +1,102 @@
-" Vim color scheme
-"
-" Name:         railscasts.vim
-" Maintainer:   Nick Moffitt <nick@zork.net>
-" Last Change:  01 Mar 2008
-" License:      WTFPL <http://sam.zoy.org/wtfpl/>
-" Version:      2.1
-"
-" This theme is based on Josh O'Rourke's Vim clone of the railscast
-" textmate theme.  The key thing I have done here is supply 256-color
-" terminal equivalents for as many of the colors as possible, and fixed
-" up some of the funny behaviors for editing e-mails and such.
-"
-" To use for gvim:
-" 1: install this file as ~/.vim/colors/railscasts.vim
-" 2: put "colorscheme railscasts" in your .gvimrc
-"
-" If you are using Ubuntu, you can get the benefit of this in your
-" terminals using ordinary vim by taking the following steps:
-"
-" 1: sudo apt-get install ncurses-term
-" 2: put the following in your .vimrc
-"     if $COLORTERM == 'gnome-terminal'
-"         set term=gnome-256color
-"         colorscheme railscasts
-"     else
-"         colorscheme default
-"     endif
-" 3: if you wish to use this with screen, add the following to your .screenrc:
-"     attrcolor b ".I"
-"     termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-"     defbce "on"
-"     term screen-256color-bce
+" Vim color file
+" Converted from Textmate theme Railscasts using Coloration v0.2.5 (http://github.com/sickill/coloration)
 
 set background=dark
-hi clear
+highlight clear
+
 if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "railscasts"
+let g:colors_name = "Railscasts"
 
-hi link htmlTag                     xmlTag
-hi link htmlTagName                 xmlTagName
-hi link htmlEndTag                  xmlEndTag
+hi Cursor  guifg=NONE guibg=#ffffff gui=NONE
+hi Visual  guifg=NONE guibg=#545d73 gui=NONE
+hi CursorLine  guifg=NONE guibg=#333435 gui=NONE
+hi CursorColumn  guifg=NONE guibg=#333435 gui=NONE
+hi LineNr  guifg=#898684 guibg=#2b2b2b gui=NONE
+hi VertSplit  guifg=#4f4e4d guibg=#4f4e4d gui=NONE
+hi MatchParen  guifg=#cc7833 guibg=NONE gui=NONE
+hi StatusLine  guifg=#e6e1dc guibg=#4f4e4d gui=bold
+hi StatusLineNC  guifg=#e6e1dc guibg=#4f4e4d gui=NONE
+hi Pmenu  guifg=#ffffff guibg=NONE gui=NONE
+hi PmenuSel  guifg=NONE guibg=#545d73 gui=NONE
+hi IncSearch  guifg=NONE guibg=#60442e gui=NONE
+hi Search  guifg=NONE guibg=#60442e gui=NONE
+hi Directory  guifg=#6d9cbe guibg=NONE gui=NONE
+hi Folded  guifg=#bc9458 guibg=#2b2b2b gui=NONE
 
-highlight Normal                    guifg=#E6E1DC guibg=#111111 
-highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
-highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
-
-highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
-highlight Constant                  guifg=#6D9CBE ctermfg=73
-highlight Define                    guifg=#CC7833 ctermfg=173
-highlight Error                     guifg=#FFC66D ctermfg=221 guibg=#990000 ctermbg=88
-highlight Function                  guifg=#FFC66D ctermfg=221 gui=NONE cterm=NONE
-highlight Identifier                guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
-highlight Include                   guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
-highlight PreCondit                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
-highlight Keyword                   guifg=#CC7833 ctermfg=173 cterm=NONE
-highlight LineNr                    guifg=#2B2B2B ctermfg=159 guibg=#C0C0FF
-highlight Number                    guifg=#A5C261 ctermfg=107
-highlight PreProc                   guifg=#E6E1DC ctermfg=103
-highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
-highlight Statement                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
-highlight String                    guifg=#A5C261 ctermfg=107
-highlight Title                     guifg=#FFFFFF ctermfg=15
-highlight Type                      guifg=#DA4939 ctermfg=167 gui=NONE cterm=NONE
-highlight Visual                    guibg=#5A647E ctermbg=60
-
-highlight DiffAdd                   guifg=#E6E1DC ctermfg=7 guibg=#519F50 ctermbg=71
-highlight DiffDelete                guifg=#E6E1DC ctermfg=7 guibg=#660000 ctermbg=52
-highlight Special                   guifg=#DA4939 ctermfg=167 
-
-highlight pythonBuiltin             guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
-highlight rubyBlockParameter        guifg=#FFFFFF ctermfg=15
-highlight rubyClass                 guifg=#FFFFFF ctermfg=15
-highlight rubyConstant              guifg=#DA4939 ctermfg=167
-highlight rubyInstanceVariable      guifg=#D0D0FF ctermfg=189
-highlight rubyInterpolation         guifg=#519F50 ctermfg=107
-highlight rubyLocalVariableOrMethod guifg=#D0D0FF ctermfg=189
-highlight rubyPredefinedConstant    guifg=#DA4939 ctermfg=167
-highlight rubyPseudoVariable        guifg=#FFC66D ctermfg=221
-highlight rubyStringDelimiter       guifg=#A5C261 ctermfg=143
-
-highlight xmlTag                    guifg=#E8BF6A ctermfg=179
-highlight xmlTagName                guifg=#E8BF6A ctermfg=179
-highlight xmlEndTag                 guifg=#E8BF6A ctermfg=179
-
-highlight mailSubject               guifg=#A5C261 ctermfg=107
-highlight mailHeaderKey             guifg=#FFC66D ctermfg=221
-highlight mailEmail                 guifg=#A5C261 ctermfg=107 gui=italic cterm=underline
-
-highlight SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
-highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
-highlight SpellCap                  guifg=#D0D0FF ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
-highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
+hi Normal  guifg=#e6e1dc guibg=#2b2b2b gui=NONE
+hi Boolean  guifg=#6e9cbe guibg=NONE gui=NONE
+hi Character  guifg=#6d9cbe guibg=NONE gui=NONE
+hi Comment  guifg=#bc9458 guibg=NONE gui=italic
+hi Conditional  guifg=#cc7833 guibg=NONE gui=NONE
+hi Constant  guifg=#6d9cbe guibg=NONE gui=NONE
+hi Define  guifg=#cc7833 guibg=NONE gui=NONE
+hi ErrorMsg  guifg=#ffffff guibg=#990000 gui=NONE
+hi WarningMsg  guifg=#ffffff guibg=#990000 gui=NONE
+hi Float  guifg=#a5c261 guibg=NONE gui=NONE
+hi Function  guifg=#ffc66d guibg=NONE gui=NONE
+hi Identifier  guifg=#cc7833 guibg=NONE gui=NONE
+hi Keyword  guifg=#cc7833 guibg=NONE gui=NONE
+hi Label  guifg=#a5c261 guibg=NONE gui=NONE
+hi NonText  guifg=#404040 guibg=#333435 gui=NONE
+hi Number  guifg=#a5c261 guibg=NONE gui=NONE
+hi Operator  guifg=#cc7833 guibg=NONE gui=NONE
+hi PreProc  guifg=#cc7833 guibg=NONE gui=NONE
+hi Special  guifg=#e6e1dc guibg=NONE gui=NONE
+hi SpecialKey  guifg=#404040 guibg=#333435 gui=NONE
+hi Statement  guifg=#cc7833 guibg=NONE gui=NONE
+hi StorageClass  guifg=#cc7833 guibg=NONE gui=NONE
+hi String  guifg=#a5c261 guibg=NONE gui=NONE
+hi Tag  guifg=#e8bf6a guibg=NONE gui=NONE
+hi Title  guifg=#e6e1dc guibg=NONE gui=bold
+hi Todo  guifg=#bc9458 guibg=NONE gui=inverse,bold,italic
+hi Type  guifg=#ffffff guibg=NONE gui=NONE
+hi Underlined  guifg=NONE guibg=NONE gui=underline
+hi rubyClass  guifg=#cc7833 guibg=NONE gui=NONE
+hi rubyFunction  guifg=#ffc66d guibg=NONE gui=NONE
+hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi rubySymbol  guifg=#6d9cbe guibg=NONE gui=NONE
+hi rubyConstant  guifg=NONE guibg=NONE gui=NONE
+hi rubyStringDelimiter  guifg=#a5c261 guibg=NONE gui=NONE
+hi rubyBlockParameter  guifg=NONE guibg=NONE gui=NONE
+hi rubyInstanceVariable  guifg=#d0d0ff guibg=NONE gui=NONE
+hi rubyInclude  guifg=#cc7833 guibg=NONE gui=NONE
+hi rubyGlobalVariable  guifg=#d0d0ff guibg=NONE gui=NONE
+hi rubyRegexp  guifg=#a5c261 guibg=NONE gui=NONE
+hi rubyRegexpDelimiter  guifg=#a5c261 guibg=NONE gui=NONE
+hi rubyEscape  guifg=#519f50 guibg=NONE gui=NONE
+hi rubyControl  guifg=#cc7833 guibg=NONE gui=NONE
+hi rubyClassVariable  guifg=NONE guibg=NONE gui=NONE
+hi rubyOperator  guifg=#cc7833 guibg=NONE gui=NONE
+hi rubyException  guifg=#cc7833 guibg=NONE gui=NONE
+hi rubyPseudoVariable  guifg=#d0d0ff guibg=NONE gui=NONE
+hi rubyRailsUserClass  guifg=NONE guibg=NONE gui=NONE
+hi rubyRailsARAssociationMethod  guifg=#da4939 guibg=NONE gui=NONE
+hi rubyRailsARMethod  guifg=#da4939 guibg=NONE gui=NONE
+hi rubyRailsRenderMethod  guifg=#da4939 guibg=NONE gui=NONE
+hi rubyRailsMethod  guifg=#da4939 guibg=NONE gui=NONE
+hi erubyDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi erubyComment  guifg=#bc9458 guibg=NONE gui=italic
+hi erubyRailsMethod  guifg=#da4939 guibg=NONE gui=NONE
+hi htmlTag  guifg=#e8bf6a guibg=NONE gui=NONE
+hi htmlEndTag  guifg=#e8bf6a guibg=NONE gui=NONE
+hi htmlTagName  guifg=#e8bf6a guibg=NONE gui=NONE
+hi htmlArg  guifg=#e8bf6a guibg=NONE gui=NONE
+hi htmlSpecialChar  guifg=#6d9cbe guibg=NONE gui=NONE
+hi javaScriptFunction  guifg=#cc7833 guibg=NONE gui=NONE
+hi javaScriptRailsFunction  guifg=#da4939 guibg=NONE gui=NONE
+hi javaScriptBraces  guifg=NONE guibg=NONE gui=NONE
+hi yamlKey  guifg=#e8bf6a guibg=NONE gui=NONE
+hi yamlAnchor  guifg=#d0d0ff guibg=NONE gui=NONE
+hi yamlAlias  guifg=#d0d0ff guibg=NONE gui=NONE
+hi yamlDocumentHeader  guifg=#a5c261 guibg=NONE gui=NONE
+hi cssURL  guifg=NONE guibg=NONE gui=NONE
+hi cssFunctionName  guifg=#da4939 guibg=NONE gui=NONE
+hi cssColor  guifg=#6d9cbe guibg=NONE gui=NONE
+hi cssPseudoClassId  guifg=#e8bf6a guibg=NONE gui=NONE
+hi cssClassName  guifg=#e8bf6a guibg=NONE gui=NONE
+hi cssValueLength  guifg=#a5c261 guibg=NONE gui=NONE
+hi cssCommonAttr  guifg=#a5c261 guibg=NONE gui=NONE
+hi cssBraces  guifg=NONE guibg=NONE gui=NONE
