@@ -168,6 +168,11 @@ fun! GithubScheme10()
   set gfn=Monospace\ 10
 endf
 
+fun! RailscastsScheme()
+  colorscheme railscasts
+  set gfn=Monaco\ 10
+endf
+
 com Lfdark :call DarkScheme()<CR>
 com Lflight :call LightScheme()<CR>
 com Lfdark12 :call DarkScheme12()<CR>
@@ -175,6 +180,7 @@ com Lfdark14 :call DarkScheme14()<CR>
 com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
 com Lfgithub :call GithubScheme()<CR>
 com Lfgithub10 :call GithubScheme10()<CR>
+com Lfrailscasts :call RailscastsScheme()<CR>
 
 "''''''
 
