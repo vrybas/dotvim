@@ -68,7 +68,6 @@ works best with Gvim
     <Tab>     Navigate between brackets
     <,a>      Search on current path with Ack
     <,r>      Toggle relative/straight line numbers (Vim 7.3)
-    <F5>      Graphical undo window (Vim 7.3)
 
 
 ## How To ##
