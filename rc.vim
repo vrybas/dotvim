@@ -269,7 +269,7 @@ function! TYToggleBreakMove()
 endfunction
 nmap  <expr> ,b  TYShowBreak()
 nmap  <expr> ,bb  TYToggleBreakMove()
-" - - - 
+" - - -
 
  "                                                                           "
 "*****************************************************************************"
@@ -439,9 +439,9 @@ set listchars=tab:>-,trail:·,eol:$
 
 """""" Indent Guides plugin configuration
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#F8F8FF   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#EEEEEE ctermbg=4
-let g:indent_guides_start_level = 2
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#EFEFEF   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#EFEFEF ctermbg=4
+let g:indent_guides_start_level = 4
 let g:indent_guides_guide_size = 1
 
 if has("gui_running")
@@ -471,7 +471,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}  
 
 "Remove all spaces from end of each line and save file on focus lost
 au FocusLost * call RemoveSpaces()
-au FocusLost * :wa 
+au FocusLost * :silent wa
 
 "Restore custor position
 autocmd BufReadPost *
