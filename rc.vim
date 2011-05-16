@@ -295,6 +295,9 @@ nmap <F3> <C-w>c :set nowrap<CR>
 imap <F4> :q!<CR> :set nowrap<CR>
 nmap <F4> :q!<CR> :set nowrap<CR>
 
+set pastetoggle=<F6>
+
+
 ""
 
 "" Tabs
