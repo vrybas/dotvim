@@ -161,16 +161,35 @@ endf
 fun! GithubScheme()
   colorscheme github
   set gfn=Monospace\ 11
+  call LightIndentGuides()
 endf
 
 fun! GithubScheme10()
   colorscheme github
   set gfn=Monospace\ 10
+  call LightIndentGuides()
 endf
 
 fun! RailscastsScheme()
   colorscheme railscasts
   set gfn=Monaco\ 10
+  call DarkIndentGuides()
+endf
+
+fun! RailscastsScheme11()
+  colorscheme railscasts
+  set gfn=Monaco\ 11
+  call DarkIndentGuides()
+endf
+
+fun! DarkIndentGuides()
+  :hi IndentGuidesOdd  guibg=#333333   ctermbg=3
+  ":hi IndentGuidesEven guibg=#000000 ctermbg=4
+endf
+
+fun! LightIndentGuides()
+  :hi IndentGuidesOdd  guibg=#EFEFEF   ctermbg=3
+  ":hi IndentGuidesEven guibg=#EFEFEF ctermbg=4
 endf
 
 com Lfdark :call DarkScheme()<CR>
@@ -181,6 +200,7 @@ com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
 com Lfgithub :call GithubScheme()<CR>
 com Lfgithub10 :call GithubScheme10()<CR>
 com Lfrailscasts :call RailscastsScheme()<CR>
+com Lfrailscasts11 :call RailscastsScheme11()<CR>
 
 "''''''
 
@@ -439,8 +459,8 @@ set listchars=tab:>-,trail:·,eol:$
 
 """""" Indent Guides plugin configuration
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#EFEFEF   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#EFEFEF ctermbg=4
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#EFEFEF   ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#EFEFEF ctermbg=4
 let g:indent_guides_start_level = 4
 let g:indent_guides_guide_size = 1
 
@@ -478,6 +498,19 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+" Change color scheme by day time
+let dayBegin = 10
+let nightBegin = 19
+let currentTime = str2nr(strftime("%H"))
+
+if currentTime < nightBegin && currentTime < dayBegin
+    call RailscastsScheme()
+elseif currentTime > nightBegin && currentTime > dayBegin
+    call RailscastsScheme()
+else
+    call GithubScheme()
+endif
 
  "                                                                           "
 "*****************************************************************************"
