@@ -158,27 +158,15 @@ fun! LightScheme()
   set gfn=Monospace\ 10
 endf
 
-fun! GithubScheme()
+fun! GithubScheme(n)
   colorscheme github
-  set gfn=Monospace\ 11
-  call LightIndentGuides()
-endf
-
-fun! GithubScheme10()
-  colorscheme github
-  set gfn=Monospace\ 10
+  execute ':set gfn=Monospace\ ' . a:n
   call LightIndentGuides()
 endf
 
 fun! RailscastsScheme()
   colorscheme railscasts
-  set gfn=Monaco\ 10
-  call DarkIndentGuides()
-endf
-
-fun! RailscastsScheme11()
-  colorscheme railscasts
-  set gfn=Monaco\ 11
+  execute ':set gfn=Monaco\ ' . a:n
   call DarkIndentGuides()
 endf
 
@@ -197,10 +185,10 @@ com Lflight :call LightScheme()<CR>
 com Lfdark12 :call DarkScheme12()<CR>
 com Lfdark14 :call DarkScheme14()<CR>
 com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
-com Lfgithub :call GithubScheme()<CR>
-com Lfgithub10 :call GithubScheme10()<CR>
-com Lfrailscasts :call RailscastsScheme()<CR>
-com Lfrailscasts11 :call RailscastsScheme11()<CR>
+com Lfgithub :call GithubScheme(11)<CR>
+com Lfgithub10 :call GithubScheme(10)<CR>
+com Lfrailscasts :call RailscastsScheme(10)<CR>
+com Lfrailscasts11 :call RailscastsScheme(11)<CR>
 
 "''''''
 
@@ -500,16 +488,16 @@ autocmd BufReadPost *
      \ endif
 
 " Change color scheme by day time
-let dayBegin = 10
+let dayBegin = 8
 let nightBegin = 19
 let currentTime = str2nr(strftime("%H"))
 
 if currentTime < nightBegin && currentTime < dayBegin
-    call RailscastsScheme()
+    call RailscastsScheme(10)
 elseif currentTime > nightBegin && currentTime > dayBegin
-    call RailscastsScheme()
+    call RailscastsScheme(10)
 else
-    call GithubScheme()
+    call GithubScheme(11)
 endif
 
  "                                                                           "
