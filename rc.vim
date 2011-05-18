@@ -164,7 +164,7 @@ fun! GithubScheme(n)
   call LightIndentGuides()
 endf
 
-fun! RailscastsScheme()
+fun! RailscastsScheme(n)
   colorscheme railscasts
   execute ':set gfn=Monaco\ ' . a:n
   call DarkIndentGuides()
