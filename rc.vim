@@ -414,6 +414,7 @@ nmap <silent> <C-F1> :g/def /<CR>
 imap <silent> <C-F1> :g/def /<CR>
 
 """ Vim-Ruby
+let ruby_no_expensive = 1
 
 " Autocomplete setup
 
@@ -493,9 +494,11 @@ let nightBegin = 19
 let currentTime = str2nr(strftime("%H"))
 
 if currentTime < nightBegin && currentTime < dayBegin
-    call RailscastsScheme(10)
+    "call RailscastsScheme(10)
+    call GithubScheme(11)
 elseif currentTime > nightBegin && currentTime > dayBegin
-    call RailscastsScheme(10)
+    "call RailscastsScheme(10)
+    call GithubScheme(11)
 else
     call GithubScheme(11)
 endif
