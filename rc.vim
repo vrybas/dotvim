@@ -480,7 +480,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}  
 
 "Remove all spaces from end of each line and save file on focus lost
 au FocusLost * call RemoveSpaces()
-au FocusLost * :tabdo wa!
+au FocusLost * silent! tabdo wa!
 
 "Restore custor position
 autocmd BufReadPost *
