@@ -86,7 +86,7 @@ set scrolloff=3
 set hidden " Allow dirty unsaved buffers
 
 """ Appearance
-colorscheme evening    " Color theme
+colorscheme default    " Color theme
 
 """ Search
 set ignorecase
@@ -100,6 +100,7 @@ set showmatch
 
 " Page Up & Page Down behaviour
 set nostartofline " Don't jump to fisrt line
+set vb
 
  "                                                                           "
 "*****************************************************************************"
@@ -118,8 +119,8 @@ if has("gui_running")
   set guioptions-=L     " remove left-hand scroll bar
   set showtabline=2     " tabs bar
   set laststatus=2      " file status
-  colorscheme github " Colorscheme
-  set gfn=Monospace\ 11  " GUI Font
+  colorscheme github
+  set gfn=Monaco:h12
 endif
 
  "                                                                           "
@@ -160,13 +161,13 @@ endf
 
 fun! GithubScheme(n)
   colorscheme github
-  execute ':set gfn=Monospace\ ' . a:n
+  execute ':set gfn=Monaco:h' . a:n
   call LightIndentGuides()
 endf
 
 fun! RailscastsScheme(n)
   colorscheme railscasts
-  execute ':set gfn=Monaco\ ' . a:n
+  execute ':set gfn=Monaco:h' . a:n
   call DarkIndentGuides()
 endf
 
@@ -309,21 +310,20 @@ set pastetoggle=<F6>
 ""
 
 "" Tabs
-nmap <M-t> :sp<cr><C-w>T " Open current buffer in new tab
-nmap <M-w> :tabclose<cr>
+nmap <leader>t :sp<cr><C-w>T " Open current buffer in new tab
 map <C-Left> <esc>:tabprevious<cr>
 map <C-Right> <esc>:tabnext<cr>
 
 " Open tab by number
-map <M-1> 1gt
-map <M-2> 2gt
-map <M-3> 3gt
-map <M-4> 4gt
-map <M-5> 5gt
-map <M-6> 6gt
-map <M-7> 7gt
-map <M-8> 8gt
-map <M-9> 9gt
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
 
 "" Ctrl+C & Ctrl+V to system buffer
 nmap <C-v> "+gp
@@ -340,20 +340,20 @@ vmap <F2> <esc>:w<cr>
 imap <F2> <esc>:w<cr>
 
 "" Move visually selected blocks of text
-vmap <C-h> <gv
-vmap <C-l> >gv
-vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
-vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+vmap <C-S-h> <gv
+vmap <C-S-l> >gv
+vmap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
+vmap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 
 
 "" Windows
 
 " Navigate between windows
 
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 
 " Window resize
@@ -375,7 +375,7 @@ nnoremap <leader>a :Ack<space>
 nmap <silent> <leader>w :call WrapLbr()<CR>" Enable smart wrapping
 nmap <silent> <leader>wo :set nowrap<CR>   " Disable smart wrapping
 
-nmap <silent><leader>p :set nolist!<CR>   " Show trailing characters
+nmap <silent><leader>y :set nolist!<CR>   " Show trailing characters
 nnoremap <leader>n :noh<cr>          " Clear highlight
 
 let g:SuperTabMappingForward = '<leader><tab>'
@@ -406,8 +406,14 @@ let g:CommandTMaxHeight=20
 
 """ NERDTree
 " F1 to toggle NERDTree
-nmap <silent> <F1> :call NERDTreeToggleWithFind()<CR>
-imap <silent> <F1> :call NERDTreeToggleWithFind()<CR>
+nmap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
+imap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
+
+"PeepOpen"
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-/> <Plug>PeepOpen
+end
 
 
 nmap <silent> <C-F1> :g/def /<CR>
@@ -479,8 +485,8 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}  
 "autocmd BufWritePost * !ctags -R > /dev/null
 
 "Remove all spaces from end of each line and save file on focus lost
-au FocusLost * call RemoveSpaces()
-au FocusLost * silent! tabdo wa!
+au BufReadPost * call RemoveSpaces()
+au FocusLost * silent! windo wa!
 
 "Restore custor position
 autocmd BufReadPost *
@@ -493,15 +499,15 @@ let dayBegin = 8
 let nightBegin = 19
 let currentTime = str2nr(strftime("%H"))
 
-if currentTime < nightBegin && currentTime < dayBegin
-    "call RailscastsScheme(10)
-    call GithubScheme(11)
-elseif currentTime > nightBegin && currentTime > dayBegin
-    "call RailscastsScheme(10)
-    call GithubScheme(11)
-else
-    call GithubScheme(11)
-endif
+"if currentTime < nightBegin && currentTime < dayBegin
+  ""call RailscastsScheme(10)
+  "call GithubScheme(11)
+"elseif currentTime > nightBegin && currentTime > dayBegin
+  ""call RailscastsScheme(10)
+  "call GithubScheme(11)
+"else
+  "call GithubScheme(12)
+"endif
 
  "                                                                           "
 "*****************************************************************************"
