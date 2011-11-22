@@ -1,2 +1,4 @@
 .netrwhist
 backups/*
+plugin/peepopen.vim
+
