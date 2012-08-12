@@ -119,8 +119,9 @@ if has("gui_running")
   set guioptions-=L     " remove left-hand scroll bar
   set showtabline=2     " tabs bar
   set laststatus=2      " file status
-  colorscheme github
-  set gfn=Monaco:h12
+  set background=dark
+  colorscheme solarized
+  set gfn=Monaco:h15
 endif
 
  "                                                                           "
@@ -135,8 +136,7 @@ endif
 
 
 fun! DarkScheme()
-  colorscheme glowchalk
-  set gfn=Terminus\ 10
+  set background=dark
 endf
 
 fun! DarkScheme12()
@@ -155,8 +155,7 @@ fun! DarkSchemeMonaco()
 endf
 
 fun! LightScheme()
-  colorscheme vrdual
-  set gfn=Monospace\ 10
+  set background=light
 endf
 
 fun! GithubScheme(n)
@@ -389,6 +388,8 @@ nmap <silent><leader><tab> :Sscratch<CR> " Opens a buffer which is never saved
 
 nmap <silent><leader>r :call ToggleRelNumber()<cr>
 
+nmap <silent><leader>b :set ba<CR>   " Show trailing characters
+
  "                                                                           "
 "*****************************************************************************"
 "
@@ -486,7 +487,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}  
 
 "Remove all spaces from end of each line and save file on focus lost
 au BufReadPost * call RemoveSpaces()
-au FocusLost * silent! windo wa!
+au FocusLost * silent! wa
 
 "Restore custor position
 autocmd BufReadPost *
