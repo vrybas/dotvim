@@ -121,7 +121,7 @@ if has("gui_running")
   set laststatus=2      " file status
   set background=dark
   colorscheme solarized
-  set gfn=Monaco:h15
+  set gfn=Monaco:h13
 endif
 
  "                                                                           "
