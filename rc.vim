@@ -56,6 +56,8 @@ set nu   " Turn on line numbers
 "set cul  " Highligth current line
 "set so=999
 
+set cc=80
+
 
 " Tab size
 
