@@ -439,6 +439,9 @@ set grepprg=ack\ -a
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
+" Easymotion
+let g:EasyMotion_leader_key = '<leader><leader>'
+
 " Another user functions
 "
 " Sudo promt with :w!!
