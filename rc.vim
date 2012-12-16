@@ -125,6 +125,17 @@ if has("gui_running")
   set guioptions-=L     " remove left-hand scroll bar
   set showtabline=2     " tabs bar
   set laststatus=2      " file status
+  " Change color scheme by day time
+  let dayBegin = 6
+  let nightBegin = 18
+  let currentTime = str2nr(strftime("%H"))
+
+  if currentTime > dayBegin && currentTime < nightBegin
+    set background=light
+  else
+    set background=dark
+  endif
+
   colorscheme solarized
   set gfn=Monaco:h14
 endif
@@ -495,20 +506,6 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-" Change color scheme by day time
-let dayBegin = 8
-let nightBegin = 19
-let currentTime = str2nr(strftime("%H"))
-
-"if currentTime < nightBegin && currentTime < dayBegin
-  ""call RailscastsScheme(10)
-  "call GithubScheme(11)
-"elseif currentTime > nightBegin && currentTime > dayBegin
-  ""call RailscastsScheme(10)
-  "call GithubScheme(11)
-"else
-  "call GithubScheme(12)
-"endif
 
  "                                                                           "
 "*****************************************************************************"
