@@ -403,13 +403,6 @@ nmap <silent><leader>b :set ba<CR>   " Show trailing characters
 "*****************************************************************************"
  "                                                                           "
 
-""" CommandT for files browsing
-
-" Alt+F map to start search
-
-nmap <M-f> :CommandT<CR>
-let g:CommandTMaxHeight=20
-
 """ NERDTree
 " F1 to toggle NERDTree
 nmap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
