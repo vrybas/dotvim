@@ -49,8 +49,11 @@ set gdefault " 'g' flag is used by default in commands
 " Look and feel
 "
 "*****************************************************************************"
+"
+colorscheme default
 
 """ Line options
+
 
 set nu   " Turn on line numbers
 "set cul  " Highligth current line
@@ -112,6 +115,7 @@ set vb
 "*****************************************************************************"
  "                                                                           "
 
+let g:solarized_termtrans = 1
 if has("gui_running")
   set tb=icons          " Only icons in toolbar
   set tbis=tiny         " Set icon size to tiny
@@ -121,7 +125,6 @@ if has("gui_running")
   set guioptions-=L     " remove left-hand scroll bar
   set showtabline=2     " tabs bar
   set laststatus=2      " file status
-  set background=dark
   colorscheme solarized
   set gfn=Monaco:h13
 endif
