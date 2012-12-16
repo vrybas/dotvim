@@ -1,242 +1,263 @@
-"*****************************************************************************"
-"
-"     ______        _____
-"   ||      |     ||     |
-"    \\     /     \\     |
-"     ||   |       /    /
-"     ||   |      /    /
-"     ||   |     /    /
-"      ||   |   /    /
-"      ||   | _/   _/
-"      ||   |/    |_|
-"      ||        / ___ __              ___    ___
-"       ||     _/ \\ | \\ \−-_−-_    ||  _/ // _|
-"   _   ||    /   || | || /\ /\ |    || |  || |_
-"  |_|   ||__/    ||_| ||_||_||_|_   ||_|   \\__|
-"
-"
-"                                         by Aleksandr Koss (http://nocorp.ru)
-"                                         forked by Vladimir Rybas
-"
-"*****************************************************************************"
-"                                                                           "
+
 "*****************************************************************************"
 "
 " Base settings
 "
 "*****************************************************************************"
- "                                                                           "
 
-set nocompatible " Turn off vi compatible
-syntax on        " Turn on syntax highlight
-set mouse=a      " Mouse everywhere
+set nocompatible                                                               " Turn off vi compatible
+syntax on                                                                      " Turn on syntax highlight
+set mouse=a                                                                    " Mouse everywhere
 
-set backup       " Enable creation of backup file.
-set backupdir=~/.vim/backups  " Where backups will go.
-set directory=~/.vim/tmp      " Where temporary files will go.
+set backup                                                                     " Enable backup file creation
+set backupdir=~/.vim/backups                                                   " Where backups will go
+set directory=~/.vim/tmp                                                       " Where temporary files will go
 
-set history=1000 " Store lots of :cmdline history
+set history=1000                                                               " Remember lots of :cmdline history
+set backspace=indent,eol,start                                                 " Allow to navigate from start of line to end of previous line
+set wildmode=list:longest                                                      " Make cmdline tab completion similar to bash
 
-set backspace=indent,eol,start " Allow to navigate from start of line to end of previous line
-
-set wildmode=list:longest " Make cmdline tab completion similar to bash
-set autoread
-set encoding=utf-8
-set gdefault " 'g' flag is used by default in commands
+set autoread                                                                   " Reload file immediately when changed outside of Vim
+set encoding=utf-8                                                             " UTF8 Support
+set gdefault                                                                   " 'g' flag is used by default in commands
 
 "*****************************************************************************"
 "
 " Look and feel
 "
 "*****************************************************************************"
-"
+
 colorscheme default
 
-""" Line options
+set nu                                                                         " Turn on line numbers
+set cc=80                                                                      " Set 80 symbols ruler
+set scrolloff=3                                                                " Show 3 line after and before cursor when scrolling
 
+set ts=2                                                                       " Tabulation Size
+set expandtab                                                                  " Tabulation symbols replaced with spaces
+set sw=2                                                                       " N characters text is moved with 'shift' command
+set nowrap                                                                     " Disable text wrapping
 
-set nu   " Turn on line numbers
-"set cul  " Highligth current line
-"set so=999
+set shiftwidth=2                                                               " Make indent level equal 2 spaces
+set ai                                                                         " Auto indent to current level
+set si                                                                         " Smart indent
+set stal=2                                                                     " Always show tabs
 
-set cc=80
+filetype on                                                                    " Enable filetype detection
+filetype plugin on                                                             " Enable loading plugins for filetypes
+filetype indent on                                                             " Enable loading identation rules for filetypes
 
+set statusline=%<%f\ %m%r%{fugitive#statusline()}%=%-14.(%l,%c%)\ %P           " Statusline shows relative filepath,
+                                                                               " modified/not, readonly/not, fugitive-related stuff,
+                                                                               " line number, column number, file percentage
+                                                                               
+set hidden                                                                     " Allow dirty unsaved buffers
+set noswapfile                                                                 " Disable .swp files creation for every buffer
 
-" Tab size
+colorscheme default                                                            " Clear coloscheme settings
 
-set ts=2
-set sw=2
-set shiftwidth=2  " Make indent equal 2 spaces
-set ai            " Auto indent to current level
-set si            " Smart indent
-set stal=2
-set expandtab     " No tabs, no war!
+set ignorecase                                                                 " Disable case-sensitive search when search in lowercase
+set smartcase                                                                  " Disable case-sensitive search when search in lowercase
+set incsearch                                                                  " Find the next match as we type the search
+set hlsearch                                                                   " Hilight searches by default
 
-filetype on
-filetype plugin on
-filetype indent on
-"set statusline=%<%f\ %{fugitive#statusline()}\ %=\ lin:%l\,%L\ col:%c%V\ %P
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set ruler
-set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+set showcmd                                                                    " Show currently running cmds on cmdline
+set showmode                                                                   " Show INSERT mode on cmdline
 
-" Do not wrap text
-set nowrap
-set noswapfile
+set showmatch                                                                  " Jump to automatically inserted paired bracket
 
-" Show 3 line after and before cursor when scrolling
-set scrolloff=3
+set nostartofline                                                              " Don't jump to start of the line when moving around
 
-""" Buffers
-set hidden " Allow dirty unsaved buffers
+set vb                                                                         " Disable beeping and use 'visualbell' instead
 
-""" Appearance
-colorscheme default    " Color theme
-
-""" Search
-set ignorecase
-set smartcase
-set showcmd    " Show incomplete cmds down the bottom
-set showmode   " Show current mode down the bottom
-
-set incsearch  " Find the next match as we type the search
-set hlsearch   " Hilight searches by default
-set showmatch
-
-" Page Up & Page Down behaviour
-set nostartofline " Don't jump to fisrt line
-set vb
-
- "                                                                           "
 "*****************************************************************************"
 "
 " GUI settings
 "
 "*****************************************************************************"
- "                                                                           "
 
-let g:solarized_termtrans = 1
+let g:solarized_termtrans = 1                                                  " Use terminal background for Solarized when run MacVim from terminal
+                                                                               " (fix for iTerm2)
+
 if has("gui_running")
-  set tb=icons          " Only icons in toolbar
-  set tbis=tiny         " Set icon size to tiny
-  set guioptions-=m     " remove menu bar
-  set guioptions-=T     " remove toolbar
-  set guioptions-=r     " remove right-hand scroll bar
-  set guioptions-=L     " remove left-hand scroll bar
-  set showtabline=2     " tabs bar
-  set laststatus=2      " file status
-  " Change color scheme by day time
-  let dayBegin = 6
-  let nightBegin = 18
-  let currentTime = str2nr(strftime("%H"))
+  set guioptions-=m                                                            " Remove menu bar
+  set guioptions-=T                                                            " Remove toolbar
+  set guioptions-=r                                                            " Remove right-hand scroll bar
+  set guioptions-=L                                                            " Remove left-hand scroll bar
+  set showtabline=2                                                            " Show tabs bar
+  set laststatus=2                                                             " Show file status
 
-  if currentTime > dayBegin && currentTime < nightBegin
-    set background=light
-  else
-    set background=dark
-  endif
+  colorscheme solarized                                                        " My favorite color scheme
+  set gfn=Monaco:h14                                                           " Font settings
 
-  colorscheme solarized
-  set gfn=Monaco:h14
+                                                                               " Change color scheme by daytime :
+                                                                               "
+  let dayBegin = 6                                                             " Sunrise hour
+  let nightBegin = 18                                                          " Sunset hour
+  let currentTime = str2nr(strftime("%H"))                                     " Get current time 
+                                                                               "
+  if currentTime > dayBegin && currentTime < nightBegin                        " If Sun is up 
+    set background=light                                                       " use light scheme
+  else                                                                         " else
+    set background=dark                                                        " use dark scheme                                       
+  endif                                                                        "   
+
 endif
 
- "                                                                           "
 "*****************************************************************************"
 "
 " Functions and commands
 "
 "*****************************************************************************"
- "                                                                           "
-
-" Color switchers
 
 
-fun! DarkScheme()
-  set background=dark
-endf
-
-fun! DarkScheme12()
-  colorscheme glowchalk
-  set gfn=Terminus\ 12
-endf
-
-fun! DarkScheme14()
-  colorscheme glowchalk
-  set gfn=Terminus\ 14
-endf
-
-fun! DarkSchemeMonaco()
-  colorscheme glowchalk
-  set gfn=Monaco\ 10
-endf
-
-fun! LightScheme()
-  set background=light
-endf
-
-fun! GithubScheme(n)
-  colorscheme github
-  execute ':set gfn=Monaco:h' . a:n
-  call LightIndentGuides()
-endf
-
-fun! RailscastsScheme(n)
-  colorscheme railscasts
-  execute ':set gfn=Monaco:h' . a:n
-  call DarkIndentGuides()
-endf
-
-fun! DarkIndentGuides()
-  :hi IndentGuidesOdd  guibg=#333333   ctermbg=3
-  ":hi IndentGuidesEven guibg=#000000 ctermbg=4
-endf
-
-fun! LightIndentGuides()
-  :hi IndentGuidesOdd  guibg=#EFEFEF   ctermbg=3
-  ":hi IndentGuidesEven guibg=#EFEFEF ctermbg=4
-endf
-
-com Lfdark :call DarkScheme()<CR>
-com Lflight :call LightScheme()<CR>
-com Lfdark12 :call DarkScheme12()<CR>
-com Lfdark14 :call DarkScheme14()<CR>
-com Lfdarkmonaco :call DarkSchemeMonaco()<CR>
-com Lfgithub :call GithubScheme(11)<CR>
-com Lfgithub10 :call GithubScheme(10)<CR>
-com Lfrailscasts :call RailscastsScheme(10)<CR>
-com Lfrailscasts11 :call RailscastsScheme(11)<CR>
-
-"''''''
-
-" ConqueTerm
-com Zsh :call ZshStart()<CR>
-
-fun! ZshStart()
-  ConqueTerm zsh
-endf
-
-let g:ConqueTerm_Color = 0
-
-" Remove all spaces from end in each line
-fun! RemoveSpaces()
-  if &bin | return | endif
-  if search('\s\+$', 'n')
-    let line = line('.')
-    let col = col('.')
-    sil %s/\s\+$//ge
-    call cursor(line, col)
-  endif
-endf
+                                                                               " Remove all spaces from the end of each line
+fun! RemoveSpaces()                                                            "
+  if &bin | return | endif                                                     "
+  if search('\s\+$', 'n')                                                      "
+    let line = line('.')                                                       "
+    let col = col('.')                                                         "
+    sil %s/\s\+$//ge                                                           "
+    call cursor(line, col)                                                     "
+  endif                                                                        "
+endf                                                                           "
 
 
-" Toggle set line numbers relative or straight(Vim 7.3 required)
-function ToggleRelNumber()
-  if (&relativenumber == 1)
-    set nu!
-  else
-    set relativenumber!
-  endif
-endfunction
+                                                                               " Toggle relative and straight line numbers
+function ToggleRelNumber()                                                     "
+  if (&relativenumber == 1)                                                    "
+    set nu!                                                                    "
+  else                                                                         "
+    set relativenumber!                                                        "
+  endif                                                                        "
+endfunction                                                                    "
+
+
+
+                                                                               " Set text wrap and make movements operate on single 
+                                                                               " screen line (regular text editor mode)
+fun! WrapLbr()                                                                 "
+  set wrap                                                                     "
+  set wm=2                                                                     "
+  set textwidth=72                                                             "
+  set lbr                                                                      "
+  call TYToggleBreakMove()                                                     "
+endf                                                                           "
+                                                                               "
+function! ScreenMovement(movement)                                             "
+  if &wrap && b:gmove == 'yes'                                                 "
+    return "g" . a:movement                                                    "
+  else                                                                         "
+    return a:movement                                                          "
+  endif                                                                        "
+endfunction                                                                    "
+                                                                               "
+onoremap <silent> <expr> j ScreenMovement("j")                                 "
+onoremap <silent> <expr> k ScreenMovement("k")                                 "
+onoremap <silent> <expr> 0 ScreenMovement("0")                                 "
+onoremap <silent> <expr> ^ ScreenMovement("^")                                 "
+onoremap <silent> <expr> $ ScreenMovement("$")                                 "
+nnoremap <silent> <expr> j ScreenMovement("j")                                 "
+nnoremap <silent> <expr> k ScreenMovement("k")                                 "
+nnoremap <silent> <expr> 0 ScreenMovement("0")                                 "
+nnoremap <silent> <expr> ^ ScreenMovement("^")                                 "
+nnoremap <silent> <expr> $ ScreenMovement("$")                                 "
+                                                                               "
+function! TYShowBreak()                                                        "
+  if &showbreak == ''                                                          "
+    set showbreak=>                                                            "
+  else                                                                         "
+    set showbreak=                                                             "
+  endif                                                                        "
+endfunction                                                                    "
+let b:gmove = "yes"                                                            "
+function! TYToggleBreakMove()                                                  "
+  if exists("b:gmove") && b:gmove == "yes"                                     "
+    let b:gmove = "no"                                                         "
+  else                                                                         "
+    let b:gmove = "yes"                                                        "
+  endif                                                                        "
+endfunction                                                                    "
+nmap  <expr> ,b  TYShowBreak()                                                 "
+nmap  <expr> ,bb  TYToggleBreakMove()                                          "
+
+"*****************************************************************************"
+"
+" Key mappings
+"
+"*****************************************************************************"
+
+let mapleader = ","                                                            " Leader key mapping
+noremap <leader><leader> <ESC>                                                 "
+inoremap <leader><leader> <ESC>                                                "
+
+map <M-a> :bprev<CR>                                                           " Previous buffer
+map <M-s> :bnext<CR>                                                           " Next buffer 
+map <C-Tab> :BufExplorer<CR>                                                   " Buffer Explorer
+
+set pastetoggle=<F6>                                                           " Do not autoindent lines, when paste from OS buffer
+
+
+nmap <leader><leader>t :sp<cr><C-w>T                                           " Open current buffer in new tab
+map <D-1> 1gt                                                                  " Open Tabs by number
+map <D-2> 2gt                                                                  "
+map <D-3> 3gt                                                                  "
+map <D-4> 4gt                                                                  "
+map <D-5> 5gt                                                                  "
+map <D-6> 6gt                                                                  "
+map <D-7> 7gt                                                                  "
+map <D-8> 8gt                                                                  "
+map <D-9> 9gt                                                                  "
+
+                                                                               " Move visually selected blocks of text
+vmap <C-S-h> <gv                                                               " Left
+vmap <C-S-l> >gv                                                               " Right
+vmap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z                                      " Up
+vmap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z                                       " Down
+
+
+nmap <silent><leader>v <C-w>v                                                  " Create vertical split
+nmap <silent><leader>s <C-w>s                                                  " Create horisontal split
+nmap <silent><leader>x <C-w>c                                                  " Close split
+nmap <silent><leader>o :ZoomWin<CR>                                            " Expand current split to fullscren/restore split size
+nmap + <C-w>+                                                                  " Resize split
+nmap _ <C-w>-                                                                  "
+
+                                                                               " Navigate between splits
+nnoremap <C-l> <C-w>l                                                          " Left
+nnoremap <C-h> <C-w>h                                                          " Right
+nnoremap <C-k> <C-w>k                                                          " Up
+nnoremap <C-j> <C-w>j                                                          " Down
+
+
+                                                                               " Use <Tab> to move between brackets
+nnoremap <tab> %                                                               "
+vnoremap <tab> %                                                               "
+map <tab> %                                                                    "
+
+nnoremap <leader>a :Ack<space>                                                 " Search with Ack
+
+nmap <silent> <leader><leader>w :call WrapLbr()<CR>                            " Enable smart wrapping (regular editor mode)
+nmap <silent> <leader><leader>wo :set nowrap<CR>                               " Disable smart wrapping (regular editor mode)
+
+nmap <silent><leader>y :set nolist!<CR>                                        " Show trailing characters
+nnoremap <leader>m :noh<cr>                                                    " Clear highlight
+
+let g:SuperTabMappingForward = '<leader><tab>'
+
+
+nmap <silent><leader><tab> :Sscratch<CR>                                       " Opens a buffer which is never saved (for scratches)
+
+nmap <silent><leader>r :call ToggleRelNumber()<cr>                             " Toggle relative and straight line numbers
+
+vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<                                        " Fold everything, except visually selected block
+nmap <silent><Leader>zs <Esc>zRzz                                               " Unfold everything
+
+"*****************************************************************************"
+"
+" Plugin configurations
+"
+"*****************************************************************************"
 
 " NerdTree expand behaviour fix
 fun! NERDTreeToggleWithFind()
@@ -247,173 +268,14 @@ fun! NERDTreeToggleWithFind()
   end
 endf
 
-" Set text wrap and make movements to operate on 1 screen line in wrap mode
-fun! WrapLbr()
-  set wrap
-  set wm=2
-  set textwidth=72
-  set lbr
-  call TYToggleBreakMove()
+" ConqueTerm
+com Zsh :call ZshStart()<CR>
+
+fun! ZshStart()
+  ConqueTerm zsh
 endf
 
-function! ScreenMovement(movement)
-  "if &wrap && b:gmove == 'yes'
-  if &wrap && b:gmove == 'yes'
-    return "g" . a:movement
-  else
-    return a:movement
-  endif
-endfunction
-
-onoremap <silent> <expr> j ScreenMovement("j")
-onoremap <silent> <expr> k ScreenMovement("k")
-onoremap <silent> <expr> 0 ScreenMovement("0")
-onoremap <silent> <expr> ^ ScreenMovement("^")
-onoremap <silent> <expr> $ ScreenMovement("$")
-nnoremap <silent> <expr> j ScreenMovement("j")
-nnoremap <silent> <expr> k ScreenMovement("k")
-nnoremap <silent> <expr> 0 ScreenMovement("0")
-nnoremap <silent> <expr> ^ ScreenMovement("^")
-nnoremap <silent> <expr> $ ScreenMovement("$")
-
-function! TYShowBreak()
-  if &showbreak == ''
-    set showbreak=>
-  else
-    set showbreak=
-  endif
-endfunction
-let b:gmove = "yes"
-function! TYToggleBreakMove()
-  if exists("b:gmove") && b:gmove == "yes"
-    let b:gmove = "no"
-  else
-    let b:gmove = "yes"
-  endif
-endfunction
-nmap  <expr> ,b  TYShowBreak()
-nmap  <expr> ,bb  TYToggleBreakMove()
-" - - -
-
- "                                                                           "
-"*****************************************************************************"
-"
-" Key maps
-"
-"*****************************************************************************"
- "                                                                           "
-
-let mapleader = ","
-
-noremap <leader><leader> <ESC>
-inoremap <leader><leader> <ESC>
-
-"" Previous - Next buffer
-map <M-a> :bprev<CR>
-map <M-s> :bnext<CR>
-map <C-Tab> :BufExplorer<CR>
-map <M-d> :BufExplorer<CR>
-
-imap <F3> <C-w>c :set nowrap<CR>
-nmap <F3> <C-w>c :set nowrap<CR>
-imap <F4> :q!<CR> :set nowrap<CR>
-nmap <F4> :q!<CR> :set nowrap<CR>
-
-set pastetoggle=<F6>
-
-
-""
-
-"" Tabs
-nmap <leader><leader>t :sp<cr><C-w>T " Open current buffer in new tab
-map <C-Left> <esc>:tabprevious<cr>
-map <C-Right> <esc>:tabnext<cr>
-
-" Open tab by number
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-
-"" Ctrl+C & Ctrl+V to system buffer
-nmap <C-v> "+gp
-imap <C-v> <ESC><C-v>i
-vmap <C-c> "+y
-
-"imap <C-o> <ESC>O
-"imap <C-o> <ESC>o
-
-
-" F2 - Save File
-nmap <F2> :w<cr>
-vmap <F2> <esc>:w<cr>
-imap <F2> <esc>:w<cr>
-
-"" Move visually selected blocks of text
-vmap <C-S-h> <gv
-vmap <C-S-l> >gv
-vmap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
-vmap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
-
-
-"" Windows
-
-" Navigate between windows
-
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-
-" Window resize
-
-nmap + <C-w>+
-nmap _ <C-w>-
-
-
-" Use <Tab> to move between brackets
-nnoremap <tab> %
-vnoremap <tab> %
-map <tab> %
-
-
-"""" Leader Mappings
-
-nnoremap <leader>a :Ack<space>
-
-nmap <silent> <leader><leader>w :call WrapLbr()<CR>" Enable smart wrapping
-nmap <silent> <leader><leader>wo :set nowrap<CR>   " Disable smart wrapping
-
-nmap <silent><leader>y :set nolist!<CR>   " Show trailing characters
-nnoremap <leader>m :noh<cr>          " Clear highlight
-
-let g:SuperTabMappingForward = '<leader><tab>'
-
-nmap <silent><leader>v <C-w>v  " Create vertical split
-nmap <silent><leader>s <C-w>s  " Create horisontal split
-nmap <silent><leader>x <C-w>c  " Close split
-nmap <silent><leader>o :ZoomWin<CR> " Expand current split to fullscren/restore split size
-
-nmap <silent><leader><tab> :Sscratch<CR> " Opens a buffer which is never saved
-
-nmap <silent><leader>r :call ToggleRelNumber()<cr>
-
-vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<                                        " Fold everything, except visually selected block
-nmap <silent><Leader>zs <Esc>zRzz                                               " Unfold everything
-
- "                                                                           "
-"*****************************************************************************"
-"
-" Plugin configurations
-"
-"*****************************************************************************"
- "                                                                           "
+let g:ConqueTerm_Color = 0
 
 """ NERDTree
 " F1 to toggle NERDTree
@@ -489,14 +351,6 @@ endif
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}    set ft=ruby
-
-" md, markdown, and mk are markdown and define buffer-local preview
-"au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-"au BufRead,BufNewFile *.txt call WrapLbr()
-
-"" Auto create ctags
-"autocmd BufWritePost * !ctags -R > /dev/null
 
 "Remove all spaces from end of each line and save file on focus lost
 au BufReadPost * call RemoveSpaces()
