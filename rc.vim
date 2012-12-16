@@ -404,6 +404,8 @@ nmap <silent><leader><tab> :Sscratch<CR> " Opens a buffer which is never saved
 
 nmap <silent><leader>r :call ToggleRelNumber()<cr>
 
+vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<                                        " Fold everything, except visually selected block
+nmap <silent><Leader>zs <Esc>zRzz                                               " Unfold everything
 
  "                                                                           "
 "*****************************************************************************"
