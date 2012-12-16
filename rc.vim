@@ -126,7 +126,7 @@ if has("gui_running")
   set showtabline=2     " tabs bar
   set laststatus=2      " file status
   colorscheme solarized
-  set gfn=Monaco:h13
+  set gfn=Monaco:h14
 endif
 
  "                                                                           "
