@@ -311,7 +311,7 @@ set pastetoggle=<F6>
 ""
 
 "" Tabs
-nmap <leader>t :sp<cr><C-w>T " Open current buffer in new tab
+nmap <leader><leader>t :sp<cr><C-w>T " Open current buffer in new tab
 map <C-Left> <esc>:tabprevious<cr>
 map <C-Right> <esc>:tabnext<cr>
 
@@ -373,11 +373,11 @@ map <tab> %
 
 nnoremap <leader>a :Ack<space>
 
-nmap <silent> <leader>w :call WrapLbr()<CR>" Enable smart wrapping
-nmap <silent> <leader>wo :set nowrap<CR>   " Disable smart wrapping
+nmap <silent> <leader><leader>w :call WrapLbr()<CR>" Enable smart wrapping
+nmap <silent> <leader><leader>wo :set nowrap<CR>   " Disable smart wrapping
 
 nmap <silent><leader>y :set nolist!<CR>   " Show trailing characters
-nnoremap <leader>n :noh<cr>          " Clear highlight
+nnoremap <leader>m :noh<cr>          " Clear highlight
 
 let g:SuperTabMappingForward = '<leader><tab>'
 
@@ -440,7 +440,7 @@ set grepprg=ack\ -a
 nnoremap <F5> :GundoToggle<CR>
 
 " Easymotion
-let g:EasyMotion_leader_key = '<leader><leader>'
+let g:EasyMotion_leader_key = '<leader>'
 
 " Another user functions
 "
