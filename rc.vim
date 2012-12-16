@@ -393,7 +393,6 @@ nmap <silent><leader><tab> :Sscratch<CR> " Opens a buffer which is never saved
 
 nmap <silent><leader>r :call ToggleRelNumber()<cr>
 
-nmap <silent><leader>b :set ba<CR>   " Show trailing characters
 
  "                                                                           "
 "*****************************************************************************"
