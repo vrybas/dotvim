@@ -87,9 +87,6 @@ if has("gui_running")
   set showtabline=2                                                            " Show tabs bar
   set laststatus=2                                                             " Show file status
 
-  colorscheme solarized                                                        " My favorite color scheme
-  set gfn=Monaco:h14                                                           " Font settings
-
                                                                                " Change color scheme by daytime :
                                                                                "
   let dayBegin = 6                                                             " Sunrise hour
@@ -101,6 +98,9 @@ if has("gui_running")
   else                                                                         " else
     set background=dark                                                        " use dark scheme                                       
   endif                                                                        "   
+
+  colorscheme solarized                                                        " My favorite color scheme
+  set gfn=Monaco:h14                                                           " Font settings
 
 endif
 
