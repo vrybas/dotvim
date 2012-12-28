@@ -133,55 +133,6 @@ function ToggleRelNumber()                                                     "
   endif                                                                        "
 endfunction                                                                    "
 
-
-
-                                                                               " Set text wrap and make movements operate on single
-                                                                               " screen line (regular text editor mode)
-fun! WrapLbr()                                                                 "
-  set wrap                                                                     "
-  set wm=2                                                                     "
-  set textwidth=72                                                             "
-  set lbr                                                                      "
-  call TYToggleBreakMove()                                                     "
-endf                                                                           "
-                                                                               "
-function! ScreenMovement(movement)                                             "
-  if &wrap && b:gmove == 'yes'                                                 "
-    return "g" . a:movement                                                    "
-  else                                                                         "
-    return a:movement                                                          "
-  endif                                                                        "
-endfunction                                                                    "
-                                                                               "
-onoremap <silent> <expr> j ScreenMovement("j")                                 "
-onoremap <silent> <expr> k ScreenMovement("k")                                 "
-onoremap <silent> <expr> 0 ScreenMovement("0")                                 "
-onoremap <silent> <expr> ^ ScreenMovement("^")                                 "
-onoremap <silent> <expr> $ ScreenMovement("$")                                 "
-nnoremap <silent> <expr> j ScreenMovement("j")                                 "
-nnoremap <silent> <expr> k ScreenMovement("k")                                 "
-nnoremap <silent> <expr> 0 ScreenMovement("0")                                 "
-nnoremap <silent> <expr> ^ ScreenMovement("^")                                 "
-nnoremap <silent> <expr> $ ScreenMovement("$")                                 "
-                                                                               "
-function! TYShowBreak()                                                        "
-  if &showbreak == ''                                                          "
-    set showbreak=>                                                            "
-  else                                                                         "
-    set showbreak=                                                             "
-  endif                                                                        "
-endfunction                                                                    "
-let b:gmove = "yes"                                                            "
-function! TYToggleBreakMove()                                                  "
-  if exists("b:gmove") && b:gmove == "yes"                                     "
-    let b:gmove = "no"                                                         "
-  else                                                                         "
-    let b:gmove = "yes"                                                        "
-  endif                                                                        "
-endfunction                                                                    "
-nmap  <expr> ,b  TYShowBreak()                                                 "
-nmap  <expr> ,bb  TYToggleBreakMove()                                          "
-
 "*****************************************************************************"
 "
 " Key mappings
@@ -237,9 +188,6 @@ vnoremap <tab> %                                                               "
 map <tab> %                                                                    "
                                                                                " Search with Ack
 nnoremap <leader>a :Ack<space>
-
-nmap <silent> <leader><leader>w :call WrapLbr()<CR>                            " Enable smart wrapping (regular editor mode)
-nmap <silent> <leader><leader>wo :set nowrap<CR>                               " Disable smart wrapping (regular editor mode)
 
 nmap <silent><leader>y :set nolist!<CR>                                        " Show trailing characters
 nnoremap <leader>m :noh<cr>                                                    " Clear highlight
