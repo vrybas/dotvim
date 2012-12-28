@@ -19,6 +19,7 @@
  Bundle 'tpope/vim-rails'
  Bundle 'scrooloose/nerdtree'
  Bundle 'scrooloose/nerdcommenter'
+ Bundle 'mileszs/ack.vim'
 
  filetype plugin indent on     " required!
  "
