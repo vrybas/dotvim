@@ -192,7 +192,6 @@ nnoremap <leader>a :Ack<space>
 nmap <silent><leader>y :set nolist!<CR>                                        " Show trailing characters
 nnoremap <leader>m :noh<cr>                                                    " Clear highlight
 
-let g:SuperTabMappingForward = '<leader><tab>'
 
 
 nmap <silent><leader><tab> :Sscratch<CR>                                       " Opens a buffer which is never saved (for scratches)
@@ -278,6 +277,7 @@ let g:surround_61 = "<%= \r %>"
 
 set listchars=tab:>-,trail:·,eol:$
 
+let g:SuperTabMappingForward = '<leader><space>'
 
 """""" Indent Guides plugin configuration
 let g:indent_guides_auto_colors = 0
