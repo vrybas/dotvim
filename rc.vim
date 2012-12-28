@@ -31,6 +31,7 @@ colorscheme default
 
 set nu                                                                         " Turn on line numbers
 set cc=80                                                                      " Set 80 symbols ruler
+
 set scrolloff=3                                                                " Show 3 line after and before cursor when scrolling
 
 set ts=2                                                                       " Tabulation Size
@@ -50,7 +51,7 @@ filetype indent on                                                             "
 set statusline=%<%f\ %m%r%{fugitive#statusline()}%=%-14.(%l,%c%)\ %P           " Statusline shows relative filepath,
                                                                                " modified/not, readonly/not, fugitive-related stuff,
                                                                                " line number, column number, file percentage
-                                                                               
+
 set hidden                                                                     " Allow dirty unsaved buffers
 set noswapfile                                                                 " Disable .swp files creation for every buffer
 
@@ -91,13 +92,13 @@ if has("gui_running")
                                                                                "
   let dayBegin = 6                                                             " Sunrise hour
   let nightBegin = 18                                                          " Sunset hour
-  let currentTime = str2nr(strftime("%H"))                                     " Get current time 
+  let currentTime = str2nr(strftime("%H"))                                     " Get current time
                                                                                "
-  if currentTime > dayBegin && currentTime < nightBegin                        " If Sun is up 
+  if currentTime > dayBegin && currentTime < nightBegin                        " If Sun is up
     set background=light                                                       " use light scheme
   else                                                                         " else
-    set background=dark                                                        " use dark scheme                                       
-  endif                                                                        "   
+    set background=dark                                                        " use dark scheme
+  endif                                                                        "
 
   colorscheme solarized                                                        " My favorite color scheme
   set gfn=Monaco:h14                                                           " Font settings
@@ -134,7 +135,7 @@ endfunction                                                                    "
 
 
 
-                                                                               " Set text wrap and make movements operate on single 
+                                                                               " Set text wrap and make movements operate on single
                                                                                " screen line (regular text editor mode)
 fun! WrapLbr()                                                                 "
   set wrap                                                                     "
@@ -192,7 +193,7 @@ noremap <leader><leader> <ESC>                                                 "
 inoremap <leader><leader> <ESC>                                                "
 
 map <M-a> :bprev<CR>                                                           " Previous buffer
-map <M-s> :bnext<CR>                                                           " Next buffer 
+map <M-s> :bnext<CR>                                                           " Next buffer
 map <C-Tab> :BufExplorer<CR>                                                   " Buffer Explorer
 
 set pastetoggle=<F6>                                                           " Do not autoindent lines, when paste from OS buffer
