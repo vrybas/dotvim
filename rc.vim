@@ -21,6 +21,7 @@
  Bundle 'scrooloose/nerdcommenter'
  Bundle 'mileszs/ack.vim'
  Bundle 'vim-scripts/bufexplorer.zip'
+ Bundle 'topfunky/PeepOpen-EditorSupport', {'rtp': 'vim-peepopen/'}
 
  filetype plugin indent on     " required!
  "
