@@ -16,6 +16,7 @@
 
  " Bundles :
  "
+ Bundle 'tpope/vim-rails'
 
  filetype plugin indent on     " required!
  "
