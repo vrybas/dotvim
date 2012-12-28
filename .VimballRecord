@@ -1,2 +1,0 @@
-ZoomWin.vba: call delete('/home/vrybas/.vim/plugin/ZoomWinPlugin.vim')|call delete('/home/vrybas/.vim/doc/ZoomWin.txt')|call delete('/home/vrybas/.vim/autoload/ZoomWin.vim')
-supertab.vba: call delete('/home/vrybas/.vim/doc/supertab.txt')|call delete('/home/vrybas/.vim/plugin/supertab.vim')
