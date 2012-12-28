@@ -234,8 +234,8 @@ nnoremap <C-j> <C-w>j                                                          "
 nnoremap <tab> %                                                               "
 vnoremap <tab> %                                                               "
 map <tab> %                                                                    "
-
-nnoremap <leader>a :Ack<space>                                                 " Search with Ack
+                                                                               " Search with Ack
+nnoremap <leader>a :Ack<space>
 
 nmap <silent> <leader><leader>w :call WrapLbr()<CR>                            " Enable smart wrapping (regular editor mode)
 nmap <silent> <leader><leader>wo :set nowrap<CR>                               " Disable smart wrapping (regular editor mode)
