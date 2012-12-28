@@ -25,6 +25,7 @@
  Bundle 'vim-scripts/delimitMate.vim'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'tpope/vim-fugitive'
+ Bundle 'sjl/gundo.vim'
 
  filetype plugin indent on     " required!
  "
