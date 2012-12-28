@@ -253,6 +253,8 @@ nmap <silent><leader>r :call ToggleRelNumber()<cr>                             "
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<                                        " Fold everything, except visually selected block
 nmap <silent><Leader>zs <Esc>zRzz                                               " Unfold everything
 
+nnoremap ; :
+
 "*****************************************************************************"
 "
 " Plugin configurations
