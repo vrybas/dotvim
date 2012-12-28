@@ -1,12 +1,49 @@
+"*****************************************************************************"
+"
+" Vundle configuration
+" https://github.com/gmarik/vundle
+"
+"*****************************************************************************"
+ set nocompatible               " be iMproved
+ filetype off                   " required!
+
+ set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+ " let Vundle manage Vundle
+ " required! 
+ Bundle 'gmarik/vundle'
+
+ " My Bundles here:
+ "
+ " original repos on github
+ Bundle 'tpope/vim-fugitive'
+ Bundle 'Lokaltog/vim-easymotion'
+ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Bundle 'tpope/vim-rails.git'
+ " vim-scripts repos
+ Bundle 'L9'
+ Bundle 'FuzzyFinder'
+ " non github repos
+ Bundle 'git://git.wincent.com/command-t.git'
+ " ...
+
+ filetype plugin indent on     " required!
+ "
+ " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
 
 "*****************************************************************************"
 "
 " Base settings
 "
 "*****************************************************************************"
-
-set nocompatible
-" Turn off vi compatible
 
 syntax on
 " Turn on syntax highlight
@@ -88,17 +125,6 @@ set si
 
 set stal=2
 " Always show tabs
-
-
-filetype on
-" Enable filetype detection
-
-filetype plugin on
-" Enable loading plugins for filetypes
-
-filetype indent on
-" Enable loading identation rules for filetypes
-
 
 set statusline=%<%f\ %m%r%{fugitive#statusline()}%=%-14.(%l,%c%)\ %P
 " Statusline shows relative filepath,
