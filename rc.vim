@@ -444,18 +444,6 @@ set listchars=tab:>-,trail:·,eol:$
 
 let g:SuperTabMappingForward = '<leader><space>'
 
-"""""" Indent Guides plugin configuration
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#EFEFEF   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#EFEFEF ctermbg=4
-let g:indent_guides_start_level = 4
-let g:indent_guides_guide_size = 1
-
-if has("gui_running")
-  autocmd VimEnter * IndentGuidesEnable
-endif
-
-
 
  "                                                                           "
 "*****************************************************************************"
