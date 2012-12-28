@@ -23,6 +23,7 @@
  Bundle 'vim-scripts/bufexplorer.zip'
  Bundle 'topfunky/PeepOpen-EditorSupport', {'rtp': 'vim-peepopen/'}
  Bundle 'vim-scripts/delimitMate.vim'
+ Bundle 'Lokaltog/vim-easymotion'
 
  filetype plugin indent on     " required!
  "
