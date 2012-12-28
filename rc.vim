@@ -351,8 +351,7 @@ endif
 "*****************************************************************************"
  "                                                                           "
 
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill}    set ft=ruby
+autocmd BufEnter * if &filetype == "" | set ft=ruby | endif                    " Set filetype to 'ruby' by default to have syntax highlight everywhere
 
 "Remove all spaces from end of each line and save file on focus lost
 au BufReadPost * call RemoveSpaces()
