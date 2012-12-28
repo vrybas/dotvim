@@ -17,6 +17,7 @@
  " Bundles :
  "
  Bundle 'tpope/vim-rails'
+ Bundle 'scrooloose/nerdtree'
 
  filetype plugin indent on     " required!
  "
