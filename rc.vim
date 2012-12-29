@@ -33,6 +33,7 @@
  Bundle 'ervandew/supertab'
  Bundle 'duff/vim-scratch'
  Bundle 'tpope/vim-surround'
+ Bundle 'vim-scripts/ZoomWin'
 
  filetype plugin indent on     " required!
  "
