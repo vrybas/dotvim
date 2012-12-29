@@ -457,11 +457,6 @@ end
 """ Vim-Ruby
 let ruby_no_expensive = 1
 
-" Autocomplete setup
-let g:rubycomplete_buffer_loading = 1
-let g:rubes_in_global = 1
-let g:rubycomplete_rails = 1
-
 " Use Ack instead of Grep
 set grepprg=ack\ -a
 
@@ -487,7 +482,7 @@ function! OpenRspecDoc(keyword)
   call system("open -a Firefox ". url)
 endfunction
 
-noremap RR :call OpenRailsDoc(expand('<cword>'))<cr> 
+noremap RR :call OpenRailsDoc(expand('<cword>'))<cr>
 noremap RB :call OpenRubyDoc(expand('<cword>'))<cr>
 noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 
@@ -499,10 +494,35 @@ cmap w!! %!sudo tee > /dev/null %
 """" Toggle show trailing characters
 set listchars=tab:>-,trail:·,eol:$
 
-let g:SuperTabDefaultCompletionType = 'context'
+set completeopt+=longest,menu,preview
+
+" For code completion with a drop down menu
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" " made, these lines close it on movement in insert mode or when leaving
+" " insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+autocmd FileType *
+   \ if &omnifunc != '' |
+   \   call SuperTabChain(&omnifunc, "<c-p>") |
+   \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+   \ endif
 
 let g:rsenseUseOmniFunc = 1
 let g:rsenseHome = expand('~/.vim/bundle/rsense')
+
+let g:rubycomplete_buffer_loading = 1
+let g:rubes_in_global = 1
+let g:rubycomplete_rails = 1"
+
+set ofu=syntaxcomplete#Complete
 
  "                                                                           "
 "*****************************************************************************"
@@ -527,11 +547,6 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
- autocmd FileType *
-     \ if &omnifunc != '' |
-     \   call SuperTabChain(&omnifunc, "<c-p>") |
-     \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-     \ endif
 
  "                                                                           "
 "*****************************************************************************"
