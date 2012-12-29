@@ -471,6 +471,26 @@ nnoremap <Leader>u :GundoToggle<CR>
 " Easymotion
 let g:EasyMotion_leader_key = '<leader>'
 
+" Apidock
+function! OpenRailsDoc(keyword)
+  let url = 'http://apidock.com/rails/'.a:keyword
+  call system("open -a Firefox ". url)
+endfunction
+
+function! OpenRubyDoc(keyword)
+  let url = 'http://apidock.com/ruby/'.a:keyword
+  call system("open -a Firefox ". url)
+endfunction
+
+function! OpenRspecDoc(keyword)
+  let url = 'http://apidock.com/rspec/'.a:keyword
+  call system("open -a Firefox ". url)
+endfunction
+
+noremap RR :call OpenRailsDoc(expand('<cword>'))<cr> 
+noremap RB :call OpenRubyDoc(expand('<cword>'))<cr>
+noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
+
 " Another user functions
 "
 " Sudo promt with :w!!
