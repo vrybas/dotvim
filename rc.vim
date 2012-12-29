@@ -502,6 +502,7 @@ set listchars=tab:>-,trail:·,eol:$
 let g:SuperTabDefaultCompletionType = 'context'
 
 let g:rsenseUseOmniFunc = 1
+let g:rsenseHome = expand('~/.vim/bundle/rsense')
 
  "                                                                           "
 "*****************************************************************************"
