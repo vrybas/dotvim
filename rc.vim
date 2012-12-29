@@ -16,6 +16,7 @@
 
  " Bundles :
  "
+ Bundle 'vim-ruby/vim-ruby'
  Bundle 'tpope/vim-rails'
  Bundle 'scrooloose/nerdtree'
  Bundle 'scrooloose/nerdcommenter'
