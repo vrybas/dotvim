@@ -35,6 +35,7 @@
  Bundle 'duff/vim-scratch'
  Bundle 'tpope/vim-surround'
  Bundle 'vim-scripts/ZoomWin'
+ Bundle 'altercation/vim-colors-solarized'
 
  filetype plugin indent on     " required!
  "
