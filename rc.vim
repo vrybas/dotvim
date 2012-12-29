@@ -27,6 +27,10 @@
  Bundle 'tpope/vim-fugitive'
  Bundle 'sjl/gundo.vim'
  Bundle 'tsaleh/vim-matchit'
+ Bundle 'cohama/rsense'
+ Bundle 'cfurrow/vim-l9'
+ Bundle 'chrismetcalf/vim-autocomplpop'
+ Bundle 'ervandew/supertab'
 
  filetype plugin indent on     " required!
  "
@@ -468,8 +472,9 @@ cmap w!! %!sudo tee > /dev/null %
 """" Toggle show trailing characters
 set listchars=tab:>-,trail:·,eol:$
 
-let g:SuperTabMappingForward = '<leader><space>'
+let g:SuperTabDefaultCompletionType = 'context'
 
+let g:rsenseUseOmniFunc = 1
 
  "                                                                           "
 "*****************************************************************************"
@@ -486,6 +491,7 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 "Remove all spaces from end of each line and save file on focus lost
 au BufReadPost * call RemoveSpaces()
 au FocusLost * silent! wa
+au FocusLost * silent! :Rtags
 
 "Restore custor position on file open
 autocmd BufReadPost *
@@ -493,6 +499,11 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+ autocmd FileType *
+     \ if &omnifunc != '' |
+     \   call SuperTabChain(&omnifunc, "<c-p>") |
+     \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+     \ endif
 
  "                                                                           "
 "*****************************************************************************"
