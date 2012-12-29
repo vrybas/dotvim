@@ -31,6 +31,7 @@
  Bundle 'cfurrow/vim-l9'
  Bundle 'chrismetcalf/vim-autocomplpop'
  Bundle 'ervandew/supertab'
+ Bundle 'duff/vim-scratch'
 
  filetype plugin indent on     " required!
  "
