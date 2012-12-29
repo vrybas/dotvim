@@ -324,6 +324,8 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 
+nnoremap <silent><Leader>g <C-w><C-]><C-w>T
+
 
 
 " Move visually selected blocks of text
