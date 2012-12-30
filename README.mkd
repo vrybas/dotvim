@@ -48,7 +48,7 @@
    7. gem install gem-ctags
    8. gem ctags (see [troubleshooting](https://github.com/tpope/gem-ctags#troubleshooting))
    9. mvim /path/to/project
-   10. :e anyFile
+   10. :e any_file_in_path
    11. :Rtags
 
 ## Keymap (above Vim and plugins standard mappings) ##
