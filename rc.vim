@@ -482,6 +482,8 @@ noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 cmap w!! %!sudo tee > /dev/null %
 
 
+" CODE COMPLETION BLOCK
+
 set completeopt+=longest,menu,preview
 
 " For code completion with a drop down menu
