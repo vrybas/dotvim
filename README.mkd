@@ -3,7 +3,7 @@
 ![](http://f.cl.ly/items/3C1b2P3p362q2n2M0m3K/Screen%20Shot%202012-12-30%20at%203.00.43%20PM.png)
 
 ## Features ##
-   * **Ruby on Rails projects support** → [VimRails](http://github.com/vim-ruby/vim-rails) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L517)
+   * **Ruby on Rails projects support** → [VimRails](http://github.com/tpope/vim-rails) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L517)
    * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L446)
    * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L459)
    * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L303)
@@ -12,19 +12,19 @@
    * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L498)
    * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L462)
    * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L137)
-   * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net)
-   * **Open online Ruby/Rails/Rspec documentation** from [APIDock](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
-   * **Show all Ruby methods in current file** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
+   * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L326)
+   * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
+   * **Show all Ruby methods in current file** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L413)
 
 =====
-   * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
+   * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L357)
    * **Bulk lines commenting based on syntax** → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
    * **Auto-closing quotes, brackets etc.** → [DelimitMate](http://github.com/vim-scripts/delimitMate.vim)
    * **Jump between quotes, brackets etc.** → [Matchit](http://github.com/tsaleh/vim-matchit)
-   * **Jump around code with keystrokes** → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
+   * **Jump around code with keystrokes** → [Easymotion](http://github.com/Lokaltog/vim-easymotion)  [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L465)
    * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround](http://github.com/tpope/vim-surround)
-   * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch)
-   * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)
+   * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L400)
+   * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)  [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L192)
 
 =====
    * **Hide everything, except selected text** (stay focused!) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L407)
