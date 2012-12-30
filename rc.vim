@@ -458,9 +458,9 @@ nnoremap <Leader>u :GundoToggle<CR>
 let g:EasyMotion_leader_key = '<leader>'
 
 "ri.vim
-nnoremap  ,ri :call ri#OpenSearchPrompt(0)<cr> " horizontal split
-nnoremap  ,RI :call ri#OpenSearchPrompt(1)<cr> " vertical split
-nnoremap  ,RK :call ri#LookupNameUnderCursor()<cr> " keyword lookup "
+nnoremap  RI :call ri#OpenSearchPrompt(0)<cr> " horizontal split
+nnoremap  RIV :call ri#OpenSearchPrompt(1)<cr> " vertical split
+nnoremap  RK :call ri#LookupNameUnderCursor()<cr> " keyword lookup "
 
 " Apidock
 function! OpenRailsDoc(keyword)

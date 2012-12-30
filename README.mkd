@@ -107,3 +107,8 @@
 * `RB` - APIDock open Ruby documentation
 * `RS` - APIDock open Rspec documentation
 
+===
+* `RI` - Open Ri documentation with autocompletive search in horisontal split
+* `RIV` - Open Ri documentation in vertical split
+* `RK` - Open Ri documentation for keyword under cursor
+
