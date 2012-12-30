@@ -1,7 +1,9 @@
-[DotVim](https://github.com/vrybas/dotvim) -- Vim configuration & plugins
+My Vim configuration for Ruby on Rails development
 ======================================================================
 
-works best with MacVim
+![Rails](http://f.cl.ly/items/3T301q360C1P2y312o2V/rails_logo_200x200.png)
+![Macvim](http://f.cl.ly/items/1A1d0M323o0E1F3u0i3I/mac_vim_logo_200x200.png)
+
 
 ## Installation ##
    1. $ git clone git://github.com/vrybas/dotvim.git ~/.vim
