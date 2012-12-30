@@ -433,16 +433,6 @@ fun! NERDTreeToggleWithFind()
   end
 endf
 
-" ConqueTerm
-"
-com Zsh :call ZshStart()<CR>
-
-fun! ZshStart()
-  ConqueTerm zsh
-endf
-
-let g:ConqueTerm_Color = 0
-
 """ NERDTree
 nmap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
 imap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
