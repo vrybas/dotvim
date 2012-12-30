@@ -3,39 +3,40 @@
 ![](http://f.cl.ly/items/3C1b2P3p362q2n2M0m3K/Screen%20Shot%202012-12-30%20at%203.00.43%20PM.png)
 
 ## Features ##
-   * Ruby on Rails projects support → [VimRails](http://github.com/vim-ruby/vim-rails)
-   * Project Tree View → [NERDTree](http://github.com/scrooloose/nerdtree)
-   * Project search with Ack → [Ack.vim](http://github.com/mileszs/ack.vim)
-   * Files switcher → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
-   * Graphical popup Open File dialog with smart search → [PeepOpen](http://github.com/topfunky/PeepOpen-EditorSupport)
-   * Code completion as-you-type → [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop)
-   * Alternative code completion on Tab → [SuperTab](http://github.com/ervandew/supertab)
-   * Graphical tree-like undo/redo tool → [Gundo](http://github.com/sjl/gundo.vim)
-   * Incredible GIT support → [Fugitive](http://github.com/tpope/vim-fugitive)
-   * Jump to class/method definition → [Ctags](http://ctags.sourceforge.net)
-   * Open online Ruby/Rails/Rspec documentation from [APIDock](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
+   * **Ruby on Rails projects support** → [VimRails](http://github.com/vim-ruby/vim-rails) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L517)
+   * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L446)
+   * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L459)
+   * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L303)
+   * **Graphical popup Open File dialog with smart search** → [PeepOpen](http://github.com/topfunky/PeepOpen-EditorSupport) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L450)
+   * **Code completion as-you-type** → [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop) ([disable](https://github.com/vim-scripts/AutoComplPop/blob/master/doc/acp.txt#L105))
+   * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L498)
+   * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L462)
+   * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L137)
+   * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net)
+   * **Open online Ruby/Rails/Rspec documentation** from [APIDock](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
+   * **Show all Ruby methods in current file** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
 
 =====
-   * Maximize/unmaximize active split → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
-   * Bulk lines commenting based on syntax → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
-   * Auto-closing quotes, brackets etc → [DelimitMate](http://github.com/vim-scripts/delimitMate.vim)
-   * Jump between quotes, brackets etc. → [Matchit](http://github.com/tsaleh/vim-matchit)
-   * Jump around code with keystrokes → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
-   * Surround selected text with any symbols and replace surroundings on-the-fly → [Surround](http://github.com/tpope/vim-surround)
-   * Open scratch buffer which is never saved → [VimScratch](http://github.com/duff/vim-scratch)
-   * Solarized theme → [Solarized](http://github.com/altercation/vim-colors-solarized)
+   * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
+   * **Bulk lines commenting based on syntax** → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
+   * **Auto-closing quotes, brackets etc.** → [DelimitMate](http://github.com/vim-scripts/delimitMate.vim)
+   * **Jump between quotes, brackets etc.** → [Matchit](http://github.com/tsaleh/vim-matchit)
+   * **Jump around code with keystrokes** → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
+   * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround](http://github.com/tpope/vim-surround)
+   * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch)
+   * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)
 
 =====
-   * Hide everything, except selected text (stay focused!) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L407)
-   * Toggle straight/relative line numbers to use with movement operations [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L403)
-   * Move code blocks left/right/up/down [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L330)
-   * Open current split in new tab [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L310)
-   * Open tabs by numbers [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L314)
-   * Restore cursor position on file open [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L541)
-   * Save all files on window focus lost [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L537)
-   * Remove spaces from the end of each line on save [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L536)
-   * Light/Dark scheme switched on sunrise/sunset (editor restart required) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L216)
-   * Cyrillic keys mapped to latin to use in command mode [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L550)
+   * **Hide everything, except selected text** (stay focused!) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L407)
+   * **Toggle straight/relative line numbers to use with movement operations** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L276)
+   * **Move code blocks left/right/up/down** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L330)
+   * **Open current split in new tab** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L310)
+   * **Open tabs by numbers** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L314)
+   * **Restore cursor position on file open** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L541)
+   * **Save all files when switching away from editor** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L537)
+   * **Remove spaces from the end of each line on save** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L262)
+   * **Light/Dark scheme switched on sunrise/sunset** (editor restart required) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L216)
+   * **Cyrillic keys mapped to latin to use in command mode** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L550)
 
 ## Installation ##
    1. git clone git://github.com/vrybas/dotvim.git ~/.vim
@@ -52,18 +53,18 @@
 ## Keymap (above Vim and plugins standard mappings) ##
 
 ===
-* `Command-d` - Open project Tree View
+* `Command-D` - Open project Tree View
 * `Command-/` - Open File dialog
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
-* `Command-w` - Close current tab
+* `Command-W` - Close current tab
 * `Command-1..9` - Go to 1..9 tab
 * `,g` - Go to class/function definition in new tab
 
 ### Buffers
 * `Control-Tab` - Buffer explorer
-* `Command-x` - Close current buffer
+* `Command-X` - Close current buffer
 * `,Tab` - Open scratch buffer which is never saved
 
 ### Splits
@@ -91,7 +92,7 @@
 * `,y` - Toggle display trailing characters
 * `,a` - Search on current path with Ack
 * `,r` - Toggle relative/straight line numbers
-* `F6` - Do not autoindent lines, when paste from OS buffer
+* `F6` - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u` - Toggle open graphical tree-based undo
 
 ===
@@ -99,6 +100,7 @@
 * `,zs` - Unfold everything
 
 ===
+* `,d` - Show all Ruby methods in current file (enter line number to jump)
 * `RR` - APIDock open Rails documentation for method under cursor
 * `RB` - APIDock open Ruby documentation
 * `RS` - APIDock open Rspec documentation
