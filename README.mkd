@@ -1,19 +1,67 @@
-My Vim configuration for Ruby on Rails development
-======================================================================
+## My Vim configuration for Ruby on Rails development
 
-![Rails](http://f.cl.ly/items/3T301q360C1P2y312o2V/rails_logo_200x200.png)
-![Macvim](http://f.cl.ly/items/1A1d0M323o0E1F3u0i3I/mac_vim_logo_200x200.png)
+![](http://f.cl.ly/items/3C1b2P3p362q2n2M0m3K/Screen%20Shot%202012-12-30%20at%203.00.43%20PM.png)
 
+## Features ##
+   * Ruby on Rails projects support → [VimRails](http://github.com/vim-ruby/vim-rails)
+   * Project Tree View → [NERDTree](http://github.com/scrooloose/nerdtree)
+   * Project search with Ack → [Ack.vim](http://github.com/mileszs/ack.vim)
+   * Files switcher → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
+   * Graphical popup Open File dialog with smart search → [PeepOpen](http://github.com/topfunky/PeepOpen-EditorSupport)
+   * Code completion as-you-type → [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop)
+   * Alternative code completion on Tab → [SuperTab](http://github.com/ervandew/supertab)
+   * Graphical tree-like undo/redo tool → [Gundo](http://github.com/sjl/gundo.vim)
+   * Incredible GIT support → [Fugitive](http://github.com/tpope/vim-fugitive)
+   * Jump to class/method definition → [Ctags](http://ctags.sourceforge.net)
+   * Open online Ruby/Rails/Rspec documentation from [APIDock](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
+ 
+=====
+   * Maximize/unmaximize active split → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
+   * Bulk lines commenting based on syntax → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
+   * Auto-closing quotes, brackets etc → [DelimitMate](http://github.com/vim-scripts/delimitMate.vim)
+   * Jump between quotes, brackets etc. → [Matchit](http://github.com/tsaleh/vim-matchit)
+   * Jump around code with keystrokes → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
+   * Surround selected text with any symbols and replace surroundings on-the-fly → [Surround](http://github.com/tpope/vim-surround)
+   * Open draft buffer which is never saved → [VimScratch](http://github.com/duff/vim-scratch)
+   * Solarized theme → [Solarized](http://github.com/altercation/vim-colors-solarized)
+
+=====
+   * Hide everything, except selected text (stay focused!) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L407)
+   * Toggle straight/relative line numbers to use with movement operations [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L403)
+   * Move code blocks left/right/up/down [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L330)
+   * Open current split in new tab [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L310)
+   * Open tabs by numbers [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L314)
+   * Restore cursor position on file open [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L541)
+   * Save all files on window focus lost [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L537)
+   * Remove spaces from the end of each line on save [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L536)
+   * Light/Dark scheme switched on sunrise/sunset (editor restart required) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L216)
+   * Cyrillic keys mapped to latin to use in command mode [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L550)
 
 ## Installation ##
-   1. $ git clone git://github.com/vrybas/dotvim.git ~/.vim
-   2. $ echo "runtime! rc.vim" > ~/.vimrc
-   3. $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-   4. $ vim +BundleInstall +qall
-   5. $ brew install ack
-   6. $ brew install ctags
-   7. $ gem install gem-ctags
-   8. $ gem ctags (see [troubleshooting](https://github.com/tpope/gem-ctags#troubleshooting))
-   9. Run :Rtags inside opened project in Vim
+   1. git clone git://github.com/vrybas/dotvim.git ~/.vim
+   2. echo "runtime! rc.vim" > ~/.vimrc
+   3. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+   4. vim +BundleInstall +qall
+   5. brew install ack
+   6. brew install ctags
+   7. gem install gem-ctags
+   8. gem ctags (see [troubleshooting](https://github.com/tpope/gem-ctags#troubleshooting))
+   9. mvim /path/to/project
+   10. :Rtags
 
+## Keymap (above standard) ##
 
+### Tabs
+* `,,t` - Open current buffer in new tab
+* `Command-w` - Close current tab
+* `Command-1..9` - Go to 1..9 tab
+
+### Buffers
+* `Control-Tab` - Buffer explorer
+* `Command-x` - Close current buffer
+
+### Move selected line(s) in visual mode
+* `Control-h` - Move left
+* `Control-j` - Move down
+* `Control-k` - Move up
+* `Control-l` - Move right
