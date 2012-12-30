@@ -14,7 +14,7 @@
    * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L137)
    * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L326)
    * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
-   * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim) [↓](https://github.com/vrybas/dotvim/blob/794ccc5d500488abdded2359e06228b97bef8050/rc.vim#L460)
+   * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim) [↓](https://github.com/vrybas/dotvim/blob/fcf5650494251f8b701e9b1d64237b905297929d/rc.vim#L460)
    * **Show all Ruby methods in current file** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L413)
 
 =====
