@@ -14,7 +14,7 @@
    * Incredible GIT support → [Fugitive](http://github.com/tpope/vim-fugitive)
    * Jump to class/method definition → [Ctags](http://ctags.sourceforge.net)
    * Open online Ruby/Rails/Rspec documentation from [APIDock](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
- 
+
 =====
    * Maximize/unmaximize active split → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
    * Bulk lines commenting based on syntax → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
@@ -22,7 +22,7 @@
    * Jump between quotes, brackets etc. → [Matchit](http://github.com/tsaleh/vim-matchit)
    * Jump around code with keystrokes → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
    * Surround selected text with any symbols and replace surroundings on-the-fly → [Surround](http://github.com/tpope/vim-surround)
-   * Open draft buffer which is never saved → [VimScratch](http://github.com/duff/vim-scratch)
+   * Open scratch buffer which is never saved → [VimScratch](http://github.com/duff/vim-scratch)
    * Solarized theme → [Solarized](http://github.com/altercation/vim-colors-solarized)
 
 =====
@@ -49,19 +49,57 @@
    9. mvim /path/to/project
    10. :Rtags
 
-## Keymap (above standard) ##
+## Keymap (above Vim and plugins standard mappings) ##
+
+===
+* `Command-d` - Open project Tree View
+* `Command-/` - Open File dialog
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
 * `Command-w` - Close current tab
 * `Command-1..9` - Go to 1..9 tab
+* `,g` - Go to class/function definition in new tab
 
 ### Buffers
 * `Control-Tab` - Buffer explorer
 * `Command-x` - Close current buffer
+* `,Tab` - Open scratch buffer which is never saved
 
-### Move selected line(s) in visual mode
+### Splits
+* `,v` - Create vertical split
+* `,s` - Create horisontal split
+* `,o` - Maximize/unmaximize split
+* `,x` - Close split
+* `,h` - Switch to Left
+* `,j` - Switch to Down
+* `,k` - Switch to Up
+* `,l` - Switch to Right
+* `,+` - Increase split area
+* `,_` - Decrease split area
+
+### Move selected line(s) around
 * `Control-h` - Move left
 * `Control-j` - Move down
 * `Control-k` - Move up
 * `Control-l` - Move right
+
+### Other
+
+===
+* `,m` - Clear search highlighting
+* `,y` - Toggle display trailing characters
+* `,a` - Search on current path with Ack
+* `,r` - Toggle relative/straight line numbers
+* `F6` - Do not autoindent lines, when paste from OS buffer
+* `,u` - Toggle open graphical tree-based undo
+
+===
+* `,za` - Fold everything, except visually selected block
+* `,zs` - Unfold everything
+
+===
+* `RR` - APIDock open Rails documentation for method under cursor
+* `RB` - APIDock open Ruby documentation
+* `RS` - APIDock open Rspec documentation
+
