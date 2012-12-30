@@ -28,7 +28,6 @@
  Bundle 'tpope/vim-fugitive'
  Bundle 'sjl/gundo.vim'
  Bundle 'tsaleh/vim-matchit'
- Bundle 'cohama/rsense'
  Bundle 'cfurrow/vim-l9'
  Bundle 'chrismetcalf/vim-autocomplpop'
  Bundle 'ervandew/supertab'
@@ -514,9 +513,6 @@ autocmd FileType *
    \   call SuperTabChain(&omnifunc, "<c-p>") |
    \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
    \ endif
-
-let g:rsenseUseOmniFunc = 1
-let g:rsenseHome = expand('~/.vim/bundle/rsense')
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
