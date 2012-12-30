@@ -391,6 +391,7 @@ map <tab> %
 nnoremap <leader>a :Ack<space>
 " Search with Ack
 
+set listchars=tab:>-,trail:·,eol:$
 nmap <silent><leader>y :set nolist!<CR>
 " Show trailing characters
 
@@ -480,8 +481,6 @@ noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 " Sudo promt with :w!!
 cmap w!! %!sudo tee > /dev/null %
 
-"""" Toggle show trailing characters
-set listchars=tab:>-,trail:·,eol:$
 
 set completeopt+=longest,menu,preview
 
