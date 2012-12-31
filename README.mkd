@@ -62,7 +62,7 @@
 * `,,t` - Open current buffer in new tab
 * `Command-W` - Close current tab
 * `Command-1..9` - Go to 1..9 tab
-* `,g` - Go to class/function definition in new tab
+* `,g` - Open class/function definition in new tab
 
 ### Buffers
 * `Control-Tab` - Buffer explorer
