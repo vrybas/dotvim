@@ -542,7 +542,8 @@ endfunction
 com! -nargs=+ -complete=command Bufdo call BufDo(<q-args>)
 
 au FocusLost * silent! Bufdo e
-au FocusLost * silent! :Rtags
+au FocusLost * silent! syntax off
+au FocusLost * silent! syntax on
 
 "Restore custor position on file open
 autocmd BufReadPost *
