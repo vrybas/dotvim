@@ -402,6 +402,12 @@ imap <silent><Leader>d :g/def /<CR>
 nmap <silent><leader>bd :set background=dark<CR>
 nmap <silent><leader>bl :set background=light<CR>
 
+nmap <silent><leader>c4 :set cc=40<CR>
+nmap <silent><leader>c5 :set cc=50<CR>
+nmap <silent><leader>c6 :set cc=60<CR>
+nmap <silent><leader>c7 :set cc=70<CR>
+nmap <silent><leader>c8 :set cc=80<CR>
+
 nnoremap ; :
 " Handy mapping for quick access to CLI
 
