@@ -36,7 +36,7 @@
    * **Restore cursor position on file open** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L541)
    * **Save all files when switching away from editor** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L537)
    * **Remove spaces from the end of each line on save** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L262)
-   * **Light/Dark scheme switched on sunrise/sunset** (editor restart required) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L216)
+   * **Light/Dark scheme automatically switched on sunrise/sunset** ([disable](https://github.com/vrybas/dotvim/blob/07663fc9b101e244c5d0ab6487889dfb91e0f8d9/rc.vim#L556))
    * **Cyrillic keys mapped to latin to use in command mode** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L550)
 
 ## Installation ##
