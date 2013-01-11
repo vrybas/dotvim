@@ -214,32 +214,7 @@ if has("gui_running") " =======================================================
   set laststatus=2
   " Show file status
 
-  " Change color scheme by daytime :
-  "
-  let dayBegin = 6
-  " Sunrise hour
-
-  let nightBegin = 18
-  " Sunset hour
-
-  let currentTime = str2nr(strftime("%H"))
-  " Get current time
-
-  if currentTime > dayBegin && currentTime < nightBegin
-    " If Sun is up
-
-    set background=light
-    " use light scheme
-
-  else
-    " else
-
-    set background=dark
-    " use dark scheme
-
-  endif
-  "
-
+  set background=light
 
   colorscheme solarized
   " My favorite color scheme
@@ -493,6 +468,34 @@ noremap RR :call OpenRailsDoc(expand('<cword>'))<cr>
 noremap RB :call OpenRubyDoc(expand('<cword>'))<cr>
 noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 
+function! BgSwitchDayTime()
+  " Change color scheme by daytime :
+  "
+  let dayBegin = 6
+  " Sunrise hour
+
+  let nightBegin = 18
+  " Sunset hour
+
+  let currentTime = str2nr(strftime("%H"))
+  " Get current time
+
+  if currentTime > dayBegin && currentTime < nightBegin
+    " If Sun is up
+
+    set background=light
+    " use light scheme
+
+  else
+    " else
+
+    set background=dark
+    " use dark scheme
+
+  endif
+  "
+endfunction
+
 " Another user functions
 "
 " Sudo promt with :w!!
@@ -548,6 +551,9 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 "
 au BufReadPost * silent! RemoveSpaces()
 au FocusLost * silent! call AutoSave()
+
+au VimEnter * silent! call BgSwitchDayTime()
+au FocusLost * silent! call BgSwitchDayTime()
 
 au FocusLost * silent! :Rtags
 
