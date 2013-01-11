@@ -540,10 +540,9 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 
 "Remove all spaces from end of each line and save file on focus lost
 "
-"
-"
 au BufReadPost * silent! RemoveSpaces()
 au FocusLost * silent! call AutoSave()
+
 au FocusLost * silent! :Rtags
 
 "Restore custor position on file open
