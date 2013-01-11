@@ -584,6 +584,7 @@ map ы s
 map в d
 map а f
 map п g
+map пп gg
 map р h
 map о j
 map л k
