@@ -283,6 +283,15 @@ function ToggleRelNumber()
 endfunction
 
 
+" Saves all opened modifieable buffers
+"
+function! AutoSave()
+  execute 'new'
+  execute 'bufdo w'
+  execute 'q'
+endfunction
+
+
 "*****************************************************************************"
 "
 " Key mappings
@@ -530,20 +539,11 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 
 
 "Remove all spaces from end of each line and save file on focus lost
-au BufReadPost * call RemoveSpaces()
-set autowriteall
+"
+au BufReadPost * silent! RemoveSpaces()
+au FocusLost * silent! call AutoSave()
 
-" Like bufdo but restore the current buffer.
-function! BufDo(command)
-  let currBuff=bufnr("%")
-  execute 'bufdo ' . a:command
-  execute 'buffer ' . currBuff
-endfunction
-com! -nargs=+ -complete=command Bufdo call BufDo(<q-args>)
-
-au FocusLost * silent! Bufdo e
-au FocusLost * silent! syntax off
-au FocusLost * silent! syntax on
+au FocusLost * silent! :Rtags
 
 "Restore custor position on file open
 autocmd BufReadPost *
