@@ -533,9 +533,13 @@ set ofu=syntaxcomplete#Complete
 "
 "*****************************************************************************"
  "                                                                           "
+ "
+autocmd BufEnter *.txt | AcpLock
+" Disable popup autocompletion when editing txt files
 
 autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 " Set filetype to 'ruby' by default to have syntax highlight everywhere
+"
 
 
 "Remove all spaces from end of each line and save file on focus lost
