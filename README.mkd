@@ -90,12 +90,14 @@
 ### Other
 
 ===
-* `,m` - Clear search highlighting
-* `,y` - Toggle display trailing characters
-* `,a` - Search on current path with Ack
-* `,r` - Toggle relative/straight line numbers
-* `F6` - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
-* `,u` - Toggle open graphical tree-based undo
+* `,m`  - Clear search highlighting
+* `,y`  - Toggle display trailing characters
+* `,a`  - Search on current path with Ack
+* `,r`  - Toggle relative/straight line numbers
+* `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
+* `,u`  - Toggle open graphical tree-based undo
+* `,bd` - Set background dark
+* `,bl` - Set background light
 
 ===
 * `,za` - Fold everything, except visually selected block

@@ -424,6 +424,8 @@ nmap <silent><Leader>zs <Esc>zRzz
 nmap <silent><Leader>d :g/def /<CR>
 imap <silent><Leader>d :g/def /<CR>
 
+nmap <silent><leader>bd :set background=dark<CR>
+nmap <silent><leader>bl :set background=light<CR>
 
 nnoremap ; :
 " Handy mapping for quick access to CLI
