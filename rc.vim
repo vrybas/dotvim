@@ -545,7 +545,7 @@ set ofu=syntaxcomplete#Complete
 "*****************************************************************************"
  "                                                                           "
  "
-autocmd BufEnter *.txt | AcpLock | set cc=60
+autocmd BufEnter *.txt | AcpLock | set cc=70
 " Disable popup autocompletion when editing txt files
 
 autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
