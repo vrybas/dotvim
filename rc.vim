@@ -36,6 +36,7 @@
  Bundle 'tpope/vim-surround'
  Bundle 'vim-scripts/ZoomWin'
  Bundle 'altercation/vim-colors-solarized'
+ Bundle 'gorkunov/smartpairs.vim'
 
  filetype plugin indent on     " required!
  "
