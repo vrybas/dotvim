@@ -15,3 +15,5 @@ nmap <silent><leader>c6 :call WrapColumn(60)<CR>
 nmap <silent><leader>c7 :call WrapColumn(70)<CR>
 nmap <silent><leader>c8 :call WrapColumn(80)<CR>
 
+" Autoformat paragraph to respect autowrapping after each change
+setlocal fo=aw2tq
