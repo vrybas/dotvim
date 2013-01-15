@@ -98,7 +98,7 @@
 * `,u`  - Toggle open graphical tree-based undo
 * `,bd` - Set background dark
 * `,bl` - Set background light
-* `,c4..8`  - Set vertical ruler to 40..80 symbols
+* `,c4..8`  - Set vertical ruler and autowrapping to 40..80 symbols (for text files)
 
 ===
 * `,za` - Fold everything, except visually selected block
