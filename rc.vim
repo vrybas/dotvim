@@ -307,6 +307,7 @@ map <D-8> 8gt
 map <D-9> 9gt
 
 nnoremap <silent><Leader>g <C-w><C-]><C-w>T
+" Open class/function definition in new tab
 
 
 
