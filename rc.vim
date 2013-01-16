@@ -606,6 +606,7 @@ map и b
 map т n
 map ь m
 map б ,
+map бб ,,
 map ю .
 "map . /
 
@@ -644,7 +645,23 @@ map Б <
 map Ю >
 "map , ?
 
- "                                                                           "
+ " Repeat all leader mappings with Cyrillic keys:
+ "
+ 
+nmap <leader><leader>е :sp<cr><C-w>T
+nmap <silent><leader>м <C-w>v
+nmap <silent><leader>ы <C-w>s
+nmap <silent><leader>ч <C-w>c
+nmap <silent><leader>щ :ZoomWin<CR>
+nnoremap <leader>ф :Ack<space>
+nmap <silent><leader>н :set nolist!<CR>
+nnoremap <leader>ь :noh<CR>
+nmap <silent><leader>к :call ToggleRelNumber()<cr>
+vnoremap <Leader>яф <Esc>`<kzfgg`>jzfG`<
+nmap <silent><Leader>яы <Esc>zRzz
+nmap <silent><leader>ив :set background=dark<CR>
+nmap <silent><leader>ид :set background=light<CR>
+nnoremap <Leader>г :GundoToggle<CR>
 
 "*****************************************************************************"
 " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * "
