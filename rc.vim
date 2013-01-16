@@ -277,9 +277,6 @@ endfunction
 let mapleader = ","
 " Leader key mapping
 
-noremap <leader><leader> <ESC>
-inoremap <leader><leader> <ESC>
-
 map <M-a> :bprev<CR>
 " Previous buffer
 
