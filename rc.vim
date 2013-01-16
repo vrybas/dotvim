@@ -645,8 +645,8 @@ map Б <
 map Ю >
 "map , ?
 
- " Repeat all leader mappings with Cyrillic keys:
- "
+" Repeat all leader mappings with Cyrillic keys:
+"
  
 nmap <leader><leader>е :sp<cr><C-w>T
 nmap <silent><leader>м <C-w>v

@@ -100,6 +100,7 @@
 * `,bd` - Set background dark
 * `,bl` - Set background light
 * `,c4..8`  - Set vertical ruler and autowrapping to 40..80 symbols (for text files)
+* `,c78`  - Set vertical ruler and autowrapping to 78 symbols (Email standard, for text files)
 
 ===
 * `,za` - Fold everything, except visually selected block
