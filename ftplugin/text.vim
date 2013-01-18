@@ -9,12 +9,21 @@ endfunction
 
 call WrapColumn(78)
 
-nmap <silent><leader>c4 :call WrapColumn(40)<CR>
-nmap <silent><leader>c5 :call WrapColumn(50)<CR>
-nmap <silent><leader>c6 :call WrapColumn(60)<CR>
-nmap <silent><leader>c7 :call WrapColumn(70)<CR>
-nmap <silent><leader>c78 :call WrapColumn(78)<CR>
-nmap <silent><leader>c8 :call WrapColumn(80)<CR>
+nmap <silent><leader>w4 :call WrapColumn(40)<CR>
+nmap <silent><leader>w5 :call WrapColumn(50)<CR>
+nmap <silent><leader>w6 :call WrapColumn(60)<CR>
+nmap <silent><leader>w7 :call WrapColumn(70)<CR>
+nmap <silent><leader>w8 :call WrapColumn(80)<CR>
+nmap <silent><leader>wm :call WrapColumn(78)<CR>
+nmap <silent><leader>wg :call WrapColumn(70)<CR>
+
+nmap <silent><leader>ц4 :call WrapColumn(40)<CR>
+nmap <silent><leader>ц5 :call WrapColumn(50)<CR>
+nmap <silent><leader>ц6 :call WrapColumn(60)<CR>
+nmap <silent><leader>ц7 :call WrapColumn(70)<CR>
+nmap <silent><leader>ц8 :call WrapColumn(80)<CR>
+nmap <silent><leader>ць :call WrapColumn(78)<CR>
+nmap <silent><leader>цп :call WrapColumn(70)<CR>
 
 " Autoformat paragraph to respect autowrapping after each change
 setlocal fo=aw2tq
