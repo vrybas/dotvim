@@ -66,7 +66,7 @@
 * `,g` - Open class/function definition in new tab
 
 ### Buffers
-* `Control-Tab` - Buffer explorer
+* `,,b` - Buffer explorer
 * `Command-X` - Close current buffer
 * `,Tab` - Open scratch buffer which is never saved
 
@@ -75,18 +75,18 @@
 * `,s` - Create horisontal split
 * `,o` - Maximize/unmaximize split
 * `,x` - Close split
-* `,h` - Switch to Left
-* `,j` - Switch to Down
-* `,k` - Switch to Up
-* `,l` - Switch to Right
+* `fh` - Switch to Left
+* `fj` - Switch to Down
+* `fk` - Switch to Up
+* `fl` - Switch to Right
 * `,+` - Increase split area
 * `,_` - Decrease split area
 
-### Move selected line(s) around
-* `Control-h` - Move left
-* `Control-j` - Move down
-* `Control-k` - Move up
-* `Control-l` - Move right
+### Move selected line(s) around (in visually select mode)
+* `Shift ↑` - Move left
+* `Shift ↓` - Move down
+* `Shift ←` - Move up
+* `Shift →` - Move right
 
 ### Other
 

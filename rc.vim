@@ -283,7 +283,7 @@ map <M-a> :bprev<CR>
 map <M-s> :bnext<CR>
 " Next buffer
 
-map <C-Tab> :BufExplorer<CR>
+map <leader><leader>b :BufExplorer<CR>
 " Buffer Explorer
 
 
@@ -313,16 +313,16 @@ nnoremap <silent><Leader>g <C-w><C-]><C-w>T
 
 " Move visually selected blocks of text
 "
-vmap <C-S-h> <gv
+vmap <S-Left> <gv
 " Left
 
-vmap <C-S-l> >gv
+vmap <S-Right> >gv
 " Right
 
-vmap <C-S-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+vmap <S-Up> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 " Up
 
-vmap <C-S-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
+vmap <S-Down> :m'>+<CR>gv=`<my`>mzgv`yo`z
 " Down
 
 
@@ -350,16 +350,16 @@ nmap _ <C-w>-
 
 " Navigate between splits
 "
-nnoremap <C-l> <C-w>l
+nnoremap fl <C-w>l
 " Left
 
-nnoremap <C-h> <C-w>h
+nnoremap fh <C-w>h
 " Right
 
-nnoremap <C-k> <C-w>k
+nnoremap fk <C-w>k
 " Up
 
-nnoremap <C-j> <C-w>j
+nnoremap fj <C-w>j
 " Down
 
 
