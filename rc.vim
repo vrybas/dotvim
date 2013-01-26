@@ -650,6 +650,10 @@ nmap <leader><leader>е :sp<cr><C-w>T
 nmap <silent><leader>м <C-w>v
 nmap <silent><leader>ы <C-w>s
 nmap <silent><leader>ч <C-w>c
+nnoremap ад <C-w>l
+nnoremap ар <C-w>h
+nnoremap ал <C-w>k
+nnoremap ао <C-w>j
 nmap <silent><leader>щ :ZoomWin<CR>
 nnoremap <leader>ф :Ack<space>
 nmap <silent><leader>н :set nolist!<CR>
