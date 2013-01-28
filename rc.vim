@@ -350,16 +350,16 @@ nmap _ <C-w>-
 
 " Navigate between splits
 "
-nnoremap fl <C-w>l
+nnoremap <space>l <C-w>l
 " Left
 
-nnoremap fh <C-w>h
+nnoremap <space>h <C-w>h
 " Right
 
-nnoremap fk <C-w>k
+nnoremap <space>k <C-w>k
 " Up
 
-nnoremap fj <C-w>j
+nnoremap <space>j <C-w>j
 " Down
 
 
@@ -650,10 +650,10 @@ nmap <leader><leader>е :sp<cr><C-w>T
 nmap <silent><leader>м <C-w>v
 nmap <silent><leader>ы <C-w>s
 nmap <silent><leader>ч <C-w>c
-nnoremap ад <C-w>l
-nnoremap ар <C-w>h
-nnoremap ал <C-w>k
-nnoremap ао <C-w>j
+nnoremap <space>д <C-w>l
+nnoremap <space>р <C-w>h
+nnoremap <space>л <C-w>k
+nnoremap <space>о <C-w>j
 nmap <silent><leader>щ :ZoomWin<CR>
 nnoremap <leader>ф :Ack<space>
 nmap <silent><leader>н :set nolist!<CR>

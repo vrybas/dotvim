@@ -75,10 +75,10 @@
 * `,s` - Create horisontal split
 * `,o` - Maximize/unmaximize split
 * `,x` - Close split
-* `fh` - Switch to Left
-* `fj` - Switch to Down
-* `fk` - Switch to Up
-* `fl` - Switch to Right
+* `Space-h` - Switch to Left
+* `Space-j` - Switch to Down
+* `Space-k` - Switch to Up
+* `Space-l` - Switch to Right
 * `,+` - Increase split area
 * `,_` - Decrease split area
 
