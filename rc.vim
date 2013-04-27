@@ -262,9 +262,8 @@ endfunction
 " Saves all opened modifieable buffers
 "
 function! AutoSave()
-  execute 'new'
-  execute 'bufdo w'
-  execute 'q'
+  call RemoveSpaces()
+  execute 'w!'
 endfunction
 
 
@@ -546,13 +545,11 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 
 "Remove all spaces from end of each line and save file on focus lost
 "
-au BufReadPost * silent! RemoveSpaces()
+au InsertLeave * silent! call AutoSave()
 au FocusLost * silent! call AutoSave()
 
 au VimEnter * silent! call BgSwitchDayTime()
-au FocusLost * silent! call BgSwitchDayTime()
-
-au FocusLost * silent! :Rtags
+au InsertLeave * silent! call BgSwitchDayTime()
 
 "Restore custor position on file open
 autocmd BufReadPost *
@@ -645,7 +642,7 @@ map Ю >
 
 " Repeat all leader mappings with Cyrillic keys:
 "
- 
+
 nmap <leader><leader>е :sp<cr><C-w>T
 nmap <silent><leader>м <C-w>v
 nmap <silent><leader>ы <C-w>s
