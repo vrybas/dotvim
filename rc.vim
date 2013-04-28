@@ -547,6 +547,7 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 "
 au InsertLeave * silent! call AutoSave()
 au FocusLost * silent! call AutoSave()
+au BufLeave * silent! call AutoSave()
 
 au VimEnter * silent! call BgSwitchDayTime()
 au InsertLeave * silent! call BgSwitchDayTime()
