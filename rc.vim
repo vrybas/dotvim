@@ -233,7 +233,7 @@ endif " =======================================================================
 function! BgSwitchDayTime()
   " Change color scheme by daytime :
   "
-  let dayBegin = 6
+  let dayBegin = 5
   " Sunrise hour
 
   let nightBegin = 18
