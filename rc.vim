@@ -230,6 +230,37 @@ endif " =======================================================================
 "
 "*****************************************************************************"
 
+function! BgSwitchDayTime()
+  " Change color scheme by daytime :
+  "
+  let dayBegin = 6
+  " Sunrise hour
+
+  let nightBegin = 18
+  " Sunset hour
+
+  let currentTime = str2nr(strftime("%H"))
+  " Get current time
+
+  if currentTime > dayBegin && currentTime < nightBegin
+    " If Sun is up
+
+    set background=light
+    " use light scheme
+
+  else
+    " else
+
+    set background=dark
+    " use dark scheme
+
+  endif
+  "
+endfunction
+
+
+" Sudo promt with :w!!
+cmap w!! %!sudo tee > /dev/null %
 
 
 " Remove all spaces from the end of each line
@@ -468,39 +499,6 @@ noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
-
-function! BgSwitchDayTime()
-  " Change color scheme by daytime :
-  "
-  let dayBegin = 6
-  " Sunrise hour
-
-  let nightBegin = 18
-  " Sunset hour
-
-  let currentTime = str2nr(strftime("%H"))
-  " Get current time
-
-  if currentTime > dayBegin && currentTime < nightBegin
-    " If Sun is up
-
-    set background=light
-    " use light scheme
-
-  else
-    " else
-
-    set background=dark
-    " use dark scheme
-
-  endif
-  "
-endfunction
-
-" Another user functions
-"
-" Sudo promt with :w!!
-cmap w!! %!sudo tee > /dev/null %
 
 
 " CODE COMPLETION BLOCK
