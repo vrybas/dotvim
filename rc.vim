@@ -58,10 +58,6 @@
 syntax on
 " Turn on syntax highlight
 
-set mouse=a
-" Mouse in all modes
-
-
 set backup
 " Enable backup file creation
 
