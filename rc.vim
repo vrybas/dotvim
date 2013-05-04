@@ -37,6 +37,8 @@
  Bundle 'vim-scripts/ZoomWin'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'gorkunov/smartpairs.vim'
+ Bundle 'mattn/webapi-vim'
+ Bundle 'mattn/gist-vim'
 
  filetype plugin indent on     " required!
  "
@@ -461,6 +463,11 @@ endfunction
 noremap RR :call OpenRailsDoc(expand('<cword>'))<cr>
 noremap RB :call OpenRubyDoc(expand('<cword>'))<cr>
 noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
+
+" Gist.vim
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_post_private = 1
 
 function! BgSwitchDayTime()
   " Change color scheme by daytime :
