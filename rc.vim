@@ -39,6 +39,7 @@
  Bundle 'gorkunov/smartpairs.vim'
  Bundle 'mattn/webapi-vim'
  Bundle 'mattn/gist-vim'
+ Bundle 'tomtom/checksyntax_vim'
 
  filetype plugin indent on     " required!
  "
@@ -88,6 +89,9 @@ set encoding=utf-8
 
 set gdefault
 " 'g' flag is used by default in commands
+
+set shell=/bin/bash
+let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 
 
 "*****************************************************************************"
@@ -428,6 +432,8 @@ imap <silent><Leader>d :g/def /<CR>
 
 nmap <silent><leader>bd :set background=dark<CR>
 nmap <silent><leader>bl :set background=light<CR>
+
+nmap <silent><leader>i :CheckSyntax<CR>
 
 nnoremap ; :
 " Handy mapping for quick access to CLI
