@@ -27,3 +27,6 @@ nmap <silent><leader>цп :call WrapColumn(70)<CR>
 
 " Autoformat paragraph to respect autowrapping after each change
 setlocal fo=aw2tq
+
+" Syntax checking
+setlocal spell spelllang=ru_yo,en_us
