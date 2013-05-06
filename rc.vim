@@ -37,6 +37,9 @@
  Bundle 'vim-scripts/ZoomWin'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'gorkunov/smartpairs.vim'
+ Bundle 'mattn/webapi-vim'
+ Bundle 'mattn/gist-vim'
+ Bundle 'tomtom/checksyntax_vim'
 
  filetype plugin indent on     " required!
  "
@@ -57,10 +60,6 @@
 
 syntax on
 " Turn on syntax highlight
-
-set mouse=a
-" Mouse in all modes
-
 
 set backup
 " Enable backup file creation
@@ -90,6 +89,9 @@ set encoding=utf-8
 
 set gdefault
 " 'g' flag is used by default in commands
+
+set shell=/bin/bash
+let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 
 
 "*****************************************************************************"
@@ -232,6 +234,37 @@ endif " =======================================================================
 "
 "*****************************************************************************"
 
+function! BgSwitchDayTime()
+  " Change color scheme by daytime :
+  "
+  let dayBegin = 5
+  " Sunrise hour
+
+  let nightBegin = 18
+  " Sunset hour
+
+  let currentTime = str2nr(strftime("%H"))
+  " Get current time
+
+  if currentTime > dayBegin && currentTime < nightBegin
+    " If Sun is up
+
+    set background=light
+    " use light scheme
+
+  else
+    " else
+
+    set background=dark
+    " use dark scheme
+
+  endif
+  "
+endfunction
+
+
+" Sudo promt with :w!!
+cmap w!! %!sudo tee > /dev/null %
 
 
 " Remove all spaces from the end of each line
@@ -400,6 +433,8 @@ imap <silent><Leader>d :g/def /<CR>
 nmap <silent><leader>bd :set background=dark<CR>
 nmap <silent><leader>bl :set background=light<CR>
 
+nmap <silent><leader>i :CheckSyntax<CR>
+
 nnoremap ; :
 " Handy mapping for quick access to CLI
 
@@ -466,38 +501,10 @@ noremap RR :call OpenRailsDoc(expand('<cword>'))<cr>
 noremap RB :call OpenRubyDoc(expand('<cword>'))<cr>
 noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 
-function! BgSwitchDayTime()
-  " Change color scheme by daytime :
-  "
-  let dayBegin = 6
-  " Sunrise hour
-
-  let nightBegin = 18
-  " Sunset hour
-
-  let currentTime = str2nr(strftime("%H"))
-  " Get current time
-
-  if currentTime > dayBegin && currentTime < nightBegin
-    " If Sun is up
-
-    set background=light
-    " use light scheme
-
-  else
-    " else
-
-    set background=dark
-    " use dark scheme
-
-  endif
-  "
-endfunction
-
-" Another user functions
-"
-" Sudo promt with :w!!
-cmap w!! %!sudo tee > /dev/null %
+" Gist.vim
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_post_private = 1
 
 
 " CODE COMPLETION BLOCK
@@ -526,6 +533,7 @@ autocmd FileType *
 let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1"
+let g:acp_behaviorKeywordLength = 4
 
 set ofu=syntaxcomplete#Complete
 
