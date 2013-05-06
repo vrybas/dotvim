@@ -220,7 +220,7 @@ if has("gui_running") " =======================================================
   colorscheme solarized
   " My favorite color scheme
 
-  set gfn=Monaco:h14
+  set gfn=Monaco:h12
   " Font settings
 
 
