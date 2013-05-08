@@ -25,6 +25,9 @@ nmap <silent><leader>ц8 :call WrapColumn(80)<CR>
 nmap <silent><leader>ць :call WrapColumn(78)<CR>
 nmap <silent><leader>цп :call WrapColumn(70)<CR>
 
+nmap <leader>i maV
+vmap <leader>i :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
+
 " Autoformat paragraph to respect autowrapping after each change
 setlocal fo=aw2tq
 
