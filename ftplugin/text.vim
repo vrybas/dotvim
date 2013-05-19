@@ -38,5 +38,5 @@ vmap <leader>ш :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 " Autoformat paragraph to respect autowrapping after each change
 setlocal fo=aw2tq
 
-" Syntax checking
+" Spell checking
 setlocal spell spelllang=ru_yo,en_us
