@@ -25,6 +25,10 @@ nmap <silent><leader>ц8 :call WrapColumn(80)<CR>
 nmap <silent><leader>ць :call WrapColumn(78)<CR>
 nmap <silent><leader>цп :call WrapColumn(70)<CR>
 
+" The ULTIMATE paragraph formatter. How to use:
+" press <leader>i on the first line of paragraph,
+" press <leader>i again on the last line,
+" at the end, cursor jums back to the first line.
 nmap <leader>i maV
 vmap <leader>i :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
