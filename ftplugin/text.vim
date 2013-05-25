@@ -18,7 +18,7 @@ function! SoftWrap()
   set nolist
 endfunction
 
-call WrapColumn(78)
+call WrapColumn(80)
 
 nmap <silent><leader>w4 :call WrapColumn(40)<CR>
 nmap <silent><leader>w5 :call WrapColumn(50)<CR>
@@ -38,6 +38,10 @@ nmap <silent><leader>ць :call WrapColumn(78)<CR>
 nmap <silent><leader>цп :call WrapColumn(70)<CR>
 nmap <silent><leader>ц1 :call SoftWrap()<CR>
 
+" The ULTIMATE paragraph formatter. How to use:
+" press <leader>i on the first line of paragraph,
+" press <leader>i again on the last line,
+" at the end, cursor jums back to the first line.
 nmap <leader>i maV
 vmap <leader>i :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
@@ -70,5 +74,6 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
-" Syntax checking
+" Spell checking
 setlocal spell spelllang=ru_yo,en_us
+
