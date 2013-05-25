@@ -105,6 +105,7 @@
 * `,bl` - Set background light
 * `,w4..8`  - Set vertical ruler and autowrapping to 40..80 symbols (for text files)
 * `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard, for text files)
+* `,w1`  - Enable soft autowrapping
 
 ===
 * `,za` - Fold everything, except visually selected block
