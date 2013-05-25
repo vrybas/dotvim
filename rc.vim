@@ -40,6 +40,7 @@
  Bundle 'mattn/webapi-vim'
  Bundle 'mattn/gist-vim'
  Bundle 'tomtom/checksyntax_vim'
+ Bundle 'airblade/vim-gitgutter'
 
  filetype plugin indent on     " required!
  "
@@ -259,7 +260,15 @@ function! BgSwitchDayTime()
     " use dark scheme
 
   endif
-  "
+
+  " Highlights used by the GitGutter signs.
+  hi! link SignColumn Background
+  highlight GitGutterAdd          guifg=#009900 guibg=NONE ctermfg=2 ctermbg=NONE
+  highlight GitGutterChange       guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
+  highlight GitGutterDelete       guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
+  highlight default link GitGutterChangeDelete GitGutterChange
+
+"
 endfunction
 
 
@@ -297,6 +306,8 @@ endfunction
 function! AutoSave()
   call RemoveSpaces()
   execute 'w!'
+  execute 'GitGutter'
+
 endfunction
 
 
@@ -505,6 +516,12 @@ noremap RS :call OpenRspecDoc(expand('<cword>'))<cr>
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
+
+" GitGutter.vim
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_eager = 0
+nmap gh <Plug>GitGutterNextHunk
+nmap gH <Plug>GitGutterPrevHunk
 
 
 " CODE COMPLETION BLOCK
