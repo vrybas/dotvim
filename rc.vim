@@ -41,6 +41,7 @@
  Bundle 'mattn/gist-vim'
  Bundle 'tomtom/checksyntax_vim'
  Bundle 'airblade/vim-gitgutter'
+ Bundle 'git://github.com/tpope/vim-markdown.git'
 
  filetype plugin indent on     " required!
  "

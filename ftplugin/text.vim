@@ -77,3 +77,5 @@ nmap <D-0> g^
 " Spell checking
 setlocal spell spelllang=ru_yo,en_us
 
+" Bigger font
+set gfn=Monaco:h14
