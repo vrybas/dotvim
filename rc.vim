@@ -301,13 +301,14 @@ function ToggleRelNumber()
 endfunction
 
 
-" Saves all opened modifieable buffers
+" Saves current buffer if it was modified. Updates git diff
 "
 function! AutoSave()
-  call RemoveSpaces()
-  execute 'w!'
-  execute 'GitGutter'
-
+  if (&modified == 1)
+    call RemoveSpaces()
+    execute 'w!'
+    execute 'GitGutter'
+  endif
 endfunction
 
 
