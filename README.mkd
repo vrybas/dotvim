@@ -38,7 +38,7 @@
    * **Open current split in new tab** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L310)
    * **Open tabs by numbers** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L314)
    * **Restore cursor position on file open** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L541)
-   * **Save all files when switching away from editor** ([disable](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L556-L560))
+   * **Autosave current buffer on various events** ([disable](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L556-L560))
    * **Remove spaces from the end of each line on save** [↓](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L298)
    * **Light/Dark scheme automatically switched on sunrise/sunset** ([disable](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L562-L564))
    * **Cyrillic keys mapped to latin to use in command mode** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L550)

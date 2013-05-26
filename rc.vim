@@ -569,14 +569,17 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 "
 
 
-"Remove all spaces from end of each line and save file on focus lost
+" Autosave events
 "
 au InsertLeave * silent! call AutoSave()
 au BufLeave * silent! call AutoSave()
 au FocusLost * silent! call AutoSave()
 au CursorHold * silent! call AutoSave()
+  " CursorHold timeout
 set ut=1000
 
+" Switching clolorscheme events
+"
 au VimEnter * silent! call BgSwitchDayTime()
 au InsertLeave * silent! call BgSwitchDayTime()
 au FocusLost * silent! call BgSwitchDayTime()
