@@ -12,8 +12,8 @@
    * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab) [↓](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L510)
    * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L462)
    * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L137)
-   * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter) [↓]()
-   * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim) [↓](https://github.com/vrybas/dotvim/blob/https://github.com/vrybas/dotvim/blob/3dfa96e18fea90195d22e3cddd48f907dc31d2bd/rc.vim#L467)
+   * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter) [↓](https://github.com/vrybas/dotvim/commit/004947a8fdfbf74bf86bed9e089019ed595d2216)
+   * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim) [↓](https://github.com/vrybas/dotvim/blob/3dfa96e18fea90195d22e3cddd48f907dc31d2bd/rc.vim#L467)
    * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L326)
    * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
    * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim) [↓](https://github.com/vrybas/dotvim/blob/fcf5650494251f8b701e9b1d64237b905297929d/rc.vim#L460)
@@ -111,6 +111,10 @@
 ===
 * `,za` - Fold everything, except visually selected block
 * `,zs` - Unfold everything
+
+===
+* `gh` - Jump to next git change
+* `gH` - Jump to previous git change
 
 ===
 * `,d` - Show all Ruby methods in current file (enter line number to jump)
