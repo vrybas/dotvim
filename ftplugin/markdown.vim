@@ -38,4 +38,4 @@ setlocal fo=aw2tq
 setlocal spell spelllang=ru_yo,en_us
 
 " Bigger font
-set gfn=Monaco:h14
+setlocal gfn=Monaco:h14
