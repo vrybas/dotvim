@@ -5,6 +5,7 @@ AcpLock
 function! WrapColumn(value)
   let &cc = a:value
   let &textwidth = a:value
+  setlocal fo=aw2tq
 endfunction
 
 " Sets soft text autowrapping without line breaks
@@ -16,6 +17,7 @@ function! SoftWrap()
   set wrap
   set linebreak
   set nolist
+  setlocal fo=croql
 endfunction
 
 call WrapColumn(80)
@@ -48,8 +50,6 @@ vmap <leader>i :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 nmap <leader>ш maV
 vmap <leader>ш :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
-" Autoformat paragraph to respect autowrapping after each change
-setlocal fo=aw2tq
 
 " Mappings to go around in autowrapped text with no linebreaks
 vmap <D-j> gj
