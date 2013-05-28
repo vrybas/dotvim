@@ -29,9 +29,6 @@ setlocal fo=aw2tq
 " Spell checking
 setlocal spell spelllang=ru_yo,en_us
 
-" Bigger font
-setlocal gfn=Monaco:h14
-
 if exists('b:undo_ftplugin')
   let b:undo_ftplugin .= "|setl cms< com< fo< flp<"
 else
