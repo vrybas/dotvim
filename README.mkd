@@ -15,6 +15,7 @@
    * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter) [↓](https://github.com/vrybas/dotvim/commit/004947a8fdfbf74bf86bed9e089019ed595d2216)
    * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim) [↓](https://github.com/vrybas/dotvim/blob/3dfa96e18fea90195d22e3cddd48f907dc31d2bd/rc.vim#L467)
    * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L326)
+   * **Run Rspec for current file/line/all of them** → [Rspec.vim](https://github.com/skwp/vim-rspec) [↓]()
    * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
    * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim) [↓](https://github.com/vrybas/dotvim/blob/fcf5650494251f8b701e9b1d64237b905297929d/rc.vim#L460)
    * **Syntax checking** [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim) [↓](https://github.com/vrybas/dotvim/commit/74415f15d54d63c24b6e739f84c64363abe0c6b0)

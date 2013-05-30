@@ -42,6 +42,7 @@
  Bundle 'tomtom/checksyntax_vim'
  Bundle 'airblade/vim-gitgutter'
  Bundle 'git://github.com/tpope/vim-markdown.git'
+ Bundle 'git://github.com/skwp/vim-rspec.git'
 
  filetype plugin indent on     " required!
  "
@@ -430,7 +431,7 @@ nnoremap <leader>m :noh<CR>
 nmap <silent><leader><tab> :Sscratch<CR>
 " Opens a buffer which is never saved (for scratches)
 
-nmap <silent><leader>r :call ToggleRelNumber()<cr>
+nmap <silent><leader>l :call ToggleRelNumber()<cr>
 " Toggle relative and straight line numbers
 
 
@@ -524,6 +525,12 @@ let g:gitgutter_sign_column_always = 1
 let g:gitgutter_eager = 0
 nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
+
+" Rspec.vim
+let g:RspecSplitHorizontal=0
+nmap <leader>r :RunSpecLine
+nmap <leader><leader>r :RunSpec
+nmap <leader><leader>rr :RunSpecs
 
 
 " CODE COMPLETION BLOCK
