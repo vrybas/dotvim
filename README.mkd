@@ -100,7 +100,7 @@
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
 * `,a`  - Search on current path with Ack
-* `,r`  - Toggle relative/straight line numbers
+* `,l`  - Toggle relative/straight line numbers
 * `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u`  - Toggle open graphical tree-based undo
 * `,bd` - Set background dark
@@ -116,6 +116,11 @@
 ===
 * `gh` - Jump to next git change
 * `gH` - Jump to previous git change
+
+===
+* `,r`   - Run Rspec for current line
+* `,,r`  - Run Rspec for current file
+* `,,rr` - Run all Rspecs
 
 ===
 * `,d` - Show all Ruby methods in current file (enter line number to jump)
