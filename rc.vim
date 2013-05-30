@@ -528,9 +528,9 @@ nmap gH <Plug>GitGutterPrevHunk
 
 " Rspec.vim
 let g:RspecSplitHorizontal=0
-nmap <leader>r :RunSpecLine
-nmap <leader><leader>r :RunSpec
-nmap <leader><leader>rr :RunSpecs
+nmap <leader>r :RunSpecLine<cr>
+nmap <leader><leader>r :RunSpec<cr>
+nmap <leader><leader>rr :RunSpecs<cr>
 
 
 " CODE COMPLETION BLOCK
