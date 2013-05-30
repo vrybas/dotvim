@@ -13,7 +13,7 @@ function! SoftWrap()
   let &cc = 0
   let &textwidth=0
   let &wrapmargin=2
-  let &columns=60
+  let &columns=78
   set wrap
   set linebreak
   set nolist
