@@ -527,7 +527,7 @@ nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
 
 " Rspec.vim
-let g:RspecSplitHorizontal=0
+let g:RspecSplitHorizontal=1
 nmap <leader>r :RunSpecLine<cr>
 nmap <leader><leader>r :RunSpec<cr>
 nmap <leader><leader>rr :RunSpecs<cr>
