@@ -238,6 +238,10 @@ function! BgSwitchDayTime()
   highlight GitGutterDelete       guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
   highlight default link GitGutterChangeDelete GitGutterChange
 
+  " EasyMotion colors reset
+  hi link EasyMotionTarget ErrorMsg
+  hi link EasyMotionShade  Comment
+
 "
 endfunction
 
