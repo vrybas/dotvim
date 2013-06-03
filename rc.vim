@@ -96,6 +96,8 @@ set gdefault
 set shell=/bin/bash
 let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 
+set clipboard=unnamed
+
 
 "*****************************************************************************"
 "
