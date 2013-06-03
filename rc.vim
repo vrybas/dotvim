@@ -103,8 +103,6 @@ let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 "
 "*****************************************************************************"
 
-colorscheme default
-
 set nu
 " Turn on line numbers
 
@@ -154,10 +152,6 @@ set noswapfile
 " Disable .swp files creation for every buffer
 
 
-colorscheme default
-" Clear coloscheme settings
-
-
 set ignorecase
 " Disable case-sensitive search when search in lowercase
 
@@ -185,46 +179,8 @@ set showmatch
 set nostartofline
 " Don't jump to start of the line when moving around
 
-
 set vb
 " Disable beeping and use 'visualbell' instead
-
-"*****************************************************************************"
-"
-" GUI settings
-"
-"*****************************************************************************"
-
-
-if has("gui_running") " =======================================================
-  set guioptions-=m
-  " Remove menu bar
-
-  set guioptions-=T
-  " Remove toolbar
-
-  set guioptions-=r
-  " Remove right-hand scroll bar
-
-  set guioptions-=L
-  " Remove left-hand scroll bar
-
-  set showtabline=2
-  " Show tabs bar
-
-  set laststatus=2
-  " Show file status
-
-  set background=light
-
-  colorscheme solarized
-  " My favorite color scheme
-
-  set gfn=Monaco:h12
-  " Font settings
-
-
-endif " =======================================================================
 
 "*****************************************************************************"
 "
@@ -258,13 +214,15 @@ function! BgSwitchDayTime()
 
   endif
 
-  let g:solarized_termcolors = 256
+  let g:solarized_termtrans = 1
+  let g:solarized_termcolors = 16
   let g:solarized_visibility = "high"
   let g:solarized_contrast = "high"
   colorscheme solarized
 
   " Highlights used by the GitGutter signs.
   highlight clear SignColumn
+  hi! link SignColumn Background
   highlight GitGutterAdd          guifg=#009900 guibg=NONE ctermfg=2 ctermbg=NONE
   highlight GitGutterChange       guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
   highlight GitGutterDelete       guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
