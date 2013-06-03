@@ -189,16 +189,11 @@ set nostartofline
 set vb
 " Disable beeping and use 'visualbell' instead
 
-
 "*****************************************************************************"
 "
 " GUI settings
 "
 "*****************************************************************************"
-
-let g:solarized_termtrans = 1
-" Use terminal background for Solarized when run MacVim from terminal
-" (fix for iTerm2)
 
 
 if has("gui_running") " =======================================================
@@ -263,8 +258,13 @@ function! BgSwitchDayTime()
 
   endif
 
+  let g:solarized_termcolors = 256
+  let g:solarized_visibility = "high"
+  let g:solarized_contrast = "high"
+  colorscheme solarized
+
   " Highlights used by the GitGutter signs.
-  hi! link SignColumn Background
+  highlight clear SignColumn
   highlight GitGutterAdd          guifg=#009900 guibg=NONE ctermfg=2 ctermbg=NONE
   highlight GitGutterChange       guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
   highlight GitGutterDelete       guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
@@ -305,12 +305,10 @@ endfunction
 
 " Saves current buffer if it was modified. Updates git diff
 "
-function! AutoSave()
-  if (&modified == 1)
+function! Save()
     call RemoveSpaces()
     execute 'w!'
     execute 'GitGutter'
-  endif
 endfunction
 
 
@@ -322,6 +320,9 @@ endfunction
 
 let mapleader = ","
 " Leader key mapping
+
+nmap <Esc>i :call Save()<CR>
+imap <Esc>i <Esc>:call Save()<CR>
 
 map <M-a> :bprev<CR>
 " Previous buffer
@@ -352,6 +353,7 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 
+
 nnoremap <silent><Leader>g <C-w><C-]><C-w>T
 " Open class/function definition in new tab
 
@@ -369,9 +371,6 @@ vmap <S-Up> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 " Up
 
 vmap <S-Down> :m'>+<CR>gv=`<my`>mzgv`yo`z
-" Down
-
-
 
 " Splits mappings
 "
@@ -470,6 +469,7 @@ endf
 
 """ NERDTree
 nmap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
+
 imap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
 
 "PeepOpen"
@@ -577,27 +577,15 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 "
 
 
-" Autosave events
-"
-au InsertLeave * silent! call AutoSave()
-au BufLeave * silent! call AutoSave()
-au FocusLost * silent! call AutoSave()
-au CursorHold * silent! call AutoSave()
-  " CursorHold timeout
-set ut=1000
-
 " Switching clolorscheme events
 "
 au VimEnter * silent! call BgSwitchDayTime()
-au InsertLeave * silent! call BgSwitchDayTime()
-au FocusLost * silent! call BgSwitchDayTime()
 
 "Restore custor position on file open
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
 
  "                                                                           "
 "*****************************************************************************"
