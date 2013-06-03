@@ -295,6 +295,7 @@ let mapleader = ","
 
 nmap <Esc>i :call Save()<CR>
 imap <Esc>i <Esc>:call Save()<CR>
+nmap <silent><leader>i :call Save()<CR>
 
 map <M-a> :bprev<CR>
 " Previous buffer
@@ -418,7 +419,9 @@ imap <silent><Leader>d :g/def /<CR>
 nmap <silent><leader>bd :set background=dark<CR>
 nmap <silent><leader>bl :set background=light<CR>
 
-nmap <silent><leader>i :CheckSyntax<CR>
+
+nmap <silent><leader><leader>i :CheckSyntax<CR>
+
 
 nnoremap ; :
 " Handy mapping for quick access to CLI
