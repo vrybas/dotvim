@@ -427,6 +427,7 @@ nmap <silent><leader><tab> :Sscratch<CR>
 nmap <silent><leader>l :call ToggleRelNumber()<cr>
 " Toggle relative and straight line numbers
 
+nmap <Leader>d V<tab>zf
 vnoremap <Leader>d zf
 
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
@@ -434,7 +435,12 @@ vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
-"
+
+set nowrapscan
+nmap <silent>di k/def <cr>V<tab>zfndi
+
+
+
 nmap <silent><leader>bd :set background=dark<CR>
 nmap <silent><leader>bl :set background=light<CR>
 
@@ -444,7 +450,6 @@ nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 nnoremap ; :
 " Handy mapping for quick access to CLI
-
 "*****************************************************************************"
 "
 " Plugin configurations
