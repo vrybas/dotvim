@@ -23,7 +23,6 @@
  Bundle 'scrooloose/nerdcommenter'
  Bundle 'mileszs/ack.vim'
  Bundle 'vim-scripts/bufexplorer.zip'
- Bundle 'topfunky/PeepOpen-EditorSupport', {'rtp': 'vim-peepopen/'}
  Bundle 'vim-scripts/delimitMate.vim'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'tpope/vim-fugitive'
@@ -43,6 +42,7 @@
  Bundle 'airblade/vim-gitgutter'
  Bundle 'git://github.com/tpope/vim-markdown.git'
  Bundle 'git://github.com/skwp/vim-rspec.git'
+ Bundle 'git://github.com/kien/ctrlp.vim.git'
 
  filetype plugin indent on     " required!
  "
@@ -506,6 +506,12 @@ let g:RspecSplitHorizontal=1
 nmap <leader>r :RunSpecLine<cr>
 nmap <leader><leader>r :RunSpec<cr>
 nmap <leader><leader>rr :RunSpecs<cr>
+
+" CtrlP.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_switch_buffer = 'et'
+let g:ctrlp_tabpage_position = 'al'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|rsync_cache|idea)$'
 
 
 " CODE COMPLETION BLOCK
