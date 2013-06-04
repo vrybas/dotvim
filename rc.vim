@@ -98,7 +98,7 @@ let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 
 set clipboard=unnamed
 
-set timeoutlen=200 ttimeoutlen=0
+set timeoutlen=500 ttimeoutlen=0
 
 "*****************************************************************************"
 "
@@ -192,6 +192,28 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+set foldtext=CustomFoldText()
+fu! CustomFoldText()
+    "get first non-blank line
+    let fs = v:foldstart
+    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    if fs > v:foldend
+        let line = getline(v:foldstart)
+    else
+        let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+    endif
+
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = " " . foldSize . " lines "
+    let foldLevelStr = repeat("+--", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldPercentage))
+    return line . expansionString . foldSizeStr . foldPercentage 
+endf
 
 "*****************************************************************************"
 "
@@ -405,6 +427,7 @@ nmap <silent><leader><tab> :Sscratch<CR>
 nmap <silent><leader>l :call ToggleRelNumber()<cr>
 " Toggle relative and straight line numbers
 
+vnoremap <Leader>d zf
 
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 " Fold everything, except visually selected block
@@ -412,9 +435,6 @@ vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
 "
-nmap <silent><Leader>d :g/def /<CR>
-imap <silent><Leader>d :g/def /<CR>
-
 nmap <silent><leader>bd :set background=dark<CR>
 nmap <silent><leader>bl :set background=light<CR>
 
