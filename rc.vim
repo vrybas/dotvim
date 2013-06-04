@@ -212,7 +212,7 @@ fu! CustomFoldText()
     let lineCount = line("$")
     let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
     let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldPercentage))
-    return line . expansionString . foldSizeStr . foldPercentage 
+    return line . expansionString . foldSizeStr . foldPercentage
 endf
 
 "*****************************************************************************"
