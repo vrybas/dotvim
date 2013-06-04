@@ -98,6 +98,7 @@ let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 
 set clipboard=unnamed
 
+set timeoutlen=200 ttimeoutlen=0
 
 "*****************************************************************************"
 "
@@ -293,9 +294,7 @@ endfunction
 let mapleader = ","
 " Leader key mapping
 
-nmap <Esc>i :call Save()<CR>
-imap <Esc>i <Esc>:call Save()<CR>
-nmap <silent><leader>i :call Save()<CR>
+nnoremap <Space> :call Save()<CR>
 
 map <M-a> :bprev<CR>
 " Previous buffer
@@ -443,9 +442,9 @@ fun! NERDTreeToggleWithFind()
 endf
 
 """ NERDTree
-nmap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
+nmap <silent> <c-d> :call NERDTreeToggleWithFind()<CR>
 
-imap <silent> <D-d> :call NERDTreeToggleWithFind()<CR>
+imap <silent> <c-d> :call NERDTreeToggleWithFind()<CR>
 
 "PeepOpen"
 if has("gui_macvim")
