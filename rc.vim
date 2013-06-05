@@ -593,7 +593,10 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
- "                                                                           "
+" Save folds and restore folds
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
+                                                                             "
 "*****************************************************************************"
 "
 " Map cyrillic keys to latin to use in command mode
