@@ -437,7 +437,7 @@ nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
 
 set nowrapscan
-nmap <silent>di k/def <cr>V<tab>zfndi
+nmap <silent>di /def <cr>V<tab>zfndi
 
 
 
