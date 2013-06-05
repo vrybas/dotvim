@@ -265,6 +265,8 @@ function! BgSwitchDayTime()
   hi link EasyMotionTarget ErrorMsg
   hi link EasyMotionShade  Comment
 
+  " Folds colors
+  highlight clear Folded "guibg=grey guifg=blue
 "
 endfunction
 
