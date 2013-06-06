@@ -215,6 +215,45 @@ endf
 
 "*****************************************************************************"
 "
+" GUI settings
+"
+"*****************************************************************************"
+
+
+if has("gui_running") " =======================================================
+  set guioptions-=m
+  " Remove menu bar
+
+  set guioptions-=T
+  " Remove toolbar
+
+  set guioptions-=r
+  " Remove right-hand scroll bar
+
+  set guioptions-=L
+  " Remove left-hand scroll bar
+
+  set showtabline=2
+  " Show tabs bar
+
+  set laststatus=2
+  " Show file status
+
+  set background=light
+
+  colorscheme solarized
+  " My favorite color scheme
+
+  set gfn=Monaco:h14
+  " Font settings
+
+  au FocusLost * silent! call Save()
+
+endif " =======================================================================
+
+
+"*****************************************************************************"
+"
 " Functions and commands
 "
 "*****************************************************************************"
