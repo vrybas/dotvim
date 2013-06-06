@@ -112,10 +112,8 @@ set nu
 set cc=80
 " Set 80 symbols ruler
 
-
 set scrolloff=3
 " Show 3 line after and before cursor when scrolling
-
 
 set ts=2
 " Tabulation Size
@@ -598,6 +596,9 @@ autocmd BufReadPost *
 " Save folds and restore folds
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
+
+" Highlight line in insert mode
+au InsertEnter,InsertLeave * set cul!
                                                                              "
 "*****************************************************************************"
 "
