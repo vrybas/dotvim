@@ -38,7 +38,7 @@ function! SoftWrap()
   setlocal fo=croql
 endfunction
 
-call WrapColumn(80)
+call WrapColumn(78)
 
 nmap <silent><leader>w4 :call WrapColumn(40)<CR>
 nmap <silent><leader>w5 :call WrapColumn(50)<CR>
@@ -93,8 +93,11 @@ nmap <D-6> g^
 nmap <D-0> g^
 
 " Insert current date
-nmap <leader>c o# <esc>:r! date<cr>kJo
+nmap <leader>c o<cr># <esc>:r! date<cr>kJo
 imap <leader>c <esc>p
+
+nmap <leader>с o<cr># <esc>:r! date<cr>kJo
+imap <leader>с <esc>p
 
 
 " Spell checking
