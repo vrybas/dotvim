@@ -83,7 +83,6 @@ set backspace=indent,eol,start
 set wildmode=list:longest
 " Make cmdline tab completion similar to bash
 
-
 set autoread
 " Reload file immediately when changed outside of Vim
 
@@ -99,6 +98,8 @@ let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 set clipboard=unnamed
 
 set timeoutlen=500 ttimeoutlen=0
+
+set mouse=a
 
 "*****************************************************************************"
 "
@@ -475,7 +476,6 @@ vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
 
-set nowrapscan
 nmap <silent>di /def <cr>V<tab>zfndi
 
 
@@ -506,6 +506,7 @@ fun! NERDTreeToggleWithFind()
 endf
 
 """ NERDTree
+let NERDTreeShowHidden=1
 nmap <silent> <c-d> :call NERDTreeToggleWithFind()<CR>
 
 imap <silent> <c-d> :call NERDTreeToggleWithFind()<CR>
