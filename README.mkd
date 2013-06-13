@@ -2,6 +2,10 @@
 
 ![](http://f.cl.ly/items/3C1b2P3p362q2n2M0m3K/Screen%20Shot%202012-12-30%20at%203.00.43%20PM.png)
 
+## Warning ##
+I've stopped using MacVim and started using console Vim in Tmux, this readme belongs to the latest MacVim commit https://github.com/vrybas/dotvim/tree/b14b0c2f557b781fad9c1c522618a6ef8299467b
+I plan to create a separate branch from it, but no longer support. And I'll update info about new keymappings and other terminal-related changes here shortly
+
 ## Features ##
    * **Ruby on Rails projects support** → [VimRails](http://github.com/tpope/vim-rails) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L517)
    * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L446)
