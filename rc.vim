@@ -259,30 +259,11 @@ endif " =======================================================================
 "
 "*****************************************************************************"
 
-function! BgSwitchDayTime()
-  " Change color scheme by daytime :
-  "
-  let dayBegin = 5
-  " Sunrise hour
-
-  let nightBegin = 18
-  " Sunset hour
-
-  let currentTime = str2nr(strftime("%H"))
-  " Get current time
-
-  if currentTime > dayBegin && currentTime < nightBegin
-    " If Sun is up
-
+function! BgSwitch(bg)
+  if a:bg == 'light'
     set background=light
-    " use light scheme
-
   else
-    " else
-
     set background=dark
-    " use dark scheme
-
   endif
 
   let g:solarized_termtrans = 1
@@ -484,8 +465,8 @@ nmap <silent>di /def <cr>V<tab>zfndi
 
 
 
-nmap <silent><leader>bd :set background=dark<CR>
-nmap <silent><leader>bl :set background=light<CR>
+nmap <silent><leader>bd :call BgSwitch('dark')<CR>
+nmap <silent><leader>bl :call BgSwitch('light')<CR>
 
 
 nmap <silent><leader><leader>i :CheckSyntax<CR>
@@ -629,7 +610,7 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 
 " Switching clolorscheme events
 "
-au VimEnter * silent! call BgSwitchDayTime()
+au VimEnter * silent! call BgSwitch('light')
 
 "Restore custor position on file open
 autocmd BufReadPost *
