@@ -474,7 +474,7 @@ vnoremap <Leader>d zf
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 " Fold everything, except visually selected block
 
-nnoremap <Leader>za :loadview
+nnoremap <Leader>za :loadview<cr>
 " Restore folds
 
 nmap <silent><Leader>zs <Esc>zRzz
