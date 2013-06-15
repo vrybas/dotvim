@@ -343,6 +343,7 @@ endfunction
 function! Save()
     call RemoveSpaces()
     execute 'w!'
+    execute 'mkview'
     execute 'GitGutter'
 endfunction
 
@@ -472,6 +473,9 @@ vnoremap <Leader>d zf
 
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 " Fold everything, except visually selected block
+
+nnoremap <Leader>za :loadview
+" Restore folds
 
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
@@ -632,10 +636,6 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
-" Save folds and restore folds
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
 
 " Highlight line in insert mode
 au InsertEnter,InsertLeave * set cul!
