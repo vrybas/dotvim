@@ -377,16 +377,16 @@ nnoremap <silent><Leader>g <C-w><C-]><C-w>T
 
 " Move visually selected blocks of text
 "
-vmap <S-Left> <gv
+vmap <leader>fh <gv
 " Left
 
-vmap <S-Right> >gv
+vmap <leader>fl >gv
 " Right
 
-vmap <S-Up> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+vmap <leader>fk :m'<-2<CR>gv=`>my`<mzgv`yo`z
 " Up
 
-vmap <S-Down> :m'>+<CR>gv=`<my`>mzgv`yo`z
+vmap <leader>fj :m'>+<CR>gv=`<my`>mzgv`yo`z
 
 " Splits mappings
 "
