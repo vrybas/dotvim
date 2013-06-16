@@ -43,6 +43,9 @@
  Bundle 'git://github.com/tpope/vim-markdown.git'
  Bundle 'git://github.com/skwp/vim-rspec.git'
  Bundle 'git://github.com/kien/ctrlp.vim.git'
+ Bundle 'git://github.com/tpope/vim-bundler.git'
+ Bundle 'git://github.com/tpope/vim-rake.git'
+ Bundle 'git://github.com/tpope/vim-rbenv.git'
 
  filetype plugin indent on     " required!
  "
@@ -504,6 +507,7 @@ end
 
 """ Vim-Ruby
 let ruby_no_expensive = 1
+let g:rails_ctags_arguments='--exclude=.rsync*'
 
 " Use Ack instead of Grep
 set grepprg=ack\ -a
@@ -581,16 +585,10 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-autocmd FileType *
-   \ if &omnifunc != '' |
-   \   call SuperTabChain(&omnifunc, "<c-p>") |
-   \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-   \ endif
-
 let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
-let g:rubycomplete_rails = 1"
-let g:acp_behaviorKeywordLength = 6
+let g:rubycomplete_rails = 1
+let g:acp_behaviorKeywordLength = 3
 
 set ofu=syntaxcomplete#Complete
 
