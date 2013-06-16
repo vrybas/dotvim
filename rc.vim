@@ -46,6 +46,7 @@
  Bundle 'git://github.com/tpope/vim-bundler.git'
  Bundle 'git://github.com/tpope/vim-rake.git'
  Bundle 'git://github.com/tpope/vim-rbenv.git'
+ Bundle 'christoomey/vim-tmux-navigator'
 
  filetype plugin indent on     " required!
  "
@@ -413,18 +414,10 @@ nmap _ <C-w>-
 
 
 " Navigate between splits
-"
-nnoremap <space>l <C-w>l
-" Left
-
-nnoremap <space>h <C-w>h
-" Right
-
-nnoremap <space>k <C-w>k
-" Up
-
-nnoremap <space>j <C-w>j
-" Down
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 
 
