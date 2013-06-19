@@ -25,11 +25,11 @@ longer supported. But still contains most of the features described here.
    * **Run Rspec for current file/line/all of them** → [Rspec.vim](https://github.com/skwp/vim-rspec)
    * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com)
    * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim)
-   * **Syntax checking** [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim)
-   * **Bundler support** [vim-bundler] (https://github.com/tpope/vim-bundler)
-   * **Rake support** [vim-rake] (https://github.com/tpope/vim-rake)
-   * **Rbenv support** [vim-rbenv] (https://github.com/tpope/vim-rbenv)
-   * **Tmux splits integration** [vim-tmux-navigator] (https://christoomey/vim-tmux-navigator)
+   * **Syntax checking** → [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim)
+   * **Bundler support** → [vim-bundler] (https://github.com/tpope/vim-bundler)
+   * **Rake support** → [vim-rake] (https://github.com/tpope/vim-rake)
+   * **Rbenv support** → [vim-rbenv] (https://github.com/tpope/vim-rbenv)
+   * **Tmux splits integration** → [vim-tmux-navigator] (https://christoomey/vim-tmux-navigator)
 
 =====
    * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
@@ -69,7 +69,7 @@ longer supported. But still contains most of the features described here.
    10. :e any_file_in_path
    11. :Rtags
 
-## Keymap (above Vim and plugins standard mappings) ##
+## Keymap (above Vima & plugins standard) ##
 
 ===
 * `space` -  Save file
