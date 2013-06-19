@@ -13,8 +13,9 @@ longer supported. But still contains most of the features described here.
    * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree)
    * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim)
    * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
-   * **Graphical popup Open File dialog with smart search** → [PeepOpen](http://github.com/topfunky/PeepOpen-EditorSupport)
-   * **Code completion as-you-type (starts on 6th symbol)** → [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop)
+   * **Popup Open File dialog with smart search** → [CtrlP](https://github.com/kien/ctrlp.vim)
+   * **Code completion as-you-type (starts on 3rd symbol)** →
+   [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop)
    * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab)
    * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim)
    * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive)
@@ -25,7 +26,10 @@ longer supported. But still contains most of the features described here.
    * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com)
    * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim)
    * **Syntax checking** [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim)
-   * **Show all Ruby methods in current file**
+   * **Bundler support** [vim-bundler] (https://github.com/tpope/vim-bundler)
+   * **Rake support** [vim-rake] (https://github.com/tpope/vim-rake)
+   * **Rbenv support** [vim-rbenv] (https://github.com/tpope/vim-rbenv)
+   * **Tmux splits integration** [vim-tmux-navigator] (https://christoomey/vim-tmux-navigator)
 
 =====
    * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
@@ -68,18 +72,18 @@ longer supported. But still contains most of the features described here.
 ## Keymap (above Vim and plugins standard mappings) ##
 
 ===
-* `Command-D` - Open project Tree View
-* `Command-/` - Open File dialog
+* `space` -  Save file
+* `Ctrl-D` - Open project Tree View
+* `Ctrl-P` - Open File dialog
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
-* `Command-W` - Close current tab
-* `Command-1..9` - Go to 1..9 tab
+* `,1..9` - Go to 1..9 tab
 * `,g` - Open class/function definition in new tab
 
 ### Buffers
 * `,,b` - Buffer explorer
-* `Command-X` - Close current buffer
+* `,x` - Close current buffer
 * `,Tab` - Open scratch buffer which is never saved
 
 ### Splits
@@ -87,18 +91,18 @@ longer supported. But still contains most of the features described here.
 * `,s` - Create horisontal split
 * `,o` - Maximize/unmaximize split
 * `,x` - Close split
-* `Space-h` - Switch to Left
-* `Space-j` - Switch to Down
-* `Space-k` - Switch to Up
-* `Space-l` - Switch to Right
 * `,+` - Increase split area
 * `,_` - Decrease split area
+* `Ctrl-h` - Switch to Left
+* `Ctrl-j` - Switch to Down
+* `Ctrl-k` - Switch to Up
+* `Ctrl-l` - Switch to Right
 
 ### Move selected line(s) around (in visually select mode)
-* `Shift ↑` - Move left
-* `Shift ↓` - Move down
-* `Shift ←` - Move up
-* `Shift →` - Move right
+* `,fh` - Move left
+* `,fj` - Move down
+* `,fk` - Move up
+* `,fl` - Move right
 
 ### Other
 
@@ -109,18 +113,12 @@ longer supported. But still contains most of the features described here.
 * `,l`  - Toggle relative/straight line numbers
 * `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u`  - Toggle open graphical tree-based undo
-* `,bd` - Set background dark
-* `,bl` - Set background light
-
-==
-When editing Markdown or Text files:
-* `,w1`  - Enable soft autowrapping
-* `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
-* `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
-* `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing commit messages (@tpope's [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) on that)
+* `,bd` - Switch to the dark colorscheme
+* `,bl` - Switch to the light colorscheme
 
 ===
-* `,za` - Fold everything, except visually selected block
+* `,d` - Fold selected lines
+* `,za` - Fold everything, except selected lines
 * `,zs` - Unfold everything
 
 ===
@@ -133,7 +131,8 @@ When editing Markdown or Text files:
 * `,,rr` - Run all Rspecs
 
 ===
-* `,d` - Show all Ruby methods in current file (enter line number to jump)
+* `,di` - Show all Ruby methods in current file (enter line number to jump)
+* `,,i` - Check syntax
 * `RR` - APIDock open Rails documentation for method under cursor
 * `RB` - APIDock open Ruby documentation
 * `RS` - APIDock open Rspec documentation
@@ -142,4 +141,16 @@ When editing Markdown or Text files:
 * `RI` - Open Ri documentation with autocompletive search in horisontal split
 * `RIV` - Open Ri documentation in vertical split
 * `RK` - Open Ri documentation for keyword under cursor
+
+===
+When editing Markdown or Text files:
+* `,w1`  - Enable soft autowrapping
+* `Cmd+hjkl460` - Move around in soft autowrapped text like in normal
+* `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
+* `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
+* `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing
+commit messages (@tpope's
+[post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+on that)
+* `,c` - Insert journal-like current date as next line
 
