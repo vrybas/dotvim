@@ -71,7 +71,6 @@ longer supported. But still contains most of the features described here.
 
 ## Keymap (above Vim & plugins standard) ##
 
-===
 * `space` -  Save file
 * `Ctrl-D` - Open project Tree View
 * `Ctrl-P` - Open File dialog
@@ -106,7 +105,6 @@ longer supported. But still contains most of the features described here.
 
 ### Other
 
-===
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
 * `,a`  - Search on current path with Ack
