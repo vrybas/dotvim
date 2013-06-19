@@ -69,7 +69,7 @@ longer supported. But still contains most of the features described here.
    10. :e any_file_in_path
    11. :Rtags
 
-## Keymap (above Vima & plugins standard) ##
+## Keymap (above Vim & plugins standard) ##
 
 ===
 * `space` -  Save file
