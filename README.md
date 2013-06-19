@@ -1,6 +1,5 @@
 ## My Vim for Ruby on Rails development
-
-![](http://f.cl.ly/items/3C1b2P3p362q2n2M0m3K/Screen%20Shot%202012-12-30%20at%203.00.43%20PM.png)
+![](http://f.cl.ly/items/1i2S0x1S060D3m2d2A3M/Screenshot_6_19_13_7_25_PM.png)
 
 ## Warning ##
 I've stopped using MacVim(mostly) and started using console Vim in Tmux.
