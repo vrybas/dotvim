@@ -48,9 +48,7 @@ longer supported. But still contains most of the features described here.
    * **Open current split in new tab**
    * **Open tabs by numbers**
    * **Restore cursor position on file open**
-   * **Autosave current buffer on various events**
    * **Remove spaces from the end of each line on save**
-   * **Light/Dark scheme automatically switched on sunrise/sunset**
    * **Cyrillic keys mapped to latin to use in command mode**
    * **Friendly text/markdown files editing with wrapping and ULTIMATE paragraph formatter**
    * **Spell checking english and russian(with ё) texts**
