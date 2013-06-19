@@ -139,13 +139,12 @@ longer supported. But still contains most of the features described here.
 
 ===
 When editing Markdown or Text files:
-* `,w1`  - Enable soft autowrapping
-* `Cmd+hjkl460` - Move around in soft autowrapped text like in normal
 * `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
 * `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
 * `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing
 commit messages (@tpope's
 [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 on that)
-* `,c` - Insert journal-like current date as next line
+* `,c` - Cut text above to the clipboard without line breaks
+* `,q` - Insert journal-like current date as next line
 
