@@ -55,7 +55,7 @@ nmap <silent><leader>ц6 :call WrapColumn(60)<CR>
 nmap <silent><leader>ц7 :call WrapColumn(70)<CR>
 nmap <silent><leader>ц8 :call WrapColumn(80)<CR>
 nmap <silent><leader>ць :call WrapColumn(78)<CR>
-nmap <silent><leader>цп :call WrapColumn(70)<CR>
+nmap <silent><leader>цп :call WrapColumn(72)<CR>
 nmap <silent><leader>ц1 :call SoftWrap()<CR>
 
 " The ULTIMATE paragraph formatter. How to use:

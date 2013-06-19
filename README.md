@@ -1,54 +1,56 @@
-## My Vim configuration for Ruby on Rails development
+## My Vim for Ruby on Rails development
 
 ![](http://f.cl.ly/items/3C1b2P3p362q2n2M0m3K/Screen%20Shot%202012-12-30%20at%203.00.43%20PM.png)
 
 ## Warning ##
-I've stopped using MacVim and started using console Vim in Tmux, this readme belongs to the latest MacVim commit https://github.com/vrybas/dotvim/tree/b14b0c2f557b781fad9c1c522618a6ef8299467b
-I plan to create a separate branch from it, but no longer support. And I'll update info about new keymappings and other terminal-related changes here shortly
+I've stopped using MacVim(mostly) and started using console Vim in Tmux.
+The lastest MacVim config extracted to the
+[**macvim**](https://github.com/vrybas/dotvim/tree/macvim) branch and no
+longer supported. But still contains most of the features described here.
 
 ## Features ##
-   * **Ruby on Rails projects support** → [VimRails](http://github.com/tpope/vim-rails) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L517)
-   * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L446)
-   * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L459)
-   * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip) [↓](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L318)
-   * **Graphical popup Open File dialog with smart search** → [PeepOpen](http://github.com/topfunky/PeepOpen-EditorSupport) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L450)
-   * **Code completion as-you-type (starts on 6th symbol)** → [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop) ([disable](https://github.com/vim-scripts/AutoComplPop/blob/master/doc/acp.txt#L105))
-   * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab) [↓](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L510)
-   * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L462)
-   * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L137)
-   * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter) [↓](https://github.com/vrybas/dotvim/commit/004947a8fdfbf74bf86bed9e089019ed595d2216)
-   * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim) [↓](https://github.com/vrybas/dotvim/blob/3dfa96e18fea90195d22e3cddd48f907dc31d2bd/rc.vim#L467)
-   * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L326)
-   * **Run Rspec for current file/line/all of them** → [Rspec.vim](https://github.com/skwp/vim-rspec) [↓](https://github.com/vrybas/dotvim/commit/b8daf21a6df2b7134629a734e114be89ad1435e9)
-   * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L468)
-   * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim) [↓](https://github.com/vrybas/dotvim/blob/fcf5650494251f8b701e9b1d64237b905297929d/rc.vim#L460)
-   * **Syntax checking** [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim) [↓](https://github.com/vrybas/dotvim/commit/74415f15d54d63c24b6e739f84c64363abe0c6b0)
-   * **Show all Ruby methods in current file** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L413)
+   * **Ruby on Rails projects support** → [VimRails](http://github.com/tpope/vim-rails)
+   * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree)
+   * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim)
+   * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
+   * **Graphical popup Open File dialog with smart search** → [PeepOpen](http://github.com/topfunky/PeepOpen-EditorSupport)
+   * **Code completion as-you-type (starts on 6th symbol)** → [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop)
+   * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab)
+   * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim)
+   * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive)
+   * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter)
+   * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim)
+   * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net)
+   * **Run Rspec for current file/line/all of them** → [Rspec.vim](https://github.com/skwp/vim-rspec)
+   * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com)
+   * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim)
+   * **Syntax checking** [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim)
+   * **Show all Ruby methods in current file**
 
 =====
-   * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L357)
+   * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
    * **Bulk lines commenting based on syntax** → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
    * **Auto-closing quotes, brackets etc.** → [DelimitMate](http://github.com/vim-scripts/delimitMate.vim)
    * **Jump between quotes, brackets etc.** → [Matchit](http://github.com/tsaleh/vim-matchit)
-   * **Jump around code with keystrokes** → [Easymotion](http://github.com/Lokaltog/vim-easymotion)  [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L465)
+   * **Jump around code with keystrokes** → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
    * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround](http://github.com/tpope/vim-surround)
    * **Smart text selection** → [Smartpairs](https://github.com/gorkunov/smartpairs.vim)
-   * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L400)
-   * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)  [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L192)
+   * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch)
+   * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)
 
 =====
-   * **Hide everything, except selected text** (stay focused!) [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L407)
-   * **Toggle straight/relative line numbers to use with movement operations** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L276)
-   * **Move code blocks left/right/up/down** [↓](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L346)
-   * **Open current split in new tab** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L310)
-   * **Open tabs by numbers** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L314)
-   * **Restore cursor position on file open** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L541)
-   * **Autosave current buffer on various events** ([disable](https://github.com/vrybas/dotvim/blob/f59c4909fc48b13df1cf4e3ecbe024821570b506/rc.vim#L572))
-   * **Remove spaces from the end of each line on save** [↓](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L298)
-   * **Light/Dark scheme automatically switched on sunrise/sunset** ([disable](https://github.com/vrybas/dotvim/blob/389c78fe972288f97cb198e32026ed21020aaf61/rc.vim#L562-L564))
-   * **Cyrillic keys mapped to latin to use in command mode** [↓](https://github.com/vrybas/dotvim/blob/d78cda1e90e29113886dab35136012a1aa08c0d8/rc.vim#L550)
-   * **Friendly text files editing with wrapping and ULTIMATE paragraph formatter** [↓](https://github.com/vrybas/dotvim/blob/e2a75527acfe1993181a340a269093a54c1f4352/ftplugin/text.vim#L28-L36)
-   * **Spell checking english and russian(with ё) texts** [↓](https://github.com/vrybas/dotvim/blob/e2a75527acfe1993181a340a269093a54c1f4352/ftplugin/text.vim#L28-L36)
+   * **Hide everything, except selected text** (stay focused!)
+   * **Toggle straight/relative line numbers to use with movement operations**
+   * **Move code blocks left/right/up/down**
+   * **Open current split in new tab**
+   * **Open tabs by numbers**
+   * **Restore cursor position on file open**
+   * **Autosave current buffer on various events**
+   * **Remove spaces from the end of each line on save**
+   * **Light/Dark scheme automatically switched on sunrise/sunset**
+   * **Cyrillic keys mapped to latin to use in command mode**
+   * **Friendly text/markdown files editing with wrapping and ULTIMATE paragraph formatter**
+   * **Spell checking english and russian(with ё) texts**
 
 ## Installation ##
    1. git clone git://github.com/vrybas/dotvim.git ~/.vim
@@ -109,9 +111,13 @@ I plan to create a separate branch from it, but no longer support. And I'll upda
 * `,u`  - Toggle open graphical tree-based undo
 * `,bd` - Set background dark
 * `,bl` - Set background light
-* `,w4..8`  - Set vertical ruler and autowrapping to 40..80 symbols (for text files)
-* `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard, for text files)
+
+==
+When editing Markdown or Text files:
 * `,w1`  - Enable soft autowrapping
+* `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
+* `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
+* `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing commit messages (@tpope's [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) on that)
 
 ===
 * `,za` - Fold everything, except visually selected block
