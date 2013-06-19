@@ -46,7 +46,7 @@ nmap <silent><leader>w6 :call WrapColumn(60)<CR>
 nmap <silent><leader>w7 :call WrapColumn(70)<CR>
 nmap <silent><leader>w8 :call WrapColumn(80)<CR>
 nmap <silent><leader>wm :call WrapColumn(78)<CR>
-nmap <silent><leader>wg :call WrapColumn(70)<CR>
+nmap <silent><leader>wg :call WrapColumn(72)<CR>
 nmap <silent><leader>w1 :call SoftWrap()<CR>
 
 nmap <silent><leader>ц4 :call WrapColumn(40)<CR>
