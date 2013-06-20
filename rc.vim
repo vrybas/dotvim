@@ -570,7 +570,8 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-]>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabCrMapping = 0
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " " made, these lines close it on movement in insert mode or when leaving
@@ -581,6 +582,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1
+
 let g:acp_behaviorKeywordLength = 3
 let g:acp_behaviorRubyOmniMethodLength = -1
 
