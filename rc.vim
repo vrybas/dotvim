@@ -585,6 +585,7 @@ let g:acp_behaviorKeywordLength = 3
 
 set ofu=syntaxcomplete#Complete
 
+" Cancel completion on Esc
 inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 
  "                                                                           "
