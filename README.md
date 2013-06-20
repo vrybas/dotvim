@@ -27,7 +27,7 @@ longer supported. But still contains most of the features described here.
    * **Bundler support** → [vim-bundler] (https://github.com/tpope/vim-bundler)
    * **Rake support** → [vim-rake] (https://github.com/tpope/vim-rake)
    * **Rbenv support** → [vim-rbenv] (https://github.com/tpope/vim-rbenv)
-   * **Tmux splits integration** → [vim-tmux-navigator] (https://christoomey/vim-tmux-navigator)
+   * **Tmux splits integration** → [vim-tmux-navigator] (https://github.com/christoomey/vim-tmux-navigator) | [help] (http://robots.thoughtbot.com/post/53022241323/seamlessly-navigate-vim-and-tmux-splits)
 
 =====
    * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
