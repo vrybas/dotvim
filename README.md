@@ -13,8 +13,7 @@ longer supported. But still contains most of the features described here.
    * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim)
    * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
    * **Popup Open File dialog with smart search** → [CtrlP](https://github.com/kien/ctrlp.vim)
-   * **Code completion as-you-type (starts on 3rd symbol)** →
-   [AutoComplPop](http://github.com/chrismetcalf/vim-autocomplpop)
+   * **Code completion as-you-type (starts on 3rd symbol)** → [NeoComplCache](http://github.com/Shougo/neocomplcache.vim)
    * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab)
    * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim)
    * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive)

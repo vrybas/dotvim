@@ -29,7 +29,6 @@
  Bundle 'sjl/gundo.vim'
  Bundle 'tsaleh/vim-matchit'
  Bundle 'cfurrow/vim-l9'
- Bundle 'chrismetcalf/vim-autocomplpop'
  Bundle 'ervandew/supertab'
  Bundle 'duff/vim-scratch'
  Bundle 'tpope/vim-surround'
@@ -47,6 +46,7 @@
  Bundle 'git://github.com/tpope/vim-rake.git'
  Bundle 'git://github.com/tpope/vim-rbenv.git'
  Bundle 'christoomey/vim-tmux-navigator'
+ Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
 
  filetype plugin indent on     " required!
  "
@@ -583,8 +583,11 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1
 
-let g:acp_behaviorKeywordLength = 3
-let g:acp_behaviorRubyOmniMethodLength = -1
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_enable_fuzzy_completion = 1
+let g:neocomplcache_fuzzy_completion_start_length = 4
 
 set ofu=syntaxcomplete#Complete
 
