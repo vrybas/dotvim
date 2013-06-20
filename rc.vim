@@ -582,6 +582,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1
 let g:acp_behaviorKeywordLength = 3
+let g:acp_behaviorRubyOmniMethodLength = -1
 
 set ofu=syntaxcomplete#Complete
 
