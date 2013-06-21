@@ -14,11 +14,6 @@ else
   let b:undo_ftplugin = "setl cms< com< fo< flp<"
 endif
 
-" vim:set sw=2:
-
-" Disables AutoComplPop popup window
-AcpLock
-
 " Sets vertical ruler and autowrapping
 function! WrapColumn(value)
   let &cc = a:value
