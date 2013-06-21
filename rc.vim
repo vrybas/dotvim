@@ -571,7 +571,7 @@ let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-]>", "&omnifunc:<c-x><c-o>"]
-let g:SuperTabCrMapping = 0
+let g:SuperTabCrMapping = 1
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " " made, these lines close it on movement in insert mode or when leaving
@@ -590,9 +590,6 @@ let g:neocomplcache_enable_fuzzy_completion = 1
 let g:neocomplcache_fuzzy_completion_start_length = 4
 
 set ofu=syntaxcomplete#Complete
-
-" Cancel completion on Esc
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 
  "                                                                           "
 "*****************************************************************************"
