@@ -62,10 +62,10 @@ nmap <leader>й o<cr># <esc>:r! date<cr>kJo
 imap <leader>й <esc>q
 
 " Select all above cursor, delete line breaks, copy to clipboard
-nmap <silent><leader>c o<esc>kVgg:s/\n/ /<cr>V:s/\s\+/ /<cr>0D"_dd:noh<cr>
+nmap <silent><leader>c o<esc>kVgg:s/\n/ /<cr>V:s/\s\+/ /<cr>:s/\s\+$//<cr>0D"_dd:noh<cr>
 imap <silent><leader>c <esc>c
 
-nmap <silent><leader>с o<esc>kVgg:s/\n/ /<cr>V:s/\s\+/ /<cr>0D"_dd:noh<cr><cr>
+nmap <silent><leader>с o<esc>kVgg:s/\n/ /<cr>V:s/\s\+/ /<cr>:s/\s\+$//<cr>0D"_dd:noh<cr>
 imap <silent><leader>с <esc>c
 
 
