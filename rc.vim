@@ -39,14 +39,19 @@
  Bundle 'mattn/gist-vim'
  Bundle 'tomtom/checksyntax_vim'
  Bundle 'airblade/vim-gitgutter'
- Bundle 'git://github.com/tpope/vim-markdown.git'
- Bundle 'git://github.com/skwp/vim-rspec.git'
- Bundle 'git://github.com/kien/ctrlp.vim.git'
- Bundle 'git://github.com/tpope/vim-bundler.git'
- Bundle 'git://github.com/tpope/vim-rake.git'
- Bundle 'git://github.com/tpope/vim-rbenv.git'
+ Bundle 'tpope/vim-markdown.git'
+ Bundle 'skwp/vim-rspec.git'
+ Bundle 'kien/ctrlp.vim.git'
+ Bundle 'tpope/vim-bundler.git'
+ Bundle 'tpope/vim-rake.git'
+ Bundle 'tpope/vim-rbenv.git'
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
+ Bundle 'honza/vim-snippets'
+ Bundle "MarcWeber/vim-addon-mw-utils"
+ Bundle "tomtom/tlib_vim"
+ Bundle "garbas/vim-snipmate"
+
 
  filetype plugin indent on     " required!
  "
