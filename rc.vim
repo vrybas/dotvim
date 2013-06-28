@@ -563,7 +563,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_regexp = 0
 let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|rsync_cache|idea)$'
+let g:ctrlp_custom_ignore = '\v[\/]doc|\.(git|rsync_cache|idea|)$'
 
 
 " CODE COMPLETION BLOCK
