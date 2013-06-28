@@ -49,13 +49,6 @@ vmap <leader>i :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 nmap <leader>ш maV
 vmap <leader>ш :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
-" Insert current date
-nmap <leader>q o<cr># <esc>:r! date<cr>kJo
-imap <leader>q <esc>p
-
-nmap <leader>й o<cr># <esc>:r! date<cr>kJo
-imap <leader>й <esc>q
-
 " Select all above cursor, delete line breaks, copy to clipboard
 nmap <silent><leader>c o<esc>kVgg:s/\n/ /<cr>V:s/\s\+/ /<cr>:s/\s\+$//<cr>0D"_dd:noh<cr>
 imap <silent><leader>c <esc>c
