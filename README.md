@@ -143,5 +143,5 @@ commit messages (@tpope's
 [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 on that)
 * `,c` - Cut text above to the clipboard without line breaks
-* `,q` - Insert journal-like current date as next line
+* `T` - Complete a task or group of tasks, inserted by `t<Tab>` snippet
 

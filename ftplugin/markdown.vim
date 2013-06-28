@@ -56,6 +56,10 @@ imap <silent><leader>c <esc>c
 nmap <silent><leader>с o<esc>kVgg:s/\n/ /<cr>0dwJV:s/\s\+/ /<cr>:s/\s\+$//<cr>0D"_dd:noh<cr>
 imap <silent><leader>с <esc>c
 
+" Complete a task
+nmap T VT
+vmap T :s/\[ \]/[x]/<cr>
+
 
 " Spell checking
 setlocal spell spelllang=ru_yo,en_us
