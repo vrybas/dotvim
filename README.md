@@ -69,8 +69,8 @@ longer supported. But still contains most of the features described here.
 ## Keymap (above Vim & plugins standard) ##
 
 * `space` -  Save file
-* `Ctrl-D` - Open project Tree View
-* `Ctrl-P` - Open File dialog
+* `Ctrl-d` - Open project Tree View
+* `Ctrl-p` - Open File dialog
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
@@ -85,14 +85,10 @@ longer supported. But still contains most of the features described here.
 ### Splits
 * `,v` - Create vertical split
 * `,s` - Create horisontal split
+* `,H/J/K/L` - Resize split in left/down/up/right directions
 * `,o` - Maximize/unmaximize split
 * `,x` - Close split
-* `,+` - Increase split area
-* `,_` - Decrease split area
-* `Ctrl-h` - Switch to Left
-* `Ctrl-j` - Switch to Down
-* `Ctrl-k` - Switch to Up
-* `Ctrl-l` - Switch to Right
+* `Ctrl-h/j/k/l` - Switch to left/down/up/right
 
 ### Move selected line(s) around (in visually select mode)
 * `,fh` - Move left
