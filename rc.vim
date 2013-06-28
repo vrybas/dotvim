@@ -572,10 +572,11 @@ set completeopt+=longest,menu,preview
 
 " For code completion with a drop down menu
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-]>"
+let g:SuperTabCompletionContexts = ['s:ContextDiscover','s:ContextText' ]
+let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-]>", "&omnifunc:<c-x><c-o>"]
+
 let g:SuperTabCrMapping = 1
 
 " If you prefer the Omni-Completion tip window to close when a selection is
@@ -590,6 +591,7 @@ let g:rubycomplete_rails = 1
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_max_list = 300
 let g:neocomplcache_enable_fuzzy_completion = 1
 let g:neocomplcache_auto_completion_start_length = 5
 let g:neocomplcache_fuzzy_completion_start_length = 5
