@@ -58,7 +58,7 @@ imap <silent><leader>с <esc>c
 
 " Complete a task
 nmap T VT
-vmap T :s/\[ \]/[x]/<cr>
+vmap T :s/\[ \]/[x]/<cr>:noh<cr>
 
 
 " Spell checking

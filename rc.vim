@@ -320,7 +320,7 @@ endf
 
 " Toggle relative and straight line numbers
 "
-function ToggleRelNumber()
+function! ToggleRelNumber()
   if (&relativenumber == 1)
     set nu!
   else
