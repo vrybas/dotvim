@@ -46,11 +46,12 @@
  Bundle 'tpope/vim-rake.git'
  Bundle 'tpope/vim-rbenv.git'
  Bundle 'christoomey/vim-tmux-navigator'
- Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
+ Bundle 'Shougo/neocomplcache.vim.git'
  Bundle 'honza/vim-snippets'
  Bundle "MarcWeber/vim-addon-mw-utils"
  Bundle "tomtom/tlib_vim"
  Bundle "garbas/vim-snipmate"
+ Bundle 'Shougo/neosnippet'
 
 
  filetype plugin indent on     " required!
@@ -595,6 +596,14 @@ let g:neocomplcache_max_list = 300
 let g:neocomplcache_enable_fuzzy_completion = 1
 let g:neocomplcache_auto_completion_start_length = 5
 let g:neocomplcache_fuzzy_completion_start_length = 5
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
 
 set ofu=syntaxcomplete#Complete
 
