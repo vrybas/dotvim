@@ -369,16 +369,20 @@ nmap <leader><leader>t :sp<cr><C-w>T
 
 " Open Tabs by number
 "
-map <leader>1 1gt
-map <leader>2 2gt
-map <leader>3 3gt
-map <leader>4 4gt
-map <leader>5 5gt
-map <leader>6 6gt
-map <leader>7 7gt
-map <leader>8 8gt
-map <leader>9 9gt
+nmap <leader>1 1gt
+nmap <leader>2 2gt
+nmap <leader>3 3gt
+nmap <leader>4 4gt
+nmap <leader>5 5gt
+nmap <leader>6 6gt
+nmap <leader>7 7gt
+nmap <leader>8 8gt
+nmap <leader>9 9gt
 
+" Go to previous/next tab
+"
+nmap <leader>h :tabp<cr>
+nmap <leader>l :tabn<cr>
 
 nnoremap <silent><Leader>g <C-w><C-]><C-w>T
 " Open class/function definition in new tab
@@ -447,7 +451,7 @@ nnoremap <leader>m :noh<CR>
 nmap <silent><leader><tab> :Sscratch<CR>
 " Opens a buffer which is never saved (for scratches)
 
-nmap <silent><leader>l :call ToggleRelNumber()<cr>
+nmap <silent><leader>r :call ToggleRelNumber()<cr>
 " Toggle relative and straight line numbers
 
 nmap <Leader>d V<tab>zf
@@ -554,9 +558,9 @@ nmap gH <Plug>GitGutterPrevHunk
 
 " Rspec.vim
 let g:RspecSplitHorizontal=1
-nmap <leader>r :RunSpecLine<cr>
-nmap <leader><leader>r :RunSpec<cr>
-nmap <leader><leader>rr :RunSpecs<cr>
+nmap <leader><leader>r :RunSpecLine<cr>
+nmap <leader><leader>rr :RunSpec<cr>
+nmap <leader><leader>R :RunSpecs<cr>
 
 " CtrlP.vim
 let g:ctrlp_map = '<c-p>'

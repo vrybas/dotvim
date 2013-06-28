@@ -74,6 +74,7 @@ longer supported. But still contains most of the features described here.
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
+* `,h/l` - Go to previous/next tab
 * `,1..9` - Go to 1..9 tab
 * `,g` - Open class/function definition in new tab
 
@@ -101,7 +102,7 @@ longer supported. But still contains most of the features described here.
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
 * `,a`  - Search on current path with Ack
-* `,l`  - Toggle relative/straight line numbers
+* `,r`  - Toggle relative/straight line numbers
 * `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u`  - Toggle open graphical tree-based undo
 * `,bd` - Switch to the dark colorscheme
@@ -117,9 +118,9 @@ longer supported. But still contains most of the features described here.
 * `gH` - Jump to previous git change
 
 ===
-* `,r`   - Run Rspec for current line
-* `,,r`  - Run Rspec for current file
-* `,,rr` - Run all Rspecs
+* `,,r`   - Run Rspec for current line
+* `,,rr`  - Run Rspec for current file
+* `,,R` - Run all Rspecs
 
 ===
 * `,di` - Show all Ruby methods in current file (enter line number to jump)
