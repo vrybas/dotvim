@@ -47,7 +47,7 @@
  Bundle 'tpope/vim-rbenv.git'
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'Shougo/neocomplcache.vim.git'
- Bundle 'honza/vim-snippets'
+ Bundle 'vrybas/vim-snippets'
  Bundle "MarcWeber/vim-addon-mw-utils"
  Bundle "tomtom/tlib_vim"
  Bundle "garbas/vim-snipmate"
