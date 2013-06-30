@@ -49,12 +49,9 @@ vmap <leader>i :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 nmap <leader>ш maV
 vmap <leader>ш :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
-" Select all above cursor, delete line breaks, copy to clipboard
-nmap <silent><leader>c o<esc>kVgg:s/\n/ /<cr>0dwJV:s/\s\+/ /<cr>:s/\s\+$//<cr>0D"_dd:noh<cr>
-imap <silent><leader>c <esc>c
-
-nmap <silent><leader>с o<esc>kVgg:s/\n/ /<cr>0dwJV:s/\s\+/ /<cr>:s/\s\+$//<cr>0D"_dd:noh<cr>
-imap <silent><leader>с <esc>c
+" Remove linebreaks and double spaces from selected text, copy to clipboard
+vmap <silent><leader>y :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_d
+vmap <silent><leader>н :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_d
 
 " Complete a task
 nmap T VT
