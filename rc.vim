@@ -417,8 +417,8 @@ nmap <silent><leader>o :ZoomWin<CR>
 " Expand current split to fullscren/restore split size
 
 " Resize splits
-nnoremap <silent><leader>K :resize +5<cr>
-nnoremap <silent><leader>J :resize -5<cr>
+nnoremap <silent><leader>J :resize +5<cr>
+nnoremap <silent><leader>K :resize -5<cr>
 nnoremap <silent><leader>L :vertical resize +5<cr>
 nnoremap <silent><leader>H :vertical resize -5<cr>
 
