@@ -466,10 +466,6 @@ nnoremap <Leader>za :loadview<cr>
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
 
-nmap <silent>di /def <cr>V<tab>zfndi
-
-
-
 nmap <silent><leader>bd :call BgSwitch('dark')<CR>
 nmap <silent><leader>bl :call BgSwitch('light')<CR>
 
@@ -555,6 +551,8 @@ let g:gitgutter_sign_column_always = 1
 let g:gitgutter_eager = 0
 nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
+let @d =":e! .git/diff.diff\nggdG:r !git diff\n"
+let @c =":e! .git/diff.diff\nggdG:r !git diff --cached\n"
 
 " Rspec.vim
 let g:RspecSplitHorizontal=1

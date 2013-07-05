@@ -116,6 +116,8 @@ longer supported. But still contains most of the features described here.
 ===
 * `gh` - Jump to next git change
 * `gH` - Jump to previous git change
+* `@d` - Jump to previous git change
+* `@c` - Jump to previous git change
 
 ===
 * `,,r`   - Run Rspec for current line
@@ -123,7 +125,6 @@ longer supported. But still contains most of the features described here.
 * `,,R` - Run all Rspecs
 
 ===
-* `,di` - Show all Ruby methods in current file (enter line number to jump)
 * `,,i` - Check syntax
 * `RR` - APIDock open Rails documentation for method under cursor
 * `RB` - APIDock open Ruby documentation
