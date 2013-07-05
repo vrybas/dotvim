@@ -404,10 +404,10 @@ vmap <leader>fj :m'>+<CR>gv=`<my`>mzgv`yo`z
 
 " Splits mappings
 "
-nmap <silent><leader>v <C-w>v
+nmap <silent><leader>v <C-w>v<C-w>l
 " Create vertical split
 
-nmap <silent><leader>s <C-w>s
+nmap <silent><leader>s <C-w>s<C-w>j
 " Create horisontal split
 
 nmap <silent><leader>x <C-w>c
