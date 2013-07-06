@@ -109,7 +109,10 @@ set clipboard=unnamed
 
 set timeoutlen=500 ttimeoutlen=0
 
-"set mouse=a
+set foldmethod=indent
+set foldlevel=1
+
+
 
 "*****************************************************************************"
 "
