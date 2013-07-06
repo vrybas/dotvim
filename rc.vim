@@ -123,9 +123,6 @@ set foldlevel=1
 set nu
 " Turn on line numbers
 
-set cc=80
-" Set 80 symbols ruler
-
 set scrolloff=3
 " Show 3 line after and before cursor when scrolling
 
@@ -238,7 +235,8 @@ function! FoldText()
   let l:start = strpart(l:start , 0, l:width - strlen(substitute(l:end, '.', 'x', 'g')) - l:separatorlen)
   let l:text = l:start . ' … '
 
-  return l:text . repeat(' ', l:width)
+  set fillchars=fold:░
+  return l:text . repeat(' ', 77 - strlen(getline(v:foldstart)))
 endfunction
 
 function! ToggleFold()
@@ -322,6 +320,13 @@ function! BgSwitch(bg)
 
   " Folds colors
   highlight clear Folded
+  highlight Folded ctermfg=246
+  highlight ColorColumn ctermbg=7
+
+  " Colorcolumn settings
+    execute "set colorcolumn=" . join(range(81,335), ',')
+    match Error /\%81v.\+/
+
 "
 endfunction
 
