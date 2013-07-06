@@ -325,7 +325,6 @@ function! BgSwitch(bg)
 
   " Colorcolumn settings
     execute "set colorcolumn=" . join(range(81,335), ',')
-    match Error /\%81v.\+/
 
 "
 endfunction
