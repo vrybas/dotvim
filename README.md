@@ -109,6 +109,7 @@ longer supported. But still contains most of the features described here.
 * `,bl` - Switch to the light colorscheme
 
 ===
+* `,zz` - Toggle fold method (manual/indent)
 * `,d` - Fold selected lines
 * `,za` - Fold everything, except selected lines
 * `,zs` - Unfold everything

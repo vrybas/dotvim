@@ -224,6 +224,15 @@ fu! CustomFoldText()
     return line . expansionString . foldSizeStr . foldPercentage
 endf
 
+function! ToggleFold()
+  if &foldmethod == 'manual'
+    let &l:foldmethod = 'indent'
+  else
+    let &l:foldmethod = 'manual'
+  endif
+  echo 'foldmethod is now ' . &l:foldmethod
+endfunction
+
 "*****************************************************************************"
 "
 " GUI settings
@@ -472,6 +481,7 @@ nmap <silent><leader>bl :call BgSwitch('light')<CR>
 
 nmap <silent><leader><leader>i :CheckSyntax<CR>
 
+nmap <leader>zz :call ToggleFold()<CR>
 
 nnoremap ; :
 " Handy mapping for quick access to CLI
