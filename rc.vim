@@ -236,10 +236,9 @@ function! FoldText()
   let l:separator = ' … '
   let l:separatorlen = strlen(substitute(l:separator, '.', 'x', 'g'))
   let l:start = strpart(l:start , 0, l:width - strlen(substitute(l:end, '.', 'x', 'g')) - l:separatorlen)
-  let l:text = l:start . ' … ' . l:end
-  "let l:text = '{ … }'
+  let l:text = l:start . ' … '
 
-  return l:text . repeat(' ', l:width - strlen(substitute(l:text, ".", "x", "g"))) . l:info
+  return l:text . repeat(' ', l:width)
 endfunction
 
 function! ToggleFold()
@@ -322,7 +321,7 @@ function! BgSwitch(bg)
   hi link EasyMotionShade  Comment
 
   " Folds colors
-  highlight clear Folded "guibg=grey guifg=blue
+  highlight clear Folded
 "
 endfunction
 
