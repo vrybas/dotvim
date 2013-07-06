@@ -236,7 +236,7 @@ function! FoldText()
   let l:text = l:start . ' … '
 
   set fillchars=fold:░
-  return l:text . repeat(' ', 77 - strlen(getline(v:foldstart)))
+  return l:text . repeat(' ', 82 - strlen(l:text))
 endfunction
 
 function! ToggleFold()
