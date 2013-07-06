@@ -110,9 +110,10 @@ longer supported. But still contains most of the features described here.
 
 ===
 * `,zz` - Toggle fold method (manual/indent)
-* `,d` - Fold selected lines
-* `,za` - Fold everything, except selected lines
+* `,d` - Fold selected lines (Visual mode)
+* `,za` - Fold everything, except selected lines (Visual mode)
 * `,zs` - Unfold everything
+* `,za` - Restore folds
 
 ===
 * `gh` - Jump to next git change
