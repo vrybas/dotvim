@@ -325,8 +325,6 @@ function! BgSwitch(bg)
 
   " Colorcolumn settings
     execute "set colorcolumn=" . join(range(81,335), ',')
-
-"
 endfunction
 
 
@@ -366,6 +364,17 @@ function! Save()
     execute 'w!'
     execute 'mkview'
     execute 'GitGutter'
+endfunction
+
+
+" Show the difference between unsaved buffer and corresponding file.
+"
+function! DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 
 
@@ -665,6 +674,9 @@ autocmd BufReadPost *
 
 " Highlight line in insert mode
 au InsertEnter,InsertLeave * set cul!
+
+" Check if file was edited outside of Vim
+au InsertEnter,InsertLeave,CursorHold,BufEnter * checktime
                                                                              "
 "*****************************************************************************"
 "
