@@ -1,5 +1,5 @@
 autocmd BufNewFile,BufRead *.markdown,*.md,*.mdown,*.mkd,*.mkdn
-      \   set ft=markdown
+      \   set ft=ghmarkdown
       "\ if &ft =~# '^\%(conf\|modula2\)$' |
       "\   set ft=markdown |
       "\ else |

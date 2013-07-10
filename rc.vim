@@ -39,7 +39,6 @@
  Bundle 'mattn/gist-vim'
  Bundle 'tomtom/checksyntax_vim'
  Bundle 'airblade/vim-gitgutter'
- Bundle 'tpope/vim-markdown.git'
  Bundle 'skwp/vim-rspec.git'
  Bundle 'kien/ctrlp.vim.git'
  Bundle 'tpope/vim-bundler.git'
