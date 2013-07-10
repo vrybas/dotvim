@@ -52,6 +52,7 @@
  Bundle "tomtom/tlib_vim"
  Bundle "garbas/vim-snipmate"
  Bundle 'Shougo/neosnippet'
+ Bundle 'jtratner/vim-flavored-markdown'
 
 
  filetype plugin indent on     " required!
