@@ -618,7 +618,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-]>"
 let g:SuperTabCompletionContexts = ['s:ContextDiscover','s:ContextText' ]
 let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-]>", "&omnifunc:<c-x><c-p>"]
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-p>"]
 
 let g:SuperTabCrMapping = 1
 
