@@ -2,9 +2,9 @@
 " Language:     Github Flavored Markdown
 " Markdown.vim Maintainer: Tim Pope <vimNOSPAM@tpope.org>
 " GFM Maintainer: Jeff Tratner <github.com/jtratner>
-" Filenames:    *.ghmarkdown
+" Filenames:    *.markdown
 " Last Change:	2013 June 8
-" (nearly the same as tpope's markdown.vim, with a few 
+" (nearly the same as tpope's markdown.vim, with a few
 " add-ons for Github Flavored Markdown)
 
 if exists("b:current_syntax")
@@ -12,7 +12,7 @@ if exists("b:current_syntax")
 endif
 
 if !exists('main_syntax')
-  let main_syntax = 'ghmarkdown'
+  let main_syntax = 'markdown'
 endif
 
 runtime! syntax/html.vim
@@ -112,9 +112,9 @@ hi def link markdownCodeDelimiter         Delimiter
 
 hi def link markdownEscape                Special
 
-let b:current_syntax = "ghmarkdown"
+let b:current_syntax = "markdown"
 
-if main_syntax ==# 'ghmarkdown'
+if main_syntax ==# 'markdown'
   unlet main_syntax
 endif
 " vim:set sw=2:
