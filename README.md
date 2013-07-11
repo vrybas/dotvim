@@ -74,7 +74,7 @@ longer supported. But still contains most of the features described here.
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
-* `,h/l` - Go to previous/next tab
+* `,,h/l` - Previous/Next tab
 * `,1..9` - Go to 1..9 tab
 * `,g` - Open class/function definition in new tab
 
@@ -82,6 +82,7 @@ longer supported. But still contains most of the features described here.
 * `,,b` - Buffer explorer
 * `,x` - Close current buffer
 * `,Tab` - Open scratch buffer which is never saved
+* `,h/l` - Previous/Next buffer
 
 ### Splits
 * `,v` - Create vertical split
@@ -118,8 +119,11 @@ longer supported. But still contains most of the features described here.
 ===
 * `gh` - Jump to next git change
 * `gH` - Jump to previous git change
-* `@d` - Jump to previous git change
-* `@c` - Jump to previous git change
+* `,gb` - Git Blame
+* `,gs` - Git Status
+* `,gd` - Git Diff (current file diff view)
+* `@d` - Git Diff (show all changes)
+* `@c` - Git Diff (show all changes to be committed)
 
 ===
 * `,,r`   - Run Rspec for current line

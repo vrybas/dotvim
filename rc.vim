@@ -52,6 +52,8 @@
  Bundle "garbas/vim-snipmate"
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
+ Bundle 'bling/vim-bufferline'
+ Bundle 'bling/vim-airline'
 
 
  filetype plugin indent on     " required!
@@ -151,12 +153,6 @@ set si
 set stal=2
 " Always show tabs
 
-set statusline=%<%f\ %m%r%{fugitive#statusline()}%=%-14.(%l,%c%)\ %P
-" Statusline shows relative filepath,
-" modified/not, readonly/not, fugitive-related stuff,
-" line number, column number, file percentage
-
-
 set hidden
 " Allow dirty unsaved buffers
 
@@ -235,7 +231,7 @@ function! FoldText()
   let l:start = strpart(l:start , 0, l:width - strlen(substitute(l:end, '.', 'x', 'g')) - l:separatorlen)
   let l:text = l:start . ' … '
 
-  set fillchars=fold:░
+  set fillchars+=fold:░
   return l:text . repeat(' ', 82 - strlen(l:text))
 endfunction
 
@@ -389,10 +385,10 @@ let mapleader = ","
 
 nnoremap <Space> :call Save()<CR>
 
-map <M-a> :bprev<CR>
-" Previous buffer
+nmap <leader>h :bprev<CR>
+" Pevious buffer
 
-map <M-s> :bnext<CR>
+nmap <leader>l :bnext<CR>
 " Next buffer
 
 map <leader><leader>b :BufExplorer<CR>
@@ -420,8 +416,8 @@ nmap <leader>9 9gt
 
 " Go to previous/next tab
 "
-nmap <leader>h :tabp<cr>
-nmap <leader>l :tabn<cr>
+nmap <leader><leader>h :tabp<cr>
+nmap <leader><leader>l :tabn<cr>
 
 nnoremap <silent><Leader>g <C-w><C-]><C-w>T
 " Open class/function definition in new tab
@@ -512,6 +508,11 @@ nmap <silent><leader>bl :call BgSwitch('light')<CR>
 nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 nmap <leader>zz :call ToggleFold()<CR>
+
+" fugitive shortcuts
+noremap <leader>gb :Gblame<CR>
+noremap <leader>gs :Gstatus<CR>
+noremap <leader>gd :Gdiff<CR>
 
 nnoremap ; :
 " Handy mapping for quick access to CLI
@@ -607,6 +608,32 @@ let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
 
+"""" Vim Airline
+set laststatus=2
+let g:airline_theme='solarized'
+let g:airline#themes#solarized#inactive = { 'mode': [ '#000000' , '#000000' , 0 , 0, '' ] }
+set noshowmode
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_right_sep = ''
+let g:airline_linecolumn_prefix = '␊ '
+let g:airline_linecolumn_prefix = '␤ '
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_fugitive_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+let g:airline_paste_symbol = 'Þ'
+let g:airline_paste_symbol = '∥'"
+
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_z = '%3l:%3c'
+"let g:airline_section_z = '%t'
+
+"---
+
+" Vim Bufferline
+let g:bufferline_echo=0
 
 " CODE COMPLETION BLOCK
 
