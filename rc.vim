@@ -53,7 +53,7 @@
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
  Bundle 'bling/vim-bufferline'
- Bundle 'bling/vim-airline'
+ Bundle 'vrybas/vim-airline'
 
 
  filetype plugin indent on     " required!
