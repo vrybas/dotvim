@@ -447,6 +447,9 @@ nmap <silent><leader>s <C-w>s<C-w>j
 
 nmap <silent><leader>x <C-w>c
 " Close split
+"
+nmap <silent><leader><leader>x :bd<cr>
+" Close window and delete buffer
 
 nmap <silent><leader>o :ZoomWin<CR>
 " Expand current split to fullscren/restore split size
@@ -701,6 +704,11 @@ autocmd BufReadPost *
 
 " Highlight line in insert mode
 au InsertEnter,InsertLeave * set cul!
+
+"""" Delete hidden Fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
+"---
+
 
 " Check if file was edited outside of Vim
 au InsertEnter,InsertLeave,CursorHold,BufEnter * checktime

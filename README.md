@@ -81,6 +81,7 @@ longer supported. But still contains most of the features described here.
 ### Buffers
 * `,,b` - Buffer explorer
 * `,x` - Close current buffer
+* `,,x` - Close and delete current buffer
 * `,Tab` - Open scratch buffer which is never saved
 * `,h/l` - Previous/Next buffer
 
