@@ -53,7 +53,6 @@
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
  Bundle 'bling/vim-bufferline'
- Bundle 'vrybas/vim-airline'
 
 
  filetype plugin indent on     " required!
@@ -179,6 +178,15 @@ set showcmd
 set showmode
 " Show INSERT mode on cmdline
 
+set laststatus=2
+" Always show statusline
+
+set statusline=%{fugitive#statusline()}%{bufferline#generate_string()}%=%-14.(%l,%c%)\ %P
+" Statusline shows relative filepath,
+" modified/not, readonly/not, fugitive-related stuff,
+" line number, column number, file percentage
+"
+let g:bufferline_echo=0
 
 set showmatch
 " Jump to automatically inserted paired bracket
@@ -610,33 +618,6 @@ let g:ctrlp_regexp = 0
 let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
-
-"""" Vim Airline
-set laststatus=2
-let g:airline_theme='solarized'
-let g:airline#themes#solarized#inactive = { 'mode': [ '#000000' , '#000000' , 0 , 0, '' ] }
-set noshowmode
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_right_sep = ''
-let g:airline_linecolumn_prefix = '␊ '
-let g:airline_linecolumn_prefix = '␤ '
-let g:airline_linecolumn_prefix = '¶ '
-let g:airline_fugitive_prefix = '⎇ '
-let g:airline_paste_symbol = 'ρ'
-let g:airline_paste_symbol = 'Þ'
-let g:airline_paste_symbol = '∥'"
-
-let g:airline_section_x = ''
-let g:airline_section_y = ''
-let g:airline_section_z = '%3l:%3c'
-"let g:airline_section_z = '%t'
-
-"---
-
-" Vim Bufferline
-let g:bufferline_echo=0
 
 " CODE COMPLETION BLOCK
 
