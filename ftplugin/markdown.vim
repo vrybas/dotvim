@@ -21,7 +21,7 @@ function! WrapColumn(value)
   setlocal fo=aw2tq
 endfunction
 
-call WrapColumn(78)
+call WrapColumn(80)
 
 nmap <silent><leader>w4 :call WrapColumn(40)<CR>
 nmap <silent><leader>w5 :call WrapColumn(50)<CR>
