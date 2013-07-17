@@ -77,6 +77,7 @@ longer supported. But still contains most of the features described here.
 * `,,h/l` - Previous/Next tab
 * `,1..9` - Go to 1..9 tab
 * `,g` - Open class/function definition in new tab
+* `,,tc` - Close tab
 
 ### Buffers
 * `,,b` - Buffer explorer
