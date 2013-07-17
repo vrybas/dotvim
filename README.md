@@ -150,6 +150,7 @@ When editing Markdown or Text files:
 commit messages (@tpope's
 [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 on that)
-* `,c` - Cut text above to the clipboard without line breaks
+* `,d` - Cut text above to the clipboard without line breaks
+* `,d` - Cut selected text to the clipboard without line breaks
 * `T` - Complete a task or group of tasks, inserted by `t<Tab>` snippet
 
