@@ -534,6 +534,11 @@ noremap <leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 noremap <leader>gm :r !git --no-pager log -1 --pretty=\%s<cr>i# !previous msg: <esc>ki
 "---
 
+"""" Colorcolumn hotkeys for git commit messages
+noremap <leader><leader>wm :execute "set colorcolumn=" . join(range(50,335), ',')<cr>
+noremap <leader><leader>wc :execute "set colorcolumn=" . join(range(72,335), ',')<cr>
+"---
+
 nnoremap ; :
 " Handy mapping for quick access to CLI
 "*****************************************************************************"

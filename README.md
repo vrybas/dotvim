@@ -126,6 +126,11 @@ longer supported. But still contains most of the features described here.
 * `,gd` - Git Diff (current file diff view)
 * `@d` - Git Diff (show all changes)
 * `@c` - Git Diff (show all changes to be committed)
+* `,c` - Open git status view (current file, git diff, git status )
+* `,m` - Read last commit message to current buffer
+* `,,wm` - Highlight everything above 50 symbols (for git commit message)
+* `,,wc` - Highlight everything above 72 symbols (for git commit comments)
+
 
 ===
 * `,,r`   - Run Rspec for current line
