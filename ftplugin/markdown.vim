@@ -16,7 +16,7 @@ endif
 
 " Sets vertical ruler and autowrapping
 function! WrapColumn(value)
-  let &cc = a:value
+  execute "setlocal colorcolumn=" . join(range(a:value,335), ',')
   let &textwidth = a:value
   setlocal fo=aw2tq
 endfunction
