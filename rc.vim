@@ -525,6 +525,13 @@ noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gd :Gdiff<CR>
 
+"""" Commit helpers
+" Open current buffer in new tab, show git diff in vertical split, open :Gstatus
+noremap <leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
+" Get last commit message
+noremap <leader>gm :r !git --no-pager log -1 --pretty=\%s<cr>i# !previous msg: <esc>ki
+"---
+
 nnoremap ; :
 " Handy mapping for quick access to CLI
 "*****************************************************************************"
