@@ -531,7 +531,7 @@ noremap <leader>gd :Gdiff<CR>
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
 noremap <leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 " Get last commit message
-noremap <leader>gm :r !git --no-pager log -1 --pretty=\%s<cr>i# !previous msg: <esc>ki
+noremap <leader>gm O<esc>:r !git --no-pager log -1 --pretty=\%s<cr>kdd
 "---
 
 """" Colorcolumn hotkeys for git commit messages
