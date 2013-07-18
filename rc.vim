@@ -53,6 +53,7 @@
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
  Bundle 'bling/vim-bufferline'
+ Bundle 'duff/vim-bufonly'
 
 
  filetype plugin indent on     " required!
