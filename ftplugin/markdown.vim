@@ -50,13 +50,13 @@ nmap <leader>ш maV
 vmap <leader>ш :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
 """" Remove linebreaks and double spaces from selected text, copy to clipboard
-vmap <silent><leader>y :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>:s/\n\\|\s\+/ /<cr>0vg_y,m
-vmap <silent><leader>н :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>:s/\n\\|\s\+/ /<cr>0vg_y,m
+vmap <silent><leader>y :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_y,m
+vmap <silent><leader>н :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_y,m
 "---
 
 """" Remove linebreaks and double spaces from selected text and cut to clipboard
-vmap <silent><leader>d :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>:s/\n\\|\s\+/ /<cr>0vg_d,m
-vmap <silent><leader>в :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>:s/\n\\|\s\+/ /<cr>0vg_d,m
+vmap <silent><leader>d :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_d,m
+vmap <silent><leader>в :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_d,m
 
 """" Remove linebreaks and double spaces from tex above and cut to clipboard
 nmap <silent><leader>d o<esc>Vgg,d,m
