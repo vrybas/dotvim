@@ -536,8 +536,8 @@ noremap <leader>gm O<esc>:r !git --no-pager log -1 --pretty=\%s<cr>kdd
 "---
 
 """" Colorcolumn hotkeys for git commit messages
-noremap <leader><leader>wm :execute "set colorcolumn=" . join(range(50,335), ',')<cr>
-noremap <leader><leader>wc :execute "set colorcolumn=" . join(range(72,335), ',')<cr>
+noremap <leader><leader>wm :execute "set colorcolumn=" . join(range(51,335), ',')<cr>
+noremap <leader><leader>wc :execute "set colorcolumn=" . join(range(73,335), ',')<cr>
 "---
 
 nnoremap ; :
