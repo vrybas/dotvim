@@ -618,8 +618,8 @@ let g:gitgutter_sign_column_always = 1
 let g:gitgutter_eager = 0
 nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
-let @d =":e! .git/diff.diff\nggdG:r !git diff\n:w!\n"
-let @c =":e! .git/diff.diff\nggdG:r !git diff --cached\n:w!\n"
+let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\n"
+let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\n"
 
 " Rspec.vim
 let g:RspecSplitHorizontal=1
