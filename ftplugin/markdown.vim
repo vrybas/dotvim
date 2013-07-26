@@ -14,13 +14,6 @@ else
   let b:undo_ftplugin = "setl cms< com< fo< flp<"
 endif
 
-" Sets vertical ruler and autowrapping
-function! WrapColumn(value)
-  execute "setlocal colorcolumn=" . join(range(a:value+1,335), ',')
-  let &textwidth = a:value
-  setlocal fo=aw2tq
-endfunction
-
 call WrapColumn(80)
 
 nmap <silent><leader>w4 :call WrapColumn(40)<CR>

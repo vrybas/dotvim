@@ -350,7 +350,6 @@ fun! RemoveSpaces()
 endf
 
 
-
 " Toggle relative and straight line numbers
 "
 function! ToggleRelNumber()
@@ -381,6 +380,14 @@ function! DiffWithSaved()
   diffthis
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
+
+" Sets vertical ruler and autowrapping
+function! WrapColumn(value)
+  execute "setlocal colorcolumn=" . join(range(a:value+1,335), ',')
+  let &textwidth = a:value
+  setlocal fo=aw2tq
+endfunction
+
 
 
 "*****************************************************************************"
@@ -531,8 +538,6 @@ noremap <leader>gd :Gdiff<CR>
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
 noremap <leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
-" Get last commit message
-noremap <leader>gm O<esc>:r !git --no-pager log -1 --pretty=\%s<cr>kdd
 "---
 
 """" Colorcolumn hotkeys for git commit messages
