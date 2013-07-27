@@ -52,7 +52,7 @@
  Bundle "garbas/vim-snipmate"
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
- Bundle 'bling/vim-bufferline'
+ Bundle 'vim-scripts/buftabs'
  Bundle 'duff/vim-bufonly'
 
 
@@ -184,12 +184,7 @@ set showmode
 set laststatus=2
 " Always show statusline
 
-set statusline=%{fugitive#statusline()}%{bufferline#generate_string()}%=%-14.(%l,%c%)\ %P
-" Statusline shows relative filepath,
-" modified/not, readonly/not, fugitive-related stuff,
-" line number, column number, file percentage
-"
-let g:bufferline_echo=0
+set statusline=%{fugitive#statusline()}%=%(%l,%c%)
 
 set showmatch
 " Jump to automatically inserted paired bracket
@@ -640,6 +635,9 @@ let g:ctrlp_regexp = 0
 let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
+
+" Buftabs
+let g:buftabs_only_basename=1
 
 " CODE COMPLETION BLOCK
 
