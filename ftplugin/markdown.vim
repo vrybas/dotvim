@@ -58,7 +58,10 @@ nmap <silent><leader>в o<esc>Vgg,d,m
 
 " Complete a task
 nmap T VT
-vmap T :s/\[ \]/[x]/<cr>:noh<cr>
+vmap T :s/\[ \]/[x]/<cr>:s/#/-/<cr>:noh<cr>
+
+" Mark task as current
+nmap t 0r#
 
 
 " Spell checking
