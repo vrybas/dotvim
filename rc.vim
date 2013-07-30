@@ -180,7 +180,7 @@ set showmode
 set laststatus=2
 " Always show statusline
 
-set statusline=%f\ %=%{fugitive#statusline()}%(%l,%c%)
+set statusline=%f\ %=%{fugitive#statusline()}%(\ %c%)
 
 set showmatch
 " Jump to automatically inserted paired bracket
