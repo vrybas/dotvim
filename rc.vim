@@ -663,7 +663,6 @@ let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1
 
 let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_max_list = 300
 let g:neocomplcache_enable_fuzzy_completion = 1
 let g:neocomplcache_auto_completion_start_length = 5
