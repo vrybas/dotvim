@@ -52,7 +52,7 @@
  Bundle "garbas/vim-snipmate"
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
- Bundle 'vim-scripts/buftabs'
+ Bundle 'bling/vim-bufferline'
  Bundle 'duff/vim-bufonly'
 
 
@@ -665,12 +665,8 @@ let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
 
-" Buftabs
-let g:buftabs_only_basename=1
-let g:buftabs_separator = ":"
-let g:buftabs_marker_start = "["
-let g:buftabs_marker_end = "]"
-let g:buftabs_marker_modified = "+"
+" Bufferline
+let g:bufferline_echo = 1
 
 " CODE COMPLETION BLOCK
 
