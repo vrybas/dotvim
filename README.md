@@ -11,7 +11,7 @@ longer supported. But still contains most of the features described here.
    * **Ruby on Rails projects support** → [VimRails](http://github.com/tpope/vim-rails)
    * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree)
    * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim)
-   * **Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
+   * **Open Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
    * **Popup Open File dialog with smart search** → [CtrlP](https://github.com/kien/ctrlp.vim)
    * **Code completion as-you-type (starts on 3rd symbol)** → [NeoComplCache](http://github.com/Shougo/neocomplcache.vim)
    * **Alternative code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab)
@@ -81,6 +81,7 @@ longer supported. But still contains most of the features described here.
 
 ### Buffers
 * `,,b` - Buffer explorer
+* `,,1..30` - Go to 1..30 buffer
 * `,x` - Close current buffer
 * `,,x` - Close and delete current buffer
 * `,Tab` - Open scratch buffer which is never saved

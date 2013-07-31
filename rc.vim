@@ -403,6 +403,39 @@ nmap <leader>l :bnext<CR>
 map <leader><leader>b :BufExplorer<CR>
 " Buffer Explorer
 
+" Open Buffer by number
+"
+nmap <leader><leader>1 :b 1<cr>
+nmap <leader><leader>2 :b 2<cr>
+nmap <leader><leader>3 :b 3<cr>
+nmap <leader><leader>4 :b 4<cr>
+nmap <leader><leader>5 :b 5<cr>
+nmap <leader><leader>6 :b 6<cr>
+nmap <leader><leader>7 :b 7<cr>
+nmap <leader><leader>8 :b 8<cr>
+nmap <leader><leader>9 :b 9<cr>
+nmap <leader><leader>10 :b 10<cr>
+nmap <leader><leader>11 :b 11<cr>
+nmap <leader><leader>12 :b 12<cr>
+nmap <leader><leader>13 :b 13<cr>
+nmap <leader><leader>14 :b 14<cr>
+nmap <leader><leader>15 :b 15<cr>
+nmap <leader><leader>16 :b 16<cr>
+nmap <leader><leader>17 :b 17<cr>
+nmap <leader><leader>18 :b 18<cr>
+nmap <leader><leader>19 :b 19<cr>
+nmap <leader><leader>20 :b 20<cr>
+nmap <leader><leader>21 :b 21<cr>
+nmap <leader><leader>22 :b 22<cr>
+nmap <leader><leader>23 :b 23<cr>
+nmap <leader><leader>24 :b 24<cr>
+nmap <leader><leader>25 :b 25<cr>
+nmap <leader><leader>26 :b 26<cr>
+nmap <leader><leader>27 :b 27<cr>
+nmap <leader><leader>28 :b 28<cr>
+nmap <leader><leader>29 :b 29<cr>
+nmap <leader><leader>30 :b 30<cr>
+
 
 set pastetoggle=<F6>
 " Do not autoindent lines, when paste from OS buffer
