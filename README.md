@@ -103,6 +103,7 @@ longer supported. But still contains most of the features described here.
 * `@d` - Git Diff (show all changes)
 * `@c` - Git Diff (show all changes to be committed)
 * `,,c` - Open "git status view" (current file, git diff, git status )
+* `,,u` - Close "git status view" without saving entered commit message
 * `,,c` - Save entered commit message, close "git status view"
 * `,gm` - Read last commit message to current buffer
 * `,,wm` - Highlight everything above 50 symbols (for git commit message)
