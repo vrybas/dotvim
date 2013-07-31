@@ -94,31 +94,7 @@ longer supported. But still contains most of the features described here.
 * `,x` - Close split
 * `Ctrl-h/j/k/l` - Switch to left/down/up/right
 
-### Move selected line(s) around (in visually select mode)
-* `,fh` - Move left
-* `,fj` - Move down
-* `,fk` - Move up
-* `,fl` - Move right
-
-### Other
-
-* `,m`  - Clear search highlighting
-* `,y`  - Toggle display trailing characters
-* `,a`  - Search on current path with Ack
-* `,r`  - Toggle relative/straight line numbers
-* `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
-* `,u`  - Toggle open graphical tree-based undo
-* `,bd` - Switch to the dark colorscheme
-* `,bl` - Switch to the light colorscheme
-
-===
-* `,zz` - Toggle fold method (manual/indent)
-* `,d` - Fold selected lines (Visual mode)
-* `,za` - Fold everything, except selected lines (Visual mode)
-* `,zs` - Unfold everything
-* `,za` - Restore folds
-
-===
+### Git
 * `gh` - Jump to next git change
 * `gH` - Jump to previous git change
 * `,gb` - Git Blame
@@ -131,33 +107,51 @@ longer supported. But still contains most of the features described here.
 * `,,wm` - Highlight everything above 50 symbols (for git commit message)
 * `,,wc` - Highlight everything above 72 symbols (for git commit comments)
 
-
-===
-* `,,r`   - Run Rspec for current line
-* `,,rr`  - Run Rspec for current file
-* `,,R` - Run all Rspecs
-
-===
-* `,,i` - Check syntax
+### Open Ruby/Rails documentation
 * `RR` - APIDock open Rails documentation for method under cursor
 * `RB` - APIDock open Ruby documentation
 * `RS` - APIDock open Rspec documentation
-
-===
 * `RI` - Open Ri documentation with autocompletive search in horisontal split
 * `RIV` - Open Ri documentation in vertical split
 * `RK` - Open Ri documentation for keyword under cursor
 
-===
-When editing Markdown or Text files:
+### Run Rspec
+* `,,r`   - Run Rspec for current line
+* `,,rr`  - Run Rspec for current file
+* `,,R` - Run all Rspecs
+
+### Folds
+* `,zz` - Toggle fold method (manual/indent)
+* `,d` - Fold selected lines (Visual mode, manual fold method)
+* `,za` - Fold everything, except selected lines (Visual mode, manual fold method)
+* `,zs` - Unfold everything
+* `,za` - Restore folds
+
+### Move selected line(s) around (in visually select mode)
+* `,fh` - Move left
+* `,fj` - Move down
+* `,fk` - Move up
+* `,fl` - Move right
+
+### Markdown and Text Files
 * `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
 * `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
-* `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing
-commit messages (@tpope's
-[post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-on that)
+* `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing commit messages (@tpope's [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) on that)
 * `,y` - Format and copy selected text to the clipboard without line breaks
 * `,d` - Cut selected text to the clipboard without line breaks
 * `,d` - Cut text above to the clipboard without line breaks
-* `T` - Complete a task or group of tasks, inserted by `t<Tab>` snippet
+* `t<Tab>` - Insert Github Flavored Markdown task `- [ ]`
+* `t` - Mark task as current (highlight)
+* `T` - Complete a task or group of tasks
+
+### Other
+* `,m`  - Clear search highlighting
+* `,y`  - Toggle display trailing characters
+* `,,i` - Check syntax
+* `,a`  - Search on current path with Ack
+* `,r`  - Toggle relative/straight line numbers
+* `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
+* `,u`  - Toggle open graphical tree-based undo
+* `,bd` - Switch to the dark colorscheme
+* `,bl` - Switch to the light colorscheme
 
