@@ -52,7 +52,6 @@
  Bundle "garbas/vim-snipmate"
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
- Bundle 'bling/vim-bufferline'
  Bundle 'duff/vim-bufonly'
 
 
@@ -664,9 +663,6 @@ let g:ctrlp_regexp = 0
 let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
-
-" Bufferline
-let g:bufferline_echo = 1
 
 " CODE COMPLETION BLOCK
 
