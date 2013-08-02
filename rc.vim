@@ -108,8 +108,6 @@ let $PATH=$HOME.'/.rbenv/shims:'.$PATH
 
 set clipboard=unnamed
 
-set timeoutlen=500 ttimeoutlen=0
-
 set foldmethod=indent
 set foldlevel=1
 
@@ -726,6 +724,14 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Check if file was edited outside of Vim
 au InsertEnter,InsertLeave,CursorHold,BufEnter * checktime
+
+" Fast exit from insert mode
+set ttimeoutlen=10
+augroup FastEscape
+  autocmd!
+  au InsertEnter * set timeoutlen=0
+  au InsertLeave * set timeoutlen=1000
+augroup END
                                                                              "
 "*****************************************************************************"
 "
