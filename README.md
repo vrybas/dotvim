@@ -98,17 +98,30 @@ longer supported. But still contains most of the features described here.
 ### Git
 * `gh` - Jump to next git change
 * `gH` - Jump to previous git change
+* `@d` - Git Diff (show unstaged changes)
+* `@c` - Git Diff (show staged changes)
+
+### Fugitive
+[Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+
 * `,gb` - Git Blame
 * `,gs` - Git Status
-* `,gd` - Git Diff (current file diff view)
-* `@d` - Git Diff (show all changes)
-* `@c` - Git Diff (show all changes to be committed)
-* `,,c` - Open "git status view" (current file, git diff, git status )
-* `,,u` - Close "git status view" without saving entered commit message
-* `,,c` - Save entered commit message, close "git status view"
-* `,gm` - Read last commit message to current buffer
-* `,,wm` - Highlight everything above 50 symbols (for git commit message)
-* `,,wc` - Highlight everything above 72 symbols (for git commit comments)
+
+### Git Diff View
+[Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
+
+* `,gd` - Run :Gdiff (current file diff view between staged and unstaged version)
+* `,dg` - Run :diffget on selected lines
+* `,dp` - Run :diffput on selected lines
+* `,go` - Close Diff view and show staged changes
+
+### Git Commit View
+* `,,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git status window)
+* `,,c` - (again) Save entered commit message(if any), make commit, close tab with "Git Commit View"
+* `,,u` - Close tab with "Git Commit View" without making a commit (keeping staged and unstaged changes as is)
+* `,gm` - Read last commit message to the current buffer
+* `,wm` - Highlight everything above 50 symbols (for git commit message)
+* `,wc` - Highlight everything above 72 symbols (for git commit comments)
 
 ### Open Ruby/Rails documentation
 * `RR` - APIDock open Rails documentation for method under cursor
