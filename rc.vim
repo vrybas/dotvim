@@ -397,7 +397,7 @@ nmap <leader>h :bprev<CR>
 nmap <leader>l :bnext<CR>
 " Next buffer
 
-map <leader><leader>b :BufExplorer<CR>
+map <leader>. :BufExplorer<CR>
 " Buffer Explorer
 
 " Open Buffer by number

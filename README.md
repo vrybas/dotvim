@@ -80,7 +80,7 @@ longer supported. But still contains most of the features described here.
 * `,,tc` - Close tab
 
 ### Buffers
-* `,,b` - Buffer explorer
+* `,.` - Buffer explorer
 * `,,1..30` - Go to 1..30 buffer
 * `,x` - Close current buffer
 * `,,x` - Close and delete current buffer
