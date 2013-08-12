@@ -532,9 +532,6 @@ nmap <silent><leader><tab> :Sscratch<CR>
 nmap <silent><leader>r :call ToggleRelNumber()<cr>
 " Toggle relative and straight line numbers
 
-nmap <Leader>d V<tab>zf
-vnoremap <Leader>d zf
-
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 " Fold everything, except visually selected block
 
