@@ -660,10 +660,9 @@ let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
 
 " For code completion with a drop down menu
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-p>"
 let g:SuperTabCompletionContexts = ['s:ContextDiscover','s:ContextText' ]
 let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-]>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-]>"]
 let g:SuperTabCrMapping = 1
 
 let g:rubycomplete_buffer_loading = 1
@@ -672,7 +671,7 @@ let g:rubycomplete_rails = 1
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 50
-let g:neocomplcache_auto_completion_start_length = 5
+let g:neocomplcache_disable_auto_complete = 1
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
