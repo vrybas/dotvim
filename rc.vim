@@ -39,7 +39,6 @@
  Bundle 'mattn/gist-vim'
  Bundle 'tomtom/checksyntax_vim'
  Bundle 'airblade/vim-gitgutter'
- Bundle 'skwp/vim-rspec.git'
  Bundle 'kien/ctrlp.vim.git'
  Bundle 'tpope/vim-bundler.git'
  Bundle 'tpope/vim-rake.git'
@@ -655,12 +654,6 @@ nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
 let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
 let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
-
-" Rspec.vim
-let g:RspecSplitHorizontal=1
-nmap <leader><leader>r :RunSpecLine<cr>
-nmap <leader><leader>rr :RunSpec<cr>
-nmap <leader><leader>R :RunSpecs<cr>
 
 " CtrlP.vim
 let g:ctrlp_map = '<c-p>'

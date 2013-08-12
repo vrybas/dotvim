@@ -20,7 +20,6 @@ longer supported. But still contains most of the features described here.
    * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter)
    * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim)
    * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net)
-   * **Run Rspec for current file/line/all of them** → [Rspec.vim](https://github.com/skwp/vim-rspec)
    * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com)
    * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim)
    * **Syntax checking** → [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim)
@@ -130,11 +129,6 @@ longer supported. But still contains most of the features described here.
 * `RI` - Open Ri documentation with autocompletive search in horisontal split
 * `RIV` - Open Ri documentation in vertical split
 * `RK` - Open Ri documentation for keyword under cursor
-
-### Run Rspec
-* `,,r`   - Run Rspec for current line
-* `,,rr`  - Run Rspec for current file
-* `,,R` - Run all Rspecs
 
 ### Folds
 * `,zz` - Toggle fold method (manual/indent)
