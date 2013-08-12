@@ -439,9 +439,6 @@ set pastetoggle=<F6>
 nmap <leader><leader>t :sp<cr><C-w>T
 " Open current buffer in new tab
 
-nmap <leader><leader>tc :tabclose<cr>
-" Close tab
-
 " Open Tabs by number
 "
 nmap <leader>1 1gt
