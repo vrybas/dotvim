@@ -147,9 +147,9 @@ longer supported. But still contains most of the features described here.
 * `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
 * `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
 * `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing commit messages (@tpope's [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) on that)
-* `,y` - Format and copy selected text to the clipboard without line breaks
-* `,d` - Cut selected text to the clipboard without line breaks
-* `,d` - Cut text above to the clipboard without line breaks
+* `,,y` - Format and copy selected text to the clipboard without line breaks
+* `,,d` - Cut selected text to the clipboard without line breaks (Visual mode)
+* `,,d` - Cut text above to the clipboard without line breaks (Normal mode)
 * `t<Tab>` - Insert Github Flavored Markdown task `- [ ]`
 * `t` - Mark task as current (highlight)
 * `T` - Complete a task or group of tasks
