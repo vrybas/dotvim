@@ -584,7 +584,7 @@ endf
 
 """ NERDTree
 let NERDTreeShowHidden=1
-nmap <silent><leader>w :call NERDTreeToggleWithFind()<CR>
+nmap <silent><leader><leader>f :call NERDTreeToggleWithFind()<CR>
 
 "PeepOpen"
 if has("gui_macvim")

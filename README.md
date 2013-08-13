@@ -67,8 +67,9 @@ longer supported. But still contains most of the features described here.
 ## Keymap (above Vim & plugins standard) ##
 
 * `space` -  Save file
-* `,w` - Open project Tree View
-* `,e` - Open File dialog
+* `,e` - "Open File" dialog
+* `,f` - Show opened files
+* `,,f` - Open project Tree View
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
@@ -77,7 +78,6 @@ longer supported. But still contains most of the features described here.
 * `,g` - Open class/function definition in new tab
 
 ### Buffers
-* `,f` - Buffer explorer
 * `,,1..30` - Go to 1..30 buffer
 * `,x` - Close current buffer
 * `,,x` - Close and delete current buffer
