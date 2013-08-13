@@ -67,8 +67,8 @@ longer supported. But still contains most of the features described here.
 ## Keymap (above Vim & plugins standard) ##
 
 * `space` -  Save file
-* `Ctrl-d` - Open project Tree View
-* `Ctrl-p` - Open File dialog
+* `,w` - Open project Tree View
+* `,e` - Open File dialog
 
 ### Tabs
 * `,,t` - Open current buffer in new tab
@@ -77,7 +77,7 @@ longer supported. But still contains most of the features described here.
 * `,g` - Open class/function definition in new tab
 
 ### Buffers
-* `Ctrl-a` - Buffer explorer
+* `,f` - Buffer explorer
 * `,,1..30` - Go to 1..30 buffer
 * `,x` - Close current buffer
 * `,,x` - Close and delete current buffer
@@ -153,6 +153,7 @@ longer supported. But still contains most of the features described here.
 * `T` - Complete a task or group of tasks
 
 ### Other
+* `'j`  - Easymotion
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
 * `,,i` - Check syntax
@@ -160,6 +161,4 @@ longer supported. But still contains most of the features described here.
 * `,r`  - Toggle relative/straight line numbers
 * `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u`  - Toggle open graphical tree-based undo
-* `,bd` - Switch to the dark colorscheme
-* `,bl` - Switch to the light colorscheme
 

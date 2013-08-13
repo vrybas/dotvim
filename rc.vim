@@ -396,7 +396,7 @@ nmap <leader>h :bprev<CR>
 nmap <leader>l :bnext<CR>
 " Next buffer
 
-nmap <c-a> :BufExplorer<CR>
+nmap <leader>f :BufExplorer<CR>
 " Buffer Explorer
 
 " Open Buffer by number
@@ -538,10 +538,6 @@ nnoremap <Leader>za :loadview<cr>
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
 
-nmap <silent><leader>bd :call BgSwitch('dark')<CR>
-nmap <silent><leader>bl :call BgSwitch('light')<CR>
-
-
 nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 nmap <leader>zz :call ToggleFold()<CR>
@@ -588,9 +584,7 @@ endf
 
 """ NERDTree
 let NERDTreeShowHidden=1
-nmap <silent> <c-d> :call NERDTreeToggleWithFind()<CR>
-
-imap <silent> <c-d> :call NERDTreeToggleWithFind()<CR>
+nmap <silent><leader>w :call NERDTreeToggleWithFind()<CR>
 
 "PeepOpen"
 if has("gui_macvim")
@@ -609,7 +603,7 @@ set grepprg=ack\ -a
 nnoremap <Leader>u :GundoToggle<CR>
 
 " Easymotion
-let g:EasyMotion_leader_key = '<leader>'
+let g:EasyMotion_leader_key = "'"
 
 "ri.vim
 nnoremap  RI :call ri#OpenSearchPrompt(0)<cr> " horizontal split
@@ -650,7 +644,7 @@ let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
 let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
 
 " CtrlP.vim
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = ',e'
 let g:ctrlp_regexp = 0
 let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
