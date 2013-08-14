@@ -2,7 +2,7 @@
 noremap <buffer> <leader>gm O<esc>:r !git --no-pager log -1 --pretty=\%s<cr>kdd
 
 " Create commit with entered message, close diff, close current tab
-noremap <buffer> <leader>c :wq<cr>:bd diff.diff<cr>:tabclose<cr><cr>
+noremap <buffer> <leader><leader>c :wq<cr>:bd diff.diff<cr>:tabclose<cr><cr>
 "---
 "
 " Undo commit creation, close diff, close current tab
