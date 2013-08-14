@@ -436,7 +436,7 @@ nmap <leader><leader>30 :b 30<cr>
 set pastetoggle=<F6>
 " Do not autoindent lines, when paste from OS buffer
 
-nmap <leader><leader>t :sp<cr><C-w>T
+nmap <leader>t :sp<cr><C-w>T
 " Open current buffer in new tab
 
 " Open Tabs by number
@@ -453,8 +453,8 @@ nmap <leader>9 9gt
 
 " Go to previous/next tab
 "
-nmap <leader><leader>h :tabp<cr>
-nmap <leader><leader>l :tabn<cr>
+nmap <leader>h :tabp<cr>
+nmap <leader>l :tabn<cr>
 
 nnoremap <silent><Leader>g <C-w><C-]><C-w>T
 " Open class/function definition in new tab
@@ -549,7 +549,7 @@ noremap <leader>gd :bd diff.diff<cr>:Gdiff<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
-noremap <leader><leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
+noremap <leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 "---
 "
 """" Diff resolution helpers
@@ -560,8 +560,8 @@ noremap <leader>do :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><
 "---
 
 """" Colorcolumn hotkeys for git commit messages
-noremap <leader><leader>wm :execute "set colorcolumn=" . join(range(51,335), ',')<cr>
-noremap <leader><leader>wc :execute "set colorcolumn=" . join(range(73,335), ',')<cr>
+noremap <leader>wm :execute "set colorcolumn=" . join(range(51,335), ',')<cr>
+noremap <leader>wc :execute "set colorcolumn=" . join(range(73,335), ',')<cr>
 "---
 
 nnoremap ; :
@@ -804,7 +804,7 @@ map Ю >
 " Repeat all leader mappings with Cyrillic keys:
 "
 
-nmap <leader><leader>е :sp<cr><C-w>T
+nmap <leader>е :sp<cr><C-w>T
 nmap <silent><leader>м <C-w>v
 nmap <silent><leader>ы <C-w>s
 nmap <silent><leader>ч <C-w>c

@@ -72,8 +72,8 @@ longer supported. But still contains most of the features described here.
 * `,,f` - Open project Tree View
 
 ### Tabs
-* `,,t` - Open current buffer in new tab
-* `,,h/l` - Previous/Next tab
+* `,t` - Open current buffer in new tab
+* `,h/l` - Previous/Next tab
 * `,1..9` - Go to 1..9 tab
 * `,g` - Open class/function definition in new tab
 
@@ -113,9 +113,12 @@ longer supported. But still contains most of the features described here.
 * `,go` - Close Diff view and show staged changes
 
 ### Git Commit View
-* `,,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git status window)
-* `,,c` - (again) Save entered commit message(if any), make commit, close tab with "Git Commit View"
-* `,,u` - Close tab with "Git Commit View" without making a commit (keeping staged and unstaged changes as is)
+* `,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git
+  status window)
+* `,c` - (again) Save entered commit message(if any), make commit, close tab
+  with "Git Commit View"
+* `,u` - Close tab with "Git Commit View" without making a commit (keeping
+  staged and unstaged changes as is)
 * `,gm` - Read last commit message to the current buffer
 * `,wm` - Highlight everything above 50 symbols (for git commit message)
 * `,wc` - Highlight everything above 72 symbols (for git commit comments)
@@ -145,9 +148,9 @@ longer supported. But still contains most of the features described here.
 * `,w4..8` - Set vertical ruler and autowrapping to 40..80 symbols
 * `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
 * `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing commit messages (@tpope's [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) on that)
-* `,,y` - Format and copy selected text to the clipboard without line breaks
-* `,,d` - Cut selected text to the clipboard without line breaks (Visual mode)
-* `,,d` - Cut text above to the clipboard without line breaks (Normal mode)
+* `,y` - Format and copy selected text to the clipboard without line breaks
+* `,d` - Cut selected text to the clipboard without line breaks (Visual mode)
+* `,d` - Cut text above to the clipboard without line breaks (Normal mode)
 * `t<Tab>` - Insert Github Flavored Markdown task `- [ ]`
 * `t` - Mark task as current (highlight)
 * `T` - Complete a task or group of tasks
