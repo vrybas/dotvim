@@ -69,7 +69,7 @@ longer supported. But still contains most of the features described here.
 * `space` -  Save file
 * `,e` - "Open File" dialog
 * `,f` - Show opened files
-* `,,f` - Open project Tree View
+* `,d` - Open project Tree View
 
 ### Tabs
 * `,t` - Open current buffer in new tab
@@ -107,10 +107,8 @@ longer supported. But still contains most of the features described here.
 ### Git Diff View
 [Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
 
-* `,gd` - Run :Gdiff (current file diff view between staged and unstaged version)
-* `,dg` - Run :diffget on selected lines
-* `,dp` - Run :diffput on selected lines
-* `,go` - Close Diff view and show staged changes
+* `,,d` - Run :Gdiff (current file diff view between staged and unstaged version)
+* `,,o` - Close Diff view and show staged changes
 
 ### Git Commit View
 * `,,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git
@@ -133,7 +131,6 @@ longer supported. But still contains most of the features described here.
 
 ### Folds
 * `,zz` - Toggle fold method (manual/indent)
-* `,d` - Fold selected lines (Visual mode, manual fold method)
 * `,za` - Fold everything, except selected lines (Visual mode, manual fold method)
 * `,zs` - Unfold everything
 * `,za` - Restore folds
@@ -149,8 +146,6 @@ longer supported. But still contains most of the features described here.
 * `,wm`  - Set vertical ruler and autowrapping to 78 symbols (Email standard)
 * `,wg`  - Set vertical ruler and autowrapping to 72 symbols for writing commit messages (@tpope's [post](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) on that)
 * `,y` - Format and copy selected text to the clipboard without line breaks
-* `,d` - Cut selected text to the clipboard without line breaks (Visual mode)
-* `,d` - Cut text above to the clipboard without line breaks (Normal mode)
 * `t<Tab>` - Insert Github Flavored Markdown task `- [ ]`
 * `t` - Mark task as current (highlight)
 * `T` - Complete a task or group of tasks

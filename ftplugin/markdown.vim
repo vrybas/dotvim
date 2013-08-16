@@ -47,15 +47,6 @@ vmap <silent><leader>y :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_y,m
 vmap <silent><leader>н :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_y,m
 "---
 
-"""" Remove linebreaks and double spaces from selected text and cut to clipboard
-vmap <silent><leader>d :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_d,m
-vmap <silent><leader>в :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_d,m
-
-"""" Remove linebreaks and double spaces from tex above and cut to clipboard
-nmap <silent><leader>d o<esc>Vgg,d,m
-nmap <silent><leader>в o<esc>Vgg,d,m
-"---
-
 " Complete a task
 nmap T VT
 vmap T :s/\[ \]/[x]/<cr>:s/#/ /<cr>:noh<cr>
