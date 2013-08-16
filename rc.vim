@@ -651,6 +651,7 @@ let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
 
 " CODE COMPLETION BLOCK
+set completeopt+=longest,menu,preview
 
 " For code completion with a drop down menu
 let g:SuperTabDefaultCompletionType = "context"
