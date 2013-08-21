@@ -229,7 +229,6 @@ function! FoldText()
   let l:start = strpart(l:start , 0, l:width - strlen(substitute(l:end, '.', 'x', 'g')) - l:separatorlen)
   let l:text = l:start . ' … '
 
-  set fillchars+=fold:░
   return l:text . repeat(' ', 82 - strlen(l:text))
 endfunction
 
