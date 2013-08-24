@@ -108,6 +108,8 @@ longer supported. But still contains most of the features described here.
 [Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
 
 * `,,d` - Run :Gdiff (current file diff view between staged and unstaged version)
+* `@9`  - `:diffget`
+* `@0`  - `:diffput`
 * `,,o` - Close Diff view and show staged changes
 
 ### Git Commit View
