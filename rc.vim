@@ -655,7 +655,7 @@ set completeopt+=longest
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCompletionContexts = ['s:ContextDiscover','s:ContextText' ]
 let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-]>"]
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-n>"]
 let g:SuperTabCrMapping = 1
 
 let g:rubycomplete_buffer_loading = 1
