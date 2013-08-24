@@ -151,6 +151,8 @@ longer supported. But still contains most of the features described here.
 * `T` - Complete a task or group of tasks
 
 ### Other
+* `Tab` - code completion (including tags, slow)
+* `Ctr-Esc` - local code completion (opened files)
 * `'j`  - Easymotion
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
