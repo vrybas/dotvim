@@ -153,8 +153,9 @@ longer supported. But still contains most of the features described here.
 * `T` - Complete a task or group of tasks
 
 ### Other
-* `Tab` - code completion (including tags, slow)
-* `Ctr-Esc` - local code completion (opened files)
+* `Tab` - code completion (including tags and snippets, slow)
+* `Ctrl-Esc` - local code completion (opened files, faster)
+* `Ctrl-K` - expand snipped, selected from dropdown list (single snipped expanded with Tab)
 * `'j`  - Easymotion
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
