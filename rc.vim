@@ -555,7 +555,7 @@ noremap <leader><leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
 noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
 let @9 =":diffget\n"
-let @9 =":diffput\n"
+let @0 =":diffput\n"
 "---
 
 """" Colorcolumn hotkeys for git commit messages
