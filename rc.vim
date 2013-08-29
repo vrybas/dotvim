@@ -551,11 +551,16 @@ noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
 noremap <leader><leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 "---
 "
+
 """" Diff resolution helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
 noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
-let @9 =":diffget\n"
-let @0 =":diffput\n"
+
+" Show `git diff` output in new buffer
+let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
+
+" Show `git diff --cached` output in new buffer
+let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
 "---
 
 """" Colorcolumn hotkeys for git commit messages
@@ -640,8 +645,6 @@ let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
-let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
-let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
 
 " CtrlP.vim
 let g:ctrlp_map = ',e'
