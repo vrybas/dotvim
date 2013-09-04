@@ -561,6 +561,9 @@ let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
 
 " Show `git diff --cached` output in new buffer
 let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
+
+vmap <leader>0 :diffget<cr>
+vmap <leader>9 :diffput<cr>
 "---
 
 """" Colorcolumn hotkeys for git commit messages

@@ -104,12 +104,6 @@ longer supported. But still contains most of the features described here.
 * `,gb` - Git Blame
 * `,gs` - Git Status
 
-### Git Diff View
-[Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
-
-* `,,d` - Run :Gdiff (current file diff view between staged and unstaged version)
-* `,,o` - Close Diff view and show staged changes
-
 ### Git Commit View
 * `,,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git
   status window)
@@ -120,6 +114,14 @@ longer supported. But still contains most of the features described here.
 * `,gm` - Read last commit message to the current buffer
 * `,wm` - Highlight everything above 50 symbols (for git commit message)
 * `,wc` - Highlight everything above 72 symbols (for git commit comments)
+
+### Git Diff View (opens from Commit View)
+[Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
+
+* `,,d` - Run :Gdiff (current file diff view between staged and unstaged version)
+* `,0`  - `:diffget`
+* `,9`  - `:diffput`
+* `,,o` - Close Diff view and show staged changes
 
 ### Open Ruby/Rails documentation
 * `RR` - APIDock open Rails documentation for method under cursor
