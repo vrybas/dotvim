@@ -548,7 +548,7 @@ noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
-noremap <leader><leader>c :sp<cr><C-w>T<C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
+noremap <leader><leader>c :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 "---
 "
 
