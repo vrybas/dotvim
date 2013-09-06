@@ -155,7 +155,7 @@ longer supported. But still contains most of the features described here.
 
 ### Other
 * `Tab` - code completion (including tags and snippets, slow)
-* `Ctrl-i` - local code completion (opened files, faster)
+* `Ctrl-p` - local code completion (opened files, faster)
 * `Ctrl-k` - expand snipped, selected from dropdown list (single snipped expanded with Tab)
 * `'j`  - Easymotion
 * `,m`  - Clear search highlighting
