@@ -656,6 +656,9 @@ let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
 let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
 
+"Bufexplorer
+let g:bufExplorerFindActive=0
+
 " CODE COMPLETION BLOCK
 set completeopt+=longest
 
