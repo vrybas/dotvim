@@ -43,8 +43,8 @@ nmap <leader>ш maV
 vmap <leader>ш :s/\n/ /<CR>o<Esc>kgvgq:noh<CR>`a
 
 """" Remove linebreaks and double spaces from selected text, copy to clipboard
-vmap <silent><leader>y :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_y,m
-vmap <silent><leader>н :s/\n\\|\s\+/ /<cr>V:s/^\s\+\\|\s\+$//<cr>0vg_y,m
+vmap <silent><leader>y :v/^$/-1s/\n\\|\s\+/ /<cr>gv:s/^ //<cr>gv:s/$/\r&/<cr>gv_y,m
+vmap <silent><leader>н :v/^$/-1s/\n\\|\s\+/ /<cr>gv:s/^ //<cr>gv:s/$/\r&/<cr>gv_y,m
 "---
 
 " Complete a task
