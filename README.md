@@ -1,7 +1,7 @@
 ## My Vim for Ruby on Rails development
 ![](http://f.cl.ly/items/1i2S0x1S060D3m2d2A3M/Screenshot_6_19_13_7_25_PM.png)
 
-## Warning ##
+#### Warning for MacVim users ####
 I've stopped using MacVim(mostly) and started using console Vim in Tmux.
 The lastest MacVim config extracted to the
 [**macvim**](https://github.com/vrybas/dotvim/tree/macvim) branch and no
