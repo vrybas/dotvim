@@ -104,6 +104,7 @@ set gdefault
 
 set shell=/bin/bash
 let $PATH=$HOME.'/.rbenv/shims:'.$PATH
+let $PATH=$HOME.'/.dotfiles/bin:'.$PATH
 
 set clipboard=unnamed
 
