@@ -14,7 +14,7 @@ else
   let b:undo_ftplugin = "setl cms< com< fo< flp<"
 endif
 
-call WrapColumn(80)
+call WrapColumn(72)
 
 nmap <silent><leader>w4 :call WrapColumn(40)<CR>
 nmap <silent><leader>w5 :call WrapColumn(50)<CR>
