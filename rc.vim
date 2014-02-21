@@ -551,6 +551,16 @@ noremap <leader>gs :Gstatus<CR>
 noremap <leader><leader>c :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 "---
 "
+
+"""" Pull Request helpers
+" Open Pull Request view
+noremap <leader><leader>p :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@r
+
+" Generate git request-pull patch output in new buffer (from current branch to master)
+let @r =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-parse --abbrev-ref HEAD)\n\n:w!\ngg"
+"---
+"
+
 """" Diff resolution helpers
 " Run :Gdiff (current file diff view between staged and unstaged version)
 noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>

@@ -117,6 +117,12 @@ longer supported. But still contains most of the features described here.
 * `,wm` - Highlight everything above 50 symbols (for git commit message)
 * `,wc` - Highlight everything above 72 symbols (for git commit comments)
 
+### Git Pull Request View
+* `,,c` - Open "Git Pull Request View" in new tab (git request-pull diff
+  between current branch and master)
+* `O`   - Open file, containing chunk of code under cursor, with :Gblame
+  window
+
 ### Git Diff View (opens from Commit View)
 [Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
 
