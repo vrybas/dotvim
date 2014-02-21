@@ -545,16 +545,17 @@ nmap <leader>zz :call ToggleFold()<CR>
 " fugitive shortcuts
 noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
-noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
 noremap <leader><leader>c :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
 "---
 "
-
 """" Diff resolution helpers
-" Open current buffer in new tab, show git diff in vertical split, open :Gstatus
+" Run :Gdiff (current file diff view between staged and unstaged version)
+noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
+
+" Close Diff view and show staged changes
 noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
 
 " Show `git diff` output in new buffer
@@ -562,9 +563,9 @@ let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
 
 " Show `git diff --cached` output in new buffer
 let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
+"---
+"
 
-" Generate git request-pull patch output in new buffer (from current branch to master)
-let @r =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-parse --abbrev-ref HEAD)\n\n:w!\ngg"
 
 vmap <leader>0 :diffget<cr>
 vmap <leader>9 :diffput<cr>
