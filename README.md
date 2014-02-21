@@ -118,7 +118,7 @@ longer supported. But still contains most of the features described here.
 * `,wc` - Highlight everything above 72 symbols (for git commit comments)
 
 ### Git Pull Request View
-* `,,c` - Open "Git Pull Request View" in new tab (git request-pull diff
+* `,,p` - Open "Git Pull Request View" in new tab (git request-pull diff
   between current branch and master)
 * `O`   - Open file, containing chunk of code under cursor, with :Gblame
   window
