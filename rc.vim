@@ -108,8 +108,7 @@ let $PATH=$HOME.'/.dotfiles/bin:'.$PATH
 
 set clipboard=unnamed
 
-set foldmethod=indent
-set foldlevel=1
+set foldmethod=manual
 
 "*****************************************************************************"
 "
