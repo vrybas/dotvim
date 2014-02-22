@@ -545,6 +545,7 @@ nmap <leader>zz :call ToggleFold()<CR>
 " fugitive shortcuts
 noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
+noremap W :Gbrowse<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus

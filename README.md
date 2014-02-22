@@ -104,6 +104,7 @@ longer supported. But still contains most of the features described here.
 
 * `,gb` - Git Blame
 * `,gs` - Git Status
+* `W` - Open git commit or blob in the browser (:Gbrowse)
 
 ### Git Commit View
 * `,,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git
