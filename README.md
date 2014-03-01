@@ -47,7 +47,7 @@ longer supported. But still contains most of the features described here.
    * **Open tabs by numbers**
    * **Restore cursor position on file open**
    * **Remove spaces from the end of each line on save**
-   * **Cyrillic keys mapped to latin to use in command mode**
+   * **Cyrillic keys mapped to latin to use in `normal` mode**
    * **Friendly text/markdown files editing with wrapping and ULTIMATE paragraph formatter**
    * **Spell checking english and russian(with ё) texts**
 
@@ -97,7 +97,7 @@ longer supported. But still contains most of the features described here.
 * `gH` - Jump to previous git change
 * `@d` - Git Diff (show unstaged changes)
 * `@c` - Git Diff (show staged changes)
-* `@r` - Git request-pull patch output in new buffer (from current branch to master)
+* `@p` - Git request-pull patch output in new buffer (from current branch to master)
 
 ### Fugitive
 [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
@@ -126,8 +126,7 @@ version, and "both modified" version of the file.
 ### Git Pull Request View
 * `,,p` - Open "Git Pull Request View" in new tab (git request-pull diff
   between current branch and master)
-* `@p` - Git request-pull diff in new buffer without opening new tab
-* `O`   - Open file, containing chunk of code under cursor, with :Gblame
+* `o`   - Open file, containing chunk of code under cursor, with :Gblame
   window
 
 ### Git Diff View (opens from Commit View)
