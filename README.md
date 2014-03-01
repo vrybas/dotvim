@@ -107,9 +107,9 @@ longer supported. But still contains most of the features described here.
 * `W` - Open git commit or blob in the browser (:Gbrowse)
 
 ### Git Commit View
-* `,,c` - Open "Git Commit View" in new tab (current file, unstaged changes, git
+* `,,s` - Open "Git Commit View" in new tab (current file, unstaged changes, git
   status window)
-* `,,c` - (again) Save entered commit message(if any), make commit, close tab
+* `,,s` - (again) Save entered commit message(if any), make commit, close tab
   with "Git Commit View"
 * `,u` - Close tab with "Git Commit View" without making a commit (keeping
   staged and unstaged changes as is)
