@@ -18,6 +18,6 @@ nmap <buffer><silent><leader>wc :call WrapColumn(72)<CR>
 " Spell checking
 setlocal spell spelllang=en_us
 
-
+noremap <buffer> <Space> <esc>
 
 
