@@ -121,6 +121,7 @@ longer supported. But still contains most of the features described here.
 ### Git Pull Request View
 * `,,p` - Open "Git Pull Request View" in new tab (git request-pull diff
   between current branch and master)
+* `@p` - Git request-pull diff in new buffer without opening new tab
 * `O`   - Open file, containing chunk of code under cursor, with :Gblame
   window
 

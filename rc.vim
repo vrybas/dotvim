@@ -557,7 +557,7 @@ noremap <leader><leader>s :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@d<C-w>h:Gstatus
 noremap <leader><leader>p :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@r
 
 " Generate git request-pull patch output in new buffer (from current branch to master)
-let @r =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-parse --abbrev-ref HEAD)\n\n:w!\ngg"
+let @p =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-parse --abbrev-ref HEAD)\n\n:w!\ngg"
 "---
 "
 
