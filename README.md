@@ -171,7 +171,6 @@ longer supported. But still contains most of the features described here.
 * `,y`  - Toggle display trailing characters
 * `,,i` - Check syntax
 * `,a`  - Search on current path with Ack
-* `,r`  - Toggle relative/straight line numbers
 * `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u`  - Toggle open graphical tree-based undo
 

@@ -337,18 +337,6 @@ fun! RemoveSpaces()
   endif
 endf
 
-
-" Toggle relative and straight line numbers
-"
-function! ToggleRelNumber()
-  if (&relativenumber == 1)
-    set nu!
-  else
-    set relativenumber!
-  endif
-endfunction
-
-
 " Saves current buffer if it was modified. Updates git diff
 "
 function! Save()
@@ -524,9 +512,6 @@ nnoremap <leader>m :noh<CR>
 
 nmap <silent><leader><tab> :Sscratch<CR>
 " Opens a buffer which is never saved (for scratches)
-
-nmap <silent><leader>r :call ToggleRelNumber()<cr>
-" Toggle relative and straight line numbers
 
 vnoremap <Leader>za <Esc>`<kzfgg`>jzfG`<
 " Fold everything, except visually selected block
