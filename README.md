@@ -118,6 +118,11 @@ longer supported. But still contains most of the features described here.
 * `,wm` - Highlight everything above 50 symbols (for git commit message)
 * `,wc` - Highlight everything above 72 symbols (for git commit comments)
 
+### Git Conflict Resolution View
+* `,,r` - Open Conflict Resolution view for current file
+Opens current file in new tab, shows HEAD version, conflicted MERGE
+version, and "both modified" version of the file.
+
 ### Git Pull Request View
 * `,,p` - Open "Git Pull Request View" in new tab (git request-pull diff
   between current branch and master)

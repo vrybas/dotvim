@@ -546,6 +546,12 @@ let @p =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-par
 "---
 "
 
+"""" Conflict resolution helpers
+" Open Conflict Resolution view for current file
+noremap <leader><leader>r :sp<cr><C-w>T:tabm 999<cr>:Gdiff<cr>:only<cr>:windo diffoff<cr>:split<cr>:vsplit<cr>:buffer //2<cr><c-w>l:buffer //3<cr><c-w>jgg/HEAD<cr>
+"---
+"
+
 """" Diff resolution helpers
 " Run :Gdiff (current file diff view between staged and unstaged version)
 noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
