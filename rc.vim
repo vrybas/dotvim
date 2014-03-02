@@ -564,11 +564,18 @@ endfunction
 
 """" Diff helpers
 " Run :Gdiff (current file diff view between staged and unstaged version)
-noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
+noremap <leader><leader>d :Gdiff<CR>
 
-" Close Diff view and show staged changes
-noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
+" Close Diff view and return to a file
+noremap <leader><leader>o :call GdiffOff()<cr>
 
+function! GdiffOff()
+  windo diffoff
+  windo set nowrap
+  bdelete //0
+endfunction
+
+"noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
 vmap <leader>0 :diffget<cr>
 vmap <leader>9 :diffput<cr>
 "---
