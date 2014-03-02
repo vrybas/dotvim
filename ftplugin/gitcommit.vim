@@ -7,7 +7,7 @@ noremap <buffer> <leader><leader>s :wq<cr>:tabclose<cr><cr>
 "---
 "
 " Undo commit creation, close diff, close current tab
-noremap <buffer> <leader>u :q!<cr>:bd diff.diff<cr>:tabclose<cr>
+noremap <buffer> <leader>u :q!<cr>:tabclose<cr>
 "---
 
 call WrapColumn(72)
