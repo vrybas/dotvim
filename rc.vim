@@ -542,7 +542,7 @@ function! GitCommitView()
   tabmove
   wincmd v
   wincmd l
-  call GitDiff()
+  call GitDiff('unstaged')
   wincmd h
   exe "Gstatus"
 endfunction
