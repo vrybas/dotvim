@@ -97,7 +97,8 @@ longer supported. But still contains most of the features described here.
 * `gH` - Jump to previous git change
 * `,D` - Git Diff (show unstaged changes)
 * `,C` - Git Diff (show staged changes)
-* `@p` - Git request-pull patch output in new buffer (from current branch to master)
+* `,P` - Git request-pull patch output in new buffer (from current
+  branch to master)
 
 ### Fugitive
 [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
