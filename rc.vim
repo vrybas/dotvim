@@ -583,12 +583,25 @@ vmap <leader>9 :diffput<cr>
 
 """" Pull Request helpers
 " Open Pull Request view
-noremap <leader><leader>p :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@r
+noremap <leader><leader>p :call GitPullRequestView()<cr>
+noremap <leader><leader>P :call GitPullRequestDiff()<cr>
 
-" Generate git request-pull patch output in new buffer (from current branch to master)
-let @p =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-parse --abbrev-ref HEAD)\n\n:w!\ngg"
+function! GitPullRequestView()
+  tabedit %
+  tabmove
+  wincmd v
+  wincmd l
+  call GitPullRequestDiff()
+endfunction
+
+function! GitPullRequestDiff()
+  let tmpfile = tempname()
+  silent exe '!git request-pull -p master $(git rev-parse --abbrev-ref HEAD) > '.tmpfile
+  redraw!
+  exe "e ".tmpfile
+  setlocal bufhidden=wipe filetype=diff
+endfunction
 "---
-"
 
 """" Conflict resolution helpers
 " Open Conflict Resolution view for current file
