@@ -555,11 +555,9 @@ function! GitDiff(type)
     let diff_param = " --cached"
   endif
 
+  silent execute 'r !git diff'.diff_param.' > '.tmpfile
   exe "e ".tmpfile
   setlocal bufhidden=wipe filetype=diff
-  silent execute 'r !git diff'.diff_param
-  write
-  exe "normal! gg"
 endfunction
 "---
 "
