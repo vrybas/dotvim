@@ -609,7 +609,24 @@ endfunction
 
 """" Conflict resolution helpers
 " Open Conflict Resolution view for current file
-noremap <leader><leader>r :sp<cr><C-w>T:tabm 999<cr>:Gdiff<cr>:only<cr>:windo diffoff<cr>:split<cr>:vsplit<cr>:buffer //2<cr><c-w>l:buffer //3<cr><c-w>jgg/HEAD<cr>
+noremap <leader><leader>r :call GitConflictView()<cr>
+
+function! GitConflictView()
+  tabedit %
+  tabmove
+  exe "Gdiff"
+  only
+  windo diffoff
+  split
+  vsplit
+  buffer //2
+  wincmd l
+  buffer //3
+  wincmd j
+  exe "normal! gg"
+  exe "/HEAD"
+endfunction
+
 "---
 "
 
