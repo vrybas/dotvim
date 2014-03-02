@@ -584,7 +584,7 @@ vmap <leader>9 :diffput<cr>
 """" Pull Request helpers
 " Open Pull Request view
 noremap <leader><leader>p :call GitPullRequestView()<cr>
-noremap <leader><leader>P :call GitPullRequestDiff()<cr>
+noremap <leader>P :call GitPullRequestDiff()<cr>
 
 function! GitPullRequestView()
   tabedit %
@@ -597,6 +597,10 @@ endfunction
 function! GitPullRequestDiff()
   let tmpfile = tempname()
   silent exe '!git request-pull -p master $(git rev-parse --abbrev-ref HEAD) > '.tmpfile
+  silent exe '!echo "                                          " >> '.tmpfile
+  silent exe '!echo "All commits: =============================" >> '.tmpfile
+  silent exe '!echo "                                          " >> '.tmpfile
+  silent exe '!git log -p --stat $(git rev-parse --verify --quiet master)..$(git rev-parse --verify --quiet HEAD) >> '.tmpfile
   redraw!
   exe "e ".tmpfile
   setlocal bufhidden=wipe filetype=diff
