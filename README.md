@@ -116,8 +116,6 @@ longer supported. But still contains most of the features described here.
   staged and unstaged changes as is)
 * `,gm` - Read last commit message to the current buffer
 * `,go` - Read last 15 commit messages to the current buffer
-* `,wm` - Highlight everything above 50 symbols (for git commit message)
-* `,wc` - Highlight everything above 72 symbols (for git commit comments)
 
 ### Git Conflict Resolution View
 * `,,r` - Open Conflict Resolution view for current file

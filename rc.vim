@@ -613,13 +613,6 @@ noremap <leader><leader>r :sp<cr><C-w>T:tabm 999<cr>:Gdiff<cr>:only<cr>:windo di
 "---
 "
 
-"""" Colorcolumn hotkeys for git commit messages
-noremap <leader>wm :execute "set colorcolumn=" . join(range(51,335), ',')<cr>
-noremap <leader>wc :execute "set colorcolumn=" . join(range(73,335), ',')<cr>
-"---
-
-let @p =":w !xargs -0 campsay > /dev/null 2>&1 &\n\n"
-
 nnoremap ; :
 " Handy mapping for quick access to CLI
 "*****************************************************************************"
