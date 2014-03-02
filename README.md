@@ -95,8 +95,8 @@ longer supported. But still contains most of the features described here.
 ### Git
 * `gh` - Jump to next git change
 * `gH` - Jump to previous git change
-* `@d` - Git Diff (show unstaged changes)
-* `@c` - Git Diff (show staged changes)
+* `,D` - Git Diff (show unstaged changes)
+* `,C` - Git Diff (show staged changes)
 * `@p` - Git request-pull patch output in new buffer (from current branch to master)
 
 ### Fugitive

@@ -533,7 +533,34 @@ noremap W :Gbrowse<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
-noremap <leader><leader>s :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@d<C-w>h:Gstatus<cr>
+noremap <leader><leader>s :call GitCommitView()<cr>
+noremap <leader>D :call GitDiff('unstaged')<cr>
+noremap <leader>C :call GitDiff('staged')<cr>
+
+function! GitCommitView()
+  tabedit %
+  tabmove
+  wincmd v
+  wincmd l
+  call GitDiff()
+  wincmd h
+  exe "Gstatus"
+endfunction
+
+function! GitDiff(type)
+  let tmpfile = tempname()
+  let diff_param = ""
+
+  if a:type == 'staged'
+    let diff_param = " --cached"
+  endif
+
+  exe "e ".tmpfile
+  setlocal bufhidden=wipe filetype=diff
+  silent execute 'r !git diff'.diff_param
+  write
+  exe "normal! gg"
+endfunction
 "---
 "
 
@@ -558,15 +585,6 @@ noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
 
 " Close Diff view and show staged changes
 noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
-
-" Show `git diff` output in new buffer
-let @d =":e! .git/diff.diff\ngg\"_dG:r !git diff\n:w!\ngg"
-
-" Show `git diff --cached` output in new buffer
-let @c =":e! .git/diff.diff\ngg\"_dG:r !git diff --cached\n:w!\ngg"
-"---
-"
-
 
 vmap <leader>0 :diffget<cr>
 vmap <leader>9 :diffput<cr>
