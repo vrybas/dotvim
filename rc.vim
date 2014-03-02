@@ -562,6 +562,18 @@ endfunction
 "---
 "
 
+"""" Diff helpers
+" Run :Gdiff (current file diff view between staged and unstaged version)
+noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
+
+" Close Diff view and show staged changes
+noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
+
+vmap <leader>0 :diffget<cr>
+vmap <leader>9 :diffput<cr>
+"---
+
+
 """" Pull Request helpers
 " Open Pull Request view
 noremap <leader><leader>p :sp<cr><C-w>T:tabm 999<cr><C-w>v<C-w>l@r
@@ -576,17 +588,6 @@ let @p =":e! .git/pull.diff\ngg\"_dG:r !git request-pull -p master $(git rev-par
 noremap <leader><leader>r :sp<cr><C-w>T:tabm 999<cr>:Gdiff<cr>:only<cr>:windo diffoff<cr>:split<cr>:vsplit<cr>:buffer //2<cr><c-w>l:buffer //3<cr><c-w>jgg/HEAD<cr>
 "---
 "
-
-"""" Diff resolution helpers
-" Run :Gdiff (current file diff view between staged and unstaged version)
-noremap <leader><leader>d :bd diff.diff<cr>:Gdiff<CR>
-
-" Close Diff view and show staged changes
-noremap <leader><leader>o :windo diffoff<cr>:windo set nowrap<cr><c-w>h:bd<cr>:vsp<cr><c-w>l@c
-
-vmap <leader>0 :diffget<cr>
-vmap <leader>9 :diffput<cr>
-"---
 
 """" Colorcolumn hotkeys for git commit messages
 noremap <leader>wm :execute "set colorcolumn=" . join(range(51,335), ',')<cr>
