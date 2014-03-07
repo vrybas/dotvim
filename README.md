@@ -15,7 +15,7 @@ longer supported. But still contains most of the features described here.
    * **Popup Open File dialog with smart search** → [CtrlP](https://github.com/kien/ctrlp.vim)
    * **Code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab) and [NeoComplCache](http://github.com/Shougo/neocomplcache.vim)
    * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim)
-   * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive)
+   * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) and [Flayouts](http://github.com/vrybas/vim-flayouts)
    * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter)
    * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim)
    * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net)
@@ -100,41 +100,43 @@ longer supported. But still contains most of the features described here.
 * `,P` - Git request-pull patch output in new buffer (from current
   branch to master)
 
-### Fugitive
+### Fugitive and Flayouts
 [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+
+[Flayouts.vim - layouts for Fugitive](http://github.com/vrybas/vim-flayouts)
 
 * `,gb` - Git Blame
 * `,gs` - Git Status
 * `W` - Open git commit or blob in the browser (:Gbrowse)
 
-### Git Commit View
-* `,,s` - Open "Git Commit View" in new tab (current file, unstaged changes, git
-  status window)
+##### Git Commit
+* `,,s` - Open `:Glstatus` in new tab (current file, unstaged changes,
+  git status window).
 * `,,s` - (again) Save entered commit message(if any), make commit, close tab
-  with "Git Commit View"
-* `,u` - Close tab with "Git Commit View" without making a commit (keeping
+  with `:Glstatus`.
+* `,u` - Close tab with `:Glstatus` without making a commit (keeping
   staged and unstaged changes as is)
 * `,gm` - Read last commit message to the current buffer
 * `,go` - Read last 15 commit messages to the current buffer
 
-### Git Conflict Resolution View
-* `,,r` - Open Conflict Resolution view for current file
-Opens current file in new tab, shows HEAD version, conflicted MERGE
-version, and "both modified" version of the file.
-
-### Git Pull Request View
-* `,,p` - Open "Git Pull Request View" in new tab (git request-pull diff
-  between current branch and master)
-* `o`   - Open file, containing chunk of code under cursor, with :Gblame
-  window
-
-### Git Diff View (opens from Commit View)
+##### Git Diff View (opens from Commit View)
 [Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
 
 * `,,d` - Run :Gdiff (current file diff view between staged and unstaged version)
 * `,0`  - `:diffget`
 * `,9`  - `:diffput`
 * `,,o` - Close Diff view and show staged changes
+
+##### Git Conflict Resolution
+* `,,r` - Open `:GlresolveConflict` for current file.
+Opens current file in new tab, shows HEAD version, conflicted MERGE
+version, and "both modified" version of the file.
+
+##### Git Pull Request
+* `,,p` - Open `:GlpullRequest` in new tab (git request-pull diff
+  between current branch and master)
+* `o`   - Open file, containing chunk of code under cursor, with
+  `:Gblame` window.
 
 ### Open Ruby/Rails documentation
 * `RR` - APIDock open Rails documentation for method under cursor

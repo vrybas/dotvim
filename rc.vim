@@ -26,6 +26,7 @@
  Bundle 'vim-scripts/delimitMate.vim'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'tpope/vim-fugitive'
+ Bundle 'vrybas/vim-flayouts'
  Bundle 'sjl/gundo.vim'
  Bundle 'tsaleh/vim-matchit'
  Bundle 'cfurrow/vim-l9'
@@ -533,32 +534,9 @@ noremap W :Gbrowse<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
-noremap <leader><leader>s :call GitCommitView()<cr>
-noremap <leader>D :call GitDiff('unstaged')<cr>
-noremap <leader>C :call GitDiff('staged')<cr>
-
-function! GitCommitView()
-  tabedit %
-  tabmove
-  wincmd v
-  wincmd l
-  call GitDiff('unstaged')
-  wincmd h
-  exe "Gstatus"
-endfunction
-
-function! GitDiff(type)
-  let tmpfile = tempname()
-  let diff_param = ""
-
-  if a:type == 'staged'
-    let diff_param = " --cached"
-  endif
-
-  silent execute 'r !git diff'.diff_param.' > '.tmpfile
-  exe "e ".tmpfile
-  setlocal bufhidden=wipe filetype=diff
-endfunction
+noremap <leader><leader>s :Glstatus<cr>
+noremap <leader>D :GldiffUnstaged<cr>
+noremap <leader>C :GldiffStaged<cr>
 "---
 "
 
@@ -583,50 +561,14 @@ vmap <leader>9 :diffput<cr>
 
 """" Pull Request helpers
 " Open Pull Request view
-noremap <leader><leader>p :call GitPullRequestView()<cr>
-noremap <leader>P :call GitPullRequestDiff()<cr>
+noremap <leader><leader>p :GlpullRequest<cr>
+noremap <leader>P :GlprDiff<cr>
 
-function! GitPullRequestView()
-  tabedit %
-  tabmove
-  wincmd v
-  wincmd l
-  call GitPullRequestDiff()
-endfunction
-
-function! GitPullRequestDiff()
-  let tmpfile = tempname()
-  silent exe '!git request-pull -p master $(git rev-parse --abbrev-ref HEAD) > '.tmpfile
-  silent exe '!echo "                                          " >> '.tmpfile
-  silent exe '!echo "All commits: =============================" >> '.tmpfile
-  silent exe '!echo "                                          " >> '.tmpfile
-  silent exe '!git log -p --stat --reverse $(git rev-parse --verify --quiet master)..$(git rev-parse --verify --quiet HEAD) >> '.tmpfile
-  redraw!
-  exe "e ".tmpfile
-  setlocal bufhidden=wipe filetype=diff
-endfunction
 "---
 
 """" Conflict resolution helpers
 " Open Conflict Resolution view for current file
-noremap <leader><leader>r :call GitConflictView()<cr>
-
-function! GitConflictView()
-  tabedit %
-  tabmove
-  exe "Gdiff"
-  only
-  windo diffoff
-  split
-  vsplit
-  buffer //2
-  wincmd l
-  buffer //3
-  wincmd j
-  exe "normal! gg"
-  exe "/HEAD"
-endfunction
-
+noremap <leader><leader>r :GlresolveConflict <cr>
 "---
 "
 
