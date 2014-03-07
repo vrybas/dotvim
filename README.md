@@ -107,7 +107,7 @@ longer supported. But still contains most of the features described here.
 
 * `,gb` - Git Blame
 * `,gs` - Git Status
-* `W` - Open git commit or blob in the browser (:Gbrowse)
+* `,gw` - Open git commit or blob in the browser (:Gbrowse)
 
 ##### Git Commit
 * `,,s` - Open `:Glstatus` in new tab (current file, unstaged changes,
@@ -125,7 +125,7 @@ longer supported. But still contains most of the features described here.
 * `,,d` - Run :Gdiff (current file diff view between staged and unstaged version)
 * `,0`  - `:diffget`
 * `,9`  - `:diffput`
-* `,,o` - Close Diff view and show staged changes
+* `,,do` - Close Diff view
 
 ##### Git Conflict Resolution
 * `,,r` - Open `:GlresolveConflict` for current file.
@@ -135,7 +135,7 @@ version, and "both modified" version of the file.
 ##### Git Pull Request
 * `,,p` - Open `:GlpullRequest` in new tab (git request-pull diff
   between current branch and master)
-* `o`   - Open file, containing chunk of code under cursor, with
+* `,,o`   - Open file, containing chunk of code under cursor, with
   `:Gblame` window.
 
 ### Open Ruby/Rails documentation

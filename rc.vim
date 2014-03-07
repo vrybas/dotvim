@@ -530,7 +530,7 @@ nmap <leader>zz :call ToggleFold()<CR>
 " fugitive shortcuts
 noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
-noremap W :Gbrowse<CR>
+noremap <leader>gw :Gbrowse<CR>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
@@ -545,7 +545,7 @@ noremap <leader>C :Git! diff --cached<cr>
 noremap <leader><leader>d :Gdiff<CR>
 
 " Close Diff view and return to a file
-noremap <leader><leader>o :call GdiffOff()<cr>
+noremap <leader><leader>do :call GdiffOff()<cr>
 
 function! GdiffOff()
   windo diffoff
