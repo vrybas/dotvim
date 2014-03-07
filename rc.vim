@@ -535,8 +535,8 @@ noremap W :Gbrowse<CR>
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
 noremap <leader><leader>s :Glstatus<cr>
-noremap <leader>D :GldiffUnstaged<cr>
-noremap <leader>C :GldiffStaged<cr>
+noremap <leader>D :Git! diff<cr>
+noremap <leader>C :Git! diff --cached<cr>
 "---
 "
 
