@@ -92,19 +92,19 @@ longer supported. But still contains most of the features described here.
 * `,x` - Close split
 * `Ctrl-h/j/k/l` - Switch to left/down/up/right
 
-### Git
-* `,D` - Git Diff (show unstaged changes)
-* `,C` - Git Diff (show staged changes)
-* `,P` - Git request-pull patch output in new buffer (from current
-  branch to master)
-
 ### Fugitive and Flayouts
 [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
 
 [Flayouts.vim - layouts for Fugitive](http://github.com/vrybas/vim-flayouts)
 
+* `,D` - Git Diff (show unstaged changes)
+* `,C` - Git Diff (show staged changes)
+* `,P` - Git request-pull patch output in new buffer (from current
+  branch to master)
+
 * `,gb` - Git Blame
 * `,gs` - Git Status
+* `,gh` - Show last 100 commit on current file in vertical split
 * `,gw` - Open git commit or blob in the browser (:Gbrowse)
 
 ##### Git Commit

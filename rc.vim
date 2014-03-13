@@ -531,6 +531,7 @@ nmap <leader>zz :call ToggleFold()<CR>
 noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gw :Gbrowse<CR>
+noremap <leader>gh <c-w>v<c-w>l:Git! log -p --stat -100 %<cr>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
