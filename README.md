@@ -93,8 +93,6 @@ longer supported. But still contains most of the features described here.
 * `Ctrl-h/j/k/l` - Switch to left/down/up/right
 
 ### Git
-* `gh` - Jump to next git change
-* `gH` - Jump to previous git change
 * `,D` - Git Diff (show unstaged changes)
 * `,C` - Git Diff (show staged changes)
 * `,P` - Git request-pull patch output in new buffer (from current
