@@ -37,6 +37,7 @@ longer supported. But still contains most of the features described here.
    * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround](http://github.com/tpope/vim-surround)
    * **Smart text selection** → [Smartpairs](https://github.com/gorkunov/smartpairs.vim)
    * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch)
+   * **List of recently used files** → [MRU](http://github.com/yegappan/mru)
    * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)
 
 =====
