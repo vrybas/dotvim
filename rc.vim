@@ -524,8 +524,6 @@ nnoremap <Leader>za :loadview<cr>
 nmap <silent><Leader>zs <Esc>zRzz
 " Unfold everything
 
-nmap <silent><leader><leader>i :CheckSyntax<CR>
-
 nmap <leader>zz :call ToggleFold()<CR>
 
 " fugitive shortcuts
@@ -660,6 +658,10 @@ let g:ctrlp_custom_ignore = '\v[\/]doc[\/]|\.(git|rsync_cache|idea|)$'
 
 "Bufexplorer
 let g:bufExplorerFindActive=0
+
+" CheckSyntax
+let g:checksyntax_auto = 0
+nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 " CODE COMPLETION BLOCK
 set completeopt+=longest
