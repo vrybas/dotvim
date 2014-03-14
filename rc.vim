@@ -526,11 +526,12 @@ nmap <silent><Leader>zs <Esc>zRzz
 
 nmap <leader>zz :call ToggleFold()<CR>
 
-" fugitive shortcuts
+" Fugitive & Flayouts shortcuts
 noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gw :Gbrowse<CR>
-noremap <leader>gh <c-w>v<c-w>l:Git! log -p --stat -100 %<cr>
+noremap <leader>gh :GllogPatch<cr>
+noremap <leader>L  :GllogPatchDiff<cr>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus

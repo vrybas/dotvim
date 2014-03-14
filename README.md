@@ -103,6 +103,7 @@ longer supported. But still contains most of the features described here.
 * `,C` - Git Diff (show staged changes)
 * `,P` - Git request-pull patch output in new buffer (from current
   branch to master)
+* `,L` - Git log -p of current file
 
 * `,gb` - Git Blame
 * `,gs` - Git Status
