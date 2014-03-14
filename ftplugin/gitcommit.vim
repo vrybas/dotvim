@@ -2,10 +2,6 @@
 noremap <buffer> <leader>gm O<esc>:r !git --no-pager log -1 --pretty=\%s<cr>ggdd
 noremap <buffer> <leader>go O<esc>:r !git --no-pager log -15 --pretty=\%s<cr>ggdd
 
-" Create commit with entered message, close diff, close current tab
-noremap <buffer> <leader><leader>s :Glcommit<cr>
-"---
-"
 " Undo commit creation, close diff, close current tab
 noremap <buffer> <leader>u :Glabort<cr>
 "---
