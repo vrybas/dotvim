@@ -491,8 +491,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-
-
+" Quit Vim and close all windows without saving
+nnoremap Q :qa!<cr>
 
 " Use <Tab> to move between brackets
 "

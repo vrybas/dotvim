@@ -70,6 +70,7 @@ longer supported. But still contains most of the features described here.
 * `,e` - "Open File" dialog
 * `,f` - Show opened files
 * `,d` - Open project Tree View
+* `Q`  - Quit Vim and close all windows without saving
 
 ### Tabs
 * `,t` - Open current buffer in new tab
