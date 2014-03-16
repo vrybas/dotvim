@@ -54,6 +54,7 @@
  Bundle 'jtratner/vim-flavored-markdown'
  Bundle 'duff/vim-bufonly'
  Bundle 'yegappan/mru'
+ Bundle 'int3/vim-extradite'
 
 
  filetype plugin indent on     " required!
@@ -530,8 +531,14 @@ nmap <leader>zz :call ToggleFold()<CR>
 noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gw :Gbrowse<CR>
-noremap <leader>gh :GllogPatch<cr>
-noremap <leader>L  :GllogPatchDiff<cr>
+
+noremap <leader>gh :GllogPatchTab<cr>
+noremap <leader>H  :GllogPatch<cr>
+
+noremap <leader><leader>p :GlpullRequestSummaryTab<cr>
+noremap <leader><leader>pp :GlpullRequestCommitsTab<cr>
+
+noremap <leader><leader>r :GlresolveConflict<cr>
 
 """" Commit helpers
 " Open current buffer in new tab, show git diff in vertical split, open :Gstatus
@@ -558,20 +565,6 @@ endfunction
 vmap <leader>0 :diffget<cr>
 vmap <leader>9 :diffput<cr>
 "---
-
-
-"""" Pull Request helpers
-" Open Pull Request view
-noremap <leader><leader>p :GlpullRequest<cr>
-noremap <leader>P :GlprDiff<cr>
-
-"---
-
-"""" Conflict resolution helpers
-" Open Conflict Resolution view for current file
-noremap <leader><leader>r :GlresolveConflict <cr>
-"---
-"
 
 nnoremap ; :
 " Handy mapping for quick access to CLI

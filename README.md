@@ -99,12 +99,6 @@ longer supported. But still contains most of the features described here.
 
 [Flayouts.vim - layouts for Fugitive](http://github.com/vrybas/vim-flayouts)
 
-* `,D` - Git Diff (show unstaged changes)
-* `,C` - Git Diff (show staged changes)
-* `,P` - Git request-pull patch output in new buffer (from current
-  branch to master)
-* `,L` - Git log -p of current file
-
 * `,gb` - Git Blame
 * `,gs` - Git Status
 * `,gh` - Show last 100 commit on current file in vertical split
@@ -119,6 +113,11 @@ longer supported. But still contains most of the features described here.
   staged and unstaged changes as is)
 * `,gm` - Read last commit message to the current buffer
 * `,go` - Read last 15 commit messages to the current buffer
+
+* `,D` - Git diff
+* `,C` - Git diff --cached
+* `,H` - Git log -p of current file (last 100 commits)
+
 
 ##### Git Diff View (opens from Commit View)
 [Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
