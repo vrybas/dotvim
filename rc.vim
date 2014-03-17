@@ -716,8 +716,6 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-"""" Delete hidden Fugitive buffers
-autocmd BufReadPost fugitive://* set bufhidden=delete
 "---
 
 
