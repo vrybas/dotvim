@@ -172,7 +172,7 @@ version, and "both modified" version of the file.
 * `Tab` - code completion (including tags and snippets, slow)
 * `Ctrl-p` - local code completion (opened files, faster)
 * `Ctrl-k` - expand snipped, selected from dropdown list (single snipped expanded with Tab)
-* `'j`  - Easymotion
+* `;w`  - Easymotion
 * `,m`  - Clear search highlighting
 * `,y`  - Toggle display trailing characters
 * `,,i` - Check syntax

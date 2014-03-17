@@ -569,8 +569,6 @@ vmap <leader>0 :diffget<cr>
 vmap <leader>9 :diffput<cr>
 "---
 
-nnoremap ; :
-" Handy mapping for quick access to CLI
 "*****************************************************************************"
 "
 " Plugin configurations
@@ -608,7 +606,7 @@ set grepprg=ack\ -a
 nnoremap <Leader>u :GundoToggle<CR>
 
 " Easymotion
-let g:EasyMotion_leader_key = "'"
+map ; <Plug>(easymotion-prefix)
 
 "ri.vim
 nnoremap  RI :call ri#OpenSearchPrompt(0)<cr> " horizontal split
