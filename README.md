@@ -106,8 +106,8 @@ longer supported. But still contains most of the features described here.
 * `,gw` - Open git commit or blob in the browser (:Gbrowse)
 
 ##### Git Commit
-* `,,s` - Open `:Glstatus` in new tab (current file, unstaged changes,
-  git status window).
+* `,<space>` - Open `:Glstatus` in new tab (current file, unstaged
+  changes, git status window).
 * `,,s` - (again) Save entered commit message(if any), make commit, close tab
   with `:Glstatus`.
 * `,u` - Close tab with `:Glstatus` without making a commit (keeping
