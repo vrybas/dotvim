@@ -136,7 +136,7 @@ version, and "both modified" version of the file.
 ##### Git Pull Request
 * `,,p` - Open `:GlpullRequest` in new tab (git request-pull diff
   between current branch and master)
-* `,,o`   - Open file, containing chunk of code under cursor, with
+* `<space>`   - Open file, containing chunk of code under cursor, with
   `:Gblame` window.
 
 ### Open Ruby/Rails documentation
