@@ -426,8 +426,11 @@ nmap <leader><leader>30 :b 30<cr>
 set pastetoggle=<F6>
 " Do not autoindent lines, when paste from OS buffer
 
-nmap <leader>t :sp<cr><C-w>T
 " Open current buffer in new tab
+nmap <leader>t :sp<cr><C-w>T
+
+" Close tab
+nmap <leader>w :tabclose<cr>
 
 " Open Tabs by number
 "
