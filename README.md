@@ -102,7 +102,8 @@ longer supported. But still contains most of the features described here.
 
 * `,gb` - Git Blame
 * `,gs` - Git Status
-* `,gh` - Show last 100 commit on current file in vertical split
+* `,gh` - Show last 200 commit of current file in new tab
+* `,,gh` - Show last 200 commit of all files in new tab
 * `,gw` - Open git commit or blob in the browser (:Gbrowse)
 
 ##### Git Commit
@@ -118,6 +119,7 @@ longer supported. But still contains most of the features described here.
 * `,D` - Git diff
 * `,C` - Git diff --cached
 * `,H` - Git log -p of current file (last 100 commits)
+* `,,H` - Git log -p (last 200 commits)
 
 
 ##### Git Diff View (opens from Commit View)

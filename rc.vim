@@ -535,8 +535,10 @@ noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gw :Gbrowse<CR>
 
-noremap <leader>gh :GllogPatchTab %<cr>
-noremap <leader>H  :GllogPatch %<cr>
+noremap <leader>gh :GllogPatchTab 200 %<cr>
+noremap <leader>H  :GllogPatch 200 %<cr>
+noremap <leader><leader>gh :GllogPatchTab 200<cr>
+noremap <leader><leader>H  :GllogPatch 200<cr>
 
 noremap <leader><leader>p :GlpullRequestSummaryTab<cr>
 noremap <leader><leader>pp :GlpullRequestCommitsTab<cr>
