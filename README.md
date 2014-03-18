@@ -78,7 +78,7 @@ longer supported. But still contains most of the features described here.
 * `,h/l` - Previous/Next tab
 * `,1..9` - Go to 1..9 tab
 * `,g` - Open class/function definition in new tab
-* `,w` - Close tab
+* `,W` - Close tab
 
 ### Buffers
 * `,,1..30` - Go to 1..30 buffer

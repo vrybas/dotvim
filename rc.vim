@@ -430,7 +430,7 @@ set pastetoggle=<F6>
 nmap <leader>t :sp<cr><C-w>T
 
 " Close tab
-nmap <leader>w :tabclose<cr>
+nmap <leader>W :tabclose<cr>
 
 " Open Tabs by number
 "
