@@ -120,6 +120,8 @@ longer supported. But still contains most of the features described here.
 * `,C` - Git diff --cached
 * `,H` - Git log -p of current file (last 100 commits)
 * `,,H` - Git log -p (last 200 commits)
+* `,N` - Jump to next commit (in diff mode)
+* `,P` - Jump to previous commit (in diff mode)
 
 
 ##### Git Diff View (opens from Commit View)
