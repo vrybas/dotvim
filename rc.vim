@@ -535,13 +535,24 @@ noremap <leader>gb :Gblame<CR>
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gw :Gbrowse<CR>
 
-noremap <leader>gh :GllogPatchTab 200 %<cr>
+noremap <leader>gh :GllogPatchTab 200<cr>
 noremap <leader>H  :GllogPatch 200 %<cr>
-noremap <leader><leader>gh :GllogPatchTab 200<cr>
+noremap <leader><leader>gh :GllogPatchTab 200 %<cr>
 noremap <leader><leader>H  :GllogPatch 200<cr>
 
-noremap <leader><leader>p :GlpullRequestSummaryTab<cr>
-noremap <leader><leader>pp :GlpullRequestCommitsTab<cr>
+noremap <leader>gp :GlpullRequestSummaryTab<cr>
+noremap <leader>gc :GlpullRequestCommitsTab<cr>
+
+noremap <leader><leader>gp :call GlpullRequestSummaryTabOrigin()<cr>
+noremap <leader><leader>gc :call GlpullRequestCommitsTabOrigin()<cr>
+
+function! GlpullRequestSummaryTabOrigin()
+  execute 'GlpullRequestSummaryTab origin/'.fugitive#head()
+endfunction
+
+function! GlpullRequestCommitsTabOrigin()
+  execute 'GlpullRequestCommitsTab origin/'.fugitive#head()
+endfunction
 
 noremap <leader><leader>r :GlresolveConflict<cr>
 

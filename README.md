@@ -102,9 +102,6 @@ longer supported. But still contains most of the features described here.
 
 * `,gb` - Git Blame
 * `,gs` - Git Status
-* `,gh` - Show last 200 commit of current file in new tab
-* `,,gh` - Show last 200 commit of all files in new tab
-* `,gw` - Open git commit or blob in the browser (:Gbrowse)
 
 ##### Git Commit
 * `,<space>` - Open `:Glstatus` in new tab (current file, unstaged
@@ -116,6 +113,15 @@ longer supported. But still contains most of the features described here.
 * `,gm` - Read last commit message to the current buffer
 * `,go` - Read last 15 commit messages to the current buffer
 
+##### Git Log View
+* `,gh`  - Show last 200 commit of all files in new tab
+* `,,gh` - Show last 200 commit of current file in new tab
+* `,gp`  - Show pull-request summary between current branch and base branch
+* `,gc`  - Show commits log between current branch and base branch
+* `,,gp` - Show pull-request summary between current branch and origin
+* `,,gc` - Show commits log between current branch and origin
+* `,gw`  - Open git commit or blob in the browser (:Gbrowse)
+
 * `,D` - Git diff
 * `,C` - Git diff --cached
 * `,H` - Git log -p of current file (last 100 commits)
@@ -123,6 +129,7 @@ longer supported. But still contains most of the features described here.
 * `,N` - Jump to next commit (in diff mode)
 * `,P` - Jump to previous commit (in diff mode)
 
+* `<space>`   - Open file, containing chunk of code under cursor (works in any diff)
 
 ##### Git Diff View (opens from Commit View)
 [Fugitive.vim - working with the git index](http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/)
@@ -136,12 +143,6 @@ longer supported. But still contains most of the features described here.
 * `,,r` - Open `:GlresolveConflict` for current file.
 Opens current file in new tab, shows HEAD version, conflicted MERGE
 version, and "both modified" version of the file.
-
-##### Git Pull Request
-* `,,p` - Open `:GlpullRequest` in new tab (git request-pull diff
-  between current branch and master)
-* `<space>`   - Open file, containing chunk of code under cursor, with
-  `:Gblame` window.
 
 ### Open Ruby/Rails documentation
 * `RR` - APIDock open Rails documentation for method under cursor
