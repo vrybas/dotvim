@@ -554,6 +554,16 @@ function! GlpullRequestCommitsTabOrigin()
   execute 'GlpullRequestCommitsTab origin/'.fugitive#head()
 endfunction
 
+command -nargs=* Gpcheckout call Gpcheckout(<f-args>)
+
+function! Gpcheckout(arg)
+  let cmd = 'git pcheckout '.a:arg
+  echom "Checking out ".a:arg.' ...'
+  call system(cmd)
+  execute 'GlpullRequestSummaryTab'
+  execute 'GlopenFromDiff'
+endfunction
+
 noremap <leader><leader>r :GlresolveConflict<cr>
 
 """" Commit helpers
