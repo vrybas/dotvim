@@ -31,7 +31,6 @@ longer supported. But still contains most of the features described here.
    * **Maximize/unmaximize active split** → [ZoomWin][25]
    * **Bulk lines commenting based on syntax** → [NERDCommenter][26]
    * **Auto-closing quotes, brackets etc.** → [DelimitMate][27]
-   * **Jump between quotes, brackets etc.** → [Matchit][28]
    * **Jump around code with keystrokes** → [Easymotion][29]
    * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround][30]
    * **Smart text selection** → [Smartpairs][31]
@@ -212,7 +211,6 @@ version, and "both modified" version of the file.
 [25]: http://github.com/vim-scripts/ZoomWin
 [26]: http://github.com/scrooloose/nerdcommenter
 [27]: http://github.com/vim-scripts/delimitMate.vim
-[28]: http://github.com/tsaleh/vim-matchit
 [29]: http://github.com/Lokaltog/vim-easymotion
 [30]: http://github.com/tpope/vim-surround
 [31]: https://github.com/gorkunov/smartpairs.vim

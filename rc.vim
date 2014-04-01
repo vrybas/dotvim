@@ -28,7 +28,6 @@
  Bundle 'tpope/vim-fugitive'
  Bundle 'vrybas/vim-flayouts'
  Bundle 'sjl/gundo.vim'
- Bundle 'tsaleh/vim-matchit'
  Bundle 'cfurrow/vim-l9'
  Bundle 'ervandew/supertab'
  Bundle 'duff/vim-scratch'
