@@ -8,7 +8,7 @@ longer supported. But still contains most of the features described here.
 
 ## Features ##
    * **Ruby on Rails projects support** → [VimRails][3]
-   * **Project Tree View** → [NERDTree][4]
+   * **Project Tree View** → [NERDTree][4] and [vim-vinegar][36]
    * **Project search with Ack** → [Ack.vim][5]
    * **Open Files switcher** → [BufExplorer][6]
    * **Popup Open File dialog with smart search** → [CtrlP][7]
@@ -220,3 +220,4 @@ version, and "both modified" version of the file.
 [33]: http://github.com/yegappan/mru
 [34]: http://github.com/altercation/vim-colors-solarized
 [35]: https://github.com/tpope/gem-ctags#troubleshooting
+[36]: http://github.com/tpope/vim-vinegar

@@ -55,6 +55,8 @@
  Bundle 'duff/vim-bufonly'
  Bundle 'yegappan/mru'
  Bundle 'int3/vim-extradite'
+ Bundle 'tpope/vim-vinegar'
+
 
 
  filetype plugin indent on     " required!
