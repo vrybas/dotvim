@@ -1,44 +1,43 @@
 ## My Vim for Ruby on Rails development
-![](http://f.cl.ly/items/1i2S0x1S060D3m2d2A3M/Screenshot_6_19_13_7_25_PM.png)
+![vim-window][1]
 
 #### Warning for MacVim users ####
 I've stopped using MacVim(mostly) and started using console Vim in Tmux.
-The lastest MacVim config extracted to the
-[**macvim**](https://github.com/vrybas/dotvim/tree/macvim) branch and no
+The lastest MacVim config extracted to the [**macvim**][2] branch and no
 longer supported. But still contains most of the features described here.
 
 ## Features ##
-   * **Ruby on Rails projects support** → [VimRails](http://github.com/tpope/vim-rails)
-   * **Project Tree View** → [NERDTree](http://github.com/scrooloose/nerdtree)
-   * **Project search with Ack** → [Ack.vim](http://github.com/mileszs/ack.vim)
-   * **Open Files switcher** → [BufExplorer](http://github.com/vim-scripts/bufexplorer.zip)
-   * **Popup Open File dialog with smart search** → [CtrlP](https://github.com/kien/ctrlp.vim)
-   * **Code completion on Tab** → [SuperTab](http://github.com/ervandew/supertab) and [NeoComplCache](http://github.com/Shougo/neocomplcache.vim)
-   * **Graphical tree-like undo/redo tool** → [Gundo](http://github.com/sjl/gundo.vim)
-   * **Incredible GIT support** → [Fugitive](http://github.com/tpope/vim-fugitive) and [Flayouts](http://github.com/vrybas/vim-flayouts)
-   * **Indication of added/modified/removed lines** → [Vim-GitGutter](https://github.com/airblade/vim-gitgutter)
-   * **Create/manage gists on Github** → [Gist](http://github.com/mattn/gist-vim)
-   * **Jump to class/method definition** → [Ctags](http://ctags.sourceforge.net)
-   * **Open online Ruby/Rails/Rspec documentation** from [APIDock](http://apidock.com)
-   * **Open ri documentation** → [Ri.vim](https://github.com/danchoi/ri.vim)
-   * **Syntax checking** → [Checksyntax.vim](https://github.com/tomtom/checksyntax_vim)
-   * **Bundler support** → [vim-bundler] (https://github.com/tpope/vim-bundler)
-   * **Rake support** → [vim-rake] (https://github.com/tpope/vim-rake)
-   * **Rbenv support** → [vim-rbenv] (https://github.com/tpope/vim-rbenv)
-   * **Tmux splits integration** → [vim-tmux-navigator] (https://github.com/christoomey/vim-tmux-navigator) | [help] (http://robots.thoughtbot.com/post/53022241323/seamlessly-navigate-vim-and-tmux-splits)
+   * **Ruby on Rails projects support** → [VimRails][3]
+   * **Project Tree View** → [NERDTree][4]
+   * **Project search with Ack** → [Ack.vim][5]
+   * **Open Files switcher** → [BufExplorer][6]
+   * **Popup Open File dialog with smart search** → [CtrlP][7]
+   * **Code completion on Tab** → [SuperTab][8] and [NeoComplCache][9]
+   * **Graphical tree-like undo/redo tool** → [Gundo][10]
+   * **Incredible GIT support** → [Fugitive][11] and [Flayouts][12]
+   * **Indication of added/modified/removed lines** → [Vim-GitGutter][13]
+   * **Create/manage gists on Github** → [Gist][14]
+   * **Jump to class/method definition** → [Ctags][15]
+   * **Open online Ruby/Rails/Rspec documentation** from [APIDock][16]
+   * **Open ri documentation** → [Ri.vim][17]
+   * **Syntax checking** → [Checksyntax.vim][18]
+   * **Bundler support** → [vim-bundler][19]
+   * **Rake support** → [vim-rake][20]
+   * **Rbenv support** → [vim-rbenv][21]
+   * **Tmux splits integration** → [vim-tmux-navigator][22] | [help][23]
 
 =====
-   * **Snippets** → [vim-snipmate](http://github.com/garbas/vim-snipmate)
-   * **Maximize/unmaximize active split** → [ZoomWin](http://github.com/vim-scripts/ZoomWin)
-   * **Bulk lines commenting based on syntax** → [NERDCommenter](http://github.com/scrooloose/nerdcommenter)
-   * **Auto-closing quotes, brackets etc.** → [DelimitMate](http://github.com/vim-scripts/delimitMate.vim)
-   * **Jump between quotes, brackets etc.** → [Matchit](http://github.com/tsaleh/vim-matchit)
-   * **Jump around code with keystrokes** → [Easymotion](http://github.com/Lokaltog/vim-easymotion)
-   * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround](http://github.com/tpope/vim-surround)
-   * **Smart text selection** → [Smartpairs](https://github.com/gorkunov/smartpairs.vim)
-   * **Open scratch buffer which is never saved** → [VimScratch](http://github.com/duff/vim-scratch)
-   * **List of recently used files** → [MRU](http://github.com/yegappan/mru)
-   * **Solarized theme** → [Solarized](http://github.com/altercation/vim-colors-solarized)
+   * **Snippets** → [vim-snipmate][24]
+   * **Maximize/unmaximize active split** → [ZoomWin][25]
+   * **Bulk lines commenting based on syntax** → [NERDCommenter][26]
+   * **Auto-closing quotes, brackets etc.** → [DelimitMate][27]
+   * **Jump between quotes, brackets etc.** → [Matchit][28]
+   * **Jump around code with keystrokes** → [Easymotion][29]
+   * **Surround selected text with any symbols and replace surroundings on-the-fly** → [Surround][30]
+   * **Smart text selection** → [Smartpairs][31]
+   * **Open scratch buffer which is never saved** → [VimScratch][32]
+   * **List of recently used files** → [MRU][33]
+   * **Solarized theme** → [Solarized][34]
 
 =====
    * **Hide everything, except selected text** (stay focused!)
@@ -60,7 +59,7 @@ longer supported. But still contains most of the features described here.
    5. brew install ack
    6. brew install ctags
    7. gem install gem-ctags
-   8. gem ctags (see [troubleshooting](https://github.com/tpope/gem-ctags#troubleshooting))
+   8. gem ctags (see [troubleshooting][35]
    9. mvim /path/to/project
    10. :e any_file_in_path
    11. :Rtags
@@ -185,3 +184,39 @@ version, and "both modified" version of the file.
 * `F6`  - Do not autoindent lines, when paste from OS buffer (when pasting big code block)
 * `,u`  - Toggle open graphical tree-based undo
 
+
+[1]: http://f.cl.ly/items/1i2S0x1S060D3m2d2A3M/Screenshot_6_19_13_7_25_PM.png
+[2]: https://github.com/vrybas/dotvim/tree/macvim
+[3]: http://github.com/tpope/vim-rails
+[4]: http://github.com/scrooloose/nerdtree
+[5]: http://github.com/mileszs/ack.vim
+[6]: http://github.com/vim-scripts/bufexplorer.zip
+[7]: https://github.com/kien/ctrlp.vim
+[8]: http://github.com/ervandew/supertab
+[9]: http://github.com/Shougo/neocomplcache.vim
+[10]: http://github.com/sjl/gundo.vim
+[11]: http://github.com/tpope/vim-fugitive
+[12]: http://github.com/vrybas/vim-flayouts
+[13]: https://github.com/airblade/vim-gitgutter
+[14]: http://github.com/mattn/gist-vim
+[15]: http://ctags.sourceforge.net
+[16]: http://apidock.com
+[17]: https://github.com/danchoi/ri.vim
+[18]: https://github.com/tomtom/checksyntax_vim
+[19]: https://github.com/tpope/vim-bundler
+[20]: https://github.com/tpope/vim-rake
+[21]: https://github.com/tpope/vim-rbenv
+[22]: https://github.com/christoomey/vim-tmux-navigator
+[23]: http://robots.thoughtbot.com/post/53022241323/seamlessly-navigate-vim-and-tmux-splits
+[24]: http://github.com/garbas/vim-snipmate
+[25]: http://github.com/vim-scripts/ZoomWin
+[26]: http://github.com/scrooloose/nerdcommenter
+[27]: http://github.com/vim-scripts/delimitMate.vim
+[28]: http://github.com/tsaleh/vim-matchit
+[29]: http://github.com/Lokaltog/vim-easymotion
+[30]: http://github.com/tpope/vim-surround
+[31]: https://github.com/gorkunov/smartpairs.vim
+[32]: http://github.com/duff/vim-scratch
+[33]: http://github.com/yegappan/mru
+[34]: http://github.com/altercation/vim-colors-solarized
+[35]: https://github.com/tpope/gem-ctags#troubleshooting
