@@ -572,6 +572,7 @@ noremap <leader><leader>r :GlresolveConflict<cr>
 nnoremap <leader><Space> :Glc<CR>
 noremap <leader>D :Git! diff<cr>
 noremap <leader>C :Git! diff --cached<cr>
+noremap <leader>G :Git! pget patch
 "---
 "
 

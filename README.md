@@ -126,6 +126,7 @@ longer supported. But still contains most of the features described here.
 * `,,H` - Git log -p (last 200 commits)
 * `,N` - Jump to next commit (in diff mode)
 * `,P` - Jump to previous commit (in diff mode)
+* `,G` - Get diff or patch of PR or Commit, specified by URL (via [git-pget][37])
 
 * `<space>`   - Open file, containing chunk of code under cursor (works in any diff)
 
@@ -219,3 +220,4 @@ version, and "both modified" version of the file.
 [34]: http://github.com/altercation/vim-colors-solarized
 [35]: https://github.com/tpope/gem-ctags#troubleshooting
 [36]: http://github.com/tpope/vim-vinegar
+[37]: http://github.com/vrybas/dotfiles/blob/master/bin/git-pget
