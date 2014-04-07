@@ -631,7 +631,7 @@ set grepprg=ack\ -a
 nnoremap <Leader>u :GundoToggle<CR>
 
 " Easymotion
-map ; <Plug>(easymotion-prefix)
+map f <Plug>(easymotion-prefix)
 
 "ri.vim
 nnoremap  RI :call ri#OpenSearchPrompt(0)<cr> " horizontal split
