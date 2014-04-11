@@ -55,7 +55,7 @@
  Bundle 'yegappan/mru'
  Bundle 'int3/vim-extradite'
  Bundle 'tpope/vim-vinegar'
-
+ Bundle 'tpope/vim-eunuch'
 
 
  filetype plugin indent on     " required!
