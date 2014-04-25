@@ -29,7 +29,6 @@
  Bundle 'vrybas/vim-flayouts'
  Bundle 'sjl/gundo.vim'
  Bundle 'cfurrow/vim-l9'
- Bundle 'ervandew/supertab'
  Bundle 'duff/vim-scratch'
  Bundle 'tpope/vim-surround'
  Bundle 'vim-scripts/ZoomWin'
@@ -686,13 +685,6 @@ nmap <silent><leader><leader>i :CheckSyntax<CR>
 " CODE COMPLETION BLOCK
 set completeopt+=longest
 
-" For code completion with a drop down menu
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCompletionContexts = ['s:ContextDiscover','s:ContextText' ]
-let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-n>"]
-let g:SuperTabCrMapping = 1
-
 let g:rubycomplete_buffer_loading = 1
 let g:rubes_in_global = 1
 let g:rubycomplete_rails = 1
@@ -700,14 +692,6 @@ let g:rubycomplete_rails = 1
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 50
 let g:neocomplcache_disable_auto_complete = 1
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
 
 " Expand selected NeoSnippet (when more than one in list)
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
