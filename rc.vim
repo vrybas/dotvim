@@ -613,12 +613,6 @@ endf
 let NERDTreeShowHidden=1
 nmap <silent><leader>d :call NERDTreeToggleWithFind()<CR>
 
-"PeepOpen"
-if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
-  map <D-/> <Plug>PeepOpen
-end
-
 """ Vim-Ruby
 let ruby_no_expensive = 1
 let g:rails_ctags_arguments='--exclude=.rsync*'
