@@ -674,6 +674,7 @@ let g:bufExplorerFindActive=0
 
 " CheckSyntax
 let g:checksyntax_auto = 0
+let g:checksyntax#async_runner = ''
 nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 " CODE COMPLETION BLOCK
