@@ -55,7 +55,7 @@
  Bundle 'int3/vim-extradite'
  Bundle 'tpope/vim-vinegar'
  Bundle 'tpope/vim-eunuch'
-
+ Bundle 't9md/vim-choosewin'
 
  filetype plugin indent on     " required!
  "
@@ -676,6 +676,9 @@ let g:bufExplorerFindActive=0
 let g:checksyntax_auto = 0
 let g:checksyntax#async_runner = ''
 nmap <silent><leader><leader>i :CheckSyntax<CR>
+
+" ChooseWin
+nmap  M  <Plug>(choosewin)
 
 " CODE COMPLETION BLOCK
 set completeopt+=longest
