@@ -611,6 +611,8 @@ endf
 
 """ NERDTree
 let NERDTreeShowHidden=1
+let NERDTreeMapJumpPrevSibling='none'
+let NERDTreeMapJumpNextSibling='none'
 nmap <silent><leader>d :call NERDTreeToggleWithFind()<CR>
 
 """ Vim-Ruby
