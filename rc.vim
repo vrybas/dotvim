@@ -367,6 +367,14 @@ function! WrapColumn(value)
   setlocal fo=aw2tq
 endfunction
 
+" Opens tmp file for refactoring
+"
+command Refactor               call Refactor()
+function! Refactor()
+    let filename = 'tmp/refactor/'.fnamemodify(bufname('%'), ":t")
+    execute 'w! '.filename
+    execute 'e '.filename
+endfunction
 
 
 "*****************************************************************************"
