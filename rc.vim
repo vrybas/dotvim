@@ -371,9 +371,9 @@ endfunction
 "
 command Refactor               call Refactor()
 function! Refactor()
-    let filename = 'tmp/refactor/'.fnamemodify(bufname('%'), ":t")
-    execute 'w! '.filename
-    execute 'e '.filename
+    let tmpfile = tempname()
+    execute 'r !cat % > '.tmpfile
+    execute 'e '.tmpfile
 endfunction
 
 
