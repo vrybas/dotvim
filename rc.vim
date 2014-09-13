@@ -544,9 +544,9 @@ noremap <leader>gs :Gstatus<CR>
 noremap <leader>gw :Gbrowse<CR>
 
 noremap <leader>gh :GllogPatchTab 200<cr>
-noremap <leader>H  :GllogPatch 200 %<cr>
+noremap <leader>h  :GllogPatch 200 %<cr>
 noremap <leader><leader>gh :GllogPatchTab 200 %<cr>
-noremap <leader><leader>H  :GllogPatch 200<cr>
+noremap <leader><leader>h  :GllogPatch 200<cr>
 
 noremap <leader>gp :GlpullRequestSummaryTab<cr>
 noremap <leader>gc :GlpullRequestCommitsTab<cr>
@@ -739,6 +739,7 @@ autocmd BufReadPost *
      \ endif
 
 "---
+"
 
 
 " Check if file was edited outside of Vim
