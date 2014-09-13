@@ -317,10 +317,10 @@ function! BgSwitch(bg)
   " Folds colors
   highlight clear Folded
   highlight Folded ctermfg=246
-  highlight ColorColumn ctermbg=7
+  highlight ColorColumn ctermbg=0
 
   " Colorcolumn settings
-    execute "set colorcolumn=" . join(range(81,335), ',')
+    execute "set colorcolumn=" . join(range(81,82), ',')
 endfunction
 
 
@@ -726,7 +726,11 @@ autocmd BufEnter * if &filetype == "" | set ft=ruby | endif
 
 " Switching clolorscheme events
 "
-au VimEnter * silent! call BgSwitch('light')
+if has("gui_running") " =======================================================
+  au VimEnter * silent! call BgSwitch('light')
+else
+  au VimEnter * silent! call BgSwitch('dark')
+endif " =======================================================================
 
 "Restore custor position on file open
 autocmd BufReadPost *
