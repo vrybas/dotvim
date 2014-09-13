@@ -49,10 +49,10 @@ vmap <silent><leader>н :j<cr>vg_y
 
 " Complete a task
 nmap T VT
-vmap T :s/\[ \]/[x]/<cr>:s/#/ /<cr>:noh<cr>
+vmap T :s/\[ \]/[x]/<cr>:s/*/ /<cr>:noh<cr>
 
 " Mark task as current
-nmap t 0r#
+nmap t 0r*
 
 
 " Spell checking
