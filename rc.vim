@@ -371,7 +371,7 @@ endfunction
 "
 command Refactor               call Refactor()
 function! Refactor()
-    let tmpfile = tempname()
+    let tmpfile = tempname().fnamemodify(bufname('%'), ":t")
     execute 'r !cat % > '.tmpfile
     execute 'e '.tmpfile
 endfunction
