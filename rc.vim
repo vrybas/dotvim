@@ -56,6 +56,8 @@
  Bundle 'tpope/vim-vinegar'
  Bundle 'tpope/vim-eunuch'
  Bundle 't9md/vim-choosewin'
+ Bundle 'fousa/vim-flog'
+ Bundle 'rainerborene/vim-reek'
 
  filetype plugin indent on     " required!
  "
@@ -690,6 +692,10 @@ nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 " ChooseWin
 nmap  M  <Plug>(choosewin)
+
+" Reek
+let g:reek_always_show = 0
+let g:reek_on_loading = 0
 
 " CODE COMPLETION BLOCK
 set completeopt+=longest
