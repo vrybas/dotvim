@@ -12,6 +12,7 @@
 
  " let Vundle manage Vundle
  " required!
+
  Bundle 'gmarik/vundle'
 
  " Bundles :
@@ -37,7 +38,6 @@
  Bundle 'mattn/webapi-vim'
  Bundle 'mattn/gist-vim'
  Bundle 'tomtom/checksyntax_vim'
- Bundle 'airblade/vim-gitgutter'
  Bundle 'kien/ctrlp.vim.git'
  Bundle 'tpope/vim-bundler.git'
  Bundle 'tpope/vim-rake.git'
@@ -56,8 +56,9 @@
  Bundle 'tpope/vim-vinegar'
  Bundle 'tpope/vim-eunuch'
  Bundle 't9md/vim-choosewin'
- Bundle 'fousa/vim-flog'
+ Bundle 'vrybas/vim-flog'
  Bundle 'rainerborene/vim-reek'
+ "Bundle 'airblade/vim-gitgutter'
 
  filetype plugin indent on     " required!
  "
@@ -310,6 +311,10 @@ function! BgSwitch(bg)
   highlight GitGutterAdd          guifg=#009900 guibg=NONE ctermfg=2 ctermbg=NONE
   highlight GitGutterChange       guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
   highlight GitGutterDelete       guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
+
+  highlight SignLowComplexity     guifg=#009900 guibg=NONE ctermfg=2 ctermbg=NONE
+  highlight SignMediumComplexity  guifg=#bbbb00 guibg=NONE ctermfg=3 ctermbg=NONE
+  highlight SignHighComplexity    guifg=#ff2222 guibg=NONE ctermfg=1 ctermbg=NONE
   highlight default link GitGutterChangeDelete GitGutterChange
 
   " EasyMotion colors reset
@@ -348,7 +353,7 @@ function! Save()
     call RemoveSpaces()
     execute 'w!'
     execute 'mkview'
-    execute 'GitGutter'
+    "execute 'GitGutter'
 endfunction
 
 
@@ -376,6 +381,20 @@ function! Refactor()
     let tmpfile = tempname().fnamemodify(bufname('%'), ":t")
     execute 'r !cat % > '.tmpfile
     execute 'e '.tmpfile
+endfunction
+
+function! RunFlog()
+  let metrics = system("flog " . expand("%:p"))
+  let loclist = []
+
+  for line in split(metrics, '\n')
+    let err = line
+    let lnum = 1
+    call add(loclist, { 'bufnr': bufnr('%'), 'lnum': lnum, 'text': err })
+  endfor
+
+  call setloclist(0, loclist)
+  lopen
 endfunction
 
 
@@ -692,6 +711,14 @@ nmap <silent><leader><leader>i :CheckSyntax<CR>
 
 " ChooseWin
 nmap  M  <Plug>(choosewin)
+
+" Flog
+let g:flog_enable = 0
+let g:flog_medium_limit = 15
+let g:flog_high_limit   = 25
+let g:flog_hide_low     = 1
+let g:flog_hide_medium  = 0
+nmap <silent><leader><leader>c :call ShowComplexity()<CR>
 
 " Reek
 let g:reek_always_show = 0
