@@ -403,20 +403,35 @@ endfunction
 
 command -nargs=* Crclass   call CreateClass(<f-args>)
 command -nargs=* Crmodule  call CreateModule(<f-args>)
+command          Crrspec   call CreateRspec()
 
 function! CreateClass(...)
-  call CreateEntity('c', a:1)
+  call CreateEntity('class', a:1)
 endfunction
 
 function! CreateModule(...)
-  call CreateEntity('m', a:1)
+  call CreateEntity('module', a:1)
+endfunction
+
+function! CreateRspec()
+  call CreateEntity('rspec')
 endfunction
 
 function! CreateEntity(...)
-  let dirname = expand('%:p:h').'/'.expand('%:r')
   let type_of_extraction = a:1
-  let camel_case_name = a:2
-  let underscore_name = substitute(a:2,'\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)','\l\1_\l\2',' g')
+  let dirname = expand('%:p:h')
+
+  if type_of_extraction == 'rspec'
+    let dirname = substitute(dirname, '/app/','/spec/','g')
+    let underscore_name = expand('%:t:r').'_spec'
+    let camel_case_name = substitute(underscore_name,'\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)','\u\1\2','g')
+  else
+    let dirname = dirname.'/'.expand('%:r')
+    let camel_case_name = a:2
+    let lower_case_name = substitute(camel_case_name,'.*','\L&','g')
+    let underscore_name = substitute(lower_case_name,'\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)','\l\1_\l\2','g')
+  endif
+
   let filename = underscore_name.'.rb'
   let fullpath = dirname.'/'.filename
 
@@ -430,7 +445,7 @@ function! CreateEntity(...)
     return
   endif
 
-  if type_of_extraction == 'm'
+  if type_of_extraction == 'module'
     let first_line = 'module '.camel_case_name
     let l2         = '  class << self'
     let l3         = '    def call()'
@@ -444,7 +459,8 @@ function! CreateEntity(...)
     call setline(4, l4)
     call setline(5, l5)
     call setline(6, last_line)
-  elseif type_of_extraction == 'c'
+
+  elseif type_of_extraction == 'class'
     let first_line = 'class '.camel_case_name
     let l2         = '  attr_reader :foo'
     let l3         = ''
@@ -474,6 +490,19 @@ function! CreateEntity(...)
     call setline(12, l12)
     call setline(13, l13)
     call setline(14, last_line)
+
+  elseif type_of_extraction == 'rspec'
+    let first_line = 'describe '.camel_case_name
+    let l2         = '  describe "#method"'
+    let l3         = '    it "works"'
+    let l4         = '  end'
+    let last_line  = 'end'
+
+    call setline(1, first_line)
+    call setline(2,  l2)
+    call setline(3,  l3)
+    call setline(4,  l4)
+    call setline(5, last_line)
   endif
 endfunction
 
