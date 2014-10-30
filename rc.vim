@@ -402,7 +402,7 @@ function! RunFlog()
 endfunction
 
 command -nargs=* Oclass    call OpenCreateClass(<f-args>)
-command -nargs=* Ormodule  call OpenCreateModule(<f-args>)
+command -nargs=* Omodule  call OpenCreateModule(<f-args>)
 command          Orspec    call OpenCreateRspec()
 
 function! OpenCreateClass(...)
