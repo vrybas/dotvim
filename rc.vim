@@ -426,7 +426,7 @@ function! CreateEntity(...)
     let underscore_name = expand('%:t:r').'_spec'
     let camel_case_name = substitute(underscore_name,'\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)','\u\1\2','g')
   else
-    let dirname = dirname.'/'.expand('%:r')
+    let dirname = dirname.'/'.expand('%:t:r')
     let camel_case_name = a:2
     let lower_case_name = substitute(camel_case_name,'.*','\L&','g')
     let underscore_name = substitute(lower_case_name,'\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)','\l\1_\l\2','g')
