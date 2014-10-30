@@ -423,8 +423,9 @@ function! OpenCreateEntity(...)
 
   if type_of_extraction == 'rspec'
     let dirname = substitute(dirname, '/app/','/spec/','g')
-    let underscore_name = expand('%:t:r').'_spec'
-    let camel_case_name = substitute(underscore_name,'\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)','\u\1\2','g')
+    let file_name_no_ext = expand('%:t:r')
+    let camel_case_name  = substitute(file_name_no_ext,'\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)','\u\1\2','g')
+    let underscore_name  = expand('%:t:r').'_spec'
   else
     let dirname = dirname.'/'.expand('%:t:r')
     let camel_case_name = a:2
