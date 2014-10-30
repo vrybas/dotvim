@@ -19,7 +19,7 @@
  "
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'tpope/vim-rails'
- Bundle 'danchoi/ri.vim'
+ "Bundle 'danchoi/ri.vim'
  Bundle 'scrooloose/nerdtree'
  Bundle 'scrooloose/nerdcommenter'
  Bundle 'mileszs/ack.vim'
@@ -29,15 +29,16 @@
  Bundle 'tpope/vim-fugitive'
  Bundle 'vrybas/vim-flayouts'
  Bundle 'sjl/gundo.vim'
- Bundle 'cfurrow/vim-l9'
- Bundle 'duff/vim-scratch'
+ "Bundle 'cfurrow/vim-l9'
+ "Bundle 'duff/vim-scratch'
  Bundle 'tpope/vim-surround'
  Bundle 'vim-scripts/ZoomWin'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'gorkunov/smartpairs.vim'
- Bundle 'mattn/webapi-vim'
- Bundle 'mattn/gist-vim'
- Bundle 'tomtom/checksyntax_vim'
+ "Bundle 'mattn/webapi-vim'
+ "Bundle 'mattn/gist-vim'
+ "Bundle 'tomtom/checksyntax_vim'
+ Bundle 'scrooloose/syntastic'
  Bundle 'kien/ctrlp.vim.git'
  Bundle 'tpope/vim-bundler.git'
  Bundle 'tpope/vim-rake.git'
@@ -50,15 +51,15 @@
  Bundle "garbas/vim-snipmate"
  Bundle 'Shougo/neosnippet'
  Bundle 'jtratner/vim-flavored-markdown'
- Bundle 'duff/vim-bufonly'
+ "Bundle 'duff/vim-bufonly'
  Bundle 'yegappan/mru'
- Bundle 'int3/vim-extradite'
+ "Bundle 'int3/vim-extradite'
  Bundle 'tpope/vim-vinegar'
  Bundle 'tpope/vim-eunuch'
- Bundle 't9md/vim-choosewin'
+ "Bundle 't9md/vim-choosewin'
  Bundle 'vrybas/vim-flog'
  Bundle 'rainerborene/vim-reek'
- "Bundle 'airblade/vim-gitgutter'
+ Bundle 'airblade/vim-gitgutter'
 
  filetype plugin indent on     " required!
  "
@@ -353,7 +354,7 @@ function! Save()
     call RemoveSpaces()
     execute 'w!'
     execute 'mkview'
-    "execute 'GitGutter'
+    execute 'GitGutter'
 endfunction
 
 
@@ -400,6 +401,81 @@ function! RunFlog()
   lopen
 endfunction
 
+command -nargs=* Crclass   call CreateClass(<f-args>)
+command -nargs=* Crmodule  call CreateModule(<f-args>)
+
+function! CreateClass(...)
+  call CreateEntity('c', a:1)
+endfunction
+
+function! CreateModule(...)
+  call CreateEntity('m', a:1)
+endfunction
+
+function! CreateEntity(...)
+  let dirname = expand('%:p:h').'/'.expand('%:r')
+  let type_of_extraction = a:1
+  let camel_case_name = a:2
+  let underscore_name = substitute(a:2,'\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)','\l\1_\l\2',' g')
+  let filename = underscore_name.'.rb'
+  let fullpath = dirname.'/'.filename
+
+  if !isdirectory(expand(dirname))|call mkdir(expand(dirname), "p", 0700)|endif
+
+  wincmd v
+  wincmd l
+  silent exe "e ".fullpath
+
+  if filereadable(expand(fullpath))
+    return
+  endif
+
+  if type_of_extraction == 'm'
+    let first_line = 'module '.camel_case_name
+    let l2         = '  class << self'
+    let l3         = '    def call()'
+    let l4         = '    end'
+    let l5         = '  end'
+    let last_line  = 'end'
+
+    call setline(1, first_line)
+    call setline(2, l2)
+    call setline(3, l3)
+    call setline(4, l4)
+    call setline(5, l5)
+    call setline(6, last_line)
+  elseif type_of_extraction == 'c'
+    let first_line = 'class '.camel_case_name
+    let l2         = '  attr_reader :foo'
+    let l3         = ''
+    let l4         = '  def self.perform(foo)'
+    let l5         = '    new(foo).perform'
+    let l6         = '  end'
+    let l7         = ''
+    let l8         = '  def initialize(foo)'
+    let l9         = '    @foo = foo'
+    let l10        = '  end'
+    let l11        = ''
+    let l12        = '  def perform(foo)'
+    let l13        = '  end'
+    let last_line  = 'end'
+
+    call setline(1, first_line)
+    call setline(2,  l2)
+    call setline(3,  l3)
+    call setline(4,  l4)
+    call setline(5,  l5)
+    call setline(6,  l6)
+    call setline(7,  l7)
+    call setline(8,  l8)
+    call setline(9,  l9)
+    call setline(10, l10)
+    call setline(11, l11)
+    call setline(12, l12)
+    call setline(13, l13)
+    call setline(14, last_line)
+  endif
+endfunction
 
 "*****************************************************************************"
 "
@@ -696,7 +772,7 @@ let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 
 " CtrlP.vim
-let g:ctrlp_map = ',e'
+let g:ctrlp_map = ',,e'
 let g:ctrlp_regexp = 0
 let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_tabpage_position = 'al'
@@ -707,10 +783,8 @@ let g:ctrlp_by_filename = 1
 "Bufexplorer
 let g:bufExplorerFindActive=0
 
-" CheckSyntax
-let g:checksyntax_auto = 0
-let g:checksyntax#async_runner = ''
-nmap <silent><leader><leader>i :CheckSyntax<CR>
+" Syntastic
+nmap <silent><leader>e :Errors<CR>
 
 " ChooseWin
 nmap  M  <Plug>(choosewin)
@@ -780,7 +854,7 @@ autocmd BufReadPost *
 
 
 " Check if file was edited outside of Vim
-au InsertEnter,InsertLeave,CursorHold,BufEnter * checktime
+"au InsertEnter,InsertLeave,CursorHold,BufEnter * checktime
 
 " Fast exit from insert mode
 set ttimeoutlen=10
