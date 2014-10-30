@@ -401,23 +401,23 @@ function! RunFlog()
   lopen
 endfunction
 
-command -nargs=* Crclass   call CreateClass(<f-args>)
-command -nargs=* Crmodule  call CreateModule(<f-args>)
-command          Crrspec   call CreateRspec()
+command -nargs=* Oclass    call OpenCreateClass(<f-args>)
+command -nargs=* Ormodule  call OpenCreateModule(<f-args>)
+command          Orspec    call OpenCreateRspec()
 
-function! CreateClass(...)
-  call CreateEntity('class', a:1)
+function! OpenCreateClass(...)
+  call OpenCreateEntity('class', a:1)
 endfunction
 
-function! CreateModule(...)
-  call CreateEntity('module', a:1)
+function! OpenCreateModule(...)
+  call OpenCreateEntity('module', a:1)
 endfunction
 
-function! CreateRspec()
-  call CreateEntity('rspec')
+function! OpenCreateRspec()
+  call OpenCreateEntity('rspec')
 endfunction
 
-function! CreateEntity(...)
+function! OpenCreateEntity(...)
   let type_of_extraction = a:1
   let dirname = expand('%:p:h')
 
