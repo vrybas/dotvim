@@ -51,17 +51,14 @@ longer supported. But still contains most of the features described here.
    * **Spell checking english and russian(with ё) texts**
 
 ## Installation ##
-   1. git clone git://github.com/vrybas/dotvim.git ~/.vim
-   2. echo "runtime! rc.vim" > ~/.vimrc
-   3. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-   4. vim +BundleInstall +qall
-   5. brew install ack
-   6. brew install ctags
-   7. gem install gem-ctags
-   8. gem ctags (see [troubleshooting][35]
-   9. mvim /path/to/project
-   10. :e any_file_in_path
-   11. :Rtags
+```bash
+$ curl -Lo- https://bit.ly/vrybas-dotvim | bash
+```
+
+## Usage ##
+   1. mvim /path/to/project
+   2. :e any_file_in_path
+   3. :Rtags
 
 ## Keymap (above Vim & plugins standard) ##
 
