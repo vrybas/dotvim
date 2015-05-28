@@ -52,7 +52,7 @@ longer supported. But still contains most of the features described here.
 
 ## Installation ##
 ```bash
-$ curl -Lo- https://bit.ly/vrybas-dotvim | bash
+$ curl -Lo- https://raw.githubusercontent.com/vrybas/dotvim/master/install.sh | bash
 ```
 
 ## Usage ##
